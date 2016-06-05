@@ -19,9 +19,8 @@ if ($userModel === null)
 <meta name="renderer" content="webkit">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1,user-scalable=no">
-<meta name="Keywords" content="洗车,打蜡,精洗,预约,优惠,省时,洗车位,免排队,我洗车">
-<meta name="description"
-	content="我洗车,全车洗车位预约系统，不用排队，尊享爱车养护服务，省钱，省时，就来我洗车.com！">
+<meta name="Keywords" content="">
+<meta name="description" content="">
 <link rel="shortcut icon" href="<?php echo Yii::app()->baseUrl;?>/favicon.ico" type="image/x-icon" />	
    
 <?php
@@ -35,36 +34,23 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
 Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/js/jquery.cookie.js", CClientScript::POS_END );
 Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/js/mod.udatas.js", CClientScript::POS_END );
 Yii::app ()->clientScript->registerCoreScript ( 'jquery' );
-// Yii::app ()->clientScript->registerCssFile ( Yii::app ()->theme->baseUrl . "/css/bootstrap.min.css" );
 Yii::app ()->clientScript->registerCssFile ( Yii::app ()->theme->baseUrl . "/css/bootstrap-datetimepicker.min.css" );
 
 Yii::app ()->clientScript->registerCssFile ( Yii::app ()->theme->baseUrl . "/css/AdminLTE.css" );
-// Yii::app ()->clientScript->registerCssFile ( Yii::app ()->theme->baseUrl . "/css/font-awesome.min.css" );
 Yii::app ()->clientScript->registerCssFile ( Yii::app ()->theme->baseUrl . "/css/ichecksquare/green.css" );
-// Yii::app ()->clientScript->registerCssFile ( Yii::app ()->theme->baseUrl . "/css/bootstrapValidator.min.css" );
 Yii::app ()->clientScript->registerCssFile ( Yii::app ()->theme->baseUrl . "/css/jquery.raty.css" );
 Yii::app ()->clientScript->registerCssFile ( Yii::app ()->theme->baseUrl . "/css/ystep.css" );
-// Yii::app ()->clientScript->registerCssFile ( Yii::app ()->theme->baseUrl . "/css/style.css" );
 Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/js/jquery.raty.js", CClientScript::POS_HEAD );
 
-// Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/js/bootstrap.min.js", CClientScript::POS_END );
 
 Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/js/bootstrap-datetimepicker.min.js", CClientScript::POS_HEAD );
 Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/js/custom.js", CClientScript::POS_END );
 Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/js/icheck.min.js", CClientScript::POS_HEAD );
-// Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/js/layer/layer.min.js", CClientScript::POS_END );
 Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/js/laydate/laydate.js", CClientScript::POS_END );
-// Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/js/bootstrapValidator.min.js", CClientScript::POS_END );
-// Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/js/language/zh_CN.js", CClientScript::POS_END );
 Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/js/jquery.easing.min.js", CClientScript::POS_END );
 Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/js/zzsc.js", CClientScript::POS_END );
 Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/js/ystep.js", CClientScript::POS_END );
-// Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/js/jquery.cookie.js", CClientScript::POS_END );
-
-// Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/js/jquery.inputmask.js", CClientScript::POS_END );
-// Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/js/jquery.inputmask.date.extensions.js", CClientScript::POS_END );
-// Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/js/jquery.inputmask.extensions.js", CClientScript::POS_END );
-?>        
+?>
         
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

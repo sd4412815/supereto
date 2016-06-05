@@ -1,1 +1,649 @@
-﻿
+﻿2016/06/05 12:09:20 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:09:21 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 12:09:21 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 12:09:21 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 12:09:21 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:09:22 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465099762
+2016/06/05 12:09:22 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465099762)
+2016/06/05 12:09:22 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='06789bc9e9731f70735be88128fe648d' AND (expire=0 OR expire>1465099762)
+2016/06/05 12:10:03 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:10:04 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 12:10:04 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 12:10:04 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 12:10:04 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:10:04 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465099804
+2016/06/05 12:10:04 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465099804)
+2016/06/05 12:10:04 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='06789bc9e9731f70735be88128fe648d' AND (expire=0 OR expire>1465099804)
+2016/06/05 12:10:07 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:10:08 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 12:10:08 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 12:10:08 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 12:10:08 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:10:08 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465099808
+2016/06/05 12:10:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465099808)
+2016/06/05 12:10:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='06789bc9e9731f70735be88128fe648d' AND (expire=0 OR expire>1465099808)
+2016/06/05 12:10:56 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:10:57 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 12:10:57 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 12:10:57 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 12:10:57 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:10:57 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465099857
+2016/06/05 12:10:57 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465099857)
+2016/06/05 12:10:57 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='06789bc9e9731f70735be88128fe648d' AND (expire=0 OR expire>1465099857)
+2016/06/05 12:27:21 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:27:22 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 12:27:22 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 12:27:22 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 12:27:22 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:27:22 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465100842
+2016/06/05 12:27:22 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465100842)
+2016/06/05 12:27:22 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 12:30:18 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:30:19 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 12:30:19 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 12:30:19 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 12:30:19 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:30:19 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465101019
+2016/06/05 12:30:19 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465101019)
+2016/06/05 12:30:19 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 12:30:44 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:30:45 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 12:30:45 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 12:30:45 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 12:30:45 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:30:45 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465101045
+2016/06/05 12:30:45 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465101045)
+2016/06/05 12:30:46 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 12:32:30 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:32:31 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 12:32:31 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 12:32:31 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 12:32:31 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:32:31 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465101151
+2016/06/05 12:32:31 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465101151)
+2016/06/05 12:32:31 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 12:32:31 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='06789bc9e9731f70735be88128fe648d' AND (expire=0 OR expire>1465101151)
+2016/06/05 12:32:31 [trace] [system.db.ar.CActiveRecord] Boss.findByAttributes()
+2016/06/05 12:32:31 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_Boss`
+2016/06/05 12:32:31 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_Boss`
+2016/06/05 12:32:31 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Boss` `t` WHERE `t`.`b_user_id` IS NULL LIMIT 1
+2016/06/05 12:32:31 [trace] [system.db.ar.CActiveRecord] WashShop.findByAttributes()
+2016/06/05 12:32:31 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_Wash_Shop`
+2016/06/05 12:32:32 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_Wash_Shop`
+2016/06/05 12:32:32 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Wash_Shop` `t` WHERE `t`.`ws_boss_id` IS NULL LIMIT 1
+2016/06/05 12:33:18 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:33:19 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 12:33:19 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 12:33:19 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 12:33:19 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:33:19 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465101199
+2016/06/05 12:33:19 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465101199)
+2016/06/05 12:33:19 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 12:33:19 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='06789bc9e9731f70735be88128fe648d' AND (expire=0 OR expire>1465101199)
+2016/06/05 12:33:19 [trace] [system.db.ar.CActiveRecord] Boss.findByAttributes()
+2016/06/05 12:33:19 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_Boss`
+2016/06/05 12:33:19 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_Boss`
+2016/06/05 12:33:19 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Boss` `t` WHERE `t`.`b_user_id` IS NULL LIMIT 1
+2016/06/05 12:33:19 [trace] [system.db.ar.CActiveRecord] WashShop.findByAttributes()
+2016/06/05 12:33:19 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_Wash_Shop`
+2016/06/05 12:33:19 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_Wash_Shop`
+2016/06/05 12:33:19 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Wash_Shop` `t` WHERE `t`.`ws_boss_id` IS NULL LIMIT 1
+2016/06/05 12:33:20 [trace] [system.db.ar.CActiveRecord] WashShop.findByAttributes()
+2016/06/05 12:33:20 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Wash_Shop` `t` WHERE `t`.`ws_boss_id` IS NULL LIMIT 1
+2016/06/05 12:40:10 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:40:11 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 12:40:11 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 12:40:11 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 12:40:11 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:40:11 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465101611
+2016/06/05 12:40:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465101611)
+2016/06/05 12:40:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 12:40:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='06789bc9e9731f70735be88128fe648d' AND (expire=0 OR expire>1465101611)
+2016/06/05 12:40:11 [trace] [system.db.ar.CActiveRecord] Boss.findByAttributes()
+2016/06/05 12:40:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_Boss`
+2016/06/05 12:40:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_Boss`
+2016/06/05 12:40:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Boss` `t` WHERE `t`.`b_user_id` IS NULL LIMIT 1
+2016/06/05 12:40:11 [trace] [system.db.ar.CActiveRecord] WashShop.findByAttributes()
+2016/06/05 12:40:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_Wash_Shop`
+2016/06/05 12:40:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_Wash_Shop`
+2016/06/05 12:40:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Wash_Shop` `t` WHERE `t`.`ws_boss_id` IS NULL LIMIT 1
+2016/06/05 12:41:15 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:41:16 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 12:41:16 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 12:41:16 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 12:41:16 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:41:16 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465101676
+2016/06/05 12:41:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465101676)
+2016/06/05 12:41:16 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 12:41:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='06789bc9e9731f70735be88128fe648d' AND (expire=0 OR expire>1465101676)
+2016/06/05 12:41:17 [trace] [system.db.ar.CActiveRecord] Boss.findByAttributes()
+2016/06/05 12:41:17 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_Boss`
+2016/06/05 12:41:17 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_Boss`
+2016/06/05 12:41:17 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Boss` `t` WHERE `t`.`b_user_id` IS NULL LIMIT 1
+2016/06/05 12:41:17 [trace] [system.db.ar.CActiveRecord] WashShop.findByAttributes()
+2016/06/05 12:41:17 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_Wash_Shop`
+2016/06/05 12:41:17 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_Wash_Shop`
+2016/06/05 12:41:17 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Wash_Shop` `t` WHERE `t`.`ws_boss_id` IS NULL LIMIT 1
+2016/06/05 12:41:43 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:41:44 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 12:41:44 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 12:41:44 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 12:41:44 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:41:44 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465101704
+2016/06/05 12:41:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465101704)
+2016/06/05 12:41:44 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 12:41:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='06789bc9e9731f70735be88128fe648d' AND (expire=0 OR expire>1465101704)
+2016/06/05 12:41:44 [trace] [system.db.ar.CActiveRecord] Boss.findByAttributes()
+2016/06/05 12:41:44 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_Boss`
+2016/06/05 12:41:44 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_Boss`
+2016/06/05 12:41:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Boss` `t` WHERE `t`.`b_user_id` IS NULL LIMIT 1
+2016/06/05 12:41:44 [trace] [system.db.ar.CActiveRecord] WashShop.findByAttributes()
+2016/06/05 12:41:44 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_Wash_Shop`
+2016/06/05 12:41:44 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_Wash_Shop`
+2016/06/05 12:41:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Wash_Shop` `t` WHERE `t`.`ws_boss_id` IS NULL LIMIT 1
+2016/06/05 12:41:44 [trace] [system.db.ar.CActiveRecord] User.findByPk()
+2016/06/05 12:41:44 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_User`
+2016/06/05 12:41:44 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_User`
+2016/06/05 12:41:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_User` `t` WHERE `t`.`id` IS NULL LIMIT 1
+2016/06/05 12:42:57 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:42:58 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 12:42:58 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 12:42:58 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 12:42:58 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:42:58 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465101778
+2016/06/05 12:42:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465101778)
+2016/06/05 12:42:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 12:42:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='06789bc9e9731f70735be88128fe648d' AND (expire=0 OR expire>1465101778)
+2016/06/05 12:42:58 [trace] [system.db.ar.CActiveRecord] Boss.findByAttributes()
+2016/06/05 12:42:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_Boss`
+2016/06/05 12:42:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_Boss`
+2016/06/05 12:42:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Boss` `t` WHERE `t`.`b_user_id` IS NULL LIMIT 1
+2016/06/05 12:42:58 [trace] [system.db.ar.CActiveRecord] WashShop.findByAttributes()
+2016/06/05 12:42:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_Wash_Shop`
+2016/06/05 12:42:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_Wash_Shop`
+2016/06/05 12:42:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Wash_Shop` `t` WHERE `t`.`ws_boss_id` IS NULL LIMIT 1
+2016/06/05 12:42:58 [trace] [system.db.ar.CActiveRecord] User.findByPk()
+2016/06/05 12:42:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_User`
+2016/06/05 12:42:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_User`
+2016/06/05 12:42:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_User` `t` WHERE `t`.`id` IS NULL LIMIT 1
+2016/06/05 12:43:23 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:43:24 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 12:43:24 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 12:43:24 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 12:43:24 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:43:24 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465101804
+2016/06/05 12:43:24 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465101804)
+2016/06/05 12:43:24 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 12:43:24 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='06789bc9e9731f70735be88128fe648d' AND (expire=0 OR expire>1465101804)
+2016/06/05 12:43:25 [trace] [system.db.ar.CActiveRecord] Boss.findByAttributes()
+2016/06/05 12:43:25 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_Boss`
+2016/06/05 12:43:25 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_Boss`
+2016/06/05 12:43:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Boss` `t` WHERE `t`.`b_user_id` IS NULL LIMIT 1
+2016/06/05 12:43:25 [trace] [system.db.ar.CActiveRecord] WashShop.findByAttributes()
+2016/06/05 12:43:25 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_Wash_Shop`
+2016/06/05 12:43:25 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_Wash_Shop`
+2016/06/05 12:43:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Wash_Shop` `t` WHERE `t`.`ws_boss_id` IS NULL LIMIT 1
+2016/06/05 12:43:25 [trace] [system.db.ar.CActiveRecord] User.findByPk()
+2016/06/05 12:43:25 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_User`
+2016/06/05 12:43:25 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_User`
+2016/06/05 12:43:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_User` `t` WHERE `t`.`id` IS NULL LIMIT 1
+2016/06/05 12:43:25 [trace] [system.db.ar.CActiveRecord] WashShopService.findAll()
+2016/06/05 12:43:25 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_Wash_Shop_Service`
+2016/06/05 12:43:25 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_Wash_Shop_Service`
+2016/06/05 12:43:25 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_Service_Type`
+2016/06/05 12:43:25 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_Service_Type`
+2016/06/05 12:43:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT `prefix`.`id` AS `t0_c0`, `prefix`.`wss_ws_id` AS `t0_c1`, `prefix`.`wss_st_id` AS `t0_c2`, `prefix`.`wss_state` AS `t0_c3`, `prefix`.`wss_count` AS `t0_c4`, `prefix`.`wss_service_time` AS `t0_c5`, `prefix`.`wss_service_time_rest` AS `t0_c6`, `prefix`.`wss_value` AS `t0_c7`, `prefix`.`wss_car_group` AS `t0_c8`, `wssSt`.`id` AS `t1_c0`, `wssSt`.`st_name` AS `t1_c1`, `wssSt`.`st_desc` AS `t1_c2`, `wssSt`.`st_value` AS `t1_c3`, `wssSt`.`st_score` AS `t1_c4`, `wssSt`.`st_interval_num` AS `t1_c5`, `wssSt`.`st_city_id` AS `t1_c6`, `wssSt`.`st_type` AS `t1_c7`, `wssSt`.`st_flag` AS `t1_c8`, `wssSt`.`st_time` AS `t1_c9`, `wssSt`.`st_value1` AS `t1_c10`, `wssSt`.`st_value2` AS `t1_c11`, `wssSt`.`st_time_rest` AS `t1_c12`, `wssSt`.`st_code` AS `t1_c13` FROM `yy_Wash_Shop_Service` `prefix`  LEFT OUTER JOIN `yy_Service_Type` `wssSt` ON (`prefix`.`wss_st_id`=`wssSt`.`id`) WHERE ((wss_ws_id=:shopId) AND (wss_state>=0)) ORDER BY wssSt.st_flag ASC
+2016/06/05 12:43:25 [trace] [system.db.ar.CActiveRecord] WashShopService.findAll()
+2016/06/05 12:43:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT `prefix`.`id` AS `t0_c0`, `prefix`.`wss_ws_id` AS `t0_c1`, `prefix`.`wss_st_id` AS `t0_c2`, `prefix`.`wss_state` AS `t0_c3`, `prefix`.`wss_count` AS `t0_c4`, `prefix`.`wss_service_time` AS `t0_c5`, `prefix`.`wss_service_time_rest` AS `t0_c6`, `prefix`.`wss_value` AS `t0_c7`, `prefix`.`wss_car_group` AS `t0_c8`, `wssSt`.`id` AS `t1_c0`, `wssSt`.`st_name` AS `t1_c1`, `wssSt`.`st_desc` AS `t1_c2`, `wssSt`.`st_value` AS `t1_c3`, `wssSt`.`st_score` AS `t1_c4`, `wssSt`.`st_interval_num` AS `t1_c5`, `wssSt`.`st_city_id` AS `t1_c6`, `wssSt`.`st_type` AS `t1_c7`, `wssSt`.`st_flag` AS `t1_c8`, `wssSt`.`st_time` AS `t1_c9`, `wssSt`.`st_value1` AS `t1_c10`, `wssSt`.`st_value2` AS `t1_c11`, `wssSt`.`st_time_rest` AS `t1_c12`, `wssSt`.`st_code` AS `t1_c13` FROM `yy_Wash_Shop_Service` `prefix`  LEFT OUTER JOIN `yy_Service_Type` `wssSt` ON (`prefix`.`wss_st_id`=`wssSt`.`id`) WHERE ((wss_ws_id=:shopId) AND (wss_state>=0)) ORDER BY wssSt.st_flag ASC
+2016/06/05 12:43:25 [trace] [system.db.ar.CActiveRecord] ServiceType.findAll()
+2016/06/05 12:43:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Service_Type` `t` WHERE 0=1 ORDER BY st_flag ASC
+2016/06/05 12:43:25 [trace] [system.db.ar.CActiveRecord] WashShop.findByAttributes()
+2016/06/05 12:43:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Wash_Shop` `t` WHERE `t`.`ws_boss_id` IS NULL LIMIT 1
+2016/06/05 12:43:25 [trace] [system.db.ar.CActiveRecord] WashShop.findByAttributes()
+2016/06/05 12:43:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Wash_Shop` `t` WHERE `t`.`ws_boss_id` IS NULL LIMIT 1
+2016/06/05 12:43:25 [trace] [system.db.ar.CActiveRecord] WashShop.findByAttributes()
+2016/06/05 12:43:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Wash_Shop` `t` WHERE `t`.`ws_boss_id` IS NULL LIMIT 1
+2016/06/05 12:43:25 [trace] [system.db.ar.CActiveRecord] WashShop.findByAttributes()
+2016/06/05 12:43:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Wash_Shop` `t` WHERE `t`.`ws_boss_id` IS NULL LIMIT 1
+2016/06/05 12:43:25 [trace] [system.db.ar.CActiveRecord] WashShop.findByAttributes()
+2016/06/05 12:43:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Wash_Shop` `t` WHERE `t`.`ws_boss_id` IS NULL LIMIT 1
+2016/06/05 12:47:04 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:47:05 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 12:47:05 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 12:47:05 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 12:47:05 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:47:05 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465102025
+2016/06/05 12:47:05 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465102025)
+2016/06/05 12:47:05 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 12:47:24 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:47:25 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 12:47:25 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 12:47:25 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 12:47:25 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:47:25 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465102045
+2016/06/05 12:47:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465102045)
+2016/06/05 12:47:25 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 12:47:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='06789bc9e9731f70735be88128fe648d' AND (expire=0 OR expire>1465102045)
+2016/06/05 12:47:25 [trace] [system.db.ar.CActiveRecord] Boss.findByAttributes()
+2016/06/05 12:47:25 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_Boss`
+2016/06/05 12:47:25 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_Boss`
+2016/06/05 12:47:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Boss` `t` WHERE `t`.`b_user_id`=:yp0 LIMIT 1
+2016/06/05 12:47:25 [trace] [system.db.ar.CActiveRecord] WashShop.findByAttributes()
+2016/06/05 12:47:25 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_Wash_Shop`
+2016/06/05 12:47:25 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_Wash_Shop`
+2016/06/05 12:47:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Wash_Shop` `t` WHERE `t`.`ws_boss_id`=:yp0 LIMIT 1
+2016/06/05 12:47:25 [trace] [system.db.ar.CActiveRecord] User.findByPk()
+2016/06/05 12:47:25 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_User`
+2016/06/05 12:47:25 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_User`
+2016/06/05 12:47:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_User` `t` WHERE `t`.`id` IS NULL LIMIT 1
+2016/06/05 12:47:25 [trace] [system.db.ar.CActiveRecord] WashShopService.findAll()
+2016/06/05 12:47:25 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_Wash_Shop_Service`
+2016/06/05 12:47:25 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_Wash_Shop_Service`
+2016/06/05 12:47:25 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_Service_Type`
+2016/06/05 12:47:25 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_Service_Type`
+2016/06/05 12:47:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT `prefix`.`id` AS `t0_c0`, `prefix`.`wss_ws_id` AS `t0_c1`, `prefix`.`wss_st_id` AS `t0_c2`, `prefix`.`wss_state` AS `t0_c3`, `prefix`.`wss_count` AS `t0_c4`, `prefix`.`wss_service_time` AS `t0_c5`, `prefix`.`wss_service_time_rest` AS `t0_c6`, `prefix`.`wss_value` AS `t0_c7`, `prefix`.`wss_car_group` AS `t0_c8`, `wssSt`.`id` AS `t1_c0`, `wssSt`.`st_name` AS `t1_c1`, `wssSt`.`st_desc` AS `t1_c2`, `wssSt`.`st_value` AS `t1_c3`, `wssSt`.`st_score` AS `t1_c4`, `wssSt`.`st_interval_num` AS `t1_c5`, `wssSt`.`st_city_id` AS `t1_c6`, `wssSt`.`st_type` AS `t1_c7`, `wssSt`.`st_flag` AS `t1_c8`, `wssSt`.`st_time` AS `t1_c9`, `wssSt`.`st_value1` AS `t1_c10`, `wssSt`.`st_value2` AS `t1_c11`, `wssSt`.`st_time_rest` AS `t1_c12`, `wssSt`.`st_code` AS `t1_c13` FROM `yy_Wash_Shop_Service` `prefix`  LEFT OUTER JOIN `yy_Service_Type` `wssSt` ON (`prefix`.`wss_st_id`=`wssSt`.`id`) WHERE ((wss_ws_id=:shopId) AND (wss_state>=0)) ORDER BY wssSt.st_flag ASC
+2016/06/05 12:47:25 [trace] [system.db.ar.CActiveRecord] WashShopService.findAll()
+2016/06/05 12:47:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT `prefix`.`id` AS `t0_c0`, `prefix`.`wss_ws_id` AS `t0_c1`, `prefix`.`wss_st_id` AS `t0_c2`, `prefix`.`wss_state` AS `t0_c3`, `prefix`.`wss_count` AS `t0_c4`, `prefix`.`wss_service_time` AS `t0_c5`, `prefix`.`wss_service_time_rest` AS `t0_c6`, `prefix`.`wss_value` AS `t0_c7`, `prefix`.`wss_car_group` AS `t0_c8`, `wssSt`.`id` AS `t1_c0`, `wssSt`.`st_name` AS `t1_c1`, `wssSt`.`st_desc` AS `t1_c2`, `wssSt`.`st_value` AS `t1_c3`, `wssSt`.`st_score` AS `t1_c4`, `wssSt`.`st_interval_num` AS `t1_c5`, `wssSt`.`st_city_id` AS `t1_c6`, `wssSt`.`st_type` AS `t1_c7`, `wssSt`.`st_flag` AS `t1_c8`, `wssSt`.`st_time` AS `t1_c9`, `wssSt`.`st_value1` AS `t1_c10`, `wssSt`.`st_value2` AS `t1_c11`, `wssSt`.`st_time_rest` AS `t1_c12`, `wssSt`.`st_code` AS `t1_c13` FROM `yy_Wash_Shop_Service` `prefix`  LEFT OUTER JOIN `yy_Service_Type` `wssSt` ON (`prefix`.`wss_st_id`=`wssSt`.`id`) WHERE ((wss_ws_id=:shopId) AND (wss_state>=0)) ORDER BY wssSt.st_flag ASC
+2016/06/05 12:47:25 [trace] [system.db.ar.CActiveRecord] ServiceType.findAll()
+2016/06/05 12:47:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Service_Type` `t` WHERE 0=1 ORDER BY st_flag ASC
+2016/06/05 12:47:25 [trace] [system.db.ar.CActiveRecord] WashShop.findByAttributes()
+2016/06/05 12:47:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Wash_Shop` `t` WHERE `t`.`ws_boss_id` IS NULL LIMIT 1
+2016/06/05 12:47:25 [trace] [system.db.ar.CActiveRecord] WashShop.findByAttributes()
+2016/06/05 12:47:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Wash_Shop` `t` WHERE `t`.`ws_boss_id` IS NULL LIMIT 1
+2016/06/05 12:47:25 [trace] [system.db.ar.CActiveRecord] WashShop.findByAttributes()
+2016/06/05 12:47:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Wash_Shop` `t` WHERE `t`.`ws_boss_id` IS NULL LIMIT 1
+2016/06/05 12:47:25 [trace] [system.db.ar.CActiveRecord] WashShop.findByAttributes()
+2016/06/05 12:47:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Wash_Shop` `t` WHERE `t`.`ws_boss_id` IS NULL LIMIT 1
+2016/06/05 12:47:25 [trace] [system.db.ar.CActiveRecord] WashShop.findByAttributes()
+2016/06/05 12:47:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Wash_Shop` `t` WHERE `t`.`ws_boss_id`=:yp0 LIMIT 1
+2016/06/05 12:47:25 [trace] [system.db.ar.CActiveRecord] User.findByPk()
+2016/06/05 12:47:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_User` `t` WHERE `t`.`id`='1' LIMIT 1
+2016/06/05 12:49:41 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:49:42 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 12:49:42 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 12:49:42 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 12:49:42 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:49:42 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465102182
+2016/06/05 12:49:42 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465102182)
+2016/06/05 12:49:42 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 12:49:42 [trace] [system.db.CDbCommand] Querying SQL: SELECT name, type, description, t1.bizrule, t1.data, t2.bizrule AS bizrule2, t2.data AS data2 FROM yy_auth_item t1, yy_auth_assignment t2 WHERE name=itemname AND userid=:userid
+2016/06/05 12:49:42 [trace] [system.db.CDbCommand] Querying SQL: SELECT `name`, `type`, `description`, `bizrule`, `data`
+FROM `yy_auth_item`, `yy_auth_item_child`
+WHERE parent IN ('administrator') AND name=child
+2016/06/05 12:49:42 [trace] [system.db.CDbCommand] Querying SQL: SELECT `name`, `type`, `description`, `bizrule`, `data`
+FROM `yy_auth_item`, `yy_auth_item_child`
+WHERE parent IN ('bossView', 'browse', 'staffView', 'userView') AND name=child
+2016/06/05 12:49:42 [trace] [system.db.CDbCommand] Querying SQL: SELECT `name`, `type`, `description`, `bizrule`, `data`
+FROM `yy_auth_item`, `yy_auth_item_child`
+WHERE parent IN ('BossList', 'BossProfile', 'UserList', 'UserProfile') AND name=child
+2016/06/05 12:49:42 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:49:43 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 12:49:43 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 12:49:43 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 12:49:43 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:49:43 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465102183
+2016/06/05 12:49:43 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465102183)
+2016/06/05 12:49:43 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 12:49:43 [trace] [system.db.ar.CActiveRecord] Boss.findByAttributes()
+2016/06/05 12:49:43 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_Boss`
+2016/06/05 12:49:43 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_Boss`
+2016/06/05 12:49:43 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Boss` `t` WHERE `t`.`b_user_id`=:yp0 LIMIT 1
+2016/06/05 12:49:43 [trace] [system.db.ar.CActiveRecord] WashShop.findByAttributes()
+2016/06/05 12:49:43 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_Wash_Shop`
+2016/06/05 12:49:43 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_Wash_Shop`
+2016/06/05 12:49:43 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Wash_Shop` `t` WHERE `t`.`ws_boss_id`=:yp0 LIMIT 1
+2016/06/05 12:49:43 [trace] [system.db.ar.CActiveRecord] User.findByPk()
+2016/06/05 12:49:43 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_User`
+2016/06/05 12:49:43 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_User`
+2016/06/05 12:49:43 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_User` `t` WHERE `t`.`id` IS NULL LIMIT 1
+2016/06/05 12:49:43 [trace] [system.db.ar.CActiveRecord] WashShopService.findAll()
+2016/06/05 12:49:44 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_Wash_Shop_Service`
+2016/06/05 12:49:44 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_Wash_Shop_Service`
+2016/06/05 12:49:44 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_Service_Type`
+2016/06/05 12:49:44 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_Service_Type`
+2016/06/05 12:49:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT `prefix`.`id` AS `t0_c0`, `prefix`.`wss_ws_id` AS `t0_c1`, `prefix`.`wss_st_id` AS `t0_c2`, `prefix`.`wss_state` AS `t0_c3`, `prefix`.`wss_count` AS `t0_c4`, `prefix`.`wss_service_time` AS `t0_c5`, `prefix`.`wss_service_time_rest` AS `t0_c6`, `prefix`.`wss_value` AS `t0_c7`, `prefix`.`wss_car_group` AS `t0_c8`, `wssSt`.`id` AS `t1_c0`, `wssSt`.`st_name` AS `t1_c1`, `wssSt`.`st_desc` AS `t1_c2`, `wssSt`.`st_value` AS `t1_c3`, `wssSt`.`st_score` AS `t1_c4`, `wssSt`.`st_interval_num` AS `t1_c5`, `wssSt`.`st_city_id` AS `t1_c6`, `wssSt`.`st_type` AS `t1_c7`, `wssSt`.`st_flag` AS `t1_c8`, `wssSt`.`st_time` AS `t1_c9`, `wssSt`.`st_value1` AS `t1_c10`, `wssSt`.`st_value2` AS `t1_c11`, `wssSt`.`st_time_rest` AS `t1_c12`, `wssSt`.`st_code` AS `t1_c13` FROM `yy_Wash_Shop_Service` `prefix`  LEFT OUTER JOIN `yy_Service_Type` `wssSt` ON (`prefix`.`wss_st_id`=`wssSt`.`id`) WHERE ((wss_ws_id=:shopId) AND (wss_state>=0)) ORDER BY wssSt.st_flag ASC
+2016/06/05 12:49:44 [trace] [system.db.ar.CActiveRecord] WashShopService.findAll()
+2016/06/05 12:49:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT `prefix`.`id` AS `t0_c0`, `prefix`.`wss_ws_id` AS `t0_c1`, `prefix`.`wss_st_id` AS `t0_c2`, `prefix`.`wss_state` AS `t0_c3`, `prefix`.`wss_count` AS `t0_c4`, `prefix`.`wss_service_time` AS `t0_c5`, `prefix`.`wss_service_time_rest` AS `t0_c6`, `prefix`.`wss_value` AS `t0_c7`, `prefix`.`wss_car_group` AS `t0_c8`, `wssSt`.`id` AS `t1_c0`, `wssSt`.`st_name` AS `t1_c1`, `wssSt`.`st_desc` AS `t1_c2`, `wssSt`.`st_value` AS `t1_c3`, `wssSt`.`st_score` AS `t1_c4`, `wssSt`.`st_interval_num` AS `t1_c5`, `wssSt`.`st_city_id` AS `t1_c6`, `wssSt`.`st_type` AS `t1_c7`, `wssSt`.`st_flag` AS `t1_c8`, `wssSt`.`st_time` AS `t1_c9`, `wssSt`.`st_value1` AS `t1_c10`, `wssSt`.`st_value2` AS `t1_c11`, `wssSt`.`st_time_rest` AS `t1_c12`, `wssSt`.`st_code` AS `t1_c13` FROM `yy_Wash_Shop_Service` `prefix`  LEFT OUTER JOIN `yy_Service_Type` `wssSt` ON (`prefix`.`wss_st_id`=`wssSt`.`id`) WHERE ((wss_ws_id=:shopId) AND (wss_state>=0)) ORDER BY wssSt.st_flag ASC
+2016/06/05 12:49:44 [trace] [system.db.ar.CActiveRecord] ServiceType.findAll()
+2016/06/05 12:49:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Service_Type` `t` WHERE 0=1 ORDER BY st_flag ASC
+2016/06/05 12:49:44 [trace] [system.db.ar.CActiveRecord] WashShop.findByAttributes()
+2016/06/05 12:49:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Wash_Shop` `t` WHERE `t`.`ws_boss_id` IS NULL LIMIT 1
+2016/06/05 12:49:44 [trace] [system.db.ar.CActiveRecord] WashShop.findByAttributes()
+2016/06/05 12:49:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Wash_Shop` `t` WHERE `t`.`ws_boss_id` IS NULL LIMIT 1
+2016/06/05 12:49:44 [trace] [system.db.ar.CActiveRecord] WashShop.findByAttributes()
+2016/06/05 12:49:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Wash_Shop` `t` WHERE `t`.`ws_boss_id` IS NULL LIMIT 1
+2016/06/05 12:49:44 [trace] [system.db.ar.CActiveRecord] WashShop.findByAttributes()
+2016/06/05 12:49:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Wash_Shop` `t` WHERE `t`.`ws_boss_id` IS NULL LIMIT 1
+2016/06/05 12:49:44 [trace] [system.db.ar.CActiveRecord] WashShop.findByAttributes()
+2016/06/05 12:49:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Wash_Shop` `t` WHERE `t`.`ws_boss_id`=:yp0 LIMIT 1
+2016/06/05 12:49:44 [trace] [system.db.ar.CActiveRecord] User.findByPk()
+2016/06/05 12:49:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_User` `t` WHERE `t`.`id`='1' LIMIT 1
+2016/06/05 12:50:06 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:50:07 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 12:50:07 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 12:50:07 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 12:50:08 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:50:08 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465102208
+2016/06/05 12:50:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465102208)
+2016/06/05 12:50:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 12:50:08 [trace] [system.db.ar.CActiveRecord] Boss.findByAttributes()
+2016/06/05 12:50:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_Boss`
+2016/06/05 12:50:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_Boss`
+2016/06/05 12:50:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Boss` `t` WHERE `t`.`b_user_id`=:yp0 LIMIT 1
+2016/06/05 12:50:08 [trace] [system.db.ar.CActiveRecord] WashShop.findByAttributes()
+2016/06/05 12:50:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_Wash_Shop`
+2016/06/05 12:50:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_Wash_Shop`
+2016/06/05 12:50:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Wash_Shop` `t` WHERE `t`.`ws_boss_id`=:yp0 LIMIT 1
+2016/06/05 12:50:08 [trace] [system.db.ar.CActiveRecord] User.findByPk()
+2016/06/05 12:50:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_User`
+2016/06/05 12:50:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_User`
+2016/06/05 12:50:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_User` `t` WHERE `t`.`id` IS NULL LIMIT 1
+2016/06/05 12:50:08 [trace] [system.db.ar.CActiveRecord] WashShopService.findAll()
+2016/06/05 12:50:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_Wash_Shop_Service`
+2016/06/05 12:50:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_Wash_Shop_Service`
+2016/06/05 12:50:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_Service_Type`
+2016/06/05 12:50:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_Service_Type`
+2016/06/05 12:50:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT `prefix`.`id` AS `t0_c0`, `prefix`.`wss_ws_id` AS `t0_c1`, `prefix`.`wss_st_id` AS `t0_c2`, `prefix`.`wss_state` AS `t0_c3`, `prefix`.`wss_count` AS `t0_c4`, `prefix`.`wss_service_time` AS `t0_c5`, `prefix`.`wss_service_time_rest` AS `t0_c6`, `prefix`.`wss_value` AS `t0_c7`, `prefix`.`wss_car_group` AS `t0_c8`, `wssSt`.`id` AS `t1_c0`, `wssSt`.`st_name` AS `t1_c1`, `wssSt`.`st_desc` AS `t1_c2`, `wssSt`.`st_value` AS `t1_c3`, `wssSt`.`st_score` AS `t1_c4`, `wssSt`.`st_interval_num` AS `t1_c5`, `wssSt`.`st_city_id` AS `t1_c6`, `wssSt`.`st_type` AS `t1_c7`, `wssSt`.`st_flag` AS `t1_c8`, `wssSt`.`st_time` AS `t1_c9`, `wssSt`.`st_value1` AS `t1_c10`, `wssSt`.`st_value2` AS `t1_c11`, `wssSt`.`st_time_rest` AS `t1_c12`, `wssSt`.`st_code` AS `t1_c13` FROM `yy_Wash_Shop_Service` `prefix`  LEFT OUTER JOIN `yy_Service_Type` `wssSt` ON (`prefix`.`wss_st_id`=`wssSt`.`id`) WHERE ((wss_ws_id=:shopId) AND (wss_state>=0)) ORDER BY wssSt.st_flag ASC
+2016/06/05 12:50:08 [trace] [system.db.ar.CActiveRecord] WashShopService.findAll()
+2016/06/05 12:50:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT `prefix`.`id` AS `t0_c0`, `prefix`.`wss_ws_id` AS `t0_c1`, `prefix`.`wss_st_id` AS `t0_c2`, `prefix`.`wss_state` AS `t0_c3`, `prefix`.`wss_count` AS `t0_c4`, `prefix`.`wss_service_time` AS `t0_c5`, `prefix`.`wss_service_time_rest` AS `t0_c6`, `prefix`.`wss_value` AS `t0_c7`, `prefix`.`wss_car_group` AS `t0_c8`, `wssSt`.`id` AS `t1_c0`, `wssSt`.`st_name` AS `t1_c1`, `wssSt`.`st_desc` AS `t1_c2`, `wssSt`.`st_value` AS `t1_c3`, `wssSt`.`st_score` AS `t1_c4`, `wssSt`.`st_interval_num` AS `t1_c5`, `wssSt`.`st_city_id` AS `t1_c6`, `wssSt`.`st_type` AS `t1_c7`, `wssSt`.`st_flag` AS `t1_c8`, `wssSt`.`st_time` AS `t1_c9`, `wssSt`.`st_value1` AS `t1_c10`, `wssSt`.`st_value2` AS `t1_c11`, `wssSt`.`st_time_rest` AS `t1_c12`, `wssSt`.`st_code` AS `t1_c13` FROM `yy_Wash_Shop_Service` `prefix`  LEFT OUTER JOIN `yy_Service_Type` `wssSt` ON (`prefix`.`wss_st_id`=`wssSt`.`id`) WHERE ((wss_ws_id=:shopId) AND (wss_state>=0)) ORDER BY wssSt.st_flag ASC
+2016/06/05 12:50:08 [trace] [system.db.ar.CActiveRecord] ServiceType.findAll()
+2016/06/05 12:50:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Service_Type` `t` WHERE 0=1 ORDER BY st_flag ASC
+2016/06/05 12:50:08 [trace] [system.db.ar.CActiveRecord] WashShop.findByAttributes()
+2016/06/05 12:50:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Wash_Shop` `t` WHERE `t`.`ws_boss_id` IS NULL LIMIT 1
+2016/06/05 12:50:08 [trace] [system.db.ar.CActiveRecord] WashShop.findByAttributes()
+2016/06/05 12:50:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Wash_Shop` `t` WHERE `t`.`ws_boss_id` IS NULL LIMIT 1
+2016/06/05 12:50:08 [trace] [system.db.ar.CActiveRecord] WashShop.findByAttributes()
+2016/06/05 12:50:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Wash_Shop` `t` WHERE `t`.`ws_boss_id` IS NULL LIMIT 1
+2016/06/05 12:50:08 [trace] [system.db.ar.CActiveRecord] WashShop.findByAttributes()
+2016/06/05 12:50:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Wash_Shop` `t` WHERE `t`.`ws_boss_id` IS NULL LIMIT 1
+2016/06/05 12:50:08 [trace] [system.db.ar.CActiveRecord] WashShop.findByAttributes()
+2016/06/05 12:50:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Wash_Shop` `t` WHERE `t`.`ws_boss_id`=:yp0 LIMIT 1
+2016/06/05 12:50:08 [trace] [system.db.ar.CActiveRecord] User.findByPk()
+2016/06/05 12:50:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_User` `t` WHERE `t`.`id`='1' LIMIT 1
+2016/06/05 12:50:18 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:50:19 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 12:50:19 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 12:50:19 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 12:50:19 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 12:50:19 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465102219
+2016/06/05 12:50:19 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465102219)
+2016/06/05 12:50:19 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 13:10:14 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:10:15 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 13:10:15 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 13:10:15 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 13:10:15 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:10:15 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465103415
+2016/06/05 13:10:15 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465103415)
+2016/06/05 13:10:16 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 13:17:46 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:17:47 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 13:17:47 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 13:17:47 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 13:17:47 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:17:47 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465103867
+2016/06/05 13:17:47 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465103867)
+2016/06/05 13:17:47 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 13:17:48 [trace] [system.db.ar.CActiveRecord] City.find()
+2016/06/05 13:17:48 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_City`
+2016/06/05 13:17:48 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_City`
+2016/06/05 13:17:48 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_City` `t` WHERE c_state>=1 LIMIT 1
+2016/06/05 13:17:48 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='06789bc9e9731f70735be88128fe648d' AND (expire=0 OR expire>1465103868)
+2016/06/05 13:17:48 [trace] [system.db.ar.CActiveRecord] WashShop.findAll()
+2016/06/05 13:17:48 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_Wash_Shop`
+2016/06/05 13:17:48 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_Wash_Shop`
+2016/06/05 13:17:48 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Wash_Shop` `t` WHERE (ws_state=1) AND (ws_city_id=:cid)
+2016/06/05 13:17:48 [trace] [system.db.ar.CActiveRecord] OrderTemp.count()
+2016/06/05 13:17:48 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_order_temp`
+2016/06/05 13:17:48 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_order_temp`
+2016/06/05 13:17:48 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM `yy_order_temp` `t` WHERE ((((ot_state=1) AND (ot_bias=0)) AND (ot_bias=:bias)) AND (ot_wash_shop_id IN (:ycp0, :ycp1, :ycp2, :ycp3, :ycp4, :ycp5, :ycp6, :ycp7, :ycp8, :ycp9, :ycp10, :ycp11))) AND (ot_date_time>:ctime)
+2016/06/05 13:17:48 [trace] [system.db.ar.CActiveRecord] WashShop.findAll()
+2016/06/05 13:17:48 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_Wash_Shop` `t` WHERE (ws_state=1) AND (ws_city_id=:cid)
+2016/06/05 13:17:48 [trace] [system.db.ar.CActiveRecord] OrderTemp.count()
+2016/06/05 13:17:48 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM `yy_order_temp` `t` WHERE (ot_bias=:bias) AND (ot_wash_shop_id IN (:ycp12, :ycp13, :ycp14, :ycp15, :ycp16, :ycp17, :ycp18, :ycp19, :ycp20, :ycp21, :ycp22, :ycp23))
+2016/06/05 13:17:48 [trace] [system.db.ar.CActiveRecord] City.find()
+2016/06/05 13:17:48 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_City` `t` WHERE c_state>=1 LIMIT 1
+2016/06/05 13:17:48 [trace] [system.db.ar.CActiveRecord] City.findAll()
+2016/06/05 13:17:48 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_City` `t` WHERE c_state>=0 ORDER BY c_state DESC, c_spell ASC
+2016/06/05 13:17:49 [trace] [system.db.ar.CActiveRecord] User.findAllByPk()
+2016/06/05 13:17:49 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_User`
+2016/06/05 13:17:49 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_User`
+2016/06/05 13:17:49 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_User` `t` WHERE `t`.`id`='1'
+2016/06/05 13:19:12 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:19:13 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 13:19:13 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 13:19:13 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 13:19:13 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:19:13 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465103953
+2016/06/05 13:19:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465103953)
+2016/06/05 13:19:13 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 13:19:14 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:19:15 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 13:19:15 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 13:19:15 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 13:19:15 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:19:15 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465103955
+2016/06/05 13:19:15 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465103955)
+2016/06/05 13:20:22 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:20:23 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 13:20:23 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 13:20:23 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 13:20:23 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:20:23 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465104023
+2016/06/05 13:20:23 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465104023)
+2016/06/05 13:20:23 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 13:20:24 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:20:25 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 13:20:25 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 13:20:25 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 13:20:25 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:20:25 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465104025
+2016/06/05 13:20:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465104025)
+2016/06/05 13:20:43 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:20:44 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 13:20:44 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 13:20:44 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 13:20:44 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:20:44 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465104044
+2016/06/05 13:20:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465104044)
+2016/06/05 13:20:44 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 13:21:03 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:21:04 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 13:21:04 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 13:21:04 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 13:21:04 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:21:04 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465104064
+2016/06/05 13:21:04 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465104064)
+2016/06/05 13:21:04 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 13:21:22 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:21:23 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 13:21:23 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 13:21:23 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 13:21:23 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:21:23 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465104083
+2016/06/05 13:21:23 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465104083)
+2016/06/05 13:21:23 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 13:21:37 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:21:38 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 13:21:38 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 13:21:38 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 13:21:38 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:21:38 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465104098
+2016/06/05 13:21:38 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465104098)
+2016/06/05 13:21:38 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 13:25:55 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:25:56 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 13:25:56 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 13:25:56 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 13:25:56 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:25:56 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465104356
+2016/06/05 13:25:56 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465104356)
+2016/06/05 13:25:57 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 13:28:10 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:28:11 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 13:28:11 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 13:28:11 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 13:28:11 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:28:11 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465104491
+2016/06/05 13:28:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465104491)
+2016/06/05 13:28:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 13:28:33 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:28:34 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 13:28:34 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 13:28:34 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 13:28:35 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:28:35 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465104515
+2016/06/05 13:28:35 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465104515)
+2016/06/05 13:28:35 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 13:28:55 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:28:56 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 13:28:56 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 13:28:56 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 13:28:56 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:28:56 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465104536
+2016/06/05 13:28:56 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465104536)
+2016/06/05 13:28:56 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 13:36:02 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:36:03 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 13:36:03 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 13:36:03 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 13:36:03 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:36:03 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465104963
+2016/06/05 13:36:03 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465104963)
+2016/06/05 13:36:03 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 13:36:09 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:36:10 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 13:36:10 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 13:36:10 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 13:36:10 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:36:10 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465104970
+2016/06/05 13:36:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465104970)
+2016/06/05 13:36:10 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 13:43:36 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:43:37 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 13:43:37 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 13:43:37 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 13:43:37 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:43:37 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465105417
+2016/06/05 13:43:37 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465105417)
+2016/06/05 13:43:37 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 13:43:46 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:43:47 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 13:43:47 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 13:43:47 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 13:43:47 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:43:47 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465105427
+2016/06/05 13:43:47 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465105427)
+2016/06/05 13:43:47 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 13:44:43 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:44:44 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 13:44:44 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 13:44:44 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 13:44:44 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:44:44 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465105484
+2016/06/05 13:44:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465105484)
+2016/06/05 13:44:44 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 13:45:12 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:45:13 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 13:45:13 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 13:45:13 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 13:45:13 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:45:13 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465105513
+2016/06/05 13:45:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465105513)
+2016/06/05 13:45:13 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 13:48:10 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:48:11 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 13:48:11 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 13:48:11 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 13:48:11 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:48:11 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465105691
+2016/06/05 13:48:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465105691)
+2016/06/05 13:48:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 13:48:15 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:48:16 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 13:48:16 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 13:48:16 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 13:48:16 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:48:16 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465105696
+2016/06/05 13:48:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465105696)
+2016/06/05 13:48:16 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 13:48:23 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:48:24 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 13:48:24 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 13:48:24 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 13:48:24 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:48:24 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465105704
+2016/06/05 13:48:24 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465105704)
+2016/06/05 13:48:24 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 13:49:06 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:49:07 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 13:49:07 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 13:49:07 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 13:49:07 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:49:07 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465105747
+2016/06/05 13:49:07 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465105747)
+2016/06/05 13:49:07 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 13:49:10 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:49:11 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 13:49:11 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 13:49:11 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 13:49:11 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:49:11 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465105751
+2016/06/05 13:49:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465105751)
+2016/06/05 13:49:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 13:50:23 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:50:24 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 13:50:24 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 13:50:24 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 13:50:24 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:50:24 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465105824
+2016/06/05 13:50:24 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465105824)
+2016/06/05 13:50:24 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 13:52:07 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:52:09 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 13:52:09 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 13:52:09 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 13:52:09 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:52:09 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465105929
+2016/06/05 13:52:09 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465105929)
+2016/06/05 13:52:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 13:53:22 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:53:23 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 13:53:23 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 13:53:23 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 13:53:23 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:53:23 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465106003
+2016/06/05 13:53:23 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465106003)
+2016/06/05 13:53:23 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 13:55:18 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:55:19 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 13:55:19 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 13:55:19 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 13:55:19 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:55:19 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465106119
+2016/06/05 13:55:19 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465106119)
+2016/06/05 13:55:19 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 13:55:28 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:55:29 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 13:55:29 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 13:55:29 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 13:55:29 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:55:29 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465106129
+2016/06/05 13:55:29 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465106129)
+2016/06/05 13:55:29 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 13:55:42 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:55:43 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 13:55:43 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 13:55:43 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 13:55:43 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:55:43 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465106143
+2016/06/05 13:55:43 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465106143)
+2016/06/05 13:55:43 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/05 13:55:49 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:55:50 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/05 13:55:50 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/05 13:55:50 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/05 13:55:50 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/05 13:55:50 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465106150
+2016/06/05 13:55:50 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465106150)
+2016/06/05 13:55:50 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES

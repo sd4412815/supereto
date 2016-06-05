@@ -39,7 +39,7 @@ return array(
         'ext.cascadedropdown.ECascadeDropDown'
     ),
     
-    'defaultController' => 'site',
+    'defaultController' => 'index',
     'theme' => 'v1', // requires you to copy the theme under your themes directory
     
     'modules' => $modules,

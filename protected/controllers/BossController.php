@@ -517,11 +517,7 @@ class BossController extends Controller {
 	}
 	public function actionProfile() {
 		$upload = new ShopForm ();
-		
-		// if ( !Yii::app()->user->checkAccess('boss') ) {
-		// $this->redirect(array('boss/login'));
-		// Yii::app()->end();
-		// }
+
 		$boss = UTool::getBoss ();
 		$shop = UTool::getShop ();
 		$this->layout = 'admin_boss';
@@ -550,13 +546,9 @@ class BossController extends Controller {
 				'shop' => $shop,
 				'boss' => $boss,
 				'_view' => $_view 
-		)
-		// 'upload'=>$upload,
-		 );
-		
-		// }else{
-		// throw new CHttpException(401,'非法请求');
-		// }
+				)
+		);
+
 	}
 	public function actionGuarantee() {
 		$this->layout = 'admin_boss';
