@@ -68,6 +68,9 @@ $this->pageTitle = '登录';
             <?php echo $form->error ( $model, 'u_pwd');?>
 <!--            <input type="password" name="password" required placeholder="Password">-->
         </label>
+            <?php if (Yii::app()->user->hasFlash('loginError')):?>
+                <div style="color: #ff6140;"><?php echo Yii::app()->user->getFlash('loginError');?></div>
+            <?php endif;?>
             <?php
                 echo CHtml::submitButton ( '登录', array (
                     //'class' => 'btn col-sm-offset-4 col-sm-4 col-xs-4 ',

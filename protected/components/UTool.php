@@ -158,19 +158,11 @@ class UTool {
 		if (isset ( $_oi )) {
 			$token_code = $_oi;
 		}
-		
-		// $session = new CHttpSession();
-		// $token = @$session['csrfId'];
+
 		$token = Yii::app ()->session ['csrfId'];
 		if (strcmp ( $token, $token_code ) == 0) {
 			return true;
 		}
-		// return CPasswordHelper::verifyPassword($token, $token_code);
-		// if( CPasswordHelper::verifyPassword($token, $token_code)){
-		// return 'true';
-		// }else {
-		// return 'false';
-		// }
 	}
 	
 	/**
@@ -339,18 +331,7 @@ class UTool {
 	public static function guaranteeRatio($totalValue) {
 		return 0.5;
 	}
-	public static function getShop() {
-		
-		// $boss = Boss::model()->findByAttributes(array(
-		// 'b_user_id'=>Yii::app()->user->id,
-		// ));
-		
-		// $boss = UTool::getBoss();
-		$shop = WashShop::model ()->findByAttributes ( array (
-				'ws_boss_id' => Yii::app ()->user->id 
-		) );
-		return $shop;
-	}
+
 	public static function getBoss() {
 		$boss = Boss::model ()->findByAttributes ( array (
 				'b_user_id' => Yii::app ()->user->id 

@@ -3,6 +3,7 @@
 // change the following paths if necessary
 $yii=dirname(__FILE__).'/yii/yii.php';
 $config=dirname(__FILE__).'/protected/config/main.php';
+$function=dirname(__FILE__).'/protected/function.php';
 
 // 在生产模式下删除以下的行
 // defined('YII_DEBUG') or define('YII_DEBUG',true);
@@ -14,6 +15,7 @@ defined('YII_TRACE_LEVEL');
 // include_once('emoji.php');
 
 require_once($yii);
+require_once($function);
 
 $attributes = array(
 		'ak' => 'atV54I5hflatOH00IebtxSwR',
@@ -22,7 +24,7 @@ $attributes = array(
 );
 
 $app = Yii::createWebApplication($config);
-$detect = new Mobile_Detect;
+
 Yii::app()->theme = 'v1';
 $app->run();
 ?>

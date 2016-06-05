@@ -223,13 +223,9 @@ class LoginForm extends CFormModel {
 		$rlt = UTool::iniFuncRlt();
 		if ($this->_identity === null) {
 			$this->_identity = new UserIdentity ( $this->u_tel, $this->u_pwd );
-			// $isBoss = $this->scenario=="boss"?true:false;
 			$this->_identity->authenticate ($autoLogin);
-// 			if ($autoLogin){
-// 				$this->_identity->authenticate ();
-// 			}
-			
 		}
+		print_r($this->_identity->errorCode);
 		if ($this->_identity->errorCode === UserIdentity::ERROR_NONE) {
 			$duration = $this->rememberMe ? 3600 * 24 * 30 : 0; // 30 days
 			Yii::app ()->user->login ( $this->_identity, $duration );
@@ -239,7 +235,7 @@ class LoginForm extends CFormModel {
 			$user['u_error_count'] =0;
 			if($user->save()){
 				$msg = new Message();
-				$msg['m_content']='欢迎登陆我洗车';
+				$msg['m_content']='欢迎使用superETO';
 				$msg['m_datetime']=date('Y-m-d H:i:s');
 				$msg['m_type']=Message::TYPE_LOGIN;
 				$msg['m_level']=Message::LEVEL_NORM;
@@ -252,19 +248,14 @@ class LoginForm extends CFormModel {
 			$rlt['status']=true;
 			$rlt['data']=$user['id'];
 			$rlt['msg']='登录成功';
-// 			$rlt['']
 			return  $rlt;
-// 			return true;
 		} else if($this->_identity->errorCode === UserIdentity::ERROR_PASSWORD_INVALID){
 			$user = User::model()->findByPk($this->_identity->id);
-// 			$user['u_login_date']=date('Y-m-d H:i:m');
 			$user['u_error_count'] +=1;
 			if($user->save()){
 			}
 			@Yii::log($user['id'].'-login-'.$user['u_tel'].'-'.Yii::app()->request->userHostAddress.'-'.Yii::app()->request->userHost.'-'.Yii::app()->request->userAgent,CLogger::LEVEL_INFO,'user.login.fail');
-// 			return false;
 			$rlt['msg']='用户名或密码错误,还可重试<code>'.(6-$user['u_error_count']).'</code>次';
-// 			$rlt['data']=$user['u_error_count'];
 			return $rlt;
 		}elseif ($this->_identity->errorCode === UserIdentity::ERROR_UNKNOWN_IDENTITY){
 			$rlt['msg']='用户名或密码输入次数过多，账户已锁定，请重置密码';
