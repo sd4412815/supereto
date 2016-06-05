@@ -5,7 +5,7 @@
  * Time: 12:48:45
  */
 
-$this->pageTitle = '登录';
+$this->pageTitle = 'supereto--登录';
 ?>
 
 
@@ -81,7 +81,16 @@ $this->pageTitle = '登录';
         <?php $this->endWidget(); ?>
     <h5><a href="#">Forgot password</a></h5>
 </section>
-
+<script>
+    $('#btn_submit').onclick(function(){
+        //加载层-风格2
+        layer.load(2);
+        //此处演示关闭
+        setTimeout(function(){
+            layer.closeAll('loading');
+        }, 2000);
+    });
+</script>
 
 
 

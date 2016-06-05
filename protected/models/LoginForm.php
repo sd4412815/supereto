@@ -225,7 +225,6 @@ class LoginForm extends CFormModel {
 			$this->_identity = new UserIdentity ( $this->u_tel, $this->u_pwd );
 			$this->_identity->authenticate ($autoLogin);
 		}
-		print_r($this->_identity->errorCode);
 		if ($this->_identity->errorCode === UserIdentity::ERROR_NONE) {
 			$duration = $this->rememberMe ? 3600 * 24 * 30 : 0; // 30 days
 			Yii::app ()->user->login ( $this->_identity, $duration );
