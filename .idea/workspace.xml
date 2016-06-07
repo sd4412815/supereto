@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/themes/mobile_v2/views/MWeiXinEntxcSettings/_shopServiceSetForm1.php" line="380" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="23e5fea2-818f-495e-b4ca-203e73159781" name="默认的" comment="">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/laravel-plugin.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/protected/controllers/MWeiXinEntxcSettingsController.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/themes/mobile_v2/views/MWeiXinEntConfig/_shopServiceSetForm.php" afterPath="$PROJECT_DIR$/themes/mobile_v2/views/MWeiXinEntxcSettings/_shopServiceSetForm.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/themes/mobile_v2/views/MWeiXinEntConfig/_shopServiceSetForm1.php" afterPath="$PROJECT_DIR$/themes/mobile_v2/views/MWeiXinEntxcSettings/_shopServiceSetForm1.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/themes/mobile_v2/views/MWeiXinEntConfig/_timeList.php" afterPath="$PROJECT_DIR$/themes/mobile_v2/views/MWeiXinEntxcSettings/_timeList.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/themes/mobile_v2/views/MWeiXinEntConfig/_timeListInfo.php" afterPath="$PROJECT_DIR$/themes/mobile_v2/views/MWeiXinEntxcSettings/_timeListInfo.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/themes/mobile_v2/views/MWeiXinEntConfig/_time_list.php" afterPath="$PROJECT_DIR$/themes/mobile_v2/views/MWeiXinEntxcSettings/_time_list.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/themes/mobile_v2/views/MWeiXinEntConfig/_timelist_car_type.php" afterPath="$PROJECT_DIR$/themes/mobile_v2/views/MWeiXinEntxcSettings/_timelist_car_type.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/themes/mobile_v2/views/MWeiXinEntConfig/serviceSet.php" afterPath="$PROJECT_DIR$/themes/mobile_v2/views/MWeiXinEntxcSettings/serviceSet.php" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/themes/mobile_v2/views/MWeiXinEntConfig/timeList.php" afterPath="$PROJECT_DIR$/themes/mobile_v2/views/MWeiXinEntxcSettings/timeList.php" />
     </list>
     <list readonly="true" id="54a25e87-5eca-464b-ae98-0eb591e848ca" name="Default" comment="" />
     <ignored path="yuanzb.iws" />
@@ -42,263 +48,7 @@
     <favorites_list name="yuanzb" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="supplier_category.php" pinned="false" current-in-tab="false">
-        <entry file="file://Y:/solaibao/code/supplier_category.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="651">
-              <caret line="58" column="32" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
-              <folding>
-                <element signature="e#7#23#0#PHP" expanded="true" />
-                <element signature="n#get_cat_info_supplier#0;n#!!top" expanded="true" />
-                <element signature="n#category_get_goods#0;n#!!top" expanded="true" />
-                <element signature="n#get_cagtegory_goods_count#0;n#!!top" expanded="true" />
-                <marker date="1458978285137" expanded="true" signature="10391:10598" placeholder="SELECT cat_n... ${$GLOBALS['ecs']-&gt;table('supplier_category')}" />
-                <marker date="1458978285137" expanded="true" signature="14951:15152" placeholder="SELECT count... ${$GLOBALS['ecs']-&gt;table('supplier_goods_cat')}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lib_supplier_common.php" pinned="false" current-in-tab="false">
-        <entry file="file://Y:/solaibao/code/includes/lib_supplier_common.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3697">
-              <caret line="414" column="50" selection-start-line="414" selection-start-column="50" selection-end-line="414" selection-end-column="50" />
-              <folding>
-                <element signature="n#cat_list_supplier#0;n#!!top" expanded="true" />
-                <element signature="n#cat_options_supplier#0;n#!!top" expanded="true" />
-                <marker date="1429519271000" expanded="false" signature="10:14" placeholder="  公用函数库 ..." />
-                <marker date="1429519271000" expanded="true" signature="26743:26830" placeholder="SELECT goods... ${$GLOBALS['ecs']-&gt;table('supplier_goods_cat')}" />
-                <marker date="1429519271000" expanded="true" signature="27102:27219" placeholder="select type ${$GLOBALS['ecs']-&gt;table('store_type')}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="goods.php" pinned="false" current-in-tab="false">
-        <entry file="file://Y:/solaibao/code/slb_supplier/goods.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="goods_info.htm" pinned="false" current-in-tab="false">
-        <entry file="file://Y:/solaibao/code/slb_supplier/templates/goods_info.htm">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="162" column="0" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="inc_menu.php" pinned="false" current-in-tab="false">
-        <entry file="file://Y:/solaibao/code/slb_supplier/includes/inc_menu.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="14" column="67" selection-start-line="14" selection-start-column="67" selection-end-line="14" selection-end-column="67" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="category.php" pinned="false" current-in-tab="false">
-        <entry file="file://Y:/solaibao/code/slb_supplier/category.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="588">
-              <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lib_main.php" pinned="false" current-in-tab="true">
-        <entry file="file://Y:/solaibao/code/slb_supplier/includes/lib_main.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="683">
-              <caret line="1145" column="0" selection-start-line="1145" selection-start-column="0" selection-end-line="1145" selection-end-column="0" />
-              <folding>
-                <element signature="e#7#27#0#PHP" expanded="true" />
-                <element signature="n#read_modules#0;n#!!top" expanded="true" />
-                <element signature="n#sys_msg#0;n#!!top" expanded="true" />
-                <element signature="n#admin_log#0;n#!!top" expanded="true" />
-                <element signature="n#sys_joindate#0;n#!!top" expanded="true" />
-                <element signature="n#set_admin_session#0;n#!!top" expanded="true" />
-                <element signature="n#insert_config#0;n#!!top" expanded="true" />
-                <element signature="n#admin_priv#0;n#!!top" expanded="true" />
-                <element signature="n#check_authz#0;n#!!top" expanded="true" />
-                <element signature="n#check_authz_json#0;n#!!top" expanded="true" />
-                <element signature="n#get_bonus_type#0;n#!!top" expanded="true" />
-                <element signature="n#get_rank_list#0;n#!!top" expanded="true" />
-                <element signature="n#get_user_rank#0;n#!!top" expanded="true" />
-                <element signature="n#get_position_list#0;n#!!top" expanded="true" />
-                <element signature="n#create_html_editor#0;n#!!top" expanded="true" />
-                <element signature="n#get_goods_list#0;n#!!top" expanded="true" />
-                <element signature="n#get_article_list#0;n#!!top" expanded="true" />
-                <element signature="n#get_yes_no#0;n#!!top" expanded="true" />
-                <element signature="n#get_where_sql#0;n#!!top" expanded="true" />
-                <element signature="n#area_list#0;n#!!top" expanded="true" />
-                <element signature="n#chart_color#0;n#!!top" expanded="true" />
-                <element signature="n#goods_type_list#0;n#!!top" expanded="true" />
-                <element signature="n#get_pay_ids#0;n#!!top" expanded="true" />
-                <element signature="n#truncate_table#0;n#!!top" expanded="true" />
-                <element signature="n#get_charset_list#0;n#!!top" expanded="true" />
-                <element signature="n#make_json_response#0;n#!!top" expanded="true" />
-                <element signature="n#make_json_result#0;n#!!top" expanded="true" />
-                <element signature="n#make_json_error#0;n#!!top" expanded="true" />
-                <element signature="n#sort_flag#0;n#!!top" expanded="true" />
-                <element signature="n#page_and_size#0;n#!!top" expanded="true" />
-                <element signature="n#return_bytes#0;n#!!top" expanded="true" />
-                <element signature="n#get_attr_groups#0;n#!!top" expanded="true" />
-                <element signature="n#list_link_postfix#0;n#!!top" expanded="true" />
-                <element signature="n#set_filter#0;n#!!top" expanded="true" />
-                <element signature="n#get_filter#0;n#!!top" expanded="true" />
-                <element signature="n#sanitize_url#0;n#!!top" expanded="true" />
-                <element signature="n#cat_exists#0;n#!!top" expanded="true" />
-                <element signature="n#brand_exists#0;n#!!top" expanded="true" />
-                <element signature="n#admin_info#0;n#!!top" expanded="true" />
-                <element signature="n#suppliers_list_info#0;n#!!top" expanded="true" />
-                <element signature="n#suppliers_list_name#0;n#!!top" expanded="true" />
-                <element signature="n#cat_list_2#0;n#!!top" expanded="true" />
-                <element signature="n#cat_options_2#0;n#!!top" expanded="true" />
-                <element signature="n#create_shop_settiongs#0;n#!!top" expanded="true" />
-                <element signature="n#get_ssid_list#0;n#!!top" expanded="true" />
-                <element signature="n#get_store_fullname#0;n#!!top" expanded="true" />
-                <element signature="n#get_inout_type_name#0;n#!!top" expanded="true" />
-                <element signature="n#get_attr_name#0;n#!!top" expanded="true" />
-                <element signature="n#get_goods_attr_id#0;n#!!top" expanded="true" />
-                <element signature="n#update_stock_out#0;n#!!top" expanded="true" />
-                <element signature="n#update_stock_in#0;n#!!top" expanded="true" />
-                <element signature="n#update_old_stock#0;n#!!top" expanded="true" />
-                <marker date="1458980629555" expanded="true" signature="2099:2319" placeholder="INSERT INTO ${$GLOBALS['ecs']-&gt;table('admin_log')}... " />
-                <marker date="1458980629555" expanded="true" signature="3667:3752" placeholder="SELECT id FR... ${$ecs-&gt;table('shop_config')}" />
-                <marker date="1458980629555" expanded="true" signature="3804:3932" placeholder="INSERT INTO ${$ecs-&gt;table('shop_config')}... " />
-                <marker date="1458980629555" expanded="true" signature="5363:5498" placeholder="SELECT type_... ${$GLOBALS['ecs']-&gt;table('bonus_type')}" />
-                <marker date="1458980629555" expanded="true" signature="5983:6026" placeholder="SELECT rank_... ${$GLOBALS['ecs']-&gt;table('user_rank')}" />
-                <marker date="1458980629555" expanded="true" signature="6531:6642" placeholder="SELECT user_... ${$GLOBALS['ecs']-&gt;table('users')}" />
-                <marker date="1458980629555" expanded="true" signature="7875:7886" placeholder="..." />
-                <marker date="1458980629555" expanded="true" signature="7950:8151" placeholder="..." />
-                <marker date="1458980629555" expanded="true" signature="7987:8136" placeholder="{&quot;theme&quot;: &quot;default&quot;...}" />
-                <marker date="1458980629555" expanded="true" signature="11944:12058" placeholder="SELECT * FRO... ${$GLOBALS['ecs']-&gt;table('region')}" />
-                <marker date="1458980629555" expanded="true" signature="13065:13156" placeholder="SELECT cat_i... ${$GLOBALS['ecs']-&gt;table('goods_type')}" />
-                <marker date="1458980629555" expanded="true" signature="13666:13750" placeholder="SELECT pay_i... ${$GLOBALS['ecs']-&gt;table('payment')}" />
-                <marker date="1458980629555" expanded="true" signature="17373:17463" placeholder="SELECT attr_... ${$GLOBALS['ecs']-&gt;table('goods_type')}" />
-                <marker date="1458980629555" expanded="true" signature="19499:19646" placeholder="SELECT COUNT... ${$GLOBALS['ecs']-&gt;table('category')}" />
-                <marker date="1458980629555" expanded="true" signature="19763:19866" placeholder="SELECT COUNT... ${$GLOBALS['ecs']-&gt;table('brand')}" />
-                <marker date="1458980629555" expanded="true" signature="20044:20172" placeholder="SELECT * FRO... ${$GLOBALS['ecs']-&gt;table('admin_user')}" />
-                <marker date="1458980629555" expanded="true" signature="20606:20731" placeholder="SELECT suppl... ${$GLOBALS['ecs']-&gt;table(&quot;suppliers&quot;)}" />
-                <marker date="1458980629555" expanded="true" signature="29905:29988" placeholder="SELECT count... ${$ecs-&gt;table('supplier_shop_config')}" />
-                <marker date="1458980629555" expanded="true" signature="30086:33749" placeholder="INSERT INTO ${$ecs-&gt;table('supplier_shop_config')}... " />
-                <marker date="1458980629555" expanded="true" signature="34004:34137" placeholder="select store... ${$GLOBALS['ecs']-&gt;table('store_main')}" />
-                <marker date="1458980629555" expanded="true" signature="34536:34639" placeholder="select paren... ${$GLOBALS['ecs']-&gt;table('store_main')}" />
-                <marker date="1458980629555" expanded="true" signature="34763:34867" placeholder="select store... ${$GLOBALS['ecs']-&gt;table('store_main')}" />
-                <marker date="1458980629555" expanded="true" signature="35109:35203" placeholder="select type_... ${$GLOBALS['ecs']-&gt;table('store_inout_type')}" />
-                <marker date="1458980629555" expanded="true" signature="35354:35505" placeholder="select attr_... ${$GLOBALS['ecs']-&gt;table('goods_attr')}" />
-                <marker date="1458980629555" expanded="true" signature="36217:36426" placeholder="SELECT a.att... ${$GLOBALS['ecs']-&gt;table('goods')}" />
-                <marker date="1458980629555" expanded="true" signature="36483:36632" placeholder="SELECT goods... ${$GLOBALS['ecs']-&gt;table('goods_attr')}" />
-                <marker date="1458980629555" expanded="true" signature="37053:37208" placeholder="select goods... ${$GLOBALS['ecs']-&gt;table('store_inout_goods')}" />
-                <marker date="1458980629555" expanded="true" signature="37369:37616" placeholder="select stock... ${$GLOBALS['ecs']-&gt;table('store_goods_stock')}" />
-                <marker date="1458980629555" expanded="true" signature="38425:38760" placeholder="insert into ${$GLOBALS['ecs']-&gt;table('store_inout_xushibu')}" />
-                <marker date="1458980629555" expanded="true" signature="39014:39169" placeholder="select goods... ${$GLOBALS['ecs']-&gt;table('store_inout_goods')}" />
-                <marker date="1458980629555" expanded="true" signature="39269:39494" placeholder="select stock... ${$GLOBALS['ecs']-&gt;table('store_goods_stock')}" />
-                <marker date="1458980629555" expanded="true" signature="39769:40040" placeholder="insert into ${$GLOBALS['ecs']-&gt;table('store_goods_stock')}" />
-                <marker date="1458980629555" expanded="true" signature="40167:40502" placeholder="insert into ${$GLOBALS['ecs']-&gt;table('store_inout_xushibu')}" />
-                <marker date="1458980629555" expanded="true" signature="40676:40782" placeholder="select sum(s... ${$GLOBALS['ecs']-&gt;table('store_goods_stock')}" />
-                <marker date="1458980629555" expanded="true" signature="41001:41135" placeholder="select sum(s... ${$GLOBALS['ecs']-&gt;table('store_goods_stock')}" />
-                <marker date="1458980629555" expanded="true" signature="41193:41311" placeholder="select produ... ${$GLOBALS['ecs']-&gt;table('products')}" />
-                <marker date="1458980629555" expanded="true" signature="41532:41670" placeholder="insert into ${$GLOBALS['ecs']-&gt;table('products')}... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lib_main_1.php" pinned="false" current-in-tab="false">
-        <entry file="file://Y:/solaibao/code/slb_supplier/includes/lib_main_1.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="614">
-              <caret line="1142" column="0" selection-start-line="995" selection-start-column="0" selection-end-line="1142" selection-end-column="0" />
-              <folding>
-                <element signature="n#cat_options_2#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="lib_common.php" pinned="false" current-in-tab="false">
-        <entry file="file://Y:/solaibao/code/mobile2/includes/lib_common.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="875">
-              <caret line="3218" column="38" selection-start-line="3218" selection-start-column="38" selection-end-line="3218" selection-end-column="38" />
-              <folding>
-                <marker date="1458977652695" expanded="true" signature="3673:3814" placeholder="SELECT regio... ${$GLOBALS['ecs']-&gt;table('region')}" />
-                <marker date="1458977652695" expanded="true" signature="4054:4159" placeholder="SELECT confi... ${$GLOBALS['ecs']-&gt;table('shipping_area')}" />
-                <marker date="1458977652695" expanded="true" signature="14544:14633" placeholder="SELECT code,... ${$GLOBALS['ecs']-&gt;table('shop_config')}" />
-                <marker date="1458977652695" expanded="true" signature="18617:18709" placeholder="SELECT brand... ${$GLOBALS['ecs']-&gt;table('brand')}" />
-                <marker date="1458977652695" expanded="true" signature="20793:20976" placeholder="SELECT act_i... ${$GLOBALS['ecs']-&gt;table('goods_activity')}" />
-                <marker date="1458977652695" expanded="true" signature="23487:23674" placeholder="SELECT act_i... ${$GLOBALS['ecs']-&gt;table('favourable_activity')}" />
-                <marker date="1458977652695" expanded="true" signature="24426:24533" placeholder="SELECT cat_i... ${$GLOBALS['ecs']-&gt;table('goods')}" />
-                <marker date="1458977652695" expanded="true" signature="28946:29084" placeholder="SELECT templ... ${$GLOBALS['ecs']-&gt;table('mail_templates')}" />
-                <marker date="1458977652695" expanded="true" signature="29696:30127" placeholder="INSERT INTO ${$GLOBALS['ecs']-&gt;table('order_action')}... " />
-                <marker date="1458977652695" expanded="true" signature="29892:30127" placeholder="SELECT order... ${$GLOBALS['ecs']-&gt;table('order_info')}" />
-                <marker date="1458977652695" expanded="true" signature="31737:31925" placeholder="SELECT goods... ${$GLOBALS['ecs']-&gt;table('order_goods')}" />
-                <marker date="1458977652695" expanded="true" signature="31965:32223" placeholder="SELECT goods... ${$GLOBALS['ecs']-&gt;table('order_goods')}" />
-                <marker date="1458977652695" expanded="true" signature="34129:34245" placeholder="SELECT COUNT... ${$GLOBALS['ecs']-&gt;table('virtual_card')}" />
-                <marker date="1458977652695" expanded="true" signature="34474:34638" placeholder="SELECT card_... ${$GLOBALS['ecs']-&gt;table('virtual_card')}" />
-                <marker date="1458977652695" expanded="true" signature="36239:36358" placeholder="SELECT order... ${$GLOBALS['ecs']-&gt;table('order_info')}" />
-                <marker date="1458977652695" expanded="true" signature="38197:38353" placeholder="SELECT card_... ${$GLOBALS['ecs']-&gt;table('virtual_card')}" />
-                <marker date="1458977652695" expanded="true" signature="40201:40380" placeholder="SELECT ext_i... ${$GLOBALS['ecs']-&gt;table('goods_activity')}" />
-                <marker date="1458977652695" expanded="true" signature="78696:79065" placeholder="SELECT a.att... ${$GLOBALS['ecs']-&gt;table('attribute')}" />
-                <marker date="1458977652695" expanded="true" signature="79636:80005" placeholder="SELECT a.att... ${$GLOBALS['ecs']-&gt;table('attribute')}" />
-                <marker date="1458977652695" expanded="true" signature="83513:83768" placeholder="SELECT s.sup... ${$GLOBALS['ecs']-&gt;table('goods')}" />
-                <marker date="1458977652695" expanded="true" signature="84480:84929" placeholder="SELECT pg.go... ${$GLOBALS['ecs']-&gt;table('package_goods')}" />
-                <marker date="1458977652695" expanded="true" signature="86157:86275" placeholder="SELECT goods... ${$GLOBALS['ecs']-&gt;table('goods_attr')}" />
-                <marker date="1458977652695" expanded="true" signature="87826:87898" placeholder="SELECT * FRO... ${$GLOBALS['ecs']-&gt;table('products')}" />
-                <marker date="1458977652695" expanded="true" signature="87994:88081" placeholder="SELECT goods... ${$GLOBALS['ecs']-&gt;table('goods_attr')}" />
-                <marker date="1458977652695" expanded="true" signature="89489:89762" placeholder="SELECT ga.go... ${$GLOBALS['ecs']-&gt;table('goods_attr')}" />
-                <marker date="1458977652695" expanded="true" signature="91403:91547" placeholder="SELECT regio... ${$GLOBALS['ecs']-&gt;table('region')}" />
-                <marker date="1458977652695" expanded="true" signature="92806:92904" placeholder="SELECT * FRO... ${$GLOBALS['ecs']-&gt;table('keyword')}" />
-                <marker date="1458977652695" expanded="true" signature="93787:94093" placeholder="INSERT INTO ${$GLOBALS['ecs']-&gt;table('keyword')}... " />
-                <marker date="1458977652695" expanded="true" signature="94272:94460" placeholder="INSERT INTO ${$GLOBALS['ecs']-&gt;table('keyword_area')}... " />
-                <marker date="1458977652695" expanded="true" signature="96730:96863" placeholder="select code,... ${$GLOBALS['ecs']-&gt;table('supplier_shop_config')}" />
-                <marker date="1458977652695" expanded="true" signature="97179:97225" placeholder="SELECT * FRO... weixin_config" />
-                <marker date="1458977652695" expanded="true" signature="97562:97610" placeholder="select * fro... weixin_user" />
-                <marker date="1458977652695" expanded="true" signature="97873:98040" placeholder="insert into weixin_corn... " />
-                <marker date="1458977652695" expanded="true" signature="98238:98330" placeholder="select regio... ${$GLOBALS['ecs']-&gt;table('region')}" />
-                <marker date="1458977652695" expanded="true" signature="98416:98534" placeholder="select regio... ${$GLOBALS['ecs']-&gt;table('region')}" />
-                <marker date="1458977652695" expanded="true" signature="98614:98733" placeholder="select regio... ${$GLOBALS['ecs']-&gt;table('region')}" />
-                <marker date="1458977652695" expanded="true" signature="101652:101666" placeholder="select * fro... ${$ecs-&gt;table('region')}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="navigator.php" pinned="false" current-in-tab="false">
-        <entry file="file://Y:/solaibao/code/slb_supplier/navigator.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="987">
-              <caret line="319" column="33" selection-start-line="319" selection-start-column="33" selection-end-line="319" selection-end-column="33" />
-              <folding>
-                <marker date="1458715503633" expanded="true" signature="2503:2613" placeholder="SELECT max(v... ${$ecs-&gt;table('supplier_nav')}" />
-                <marker date="1458715503633" expanded="true" signature="3049:3330" placeholder="INSERT INTO ${$GLOBALS['ecs']-&gt;table('supplier_nav')}... " />
-                <marker date="1458715503633" expanded="true" signature="3412:3647" placeholder="INSERT INTO ${$GLOBALS['ecs']-&gt;table('supplier_nav')}... " />
-                <marker date="1458715503633" expanded="true" signature="4266:4341" placeholder="SELECT * FRO... ${$GLOBALS['ecs']-&gt;table('supplier_nav')}" />
-                <marker date="1458715503633" expanded="true" signature="5376:5473" placeholder="SELECT ctype... ${$GLOBALS['ecs']-&gt;table('supplier_nav')}" />
-                <marker date="1458715503633" expanded="true" signature="7785:7928" placeholder="SELECT ctype... ${$GLOBALS['ecs']-&gt;table('supplier_nav')}" />
-                <marker date="1458715503633" expanded="true" signature="8080:8206" placeholder="DELETE FROM " />
-                <marker date="1458715503633" expanded="true" signature="9284:9382" placeholder="SELECT type,... ${$GLOBALS['ecs']-&gt;table('supplier_nav')}" />
-                <marker date="1458715503633" expanded="true" signature="10497:10581" placeholder="SELECT count... ${$GLOBALS['ecs']-&gt;table('supplier_nav')}" />
-                <marker date="1458715503633" expanded="true" signature="15487:15559" placeholder="SELECT show_... ${$tablename}" />
-                <marker date="1458715503633" expanded="true" signature="15982:16062" placeholder="UPDATE ${$ta... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="HierarchyBrowserManager">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
@@ -306,8 +56,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../xc2/themes/v1/views/site/index.php" />
-        <option value="$PROJECT_DIR$/../xc2/protected/models/LoginForm.php" />
         <option value="$PROJECT_DIR$/themes/v1/js/custom.js" />
         <option value="$PROJECT_DIR$/../xc2/protected/components/serviceInterfaces/cartypeInterface.php" />
         <option value="$PROJECT_DIR$/../xc2/protected/controllers/WashShopController.php" />
@@ -357,13 +105,16 @@
         <option value="Y:/solaibao/code/slb_supplier/includes/inc_menu.php" />
         <option value="Y:/solaibao/code/slb_supplier/category.php" />
         <option value="Y:/solaibao/code/slb_supplier/includes/lib_main.php" />
+        <option value="$PROJECT_DIR$/protected/config/modules.php" />
+        <option value="$PROJECT_DIR$/protected/config/main.php" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" />
-  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PerforceDirect.Settings">
     <option name="ENABLED" value="false" />
@@ -375,10 +126,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="x" value="47" />
+    <option name="y" value="-4" />
+    <option name="width" value="1873" />
+    <option name="height" value="1084" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -422,7 +173,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
+    <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
       <showMembers ProjectPane="false" />
       <showModules />
@@ -436,6 +187,16 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope">
+        <subPane subId="Problems" />
+        <subPane subId="测试" />
+        <subPane subId="问题" />
+        <subPane subId="Changed Files" />
+        <subPane subId="Project Files" />
+        <subPane subId="默认的" />
+        <subPane subId="Default" />
+        <subPane subId="Tests" />
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -446,54 +207,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope">
-        <subPane subId="测试" />
-        <subPane subId="问题" />
-        <subPane subId="Project Files">
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="code">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="code">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="slb_supplier">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT USER_OBJECT="Root">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="code">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="slb_supplier">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT USER_OBJECT="includes">
-              <option name="myItemId" value="" />
-              <option name="myItemType" value="" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
+      <pane id="Scratches">
+        <subPane />
       </pane>
       <pane id="NBKnowledgePane">
         <subPane />
@@ -501,9 +216,9 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="Y:/solaibao/code" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="full.screen.before.presentation.mode" value="false" />
     <property name="ToolWindow数据库.ShowToolbar" value="false" />
@@ -600,11 +315,12 @@
       <updated>1449458563344</updated>
       <workItem from="1458974274908" duration="174000" />
       <workItem from="1458974486826" duration="7049000" />
+      <workItem from="1465175772980" duration="2671000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7223000" />
+    <option name="totallyTimeSpent" value="9894000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -616,10 +332,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
-    <editor active="true" />
+    <frame x="47" y="-4" width="1873" height="1084" extended-state="7" />
+    <editor active="false" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14270833" sideWeight="0.4910432" order="0" side_tool="false" content_ui="combo" x="215" y="144" width="339" height="1033" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14255206" sideWeight="0.4910432" order="0" side_tool="false" content_ui="combo" x="215" y="144" width="339" height="1033" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3265925" sideWeight="0.4968017" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32769555" sideWeight="0.50319827" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="true" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.13113007" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -9664,547 +9380,82 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/themes/mobile_v2/views/MWeiXinEntxcSettings/_timeListInfo.php">
+    <entry file="file://$PROJECT_DIR$/themes/mobile_v2/views/layouts/main_weixin.php" />
+    <entry file="file://$PROJECT_DIR$/themes/mobile_v2/views/MWeiXinEntxcSettings/serviceSet.php" />
+    <entry file="file://$PROJECT_DIR$/themes/mobile_v2/views/MWeiXinEntxcSettings/_shopServiceSetForm1.php" />
+    <entry file="file://$PROJECT_DIR$/protected/models/ShopServiceSetForm.php" />
+    <entry file="file://$PROJECT_DIR$/protected/models/WashShopService.php" />
+    <entry file="file://$PROJECT_DIR$/protected/controllers/MWeiXinEntxcSettingsController.php" />
+    <entry file="file://$PROJECT_DIR$/themes/mobile_v2/js/custom.js" />
+    <entry file="file://$PROJECT_DIR$/themes/mobile_v2/views/MWeiXinEntxcSettings/_time_list.php" />
+    <entry file="file://$PROJECT_DIR$/themes/mobile_v2/views/MWeiXinEntxcSettings/timeList.php" />
+    <entry file="file://$PROJECT_DIR$/protected/models/WashShop.php" />
+    <entry file="file://$PROJECT_DIR$/themes/mobile_v2/views/MWeiXinEntConfig/news.php" />
+    <entry file="file://$PROJECT_DIR$/../xc2/protected/models/WashShop.php" />
+    <entry file="file://$PROJECT_DIR$/protected/models/JoinPriceForm.php" />
+    <entry file="file://$PROJECT_DIR$/../xc2/protected/controllers/WashShopController.php" />
+    <entry file="file://$PROJECT_DIR$/protected/controllers/MWeiXinEntConfigController.php" />
+    <entry file="file://$PROJECT_DIR$/../xc2/protected/components/serviceInterfaces/cartypeInterface.php" />
+    <entry file="file://$PROJECT_DIR$/../xc2/protected/components/services/CartypeServiceProd.php" />
+    <entry file="file://$PROJECT_DIR$/../xc2/protected/config/modules.php" />
+    <entry file="file://$PROJECT_DIR$/../xc2/protected/models/CarOil.php" />
+    <entry file="file://$PROJECT_DIR$/../xc2/protected/models/CouponCard.php" />
+    <entry file="file://$PROJECT_DIR$/../xc2/protected/components/services/ShopListServiceProd.php" />
+    <entry file="file://$PROJECT_DIR$/../xc2/protected/components/services/CouponCardServiceProd.php" />
+    <entry file="file://$PROJECT_DIR$/../xc2/protected/components/serviceInterfaces/CouponCardInterface.php" />
+    <entry file="file://$PROJECT_DIR$/../xc2/protected/controllers/MWeiXinEntConfigController.php" />
+    <entry file="file://$PROJECT_DIR$/../xc2/protected/config/ProdService.php" />
+    <entry file="file://$PROJECT_DIR$/../xc2/protected/components/services/WashShopServiceProd.php" />
+    <entry file="file://$PROJECT_DIR$/../xc2/protected/models/WashShopService.php" />
+    <entry file="file://$PROJECT_DIR$/../xc2/protected/controllers/UserController.php" />
+    <entry file="file://$PROJECT_DIR$/../xc2/protected/components/serviceInterfaces/WashShopInterface.php" />
+    <entry file="file://$PROJECT_DIR$/../xc2/protected/controllers/YuanController.php" />
+    <entry file="file://$PROJECT_DIR$/../xc2/protected/models/CardGenHistory.php" />
+    <entry file="file://Y:/solaibao/code/wholesale.php" />
+    <entry file="file://Y:/solaibao/code/supplier_index.php" />
+    <entry file="file://Y:/solaibao/code/supplier.php" />
+    <entry file="file://Y:/solaibao/code/slb_supplier/navigator.php" />
+    <entry file="file://Y:/solaibao/code/mobile2/includes/lib_common.php" />
+    <entry file="file://Y:/solaibao/code/mobile2/includes/lib_supplier_common.php" />
+    <entry file="file://Y:/solaibao/code/supplier_category.php" />
+    <entry file="file://Y:/solaibao/code/includes/lib_supplier_common.php" />
+    <entry file="file://Y:/solaibao/code/slb_supplier/goods.php" />
+    <entry file="file://Y:/solaibao/code/slb_supplier/templates/goods_info.htm" />
+    <entry file="file://Y:/solaibao/code/slb_supplier/templates/flow_stats.htm" />
+    <entry file="file://Y:/solaibao/code/slb_supplier/includes/inc_menu.php" />
+    <entry file="file://Y:/solaibao/code/slb_supplier/includes/init.php" />
+    <entry file="file://Y:/solaibao/code/slb_supplier/category.php" />
+    <entry file="file://Y:/solaibao/code/slb_supplier/includes/lib_main_1.php" />
+    <entry file="file://Y:/solaibao/code/slb_supplier/includes/lib_main.php" />
+    <entry file="file://$PROJECT_DIR$/protected/config/modules.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/OrderTemp.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="922" column="38" selection-start-line="922" selection-start-column="38" selection-end-line="922" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/mobile_v2/views/MWeiXinEntxcSettings/_shopServiceSetForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/mobile_v2/views/layouts/main_mweixin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/mobile_v2/views/layouts/main_weixin.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/mobile_v2/views/MWeiXinEntxcSettings/serviceSet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="24" column="89" selection-start-line="24" selection-start-column="89" selection-end-line="24" selection-end-column="89" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/mobile_v2/views/MWeiXinEntxcSettings/_shopServiceSetForm1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="401" column="45" selection-start-line="401" selection-start-column="45" selection-end-line="401" selection-end-column="45" />
+        <state relative-caret-position="616">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/ShopServiceSetForm.php">
+    <entry file="file://$PROJECT_DIR$/.htaccess">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/WashShopService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="57" column="77" selection-start-line="57" selection-start-column="77" selection-end-line="57" selection-end-column="77" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/MWeiXinEntxcSettingsController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="67" column="0" selection-start-line="67" selection-start-column="0" selection-end-line="67" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/mobile_v2/js/custom.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/mobile_v2/views/MWeiXinEntxcSettings/_time_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/mobile_v2/views/MWeiXinEntxcSettings/timeList.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="253" column="48" selection-start-line="253" selection-start-column="48" selection-end-line="253" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/WashShop.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="161" column="44" selection-start-line="161" selection-start-column="44" selection-end-line="161" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/themes/mobile_v2/views/MWeiXinEntConfig/news.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="18" column="2" selection-start-line="18" selection-start-column="2" selection-end-line="18" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../xc2/protected/models/WashShop.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="888" column="36" selection-start-line="888" selection-start-column="36" selection-end-line="888" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/JoinPriceForm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="192" column="20" selection-start-line="192" selection-start-column="20" selection-end-line="192" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../xc2/protected/controllers/WashShopController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="199" column="21" selection-start-line="199" selection-start-column="21" selection-end-line="199" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/MWeiXinEntConfigController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="475" column="0" selection-start-line="475" selection-start-column="0" selection-end-line="476" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../xc2/protected/components/serviceInterfaces/cartypeInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="10" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../xc2/protected/components/services/CartypeServiceProd.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../xc2/protected/config/modules.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../xc2/protected/models/CarOil.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="51" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../xc2/protected/models/CouponCard.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../xc2/protected/components/services/ShopListServiceProd.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../xc2/protected/components/services/CouponCardServiceProd.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="58" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="58" />
+        <state relative-caret-position="198">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../xc2/protected/components/serviceInterfaces/CouponCardInterface.php">
+    <entry file="file://$PROJECT_DIR$/protected/config/db.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="10" selection-end-column="1" />
-          <folding>
-            <element signature="e#6#61#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../xc2/protected/controllers/MWeiXinEntConfigController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../xc2/protected/config/ProdService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="37" column="56" selection-start-line="37" selection-start-column="56" selection-end-line="37" selection-end-column="56" />
+        <state relative-caret-position="288">
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../xc2/protected/components/services/WashShopServiceProd.php">
+    <entry file="file://$PROJECT_DIR$/protected/config/main.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3087">
-          <caret line="147" column="24" selection-start-line="147" selection-start-column="24" selection-end-line="147" selection-end-column="24" />
+        <state relative-caret-position="1012">
+          <caret line="109" column="20" selection-start-line="109" selection-start-column="20" selection-end-line="109" selection-end-column="20" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../xc2/protected/models/WashShopService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1155">
-          <caret line="55" column="18" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../xc2/protected/controllers/UserController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2100">
-          <caret line="100" column="63" selection-start-line="97" selection-start-column="8" selection-end-line="100" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../xc2/protected/components/serviceInterfaces/WashShopInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-          <folding>
-            <element signature="e#6#62#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../xc2/protected/controllers/YuanController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="903">
-          <caret line="170" column="34" selection-start-line="170" selection-start-column="34" selection-end-line="170" selection-end-column="34" />
-          <folding>
-            <element signature="n#actionyuan#0;n#YuanController#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../xc2/protected/models/CardGenHistory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="76" selection-start-line="5" selection-start-column="76" selection-end-line="5" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://Y:/solaibao/code/wholesale.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://Y:/solaibao/code/supplier_index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="84">
-          <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://Y:/solaibao/code/supplier.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="798">
-          <caret line="40" column="74" selection-start-line="40" selection-start-column="74" selection-end-line="40" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://Y:/solaibao/code/slb_supplier/navigator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="987">
-          <caret line="319" column="33" selection-start-line="319" selection-start-column="33" selection-end-line="319" selection-end-column="33" />
-          <folding>
-            <marker date="1458715503633" expanded="true" signature="2503:2613" placeholder="SELECT max(v... ${$ecs-&gt;table('supplier_nav')}" />
-            <marker date="1458715503633" expanded="true" signature="3049:3330" placeholder="INSERT INTO ${$GLOBALS['ecs']-&gt;table('supplier_nav')}... " />
-            <marker date="1458715503633" expanded="true" signature="3412:3647" placeholder="INSERT INTO ${$GLOBALS['ecs']-&gt;table('supplier_nav')}... " />
-            <marker date="1458715503633" expanded="true" signature="4266:4341" placeholder="SELECT * FRO... ${$GLOBALS['ecs']-&gt;table('supplier_nav')}" />
-            <marker date="1458715503633" expanded="true" signature="5376:5473" placeholder="SELECT ctype... ${$GLOBALS['ecs']-&gt;table('supplier_nav')}" />
-            <marker date="1458715503633" expanded="true" signature="7785:7928" placeholder="SELECT ctype... ${$GLOBALS['ecs']-&gt;table('supplier_nav')}" />
-            <marker date="1458715503633" expanded="true" signature="8080:8206" placeholder="DELETE FROM " />
-            <marker date="1458715503633" expanded="true" signature="9284:9382" placeholder="SELECT type,... ${$GLOBALS['ecs']-&gt;table('supplier_nav')}" />
-            <marker date="1458715503633" expanded="true" signature="10497:10581" placeholder="SELECT count... ${$GLOBALS['ecs']-&gt;table('supplier_nav')}" />
-            <marker date="1458715503633" expanded="true" signature="15487:15559" placeholder="SELECT show_... ${$tablename}" />
-            <marker date="1458715503633" expanded="true" signature="15982:16062" placeholder="UPDATE ${$ta... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://Y:/solaibao/code/mobile2/includes/lib_common.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="875">
-          <caret line="3218" column="38" selection-start-line="3218" selection-start-column="38" selection-end-line="3218" selection-end-column="38" />
-          <folding>
-            <marker date="1458977652695" expanded="true" signature="3673:3814" placeholder="SELECT regio... ${$GLOBALS['ecs']-&gt;table('region')}" />
-            <marker date="1458977652695" expanded="true" signature="4054:4159" placeholder="SELECT confi... ${$GLOBALS['ecs']-&gt;table('shipping_area')}" />
-            <marker date="1458977652695" expanded="true" signature="14544:14633" placeholder="SELECT code,... ${$GLOBALS['ecs']-&gt;table('shop_config')}" />
-            <marker date="1458977652695" expanded="true" signature="18617:18709" placeholder="SELECT brand... ${$GLOBALS['ecs']-&gt;table('brand')}" />
-            <marker date="1458977652695" expanded="true" signature="20793:20976" placeholder="SELECT act_i... ${$GLOBALS['ecs']-&gt;table('goods_activity')}" />
-            <marker date="1458977652695" expanded="true" signature="23487:23674" placeholder="SELECT act_i... ${$GLOBALS['ecs']-&gt;table('favourable_activity')}" />
-            <marker date="1458977652695" expanded="true" signature="24426:24533" placeholder="SELECT cat_i... ${$GLOBALS['ecs']-&gt;table('goods')}" />
-            <marker date="1458977652695" expanded="true" signature="28946:29084" placeholder="SELECT templ... ${$GLOBALS['ecs']-&gt;table('mail_templates')}" />
-            <marker date="1458977652695" expanded="true" signature="29696:30127" placeholder="INSERT INTO ${$GLOBALS['ecs']-&gt;table('order_action')}... " />
-            <marker date="1458977652695" expanded="true" signature="29892:30127" placeholder="SELECT order... ${$GLOBALS['ecs']-&gt;table('order_info')}" />
-            <marker date="1458977652695" expanded="true" signature="31737:31925" placeholder="SELECT goods... ${$GLOBALS['ecs']-&gt;table('order_goods')}" />
-            <marker date="1458977652695" expanded="true" signature="31965:32223" placeholder="SELECT goods... ${$GLOBALS['ecs']-&gt;table('order_goods')}" />
-            <marker date="1458977652695" expanded="true" signature="34129:34245" placeholder="SELECT COUNT... ${$GLOBALS['ecs']-&gt;table('virtual_card')}" />
-            <marker date="1458977652695" expanded="true" signature="34474:34638" placeholder="SELECT card_... ${$GLOBALS['ecs']-&gt;table('virtual_card')}" />
-            <marker date="1458977652695" expanded="true" signature="36239:36358" placeholder="SELECT order... ${$GLOBALS['ecs']-&gt;table('order_info')}" />
-            <marker date="1458977652695" expanded="true" signature="38197:38353" placeholder="SELECT card_... ${$GLOBALS['ecs']-&gt;table('virtual_card')}" />
-            <marker date="1458977652695" expanded="true" signature="40201:40380" placeholder="SELECT ext_i... ${$GLOBALS['ecs']-&gt;table('goods_activity')}" />
-            <marker date="1458977652695" expanded="true" signature="78696:79065" placeholder="SELECT a.att... ${$GLOBALS['ecs']-&gt;table('attribute')}" />
-            <marker date="1458977652695" expanded="true" signature="79636:80005" placeholder="SELECT a.att... ${$GLOBALS['ecs']-&gt;table('attribute')}" />
-            <marker date="1458977652695" expanded="true" signature="83513:83768" placeholder="SELECT s.sup... ${$GLOBALS['ecs']-&gt;table('goods')}" />
-            <marker date="1458977652695" expanded="true" signature="84480:84929" placeholder="SELECT pg.go... ${$GLOBALS['ecs']-&gt;table('package_goods')}" />
-            <marker date="1458977652695" expanded="true" signature="86157:86275" placeholder="SELECT goods... ${$GLOBALS['ecs']-&gt;table('goods_attr')}" />
-            <marker date="1458977652695" expanded="true" signature="87826:87898" placeholder="SELECT * FRO... ${$GLOBALS['ecs']-&gt;table('products')}" />
-            <marker date="1458977652695" expanded="true" signature="87994:88081" placeholder="SELECT goods... ${$GLOBALS['ecs']-&gt;table('goods_attr')}" />
-            <marker date="1458977652695" expanded="true" signature="89489:89762" placeholder="SELECT ga.go... ${$GLOBALS['ecs']-&gt;table('goods_attr')}" />
-            <marker date="1458977652695" expanded="true" signature="91403:91547" placeholder="SELECT regio... ${$GLOBALS['ecs']-&gt;table('region')}" />
-            <marker date="1458977652695" expanded="true" signature="92806:92904" placeholder="SELECT * FRO... ${$GLOBALS['ecs']-&gt;table('keyword')}" />
-            <marker date="1458977652695" expanded="true" signature="93787:94093" placeholder="INSERT INTO ${$GLOBALS['ecs']-&gt;table('keyword')}... " />
-            <marker date="1458977652695" expanded="true" signature="94272:94460" placeholder="INSERT INTO ${$GLOBALS['ecs']-&gt;table('keyword_area')}... " />
-            <marker date="1458977652695" expanded="true" signature="96730:96863" placeholder="select code,... ${$GLOBALS['ecs']-&gt;table('supplier_shop_config')}" />
-            <marker date="1458977652695" expanded="true" signature="97179:97225" placeholder="SELECT * FRO... weixin_config" />
-            <marker date="1458977652695" expanded="true" signature="97562:97610" placeholder="select * fro... weixin_user" />
-            <marker date="1458977652695" expanded="true" signature="97873:98040" placeholder="insert into weixin_corn... " />
-            <marker date="1458977652695" expanded="true" signature="98238:98330" placeholder="select regio... ${$GLOBALS['ecs']-&gt;table('region')}" />
-            <marker date="1458977652695" expanded="true" signature="98416:98534" placeholder="select regio... ${$GLOBALS['ecs']-&gt;table('region')}" />
-            <marker date="1458977652695" expanded="true" signature="98614:98733" placeholder="select regio... ${$GLOBALS['ecs']-&gt;table('region')}" />
-            <marker date="1458977652695" expanded="true" signature="101652:101666" placeholder="select * fro... ${$ecs-&gt;table('region')}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://Y:/solaibao/code/mobile2/includes/lib_supplier_common.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="390" column="37" selection-start-line="390" selection-start-column="37" selection-end-line="390" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://Y:/solaibao/code/supplier_category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="651">
-          <caret line="58" column="32" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
-          <folding>
-            <element signature="e#7#23#0#PHP" expanded="true" />
-            <element signature="n#get_cat_info_supplier#0;n#!!top" expanded="true" />
-            <element signature="n#category_get_goods#0;n#!!top" expanded="true" />
-            <element signature="n#get_cagtegory_goods_count#0;n#!!top" expanded="true" />
-            <marker date="1458978285137" expanded="true" signature="10391:10598" placeholder="SELECT cat_n... ${$GLOBALS['ecs']-&gt;table('supplier_category')}" />
-            <marker date="1458978285137" expanded="true" signature="14951:15152" placeholder="SELECT count... ${$GLOBALS['ecs']-&gt;table('supplier_goods_cat')}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://Y:/solaibao/code/includes/lib_supplier_common.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3697">
-          <caret line="414" column="50" selection-start-line="414" selection-start-column="50" selection-end-line="414" selection-end-column="50" />
-          <folding>
-            <element signature="n#cat_list_supplier#0;n#!!top" expanded="true" />
-            <element signature="n#cat_options_supplier#0;n#!!top" expanded="true" />
-            <marker date="1429519271000" expanded="false" signature="10:14" placeholder="  公用函数库 ..." />
-            <marker date="1429519271000" expanded="true" signature="26743:26830" placeholder="SELECT goods... ${$GLOBALS['ecs']-&gt;table('supplier_goods_cat')}" />
-            <marker date="1429519271000" expanded="true" signature="27102:27219" placeholder="select type ${$GLOBALS['ecs']-&gt;table('store_type')}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://Y:/solaibao/code/slb_supplier/goods.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://Y:/solaibao/code/slb_supplier/templates/goods_info.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="162" column="0" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://Y:/solaibao/code/slb_supplier/templates/flow_stats.htm">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://Y:/solaibao/code/slb_supplier/includes/inc_menu.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="14" column="67" selection-start-line="14" selection-start-column="67" selection-end-line="14" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://Y:/solaibao/code/slb_supplier/includes/init.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="81" column="47" selection-start-line="81" selection-start-column="47" selection-end-line="81" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://Y:/solaibao/code/slb_supplier/category.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="588">
-          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://Y:/solaibao/code/slb_supplier/includes/lib_main_1.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="614">
-          <caret line="1142" column="0" selection-start-line="995" selection-start-column="0" selection-end-line="1142" selection-end-column="0" />
-          <folding>
-            <element signature="n#cat_options_2#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://Y:/solaibao/code/slb_supplier/includes/lib_main.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="683">
-          <caret line="1145" column="0" selection-start-line="1145" selection-start-column="0" selection-end-line="1145" selection-end-column="0" />
-          <folding>
-            <element signature="e#7#27#0#PHP" expanded="true" />
-            <element signature="n#read_modules#0;n#!!top" expanded="true" />
-            <element signature="n#sys_msg#0;n#!!top" expanded="true" />
-            <element signature="n#admin_log#0;n#!!top" expanded="true" />
-            <element signature="n#sys_joindate#0;n#!!top" expanded="true" />
-            <element signature="n#set_admin_session#0;n#!!top" expanded="true" />
-            <element signature="n#insert_config#0;n#!!top" expanded="true" />
-            <element signature="n#admin_priv#0;n#!!top" expanded="true" />
-            <element signature="n#check_authz#0;n#!!top" expanded="true" />
-            <element signature="n#check_authz_json#0;n#!!top" expanded="true" />
-            <element signature="n#get_bonus_type#0;n#!!top" expanded="true" />
-            <element signature="n#get_rank_list#0;n#!!top" expanded="true" />
-            <element signature="n#get_user_rank#0;n#!!top" expanded="true" />
-            <element signature="n#get_position_list#0;n#!!top" expanded="true" />
-            <element signature="n#create_html_editor#0;n#!!top" expanded="true" />
-            <element signature="n#get_goods_list#0;n#!!top" expanded="true" />
-            <element signature="n#get_article_list#0;n#!!top" expanded="true" />
-            <element signature="n#get_yes_no#0;n#!!top" expanded="true" />
-            <element signature="n#get_where_sql#0;n#!!top" expanded="true" />
-            <element signature="n#area_list#0;n#!!top" expanded="true" />
-            <element signature="n#chart_color#0;n#!!top" expanded="true" />
-            <element signature="n#goods_type_list#0;n#!!top" expanded="true" />
-            <element signature="n#get_pay_ids#0;n#!!top" expanded="true" />
-            <element signature="n#truncate_table#0;n#!!top" expanded="true" />
-            <element signature="n#get_charset_list#0;n#!!top" expanded="true" />
-            <element signature="n#make_json_response#0;n#!!top" expanded="true" />
-            <element signature="n#make_json_result#0;n#!!top" expanded="true" />
-            <element signature="n#make_json_error#0;n#!!top" expanded="true" />
-            <element signature="n#sort_flag#0;n#!!top" expanded="true" />
-            <element signature="n#page_and_size#0;n#!!top" expanded="true" />
-            <element signature="n#return_bytes#0;n#!!top" expanded="true" />
-            <element signature="n#get_attr_groups#0;n#!!top" expanded="true" />
-            <element signature="n#list_link_postfix#0;n#!!top" expanded="true" />
-            <element signature="n#set_filter#0;n#!!top" expanded="true" />
-            <element signature="n#get_filter#0;n#!!top" expanded="true" />
-            <element signature="n#sanitize_url#0;n#!!top" expanded="true" />
-            <element signature="n#cat_exists#0;n#!!top" expanded="true" />
-            <element signature="n#brand_exists#0;n#!!top" expanded="true" />
-            <element signature="n#admin_info#0;n#!!top" expanded="true" />
-            <element signature="n#suppliers_list_info#0;n#!!top" expanded="true" />
-            <element signature="n#suppliers_list_name#0;n#!!top" expanded="true" />
-            <element signature="n#cat_list_2#0;n#!!top" expanded="true" />
-            <element signature="n#cat_options_2#0;n#!!top" expanded="true" />
-            <element signature="n#create_shop_settiongs#0;n#!!top" expanded="true" />
-            <element signature="n#get_ssid_list#0;n#!!top" expanded="true" />
-            <element signature="n#get_store_fullname#0;n#!!top" expanded="true" />
-            <element signature="n#get_inout_type_name#0;n#!!top" expanded="true" />
-            <element signature="n#get_attr_name#0;n#!!top" expanded="true" />
-            <element signature="n#get_goods_attr_id#0;n#!!top" expanded="true" />
-            <element signature="n#update_stock_out#0;n#!!top" expanded="true" />
-            <element signature="n#update_stock_in#0;n#!!top" expanded="true" />
-            <element signature="n#update_old_stock#0;n#!!top" expanded="true" />
-            <marker date="1458980629555" expanded="true" signature="2099:2319" placeholder="INSERT INTO ${$GLOBALS['ecs']-&gt;table('admin_log')}... " />
-            <marker date="1458980629555" expanded="true" signature="3667:3752" placeholder="SELECT id FR... ${$ecs-&gt;table('shop_config')}" />
-            <marker date="1458980629555" expanded="true" signature="3804:3932" placeholder="INSERT INTO ${$ecs-&gt;table('shop_config')}... " />
-            <marker date="1458980629555" expanded="true" signature="5363:5498" placeholder="SELECT type_... ${$GLOBALS['ecs']-&gt;table('bonus_type')}" />
-            <marker date="1458980629555" expanded="true" signature="5983:6026" placeholder="SELECT rank_... ${$GLOBALS['ecs']-&gt;table('user_rank')}" />
-            <marker date="1458980629555" expanded="true" signature="6531:6642" placeholder="SELECT user_... ${$GLOBALS['ecs']-&gt;table('users')}" />
-            <marker date="1458980629555" expanded="true" signature="7875:7886" placeholder="..." />
-            <marker date="1458980629555" expanded="true" signature="7950:8151" placeholder="..." />
-            <marker date="1458980629555" expanded="true" signature="7987:8136" placeholder="{&quot;theme&quot;: &quot;default&quot;...}" />
-            <marker date="1458980629555" expanded="true" signature="11944:12058" placeholder="SELECT * FRO... ${$GLOBALS['ecs']-&gt;table('region')}" />
-            <marker date="1458980629555" expanded="true" signature="13065:13156" placeholder="SELECT cat_i... ${$GLOBALS['ecs']-&gt;table('goods_type')}" />
-            <marker date="1458980629555" expanded="true" signature="13666:13750" placeholder="SELECT pay_i... ${$GLOBALS['ecs']-&gt;table('payment')}" />
-            <marker date="1458980629555" expanded="true" signature="17373:17463" placeholder="SELECT attr_... ${$GLOBALS['ecs']-&gt;table('goods_type')}" />
-            <marker date="1458980629555" expanded="true" signature="19499:19646" placeholder="SELECT COUNT... ${$GLOBALS['ecs']-&gt;table('category')}" />
-            <marker date="1458980629555" expanded="true" signature="19763:19866" placeholder="SELECT COUNT... ${$GLOBALS['ecs']-&gt;table('brand')}" />
-            <marker date="1458980629555" expanded="true" signature="20044:20172" placeholder="SELECT * FRO... ${$GLOBALS['ecs']-&gt;table('admin_user')}" />
-            <marker date="1458980629555" expanded="true" signature="20606:20731" placeholder="SELECT suppl... ${$GLOBALS['ecs']-&gt;table(&quot;suppliers&quot;)}" />
-            <marker date="1458980629555" expanded="true" signature="29905:29988" placeholder="SELECT count... ${$ecs-&gt;table('supplier_shop_config')}" />
-            <marker date="1458980629555" expanded="true" signature="30086:33749" placeholder="INSERT INTO ${$ecs-&gt;table('supplier_shop_config')}... " />
-            <marker date="1458980629555" expanded="true" signature="34004:34137" placeholder="select store... ${$GLOBALS['ecs']-&gt;table('store_main')}" />
-            <marker date="1458980629555" expanded="true" signature="34536:34639" placeholder="select paren... ${$GLOBALS['ecs']-&gt;table('store_main')}" />
-            <marker date="1458980629555" expanded="true" signature="34763:34867" placeholder="select store... ${$GLOBALS['ecs']-&gt;table('store_main')}" />
-            <marker date="1458980629555" expanded="true" signature="35109:35203" placeholder="select type_... ${$GLOBALS['ecs']-&gt;table('store_inout_type')}" />
-            <marker date="1458980629555" expanded="true" signature="35354:35505" placeholder="select attr_... ${$GLOBALS['ecs']-&gt;table('goods_attr')}" />
-            <marker date="1458980629555" expanded="true" signature="36217:36426" placeholder="SELECT a.att... ${$GLOBALS['ecs']-&gt;table('goods')}" />
-            <marker date="1458980629555" expanded="true" signature="36483:36632" placeholder="SELECT goods... ${$GLOBALS['ecs']-&gt;table('goods_attr')}" />
-            <marker date="1458980629555" expanded="true" signature="37053:37208" placeholder="select goods... ${$GLOBALS['ecs']-&gt;table('store_inout_goods')}" />
-            <marker date="1458980629555" expanded="true" signature="37369:37616" placeholder="select stock... ${$GLOBALS['ecs']-&gt;table('store_goods_stock')}" />
-            <marker date="1458980629555" expanded="true" signature="38425:38760" placeholder="insert into ${$GLOBALS['ecs']-&gt;table('store_inout_xushibu')}" />
-            <marker date="1458980629555" expanded="true" signature="39014:39169" placeholder="select goods... ${$GLOBALS['ecs']-&gt;table('store_inout_goods')}" />
-            <marker date="1458980629555" expanded="true" signature="39269:39494" placeholder="select stock... ${$GLOBALS['ecs']-&gt;table('store_goods_stock')}" />
-            <marker date="1458980629555" expanded="true" signature="39769:40040" placeholder="insert into ${$GLOBALS['ecs']-&gt;table('store_goods_stock')}" />
-            <marker date="1458980629555" expanded="true" signature="40167:40502" placeholder="insert into ${$GLOBALS['ecs']-&gt;table('store_inout_xushibu')}" />
-            <marker date="1458980629555" expanded="true" signature="40676:40782" placeholder="select sum(s... ${$GLOBALS['ecs']-&gt;table('store_goods_stock')}" />
-            <marker date="1458980629555" expanded="true" signature="41001:41135" placeholder="select sum(s... ${$GLOBALS['ecs']-&gt;table('store_goods_stock')}" />
-            <marker date="1458980629555" expanded="true" signature="41193:41311" placeholder="select produ... ${$GLOBALS['ecs']-&gt;table('products')}" />
-            <marker date="1458980629555" expanded="true" signature="41532:41670" placeholder="insert into ${$GLOBALS['ecs']-&gt;table('products')}... " />
-          </folding>
         </state>
       </provider>
     </entry>
