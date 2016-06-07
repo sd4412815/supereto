@@ -85,3 +85,53 @@
 2016/06/07 16:56:17 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465289777
 2016/06/07 16:56:17 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='7cd2564c13dff7e2907d90f19f96fa03' AND (expire=0 OR expire>1465289777)
 2016/06/07 16:56:17 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/08 00:15:03 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/08 00:15:04 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/08 00:15:04 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/08 00:15:04 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/08 00:15:04 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/08 00:15:04 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465316104
+2016/06/08 00:15:04 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465316104)
+2016/06/08 00:15:04 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21'
+2016/06/08 00:15:04 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO YiiCache (id,expire,value) VALUES ('2f1a25645a4b382ef2300e7660355a21',0,:value)
+2016/06/08 00:15:04 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/08 00:15:07 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/08 00:15:07 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/08 00:15:07 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/08 00:15:07 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/08 00:15:08 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/08 00:15:08 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465316108
+2016/06/08 00:15:08 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465316108)
+2016/06/08 00:15:08 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/08 00:15:10 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/08 00:15:10 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/08 00:15:10 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/08 00:15:10 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/08 00:15:10 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/08 00:15:10 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465316110
+2016/06/08 00:15:10 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465316110)
+2016/06/08 00:15:10 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/08 00:15:12 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/08 00:15:12 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/08 00:15:12 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/08 00:15:12 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/08 00:15:12 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/08 00:15:12 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465316112
+2016/06/08 00:15:12 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465316112)
+2016/06/08 00:15:12 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/08 00:15:15 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/08 00:15:15 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/08 00:15:15 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/08 00:15:15 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/08 00:15:15 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/08 00:15:15 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465316115
+2016/06/08 00:15:15 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465316115)
+2016/06/08 00:15:15 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/06/08 00:15:17 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/08 00:15:17 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/06/08 00:15:17 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsMngr` WHERE 0=1
+2016/06/08 00:15:17 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/06/08 00:15:17 [trace] [system.db.CDbConnection] Opening DB connection
+2016/06/08 00:15:17 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM YiiCache WHERE expire>0 AND expire<1465316117
+2016/06/08 00:15:17 [trace] [system.db.CDbCommand] Querying SQL: SELECT value FROM YiiCache WHERE id='2f1a25645a4b382ef2300e7660355a21' AND (expire=0 OR expire>1465316117)
+2016/06/08 00:15:18 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
