@@ -10,7 +10,7 @@ return
 				// 'tablePrefix' => 'tb_',
 				// );
  array (
-		'connectionString' => 'mysql:host=localhost;dbname=supereto',
+		'connectionString' => 'mysql:host=127.0.0.1;dbname=supereto',
 		'emulatePrepare' => true,
 		'username' => 'root',
 		'password' => 'root',
