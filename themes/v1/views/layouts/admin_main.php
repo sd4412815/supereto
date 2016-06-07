@@ -47,12 +47,12 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
 <div class="wrapper">
     <header class="main-header">
         <!-- Logo -->
-        <a href="index2.html" class="logo">
-            <!-- mini logo for sidebar mini 50x50 pixels -->
+        <!-- <a href="index2.html" class="logo">
+            mini logo for sidebar mini 50x50 pixels
             <span class="logo-mini"><b>A</b>LT</span>
-            <!-- logo for regular state and mobile devices -->
+            logo for regular state and mobile devices
             <span class="logo-lg"><b>super</b>ETO</span>
-        </a>
+        </a> -->
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top">
             <!-- Sidebar toggle button-->
@@ -62,6 +62,11 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
 
             <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
+                    <li class="dropdown messages-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="margin-right:50px;">
+                            supereto
+                        </a>
+                    </li>
                     <!-- Messages: style can be found in dropdown.less-->
                     <li class="dropdown messages-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -139,132 +144,17 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
                             <li class="footer"><a href="#">See All Messages</a></li>
                         </ul>
                     </li>
-                    <!-- Notifications: style can be found in dropdown.less -->
-                    <li class="dropdown notifications-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-bell-o"></i>
-                            <span class="label label-warning">10</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="header">You have 10 notifications</li>
-                            <li>
-                                <!-- inner menu: contains the actual data -->
-                                <ul class="menu">
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-users text-aqua"></i> 5 new members joined today
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
-                                            page and may cause design problems
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-users text-red"></i> 5 new members joined
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-shopping-cart text-green"></i> 25 sales made
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="fa fa-user text-red"></i> You changed your username
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="footer"><a href="#">View all</a></li>
-                        </ul>
-                    </li>
-                    <!-- Tasks: style can be found in dropdown.less -->
-                    <li class="dropdown tasks-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <i class="fa fa-flag-o"></i>
-                            <span class="label label-danger">9</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li class="header">You have 9 tasks</li>
-                            <li>
-                                <!-- inner menu: contains the actual data -->
-                                <ul class="menu">
-                                    <li><!-- Task item -->
-                                        <a href="#">
-                                            <h3>
-                                                Design some buttons
-                                                <small class="pull-right">20%</small>
-                                            </h3>
-                                            <div class="progress xs">
-                                                <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                    <span class="sr-only">20% Complete</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <!-- end task item -->
-                                    <li><!-- Task item -->
-                                        <a href="#">
-                                            <h3>
-                                                Create a nice theme
-                                                <small class="pull-right">40%</small>
-                                            </h3>
-                                            <div class="progress xs">
-                                                <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                    <span class="sr-only">40% Complete</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <!-- end task item -->
-                                    <li><!-- Task item -->
-                                        <a href="#">
-                                            <h3>
-                                                Some task I need to do
-                                                <small class="pull-right">60%</small>
-                                            </h3>
-                                            <div class="progress xs">
-                                                <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                    <span class="sr-only">60% Complete</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <!-- end task item -->
-                                    <li><!-- Task item -->
-                                        <a href="#">
-                                            <h3>
-                                                Make beautiful transitions
-                                                <small class="pull-right">80%</small>
-                                            </h3>
-                                            <div class="progress xs">
-                                                <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
-                                                    <span class="sr-only">80% Complete</span>
-                                                </div>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <!-- end task item -->
-                                </ul>
-                            </li>
-                            <li class="footer">
-                                <a href="#">View all tasks</a>
-                            </li>
-                        </ul>
-                    </li>
+
                     <!-- User Account: style can be found in dropdown.less -->
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                            <img src="<?php echo Yii::app ()->theme->baseUrl  ?>/public/common/AdminLTE-2.3.3/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                            <img src="<?php echo Yii::app ()->theme->baseUrl?>/public/common/AdminLTE-2.3.3/img/user2-160x160.jpg" class="user-image" alt="User Image">
                             <span class="hidden-xs">XXXXX</span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
                             <li class="user-header">
-                                <img src="<?php echo Yii::app ()->theme->baseUrl  ?>/public/common/AdminLTE-2.3.3/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                <img src="<?php echo Yii::app ()->theme->baseUrl?>/public/common/AdminLTE-2.3.3/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                                 <p>
                                     Alexander Pierce - Web Developer
@@ -297,10 +187,7 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
                             </li>
                         </ul>
                     </li>
-                    <!-- Control Sidebar Toggle Button -->
-                    <li>
-                        <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
-                    </li>
+
                 </ul>
             </div>
         </nav>
@@ -319,17 +206,7 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
                     <a href="#"><i class="fa fa-circle text-success"></i> 在线中</a>
                 </div>
             </div>
-            <!-- search form -->
-<!--            <form action="#" method="get" class="sidebar-form">-->
-<!--                <div class="input-group">-->
-<!--                    <input type="text" name="q" class="form-control" placeholder="搜索...">-->
-<!--                  <span class="input-group-btn">-->
-<!--                    <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>-->
-<!--                    </button>-->
-<!--                  </span>-->
-<!--                </div>-->
-<!--            </form>-->
-            <!-- /.search form -->
+
             <!-- sidebar menu: : style can be found in sidebar.less -->
             <ul class="sidebar-menu">
 <!--                <li class="header" style="text-align: center">导 航 栏</li>-->
@@ -345,8 +222,8 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
                         <span class="label label-primary pull-right">4</span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href=""><i class="fa fa-circle-o"></i> 修改资料</a></li>
-                        <li><a href=""><i class="fa fa-circle-o"></i> 变更密码</a></li>
+                        <li><a href="<?php echo Yii::app()->createUrl('user/edit_info');?>"><i class="fa fa-circle-o"></i> 修改资料</a></li>
+                        <li><a href="<?php echo Yii::app()->createUrl('user/edit_pwd');?>"><i class="fa fa-circle-o"></i> 变更密码</a></li>
                     </ul>
                 </li>
                 <li>
@@ -355,8 +232,8 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
                         <small class="label pull-right bg-green">new</small>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href=""><i class="fa fa-circle-o"></i> 新建账户</a></li>
-                        <li><a href=""><i class="fa fa-circle-o"></i> 推荐清单</a></li>
+                        <li><a href="<?php echo Yii::app()->createUrl('user/register');?>"><i class="fa fa-circle-o"></i> 新建账户</a></li>
+                        <li><a href="<?php echo Yii::app()->createUrl('user/recommend_list') ?>"><i class="fa fa-circle-o"></i> 推荐清单</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
@@ -413,6 +290,7 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
 <!--                <li><a href=""><i class="fa fa-circle-o text-yellow"></i> <span>等待添加</span></a></li>-->
 <!--                <li><a href=""><i class="fa fa-circle-o text-aqua"></i> <span>等待添加</span></a></li>-->
             </ul>
+
         </section>
         <!-- /.sidebar -->
     </aside>
@@ -421,12 +299,6 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
        <!-- Modal -->
     </div>
 
-    <footer class="main-footer">
-        <div class="pull-right hidden-xs">
-            <b>Version</b> 2.3.3
-        </div>
-        <strong>版权所有 &copy; 2016-2017 <a href="http://almsaeedstudio.com">superETO工作室</a>.</strong> 保留所有权利.
-    </footer>
 </div>
 </body>
 

@@ -65,7 +65,7 @@ class IndexController extends Controller
 
         $this->layout = 'admin_main';
 
-        $this->render ( 'index');
+        $this->render ('index');
     }
 
     /**
