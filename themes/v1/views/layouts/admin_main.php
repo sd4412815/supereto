@@ -316,7 +316,7 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
                 </div>
                 <div class="pull-left info">
                     <p>欢迎  XXXXXXX</p>
-                    <a href="#"><i class="fa fa-circle text-success"></i> 在线中</a>
+                    <a href="#"><i class="fa fa-circle text-success"></i> 在线中 <i class="fa fa-tablet"></i> <i class="fa fa-wifi"></i></a>
                 </div>
             </div>
             <!-- search form -->
@@ -345,8 +345,8 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
                         <span class="label label-primary pull-right">4</span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href=""><i class="fa fa-circle-o"></i> 修改资料</a></li>
-                        <li><a href=""><i class="fa fa-circle-o"></i> 变更密码</a></li>
+                        <li><a href=""><i class="fa fa-edit"></i> 修改资料</a></li>
+                        <li><a href=""><i class="fa fa-expeditedssl"></i> 变更密码</a></li>
                     </ul>
                 </li>
                 <li>
@@ -355,8 +355,8 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
                         <small class="label pull-right bg-green">new</small>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href=""><i class="fa fa-circle-o"></i> 新建账户</a></li>
-                        <li><a href=""><i class="fa fa-circle-o"></i> 推荐清单</a></li>
+                        <li><a href=""><i class="fa fa-send-o"></i> 新建账户</a></li>
+                        <li><a href=""><i class="fa fa-smile-o"></i> 推荐清单</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
@@ -366,13 +366,13 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href=""><i class="fa fa-circle-o"></i> 买入ETO包</a></li>
-                        <li><a href=""><i class="fa fa-circle-o"></i> 财富通道</a></li>
-                        <li><a href=""><i class="fa fa-circle-o"></i> 卖出ETO包</a></li>
-                        <li><a href=""><i class="fa fa-circle-o"></i> 动态额度图</a></li>
-                        <li><a href=""><i class="fa fa-circle-o"></i> 自由市场</a></li>
-                        <li><a href=""><i class="fa fa-circle-o"></i> 买入记录</a></li>
-                        <li><a href=""><i class="fa fa-circle-o"></i> 卖出记录</a></li>
+                        <li><a href=""><i class="fa fa-reply"></i> 买入ETO包</a></li>
+                        <li><a href=""><i class="fa fa-trophy"></i> 财富通道</a></li>
+                        <li><a href=""><i class="fa fa-share"></i> 卖出ETO包</a></li>
+                        <li><a href=""><i class="fa fa-line-chart"></i> 动态额度图</a></li>
+                        <li><a href=""><i class="fa fa-child"></i> 自由市场</a></li>
+                        <li><a href=""><i class="fa fa-caret-square-o-down"></i> 买入记录</a></li>
+                        <li><a href=""><i class="fa fa-caret-square-o-up"></i> 卖出记录</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
@@ -382,12 +382,12 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href=""><i class="fa fa-circle-o"></i> 我的账户</a></li>
-                        <li><a href=""><i class="fa fa-circle-o"></i> 购买门票</a></li>
-                        <li><a href=""><i class="fa fa-circle-o"></i> 门票转账</a></li>
-                        <li><a href=""><i class="fa fa-circle-o"></i> 佣金清单</a></li>
-                        <li><a href=""><i class="fa fa-circle-o"></i> 静态对账单</a></li>
-                        <li><a href=""><i class="fa fa-circle-o"></i> 动态对账单</a></li>
+                        <li><a href=""><i class="fa fa-book"></i> 我的账户</a></li>
+                        <li><a href=""><i class="fa fa-codiepie"></i> 购买门票</a></li>
+                        <li><a href=""><i class="fa fa-exchange"></i> 门票转账</a></li>
+                        <li><a href=""><i class="fa fa-newspaper-o"></i> 佣金清单</a></li>
+                        <li><a href=""><i class="fa fa-minus-square-o "></i> 静态对账单</a></li>
+                        <li><a href=""><i class="fa fa-minus-square"></i> 动态对账单</a></li>
                         <li><a href=""><i class="fa fa-circle-o"></i> 门票对账单</a></li>
                     </ul>
                 </li>
@@ -397,9 +397,9 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
                         <i class="fa fa-angle-left pull-right"></i>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href=""><i class="fa fa-circle-o"></i> 网站公告</a></li>
-                        <li><a href=""><i class="fa fa-circle-o"></i> 在线工单</a></li>
-                        <li><a href=""><i class="fa fa-circle-o"></i> 在线投票</a></li>
+                        <li><a href=""><i class="fa fa-building-o"></i> 网站公告</a></li>
+                        <li><a href=""><i class="fa fa-calendar-o"></i> 在线工单</a></li>
+                        <li><a href=""><i class="fa fa fa-envelope"></i> 在线投票</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
