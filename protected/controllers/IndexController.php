@@ -85,12 +85,7 @@ class IndexController extends Controller
         }
 
         if (! Yii::app ()->user->isGuest) {
-            if (Yii::app ()->user->checkAccess ( 'boss' )) {
-                $this->redirect ( array ('Profile'));
-                Yii::app ()->end ();
-            }else{
-                $this->redirect(Yii::app()->baseUrl);
-            }
+            $this->redirect(Yii::app()->baseUrl);
         }
         $model = new LoginForm ();
         $model->setScenario ( 'login' );

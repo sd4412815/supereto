@@ -13,6 +13,8 @@
  * @property integer $u_car_type
  */
 class User extends CActiveRecord {
+	public $new_pwd;
+	public $confirm_pwd;
 	/**
 	 *
 	 * @return string the associated database table name
@@ -134,8 +136,6 @@ class User extends CActiveRecord {
 				'u_nick_name' => '昵称',
 				'u_age' => '年龄',
 				'u_sex' => '性别',
-				'u_car_brand' => '车品牌',
-				'u_car_type' => '车型'
 		);
 	}
 
@@ -173,7 +173,6 @@ class User extends CActiveRecord {
 	 * @return boolean
 	 */
 	public function validatePassword($password) {
-		// Yii::trace(CPasswordHelper::hashPassword($password),'uc.*');
 		return CPasswordHelper::verifyPassword ( $password, $this->u_pwd );
 	}
 

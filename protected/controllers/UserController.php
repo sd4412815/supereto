@@ -26,12 +26,19 @@ class UserController extends Controller {
 	 */
 	public function actionedit_pwd()
 	{
-			// $model=new User;
-			$model = new User ();
-			// $model=[];
-      $this->render('edit_pwd',array(
+
+		$model = new User;
+		if ($_POST['User']) {
+			
+			if ($_POST['User']['new_pwd']!=$_POST['User']['confirm_pwd']) {
+				Yii::app->user->serFlash('edit_pwdError','两次密码不一致');
+				Yii::app->end();
+			}
+
+		}
+	    $this->render('edit_pwd',array(
 				'model'=>$model
-			));
+		));
 	}
 
     /**
