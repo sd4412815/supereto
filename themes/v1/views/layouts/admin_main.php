@@ -211,8 +211,8 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
             <ul class="sidebar-menu">
 <!--                <li class="header" style="text-align: center">导 航 栏</li>-->
                 <li class="active treeview">
-                    <a href="index/index">
-                        <i class="fa fa-home"></i> <span>系统首页</span> <i class="fa fa-angle-left pull-right"></i>
+                    <a href="<?php echo Yii::app()->createUrl('index/index');?>">
+                        <i class="fa fa-home"></i> <span>系统首页</span>
                     </a>
                 </li>
                 <li class="treeview">
@@ -303,5 +303,3 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
 </body>
 
 </html>
-
-

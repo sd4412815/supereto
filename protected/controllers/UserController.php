@@ -15,8 +15,8 @@ class UserController extends Controller {
 				// page action renders "static" pages stored under 'protected/views/site/pages'
 				// They can be accessed via: index.php?r=site/page&view=FileName
 				'page' => array (
-						'class' => 'CViewAction' 
-				) 
+						'class' => 'CViewAction'
+				)
 		);
 	}
 	public $layout = 'admin_main';
@@ -26,7 +26,12 @@ class UserController extends Controller {
 	 */
 	public function actionedit_pwd()
 	{
-        $this->render('edit_pwd');
+			// $model=new User;
+			$model = new User ();
+			// $model=[];
+      $this->render('edit_pwd',array(
+				'model'=>$model
+			));
 	}
 
     /**

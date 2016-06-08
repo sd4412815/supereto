@@ -18,11 +18,11 @@ class MessageController extends Controller
 			'postOnly + delete', // we only allow deletion via POST request
 		);
 	}
-	
+
 
 	public function actionShow($id){
 
-		
+
 		$rlt = UTool::iniFuncRlt();
 		if (!Yii::app()->request->isAjaxRequest ||
 		!($id>0 && is_int((int)$id))) {
@@ -30,9 +30,9 @@ class MessageController extends Controller
 			echo CJSON::encode($rlt);
 			Yii::app()->end();
 		}
-		
+
 		$msg =$this->loadModel($id);
-	
+
 		if ($msg['m_user_id'] != Yii::app()->user->id) {
 			$rlt['msg'] = '非法请求';
 			echo CJSON::encode($rlt);
@@ -42,7 +42,7 @@ class MessageController extends Controller
 		$msg['m_datetime_read']=date('Y-m-d H:i:s');
 		if($msg->save()){
 			$purifier = new CHtmlPurifier();
-			
+
 			$rlt['status']=true;
 			$rlt['data']=array(
 					'time'=>date('Y-m-d H:i:s',strtotime($msg['m_datetime'])),
@@ -53,15 +53,8 @@ class MessageController extends Controller
 		}else{
 			$rlt['msg']='消息状态更新失败';
 		}
-		
-		
-		
 		echo CJSON::encode($rlt);
 		Yii::app()->end();
-		
-		
-		
-		
 	}
 
 	/**

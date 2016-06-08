@@ -5,7 +5,7 @@ return array (
 				array (
 						'class' => 'CFileLogRoute',
 						'categories' => 'system.db.*',
-						'logFile' => 'sql.log' 
+						'logFile' => 'sql.log'
 				),
 				// array(
 				// 'class'=>'CFileLogRoute',
@@ -13,7 +13,7 @@ return array (
 				// 'categories'=>'debug.*',
 				// 'logFile'=>'debug.log',
 				// ),
-				
+
 				array (
 						'class' => 'CDbLogRoute',
 						'autoCreateLogTable' => 'true',
@@ -21,25 +21,17 @@ return array (
 						'levels' => 'info,warning,error, profile, debug',
 						'logTableName' => 'logsSystem',
 						// 'categories'=>
-						'except' => 'system.db.*,debug.*,user.*,mngr.*' 
+						'except' => 'system.db.*,debug.*,user.*'
 				),
-				array (
-						'class' => 'CDbLogRoute',
-						'autoCreateLogTable' => 'true',
-						'connectionID' => 'db',
-						'levels' => 'info,warning,error, profile, debug',
-						'logTableName' => 'logsMngr',
-						'categories' => 'mngr.*' 
-				),
+
 				array (
 						'class' => 'CDbLogRoute',
 						'autoCreateLogTable' => 'true',
 						'connectionID' => 'db',
 						'levels' => 'info,warning,error, profile, debug',
 						'logTableName' => 'logsUser',
-						'categories' => 'user.*' 
-				) 
+						'categories' => 'user.*'
+				)
 		)
-		 
-);?>
 
+);?>

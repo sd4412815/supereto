@@ -37,12 +37,12 @@ return array(
 			// 				'tablePrefix' => 'tb_',
 			// 				),
 			'db' => array (
-					'connectionString' => 'mysql:host=localhost;dbname=xc',
+					'connectionString' => 'mysql:host=localhost;dbname=supereto',
 					'emulatePrepare' => true,
 					'username' => 'root',
-					'password' => 'woshimima',
+					'password' => 'root',
 					'charset' => 'utf8',
-					'tablePrefix' => 'tb_'
+					'tablePrefix' => 'yy_'
 			),
 			'log' => array (
 						'class' => 'CLogRouter',
@@ -50,7 +50,7 @@ return array(
 								array (
 										'class' => 'CFileLogRoute',
 										'categories' => 'system.db.*',
-										'logFile' => 'sql.log' 
+										'logFile' => 'sql.log'
 								),
 								// array(
 								// 'class'=>'CFileLogRoute',
@@ -58,7 +58,7 @@ return array(
 								// 'categories'=>'debug.*',
 								// 'logFile'=>'debug.log',
 								// ),
-								
+
 								array (
 										'class' => 'CDbLogRoute',
 										'autoCreateLogTable' => 'true',
@@ -66,25 +66,25 @@ return array(
 										'levels' => 'info,warning,error, profile, debug',
 										'logTableName' => 'logsSystem',
 										// 'categories'=>
-										'except' => 'system.db.*,debug.*,user.*,mngr.*' 
+										'except' => 'system.db.*,debug.*,user.*,mngr.*'
 								),
-								array (
+								/*array (
 										'class' => 'CDbLogRoute',
 										'autoCreateLogTable' => 'true',
 										'connectionID' => 'db',
 										'levels' => 'info,warning,error, profile, debug',
 										'logTableName' => 'logsMngr',
-										'categories' => 'mngr.*' 
-								),
+										'categories' => 'mngr.*'
+								),*/
 								array (
 										'class' => 'CDbLogRoute',
 										'autoCreateLogTable' => 'true',
 										'connectionID' => 'db',
 										'levels' => 'info,warning,error, profile, debug',
 										'logTableName' => 'logsUser',
-										'categories' => 'user.*' 
-								) 
-						
+										'categories' => 'user.*'
+								)
+
 						// uncomment the following to show log messages on web pages
 						// array(
 						// 'class'=>'ext.yii-debug-toolbar.YiiDebugToolbarRoute',
@@ -101,7 +101,7 @@ return array(
 						// ),
 												)
 
-						 
+
 				) ,
 	),
 );

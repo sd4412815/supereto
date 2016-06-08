@@ -62,7 +62,6 @@ class IndexController extends Controller
 
     public function actionindex()
     {
-
         $this->layout = 'admin_main';
 
         $this->render ('index');

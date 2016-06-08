@@ -29,7 +29,7 @@ return array(
         'log',
         'userCounter'
     ),
-    
+
     // autoloading model and component classes
     'import' => array(
         'application.models.*',
@@ -38,12 +38,12 @@ return array(
         'application.modules.srbac.controllers.SBaseController',
         'ext.cascadedropdown.ECascadeDropDown'
     ),
-    
+
     'defaultController' => 'index',
     'theme' => 'v1', // requires you to copy the theme under your themes directory
-    
+
     'modules' => $modules,
-    
+
     // application components
     'components' => array(
         'session' => array(
@@ -59,12 +59,12 @@ return array(
 //     		'mobileDetect' => array(
 //     				'class' => 'ext.MobileDetect.MobileDetect'
 //     		),
-        
+
         'user' => array(
             // enable cookie-based authentication
             'allowAutoLogin' => true,
-            'returnUrl'=>'site/login',
-            
+            'returnUrl'=>'index/login',
+
         ),
         'request' => array(
             // 'class' => 'application.components.HttpRequest',
@@ -75,15 +75,15 @@ return array(
         'bootstrap' => array(
             'class' => 'bootstrap.components.Bootstrap'
         ),
-    		'cache'=>array(
+    		// 'cache'=>array(
     				'class'=>'system.caching.CDbCache',
 //     				'servers'=>array(
 //     						array('host'=>'server1', 'port'=>11211, 'weight'=>60),
 //     						array('host'=>'server2', 'port'=>11211, 'weight'=>40),
 //     				),
-    		),
-    
-        
+    		// ),
+
+
         'authManager' => array(
             'class' => 'srbac.components.SDbAuthManager',
             'connectionID' => 'db',
@@ -109,6 +109,7 @@ return array(
 ,
 
         'db' => $db,
+
         // uncomment the following to use a MySQL database
         /*
          * 'db'=>array( 'connectionString' => 'mysql:host=localhost;dbname=testdrive', 'emulatePrepare' => true, 'username' => 'root', 'password' => '', 'charset' => 'utf8', ),
@@ -119,7 +120,7 @@ return array(
         ),
         'log' => $log
     ),
-    
+
     // application-level parameters that can be accessed
     // using Yii::app()->params['paramName']
     'params' => array(

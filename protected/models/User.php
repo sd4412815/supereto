@@ -17,10 +17,10 @@ class User extends CActiveRecord {
 	 *
 	 * @return string the associated database table name
 	 */
-	public function tableName() {
+	public function tableName(){
 		return '{{User}}';
 	}
-	
+
 	/**
 	 *
 	 * @return array validation rules for model attributes.
@@ -31,29 +31,29 @@ class User extends CActiveRecord {
 		return array (
 				array (
 						'u_tel, u_pwd',
-						'required' 
+						'required'
 				),
 				array (
 						'u_tel',
 						'numerical',
-						'integerOnly' => true 
+						'integerOnly' => true
 				),
 				array (
 						'u_member_id',
 						'numerical',
 						'integerOnly' => true,
-						'allowEmpty' => true 
+						'allowEmpty' => true
 				),
 				array (
 						'u_nick_name',
 						'match',
 						'pattern' => '/[\x{4e00}-\x{9fa5}]|[a-zA-Z0-9*.]+$/u',
-						'on' => 'update' 
+						'on' => 'update'
 				),
 				array (
 						'u_type, u_sex,u_age,u_state,u_error_count',
 						'numerical',
-						'integerOnly' => true 
+						'integerOnly' => true
 				),
 				array (
 						'u_sex',
@@ -61,59 +61,39 @@ class User extends CActiveRecord {
 						'range' => array (
 								0,
 								1,
-								2 
-						) 
+								2
+						)
 				),
 				array (
 						'u_score',
-						'numerical' 
+						'numerical'
 				),
-				// array (
-				// 'u_join_date',
-				// 'date',
-				// 'format' => 'yyyy-MM-dd HH:mm:ss'
-				// ),
-				// array (
-				// 'u_join_date',
-				// 'type',
-				// 'datetime' ,
-				// ),
-				// array (
-				// 'u_login_date',
-				// 'date',
-				// 'format' => 'yyyy-MM-dd HH:mm:ss'
-				// ),
-				// array (
-				// 'u_login_date',
-				// 'type',
-				// 'datetime'
-				// ),
 				array (
 						'u_name,u_nick_name',
 						'length',
-						'max' => 20 
+						'max' => 20
 				),
 				array (
 						'u_tel',
 						'match',
-						'pattern' => '/^1\d{10}$/' 
+						'pattern' => '/^1\d{10}$/'
 				),
 				array (
 						'u_tel',
 						'length',
-						'max' => 11 
+						'max' => 11
 				),
 				array (
 						'u_pwd',
 						'length',
-						'max' => 128 
+						'max' => 128
 				),
 				// The following rule is used by search().
 				// @todo Please remove those attributes that should not be searched.
 				array (
 						'u_tel',
 						'safe',
-						'on' => 'search' 
+						'on' => 'search'
 				) ,
 				array (
 						'u_car_brand,u_car_type',
@@ -122,7 +102,7 @@ class User extends CActiveRecord {
 				)
 		);
 	}
-	
+
 	/**
 	 *
 	 * @return array relational rules.
@@ -131,25 +111,15 @@ class User extends CActiveRecord {
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array (
-				'favoriateShops' => array (
-						self::HAS_MANY,
-						'FavoriteShop',
-						'fs_user_id' 
-				),
 				'messages' => array (
 						self::HAS_MANY,
 						'Message',
-						'm_user_id' 
+						'm_user_id'
 				),
-				'favShops' => array (
-						self::MANY_MANY,
-						'WashShop',
-						'tb_Favorite_Shop(fs_shop_id, fs_user_id)' 
-				) 
 		)
 		;
 	}
-	
+
 	/**
 	 *
 	 * @return array customized attribute labels (name=>label)
@@ -165,10 +135,10 @@ class User extends CActiveRecord {
 				'u_age' => '年龄',
 				'u_sex' => '性别',
 				'u_car_brand' => '车品牌',
-				'u_car_type' => '车型' 
+				'u_car_type' => '车型'
 		);
 	}
-	
+
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 *
@@ -184,33 +154,33 @@ class User extends CActiveRecord {
 	public function search() {
 		// @todo Please modify the following code to remove attributes that should not be searched.
 		$criteria = new CDbCriteria ();
-		
+
 		$criteria->compare ( 'id', $this->id );
 		$criteria->compare ( 'u_tel', $this->u_tel, true );
 		$criteria->compare ( 'u_pwd', $this->u_pwd, true );
 		$criteria->compare ( 'u_name', $this->u_name, true );
 		$criteria->compare ( 'u_score', $this->u_score );
-		
+
 		return new CActiveDataProvider ( $this, array (
-				'criteria' => $criteria 
+				'criteria' => $criteria
 		) );
 	}
-	
+
 	/**
 	 * 验证密码
 	 *
-	 * @param unknown $password        	
+	 * @param unknown $password
 	 * @return boolean
 	 */
 	public function validatePassword($password) {
 		// Yii::trace(CPasswordHelper::hashPassword($password),'uc.*');
 		return CPasswordHelper::verifyPassword ( $password, $this->u_pwd );
 	}
-	
+
 	/**
 	 * 用户注册
-	 * 
-	 * @param LoginForm $loginForm        	
+	 *
+	 * @param LoginForm $loginForm
 	 * @return array
 	 */
 	public function reg($loginForm,$autoLogin=TRUE) {
@@ -230,7 +200,7 @@ class User extends CActiveRecord {
 		$user_model ['u_age'] = 254; // 默认未知
 		$user_model ['u_nick_name'] = '' . substr ( $model->u_tel, - 4, 4 );
 		$user_model ['u_error_count'] = 0;
-		
+
 		if (! $user_model->validate ()) {
 			$rlt ['msg'] .= $model->getErrors () . ';';
 			// Yii::log ( '用户注册信息不符合规范',CLogger::LEVEL_INFO, 'mngr.user.reg.validate' );
@@ -243,17 +213,17 @@ class User extends CActiveRecord {
 			$msg['m_src']=UTool::getRequestInfo();
 			$msg['m_level']=Message::LEVEL_NORM;
 			$msg->save ();
-			
+
 			// 用户注册成功
 			// 自动为用户增加车主角色
 			$auth = Assignments::model ()->findByAttributes ( array (
 					'itemname' => 'car_user',
-					'userid' => $user_model ['id'] 
+					'userid' => $user_model ['id']
 			) );
 			if (! isset ( $auth )) {
 				$auth = new Assignments ();
 			}
-			
+
 			$auth->itemname = 'car_user';
 			$auth->userid = $user_model ['id'];
 			if (! $auth->save ()) {
@@ -268,36 +238,36 @@ class User extends CActiveRecord {
 			// $lf->u_pwd = $user_model->u_pwd;
 			// // $loginForm->login()
 			// $lf->setScenario('login');
-			
+
 			if ($autoLogin) {
 				$loginForm->setScenario ( 'login' );
 				$r= $loginForm->login();
 				if ($r['status']) {
-					
+
 				} else {
 					Yii::log ( '用户登录失败次数增加 userId:' . $user_model ['id'], CLogger::LEVEL_WARNING, 'mngr.user.reg.login' );
 				} // end if
-				
+
 			}
 			$rlt ['status'] = true;
 			$rlt ['data'] = $user_model;
-		
+
 		} else {
 			// 用户注册失败
 			$rlt ['msg'] = '保存用户注册信息失败;';
 			Yii::log ( '用户注册失败' . CJSON::encode ( $user_model ), CLogger::LEVEL_WARNING, 'mngr.user.reg.save' );
 		} // end if save
-		
+
 		return $rlt;
 	}
-	
-	
-	
-	
+
+
+
+
 	/**
 	 * 根据用户名/手机号/ID查找用户信息
-	 * 
-	 * @param string $loginStr        	
+	 *
+	 * @param string $loginStr
 	 * @return NULL Ambigous mixed, NULL, multitype:CActiveRecord , multitype:unknown Ambigous <CActiveRecord, NULL> , unknown, multitype:unknown Ambigous <unknown, NULL> , multitype:, multitype:unknown >
 	 */
 	public function getUserByLoginName($loginStr) {
@@ -305,8 +275,8 @@ class User extends CActiveRecord {
 		if ($loginName==0 || ! preg_match ( '/^\w{1,20}$/', $loginName )) {
 			return null;
 		}
-		
-		
+
+
 		$criteria = new CDbCriteria ();
 		if (! preg_match ( '/^1\d{10}&/', $loginName )) {
 			$criteria->addCondition ( 'u_tel=:tel' );
@@ -318,18 +288,18 @@ class User extends CActiveRecord {
 			$criteria->addCondition ( 'u_member_id=:uid', 'OR' );
 			$criteria->params [':uid'] = $loginName;
 		}
-		
+
 		$criteria->addCondition ( 'u_state=0', 'AND' );
-		
+
 		$user = User::model ()->find ( $criteria );
-		
+
 		return $user;
 	}
-	
+
 	/**
 	 *
-	 * @param int $num        	
-	 * @param int $cityId        	
+	 * @param int $num
+	 * @param int $cityId
 	 * @return array
 	 */
 	public function getTopUsers($num, $cityId) {
@@ -337,13 +307,13 @@ class User extends CActiveRecord {
 		// $criteria->select = 's_name, s_sex, s_age, s_wash_shop_id, id, s_user_id';
 		$criteria->order = 'u_score  DESC';
 		$criteria->condition = 'u_type=0';
-		// $criteria->addCondition('s_state=1');
+		// $criteria->addCondition(':qqqq=');
 		$criteria->limit = $num;
-		
+
 		$items = $this->findAll ( $criteria );
 		return $items;
 	}
-	
+
 	/**
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
