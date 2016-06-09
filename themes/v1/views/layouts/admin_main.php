@@ -63,7 +63,7 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
             <div class="navbar-custom-menu">
                 <ul class="nav navbar-nav">
                     <li class="dropdown messages-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="margin-right:50px;">
+                        <a href="#" class="dropdown-toggle text-center">
                             supereto
                         </a>
                     </li>

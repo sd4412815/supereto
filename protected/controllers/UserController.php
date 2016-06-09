@@ -29,10 +29,10 @@ class UserController extends Controller {
 
 		$model = new User;
 		if ($_POST['User']) {
-			
+
 			if ($_POST['User']['new_pwd']!=$_POST['User']['confirm_pwd']) {
-				Yii::app->user->serFlash('edit_pwdError','两次密码不一致');
-				Yii::app->end();
+				Yii::app()->user->serFlash('edit_pwdError','两次密码不一致');
+				Yii::app()->end();
 			}
 
 		}
