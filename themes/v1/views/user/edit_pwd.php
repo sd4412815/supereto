@@ -9,11 +9,7 @@ $this->pageTitle='修改密码';
 ?>
 
 <div class="row text-center">
-  <?php //$form=$this->beginWidget('CActiveForm',array(
-    //'id'=>'edit_pwd',
-    //'class'=>'form'
-  //)) ?>
-  
+
  <?php $form = $this->beginWidget('CActiveForm', array(
       'id'=>'user-form',
       'enableAjaxValidation'=>true,
@@ -47,7 +43,9 @@ $this->pageTitle='修改密码';
       'id'=>'confirm_pwd'
     )) ?>
   </div>
-
+  <?php if (Yii::app ()->user->hasFlash ( 'edit_pwdError' )) :	?>
+     <div class="alert alert-danger" role="alert"><?php echo Yii::app()->user->getFlash('edit_pwdError');?></div>
+   <?php endif;?>
   <input type="submit" class='btn btn-warning' value='确认修改'>
 
   <?php $this->endWidget(); ?>
