@@ -13,8 +13,10 @@
  * @property integer $u_car_type
  */
 class User extends CActiveRecord {
-	public $new_pwd;
+	public $old_pwd;
 	public $confirm_pwd;
+	public $captcha;
+	public $mobile_code;
 	/**
 	 *
 	 * @return string the associated database table name
@@ -101,8 +103,16 @@ class User extends CActiveRecord {
 						'u_car_brand,u_car_type',
 						'safe',
 						'on' => 'update'
-				)
-		);
+				),
+                array(
+                    'captcha',
+                    'captcha',
+                    'message'=>'验证码错误'
+                ),
+            //验证密码和确认密码
+            array("confirm_pwd","compare","compareAttribute"=>"u_pwd","message"=>"两次密码不一致"),
+            array('old_pwd','validatePassword','on'=>'changePwd'),
+        );
 	}
 
 	/**

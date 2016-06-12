@@ -4,15 +4,12 @@ return  array (
 				'gii' => array (
 						'class' => 'system.gii.GiiModule',
 						'password' => 'woshimima',
-						// If removed, Gii defaults to localhost only. Edit carefully to taste.
-						'ipFilters' => array (
-								'127.0.0.1',
-								'::1' 
-						),
-						'generatorPaths' => array (
-								'bootstrap.gii' 
-						) 
+						'ipFilters' => array ('127.0.0.1','::1' ),// If removed, Gii defaults to localhost only. Edit carefully to taste.
+						'generatorPaths' => array ('bootstrap.gii')
 				),
+                'se_admin'=>array(
+                    'defaultController' => 'index',//默认控制器
+                ),
 				'srbac' => array (
 						'userclass' => 'User', // default: User 对应用户的model
 						'userid' => 'id', // default: userid 用户表标识位对应字段

@@ -9,6 +9,6 @@ class DefaultController extends CController {
 	public function actionIndex() {
 		//$this->render('index');
 		$this->layout = 'admin_mngr';
-    $this->redirect(array('//site/index'));
+    $this->redirect(array('//index/index'));
 	}
  }

@@ -27,17 +27,22 @@ class UserController extends Controller {
 	public function actionedit_pwd()
 	{
 		$model = new User;
+        Yii::app()->session['send_code']='yuanzb';
 		if (isset($_POST['User'])) {
-
-			if ($_POST['User']['new_pwd']!=$_POST['User']['confirm_pwd']) {
-				Yii::app ()->user->setFlash ( 'edit_pwdError', '两次密码不一致' );
-			}
-
-
-
+            $model->attributes = $_POST['User'];
+            $valid = $model->validate();
+            if($valid){
+                echo '过啦';
+            }else{
+                echo '没过';
+            }
 		}
+
+        $user=User::model()->find(Yii::app()->user->id);
+
 	    $this->render('edit_pwd',array(
-				'model'=>$model
+				'model'     =>$model,
+                'user'      =>$user
 		));
 	}
 
@@ -63,6 +68,85 @@ class UserController extends Controller {
     public function actionrecommend_list()
     {
         $this->render('recommend_list');
+    }
+
+    /**
+     * 找回密码
+     */
+    public function actionReset($atype="找回密码") {
+
+        unset(Yii::app()->session['resetStep']);
+        unset(Yii::app()->session['resetUserId']);
+        unset(Yii::app()->session['resetUserTel']);
+        $model = new LoginForm ();
+        $model->setScenario ( 'reset' );
+
+        // if it is ajax validation request
+        if (isset ( $_POST ['ajax'] ) && $_POST ['ajax'] === 'login-form') {
+            echo CActiveForm::validate ( $model );
+            Yii::app ()->end ();
+        }
+
+        // collect user input data
+        if (isset ( $_POST ['LoginForm'] )) {
+            // 校验令牌
+            if (FALSE && ! UTool::checkCsrf ()) {
+                throw new CHttpException ( 403, '错误请求' );
+                Yii::app ()->end ();
+            }
+
+            $model->attributes = $_POST ['LoginForm'];
+            // validate user input and redirect to the previous page if valid
+            if ($model->validate () ) {
+
+                $rltCheck = UTool::checkRepeatAction ( 0 );
+                if ($rltCheck ['status']) {
+                    // echo CJSON::encode($rltCheck);
+                    Yii::app ()->user->setFlash ( 'resetError', $rltCheck ['msg'] );
+                    // Yii::app()->end();
+                } else {
+                    $user_model = User::model ()->getUserByLoginName ( $model->u_tel );
+
+                    if (! isset ( $user_model )) {
+                        Yii::app ()->user->setFlash ( 'resetError', '该用户不存在' );
+                    } else {
+                        Yii::app ()->session ['resetUserId'] = $user_model ['id'];
+                        Yii::app ()->session ['resetUserTel'] = $model ['u_tel'];
+                        Yii::app ()->session ['resetStep'] = 'resetCheck';
+                        Yii::app ()->session ['resetCheckOn'] = true;
+                        $model->setScenario ( 'resetCheck' );
+
+                        $this->render ( 'resetCheck', array (
+                            'model' => $model ,
+                            'atype'=>$atype,
+                        ) );
+                        // $this->redirect(array('user/resetCheck'));
+                        Yii::app ()->end ();
+                    } // end if user_model
+                } // end if checkRepeat
+            } else {
+                Yii::app ()->user->setFlash ( 'resetError', '输入未通过验证' );
+            } // end if validation
+        }
+        // display the login form
+        $this->render ( 'reset', array (
+            'model' => $model ,
+            'atype'=>$atype,
+        ) );
+    }
+
+
+    /**
+     * 获取手机验证码
+     */
+    public function actionget_mobile_code()
+    {
+        $mobile=$_GET['mobile'];
+        $mobile='15642091931';
+        $sms=USms::edit_pwd($mobile,Yii::app()->session['send_code']);
+
+        echo json_encode($sms);
+
     }
 
 

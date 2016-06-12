@@ -5,7 +5,7 @@
 Yii::setPathOfAlias('bootstrap', dirname(__FILE__) . '/../extensions/bootstrap');
 Yii::setPathOfAlias('dzRaty', dirname(__FILE__) . '/../extensions/dzRaty');
 Yii::setPathOfAlias('star', dirname(__FILE__) . '/../widget/star');
-Yii::setPathOfAlias('city', dirname(__FILE__) . '/../widget/city');
+//Yii::setPathOfAlias('city', dirname(__FILE__) . '/../widget/city');
 Yii::setPathOfAlias('select2', dirname(__FILE__) . '/../extensions/yii-select2');
 Yii::setPathOfAlias('RestfullYii', dirname(__FILE__) . '/../extensions/starship/RestfullYii');
 
