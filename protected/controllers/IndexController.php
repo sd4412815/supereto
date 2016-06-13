@@ -8,6 +8,8 @@
 class IndexController extends Controller
 {
 
+  public $layouts='main';
+
 /*    public function accessRules() {
         return array (
             array (
@@ -60,11 +62,18 @@ class IndexController extends Controller
         );
     }*/
 
+
     public function actionindex()
     {
-        $this->layout = 'admin_main';
+      $userinfo = UserInfo::model ()->find(Yii::app ()->user->id);
+      // p($userinfo);die;
+      $gonggao['gg']['gonggao'] = '近期的公告';
+      $gonggao['gg']['rq']      = '2015-01-15';
 
-        $this->render ('index');
+      $this->render ( 'index', array (
+          'userinfo' => $userinfo,
+          'gonggao'  => $gonggao,
+      ));
     }
 
     /**

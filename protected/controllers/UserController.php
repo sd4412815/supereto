@@ -19,7 +19,7 @@ class UserController extends Controller {
 				)
 		);
 	}
-	public $layout = 'admin_main';
+	public $layout = 'main';
 
 	/**
 	 * 修改密码

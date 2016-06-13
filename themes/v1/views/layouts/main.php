@@ -1,407 +1,311 @@
-<!DOCTYPE HTML>
+<?php
+/* @var $this Controller */
+/*$id = Yii::app ()->user->id;
+if (! is_int ( ( int ) $id ) || $id <= 0) {
+	throw new CHttpException ( 404, '访问页面不存在' );
+} else {
+	$userModel = User::model ()->findByPk ( $id );
+}
+if ($userModel === null)
+	throw new CHttpException ( 404, '访问页面不存在' );
+*/?>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
 <title><?php echo CHtml::encode($this->pageTitle).'-'.Yii::app ()->name; ?></title>
 <meta charset="utf-8">
-
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta http-equiv="Content-Type" content="IE=edge">
-<meta name="baidu-site-verification" content="0S1m86jlX6" />
 <meta name="renderer" content="webkit">
 <meta name="viewport"
 	content="width=device-width, initial-scale=1,user-scalable=no">
-<meta name="Keywords" content="洗车,打蜡,精洗,预约,优惠,省时,洗车位,免排队,我洗车">
-<meta name="description"
-	content="我洗车,中国首家全国洗车预约系统，洗车行全网营销系统领航者，告别排队，尽享爱车养护服务，省钱，省时，就来我洗车.com！">
-	<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
+<meta name="Keywords" content="">
+<meta name="description" content="">
 <link rel="shortcut icon" href="<?php echo Yii::app()->baseUrl;?>/favicon.ico" type="image/x-icon" />
 <?php
-Yii::app ()->clientScript->registerCoreScript ( 'jquery' );
-Yii::app ()->clientScript->registerCssFile ( Yii::app ()->theme->baseUrl . "/css/bootstrap.min.css" );
-Yii::app ()->clientScript->registerCssFile ( Yii::app ()->theme->baseUrl . "/css/AdminLTE.css" );
-Yii::app ()->clientScript->registerCssFile ( Yii::app ()->theme->baseUrl . "/css/font-awesome.min.css" );
-Yii::app ()->clientScript->registerCssFile ( Yii::app ()->theme->baseUrl . "/css/custom.css" );
-Yii::app ()->clientScript->registerCssFile ( Yii::app ()->theme->baseUrl . "/css/y.css" );
-Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/js/bootstrap.min.js", CClientScript::POS_END );
-Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/js/layer/layer.min.js", CClientScript::POS_HEAD );
-Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/js/jquery.cookie.js", CClientScript::POS_HEAD );
-Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/js/mod.udatas.js", CClientScript::POS_END );
-Yii::app ()->clientScript->registerCssFile ( Yii::app ()->theme->baseUrl . "/css/ichecksquare/green.css" );
-// Yii::app ()->clientScript->registerCssFile ( Yii::app ()->theme->baseUrl . "/css/tooltipster.css" );
-Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/js/icheck.min.js", CClientScript::POS_HEAD );
-Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/js/custom.js", CClientScript::POS_END );
-// Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/js/jquery.tooltipster.min.js", CClientScript::POS_END );
-// admin_main
 
-?>
-<style>
- body {  
-      font-family:   
-	 "Microsoft YaHei", "微软雅黑",  
- 	 STXihei, "华文细黑",  
- 	 serif; 
-	 color:#000; 
- } 
+Yii::app ()->clientScript->registerCssFile ( Yii::app ()->theme->baseUrl . "/public/common/bootstrap-3.3.5-dist/css/bootstrap.min.css" );
+Yii::app ()->clientScript->registerCssFile ( Yii::app ()->theme->baseUrl . "/public/common/AdminLTE-2.3.3/css/AdminLTE.css" );
+Yii::app ()->clientScript->registerCssFile ( Yii::app ()->theme->baseUrl . "/public/common/AdminLTE-2.3.3/css/skins/_all-skins.min.css" );
+Yii::app ()->clientScript->registerCssFile ( Yii::app ()->theme->baseUrl . "/public/common/font-awesome-4.5.0/css/font-awesome.min.css" );
+//Yii::app ()->clientScript->registerCssFile ( Yii::app ()->theme->baseUrl . "/public/common/ionicons-2.0.1/css/ionicons.min.css" );
+
+//Yii::app ()->clientScript->registerCoreScript ( 'jquery' );
+Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/public/js/jquery-1.12.4.min.js", CClientScript::POS_END );
+Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/public/common/bootstrap-3.3.5-dist/js/bootstrap.min.js", CClientScript::POS_END );
+Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/public/common/AdminLTE-2.3.3/js/app.min.js", CClientScript::POS_END );
+Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/public/common/layer-v2.3/layer.js", CClientScript::POS_END );
 
 
 
-</style>
-<script
-	src="<?php echo Yii::app()->theme->baseUrl;?>/js/layer/layer.min.js"
-	type="text/javascript"></script>
-<?php
-$cid = UPlace::getCityId ();
-$available  = OrderTemp::model()->getStatAvailableCount($cid)['data'];
-$total  = OrderTemp::model()->getStatTotalCount($cid)['data'];
 
 ?>
+
 </head>
-<body >
-<div class="container-fluid">
+
+<body class="skin-blue sidebar-mini">
+<div class="wrapper">
+    <header class="main-header">
+        <!-- Logo -->
+        <!-- <a href="index2.html" class="logo">
+            mini logo for sidebar mini 50x50 pixels
+            <span class="logo-mini"><b>A</b>LT</span>
+            logo for regular state and mobile devices
+            <span class="logo-lg"><b>super</b>ETO</span>
+        </a> -->
+        <!-- Header Navbar: style can be found in header.less -->
+        <nav class="navbar navbar-static-top">
+            <!-- Sidebar toggle button-->
+            <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                <span class="sr-only">Toggle navigation</span>
+            </a>
+
+            <div class="navbar-custom-menu">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown messages-menu">
+                        <a href="#" class="dropdown-toggle text-center">
+                            supereto
+                        </a>
+                    </li>
+                    <!-- Messages: style can be found in dropdown.less-->
+                    <li class="dropdown messages-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <i class="fa fa-envelope-o"></i>
+                            <span class="label label-success">4</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li class="header">You have 4 messages</li>
+                            <li>
+                                <!-- inner menu: contains the actual data -->
+                                <ul class="menu">
+                                    <li><!-- start message -->
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img src="<?php echo Yii::app ()->theme->baseUrl  ?>/public/common/AdminLTE-2.3.3/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                            </div>
+                                            <h4>
+                                                Support Team
+                                                <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                            </h4>
+                                            <p>Why not buy a new awesome theme?</p>
+                                        </a>
+                                    </li>
+                                    <!-- end message -->
+                                    <li>
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img src="<?php echo Yii::app ()->theme->baseUrl  ?>/public/common/AdminLTE-2.3.3/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                                            </div>
+                                            <h4>
+                                                AdminLTE Design Team
+                                                <small><i class="fa fa-clock-o"></i> 2 hours</small>
+                                            </h4>
+                                            <p>Why not buy a new awesome theme?</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img src="<?php echo Yii::app ()->theme->baseUrl  ?>/public/common/AdminLTE-2.3.3/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                                            </div>
+                                            <h4>
+                                                Developers
+                                                <small><i class="fa fa-clock-o"></i> Today</small>
+                                            </h4>
+                                            <p>Why not buy a new awesome theme?</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img src="<?php echo Yii::app ()->theme->baseUrl  ?>/public/common/AdminLTE-2.3.3/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                                            </div>
+                                            <h4>
+                                                Sales Department
+                                                <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                                            </h4>
+                                            <p>Why not buy a new awesome theme?</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <div class="pull-left">
+                                                <img src="<?php echo Yii::app ()->theme->baseUrl  ?>/public/common/AdminLTE-2.3.3/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                                            </div>
+                                            <h4>
+                                                Reviewers
+                                                <small><i class="fa fa-clock-o"></i> 2 days</small>
+                                            </h4>
+                                            <p>Why not buy a new awesome theme?</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="footer"><a href="#">See All Messages</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- User Account: style can be found in dropdown.less -->
+                    <li class="dropdown user user-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <img src="<?php echo Yii::app ()->theme->baseUrl?>/public/common/AdminLTE-2.3.3/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                            <span class="hidden-xs">XXXXX</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <!-- User image -->
+                            <li class="user-header">
+                                <img src="<?php echo Yii::app ()->theme->baseUrl?>/public/common/AdminLTE-2.3.3/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+
+                                <p>
+                                    Alexander Pierce - Web Developer
+                                    <small>Member since Nov. 2012</small>
+                                </p>
+                            </li>
+                            <!-- Menu Body -->
+                            <li class="user-body">
+                                <div class="row">
+                                    <div class="col-xs-4 text-center">
+                                        <a href="#">Followers</a>
+                                    </div>
+                                    <div class="col-xs-4 text-center">
+                                        <a href="#">Sales</a>
+                                    </div>
+                                    <div class="col-xs-4 text-center">
+                                        <a href="#">Friends</a>
+                                    </div>
+                                </div>
+                                <!-- /.row -->
+                            </li>
+                            <!-- Menu Footer-->
+                            <li class="user-footer">
+                                <div class="pull-left">
+                                    <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                </div>
+                                <div class="pull-right">
+                                    <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- Left side column. contains the logo and sidebar -->
+
+		<aside class="main-sidebar">
+		    <!-- sidebar: style can be found in sidebar.less -->
+		    <section class="sidebar">
+		        <!-- Sidebar user panel -->
+		        <div class="user-panel">
+		            <div class="pull-left image">
+		                <img src="<?php echo Yii::app ()->theme->baseUrl  ?>/public/common/AdminLTE-2.3.3/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+		            </div>
+		            <div class="pull-left info">
+		                <p>欢迎  XXXXXXX</p>
+		                <a href="#"><i class="fa fa-circle text-success"></i> 在线中 <i class="fa fa-tablet"></i> <i class="fa fa-wifi"></i></a>
+		            </div>
+		        </div>
+
+		        <!-- sidebar menu: : style can be found in sidebar.less -->
+		        <ul class="sidebar-menu">
+		<!--                <li class="header" style="text-align: center">导 航 栏</li>-->
+		            <li class="active treeview">
+		                <a href="<?php echo Yii::app()->createUrl('index/index');?>">
+		                    <i class="fa fa-home"></i> <span>系统首页</span>
+		                </a>
+		            </li>
+		            <li class="treeview">
+		                <a href="#">
+		                    <i class="fa fa-shield"></i>
+		                    <span>账户管理</span>
+		                    <span class="label label-primary pull-right">4</span>
+		                </a>
+		                <ul class="treeview-menu">
+		                    <li><a href="<?php echo Yii::app()->createUrl('user/edit_info');?>"><i class="fa fa-circle-o"></i> 修改资料</a></li>
+		                    <li><a href="<?php echo Yii::app()->createUrl('user/edit_pwd');?>"><i class="fa fa-circle-o"></i> 变更密码</a></li>
+		                </ul>
+		            </li>
+		            <li>
+		                <a href="pages/widgets.html">
+		                    <i class="fa fa-user"></i> <span>会员中心</span>
+		                    <small class="label pull-right bg-green">new</small>
+		                </a>
+		                <ul class="treeview-menu">
+		                    <li><a href="<?php echo Yii::app()->createUrl('user/register');?>"><i class="fa fa-circle-o"></i> 新建账户</a></li>
+		                    <li><a href="<?php echo Yii::app()->createUrl('user/recommend_list') ?>"><i class="fa fa-circle-o"></i> 推荐清单</a></li>
+		                </ul>
+		            </li>
+		            <li class="treeview">
+		                <a href="#">
+		                    <i class="fa fa-dollar"></i>
+		                    <span>ETO理财</span>
+		                    <i class="fa fa-angle-left pull-right"></i>
+		                </a>
+		                <ul class="treeview-menu">
+		                    <li><a href=""><i class="fa fa-reply"></i> 买入ETO包</a></li>
+		                    <li><a href=""><i class="fa fa-trophy"></i> 财富通道</a></li>
+		                    <li><a href=""><i class="fa fa-share"></i> 卖出ETO包</a></li>
+		                    <li><a href=""><i class="fa fa-line-chart"></i> 动态额度图</a></li>
+		                    <li><a href=""><i class="fa fa-child"></i> 自由市场</a></li>
+		                    <li><a href=""><i class="fa fa-caret-square-o-down"></i> 买入记录</a></li>
+		                    <li><a href=""><i class="fa fa-caret-square-o-up"></i> 卖出记录</a></li>
+		                </ul>
+		            </li>
+		            <li class="treeview">
+		                <a href="#">
+		                    <i class="fa fa-yen"></i>
+		                    <span>财务管理</span>
+		                    <i class="fa fa-angle-left pull-right"></i>
+		                </a>
+		                <ul class="treeview-menu">
+		                    <li><a href=""><i class="fa fa-book"></i> 我的账户</a></li>
+		                    <li><a href=""><i class="fa fa-codiepie"></i> 购买门票</a></li>
+		                    <li><a href=""><i class="fa fa-exchange"></i> 门票转账</a></li>
+		                    <li><a href=""><i class="fa fa-newspaper-o"></i> 佣金清单</a></li>
+		                    <li><a href=""><i class="fa fa-minus-square-o "></i> 静态对账单</a></li>
+		                    <li><a href=""><i class="fa fa-minus-square"></i> 动态对账单</a></li>
+		                    <li><a href=""><i class="fa fa-circle-o"></i> 门票对账单</a></li>
+		                </ul>
+		            </li>
+		            <li class="treeview">
+		                <a href="#">
+		                    <i class="fa fa-users"></i> <span>交流中心</span>
+		                    <i class="fa fa-angle-left pull-right"></i>
+		                </a>
+		                <ul class="treeview-menu">
+		                    <li><a href=""><i class="fa fa-building-o"></i> 网站公告</a></li>
+		                    <li><a href=""><i class="fa fa-calendar-o"></i> 在线工单</a></li>
+		                    <li><a href=""><i class="fa fa fa-envelope"></i> 在线投票</a></li>
+		                </ul>
+		            </li>
+		            <li class="treeview">
+		                <a href="#">
+		                    <i class="fa fa-sign-out"></i> <span>安全退出</span>
+		<!--                        <i class="fa fa-angle-left pull-right"></i>-->
+		                </a>
+		            </li>
+		<!--                <li class="header">LABELS</li>-->
+		<!--                <li><a href=""><i class="fa fa-circle-o text-red"></i> <span>等待添加</span></a></li>-->
+		<!--                <li><a href=""><i class="fa fa-circle-o text-yellow"></i> <span>等待添加</span></a></li>-->
+		<!--                <li><a href=""><i class="fa fa-circle-o text-aqua"></i> <span>等待添加</span></a></li>-->
+		        </ul>
+
+		    </section>
+		    <!-- /.sidebar -->
+		</aside>
 
 
-	<div class="row" style="background-color:#eee;height:20px;">
-<div class="col-xs-12">
-		
-		<div class="row visible-xs">
-	<div class="text-left "><span class="glyphicon glyphicon-map-marker text-danger"
-				aria-hidden="true"></span> <span style="font-size: 16px;">我在: </span>
-			 <?php
-				$cid = UPlace::getCityId ();
-				Yii::import ( 'select2.Select2' );
-				$criteria = new CDbCriteria ();
-				$criteria->addCondition ( 'c_state>=0' );
-				$criteria->order = 'c_state DESC, c_spell ASC';
-				
-				$citiesListmodel = City::model ()->findAll ( $criteria );
-				$disabledOptions = array ();
-				foreach ( $citiesListmodel as $key => $city ) {
-					if ($city ['c_state'] < 1) {
-						$disabledOptions [$city ['id']] = array (
-								'disabled' => true 
-						);
-					}
-				}
-				$url = Yii::app()->createAbsoluteUrl('order/map');
-				echo Select2::dropDownList ( 'autoCity1', $cid, CHtml::listData ( $citiesListmodel, 'id', function ($city) {
-					return CHtml::encode ( $city->c_name );
-				} ), array (
-						'options' => $disabledOptions,
-						'select2Options' => array (
-								'matcher' => 'js:function(term, text) {
-            var mod=ZhToPinyin(text);
-            var tf1=mod.a.toUpperCase().indexOf(term.toUpperCase())==0;
-            var tf2=mod.b.toUpperCase().indexOf(term.toUpperCase())==0;
-            return (tf1||tf2);
-        }  ',
-								'width' => '90px' 
-						),
-						'onChange' => "document.cookie='_ucid='+this.value+';path=/';
-				    window.location.href='".$url."'; 
-				   " 
-				) );
-				?></div>
-	</div> <!-- end row -->
-	
-	
-			<div class="row">
-			
-				<div class="col-lg-offset-1 col-xs-6 col-lg-5 text-left">
-				
-<p>
-剩余洗车位：<?php echo $available;?> / 共：<?php echo $total;?></p>
-			</div>
-				<div class="col-xs-6 col-lg-5 text-right">
-					<ul class="list-inline">
-					您好！
-<?php if(Yii::app()->user->isGuest):?>	
-	<li>请 <a href="<?php echo Yii::app()->createUrl('site/login');?>">登录
-						</a> 或 <a href="<?php echo Yii::app()->createUrl('user/reg');?>">免费注册</a></li>				
-					
-<?php else :?>
-
-						<li><a href="<?php echo Yii::app()->createUrl('site/logout');?>"><?php
-	if (!isset ( Yii::app ()->user->_nickName )) {
-		$user = User::model()->findAllByPk(Yii::app()->user->id);
-		Yii::app()->user->setState('_nickName',$user['u_nick_name']);
-	}	
-		echo @Yii::app ()->user->_nickName;
-// 	}else{
-// 		Yii::app()->user->setState('_nickName',$user['u_nick_name']);
-// 	}
-	
-	?> [退出] </a></li>
-
-<?php endif;?>
-					
-	<?php $userModel = new User();?>		
-	<li>|</li>			
-							<li class="dropdown user user-menu"><a href="#"
-							class="dropdown-toggle" data-toggle="dropdown"> <i
-								class="fa fa-user  "></i> <span> 我的洗车 <i class="caret"></i>
-							</span>
-						</a>
-							<ul class="dropdown-menu text-left" style="z-index: 2000;">
-<?php
-if (! Yii::app ()->user->isGuest) :
-	?>
-<?php if(Yii::app()->user->checkAccess('boss')):?>
-	<li> <a 
-									href="<?php echo Yii::app()->createUrl('boss/profile');?>"><i class="fa fa-hand-o-right text-yellow"></i>车行通道</a>
-								</li>
-<?php endif;?>
-<?php endif;?>
-
-								<li class="user-body"><a
-									href="<?php echo Yii::app()->createUrl('user/profile');?>">账户概览</a>
-								</li>
-								<li class="user-body"><a
-									href="<?php echo Yii::app()->createUrl('user/list');?>">我的订单</a>
-								</li>
-								<li class="user-body"><a
-									href="<?php echo Yii::app()->createUrl('user/card');?>">我的优惠劵</a>
-								</li>
-								<li class="user-body"><a
-									href="<?php echo Yii::app()->createUrl('user/Favorite');?>">我的收藏</a>
-								</li>
-								<li class="user-body"><a
-									href="<?php echo Yii::app()->createUrl('user/score');?>">我的积分</a>
-								</li>
-
-
-							</ul></li>
-							<li>|</li>
-							<li> <a href="<?php echo  Yii::app()->createUrl('boss/login');?>">商家入口</a> </li>
-							<li>|</li>
-			  <li ><a href="javascript:void(0);" class="text-black" onclick="AddFavorite('我的网站',location.href)">收藏本站</a></li>
-					</ul>
-
-				</div>
-			</div><!-- end row  -->
-
-		</div> <!-- end  col -->
-		
-	</div>
-	<!-- row -->
-
-	</div> <!-- end contrainer -->
-	
-	<div class="container-fluid">
-	<div class=" row hidden-xs" >
-		<div class="col-lg-offset-1 col-sm-6 col-md-5  col-lg-4 pull-left">
-			<a href="<?php echo Yii::app()->createUrl('site/index');?>"><img
-				src="<?php echo Yii::app()->theme->baseUrl;?>/img/logo_2.png" /></a>
-			<span class="glyphicon glyphicon-map-marker text-danger"
-				aria-hidden="true"></span> <span style="font-size: 16px;">我在: </span>
-			 <?php
-// 				$cid = UPlace::getCityId ();
-// 				Yii::import ( 'select2.Select2' );
-// 				$criteria = new CDbCriteria ();
-// 				$criteria->addCondition ( 'c_state>=0' );
-// 				$criteria->order = 'c_state DESC, c_spell ASC';
-				
-// 				$citiesListmodel = City::model ()->findAll ( $criteria );
-// 				$disabledOptions = array ();
-// 				foreach ( $citiesListmodel as $key => $city ) {
-// 					if ($city ['c_state'] < 1) {
-// 						$disabledOptions [$city ['id']] = array (
-// 								'disabled' => true 
-// 						);
-// 					}
-// 				}
-				echo Select2::dropDownList ( 'autoCity', $cid, CHtml::listData ( $citiesListmodel, 'id', function ($city) {
-					return CHtml::encode ( $city->c_name );
-				} ), array (
-						'options' => $disabledOptions,
-						'select2Options' => array (
-								'matcher' => 'js:function(term, text) {
-            var mod=ZhToPinyin(text);
-            var tf1=mod.a.toUpperCase().indexOf(term.toUpperCase())==0;
-            var tf2=mod.b.toUpperCase().indexOf(term.toUpperCase())==0;
-            return (tf1||tf2);
-        }  ',
-								'width' => '90px' 
-						),
-						'onChange' => "document.cookie='_ucid='+this.value+';path=/';
-				         window.location.href='".$url."'; 
-				    " 
-				) );
-				?>
-<?php
-				// $this->widget('city.cityWidget');
-				?>
-		</div>
-		<div class="col-sm-6 col-md-7 col-lg-6  text-right" id="head-nav">
-		 <a href="<?php echo Yii::app()->createUrl('site/page',array('view'=>'card'));?>"><img src="<?php echo  Yii::app()->theme->baseUrl;?>/img/grey1.png" /></a>
-			<a href="<?php echo Yii::app()->createUrl('site/page',array('view'=>'icon'));?>"><img src="<?php echo  Yii::app()->theme->baseUrl;?>/img/grey2.png" /></a>
-			<a href="<?php echo Yii::app()->createUrl('site/page',array('view'=>'faq'));?>"><img src="<?php echo  Yii::app()->theme->baseUrl;?>/img/question.png" /></a>
-			<a href="<?php echo Yii::app()->createUrl('site/sendMessage');?>"><img src="<?php echo  Yii::app()->theme->baseUrl;?>/img/message.png" /></a>
-			
-		</div>
-		
-	</div>
-	<nav class="hidden-xs navbar navbar-default">
-	  <div class="container-fluid  ">
-		<!-- Brand and toggle get grouped for better mobile display -->
-		<div class="navbar-header">
-		  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-			<span class="sr-only">Toggle navigation</span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-		  </button>
-		  <!-- <a class="navbar-brand" href="#">Brand</a> -->
-		</div>
-
-		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-		  <ul class="nav navbar-nav">
-			<li id="mhome"><a
-					href="<?php echo Yii::app()->createUrl('site/index');?>">首 页</a></li>
-			<li id="mlist"><a
-					href="<?php echo Yii::app()->createUrl('order/list');?>">预定车行</a></li>	
-			<li id="mmap"><a
-					href="<?php echo Yii::app()->createUrl('order/map');?>">地图查看</a></li>
-				<li id="mjoinus"><a
-					href="<?php echo Yii::app()->createUrl('site/joinus');?>">车行加盟</a></li>
-			<li id="mhelp"><a
-					href="<?php echo Yii::app()->createUrl('site/page',array('view'=>'help_reg'));?>">帮助</a></li>
-		  </ul>
-
-		 
-		</div><!-- /.navbar-collapse -->
-	  </div><!-- /.container-fluid -->
-	</nav>
-	<div class="row visible-xs">
-		<nav class="navbar navbar-default" role="navigation">
-			<div class="container-fluid">
-				<!-- Brand and toggle get grouped for better mobile display -->
-				<div class="navbar-header" style="margin-left: -30px;margin-right:-30px;">
-
-					<a name="mhelp"
-						href="<?php echo Yii::app()->createUrl('site/page',array('view'=>'order'));?>"
-						class="navbar-toggle collapsed"> 帮助</a> <a name="mjoinus"
-						href="<?php echo Yii::app()->createUrl('site/joinus');?>"
-						class="navbar-toggle collapsed"> 加盟 </a>  <a
-						href="<?php echo Yii::app()->createUrl('order/map');?>"
-						class="navbar-toggle collapsed"> 地图 </a> <a
-						href="<?php echo Yii::app()->createUrl('order/list');?>"
-						class="navbar-toggle collapsed"> 预定 </a> <span
-						class="navbar-toggle pull-left" style="border: none;"> <a
-						href="<?php echo Yii::app()->createUrl('site/index'); ?>"><img
-							style="height: 30px; border: 0;"
-							src="<?php echo Yii::app()->theme->baseUrl;?>/img/logo_white.png" /></a></span>
-				</div>
-
-				<!-- Collect the nav links, forms, and other content for toggling -->
-
-				<!-- /.navbar-collapse -->
-			</div>
-			<!-- /.container-fluid -->
-
-		</nav>
-	</div>
-
- </div>
-
-<?php
-echo $content;
-?>
 
 
 
-<div class="container">
-	<!-- footer -->
-	<div class="row">
-		<div class="col-xs-12 visible-xs">
-			<ul class="list-group">
-				<li class="list-group-item"><a
-					href="<?php echo Yii::app()->createUrl('order/list');?>">车行列表</a></li>
-				<li class="list-group-item"><a
-					href="<?php echo Yii::app()->createUrl('boss/login');?>">车行通道</a></li>
-			</ul>
-		</div>
+    <div class="content-wrapper" style="min-height: 916px;">
+       	<?php echo $content; ?>
+       <!-- Modal -->
+    </div>
 
-	</div>
-
-	<div class="row">
-
-		<div class="col-sm-12 hidden-xs">
-
-			<div class="col-sm-3">
-				<ul style="list-style: none; text-align: center;">
-					<li><a href="<?php echo Yii::app()->createUrl('site/joinus');?>"><h4>车行加盟</h4></a></li>
-					<li><a
-						href="<?php echo Yii::app()->createUrl('site/page',array('view'=>'join_readme'));?>">加盟须知</a></li>
-					<li><a href="<?php echo Yii::app()->createUrl('site/joinus');?>">加盟申请</a></li>
-				</ul>
-			</div>
-			<div class="col-sm-3">
-				<ul style="list-style: none; text-align: center;">
-					<li><a href="<?php echo Yii::app()->createUrl('site/joinus');?>"><h4>帮助</h4></a></li>
-					<li><a
-						href="<?php echo Yii::app()->createUrl('site/page',array('view'=>'help_reg'));?>">使用帮助</a></li>
-					<li><a
-						href="<?php echo Yii::app()->createUrl('site/page',array('view'=>'faq'));?>">常见问题</a></li>
-				</ul>
-			</div>
-			<div class="col-sm-3">
-				<ul style="list-style: none; padding-left: 80px;">
-					<li><a
-						href="<?php echo Yii::app()->createUrl('site/page',array('view'=>'aboutus'));?>"><h4>关注我们</h4></a></li>
-					<li><a
-						href="<?php echo Yii::app()->createUrl('site/page',array('view'=>'aboutus'));?>">新浪微博</a></li>
-					<li><a
-						href="<?php echo Yii::app()->createUrl('site/page',array('view'=>'aboutus'));?>">微信</a></li>
-				</ul>
-			</div>
-			<div class="col-sm-3">
-				<label class="label label-danger" style="border-radius: 14px;"> <span
-					class="glyphicon glyphicon-hand-right"></span></label> <a
-					href="<?php echo  Yii::app()->createUrl('boss/login');?>"><span
-					style="font-size: 20px;">车行通道</span></a>
-			</div>
-
-
-		</div>
-
-
-	</div>
-
-	<div class="row">
-		<div class="col-sm-12 text-center">
-			<p>
-				<a href="<?php echo Yii::app()->createUrl('site/index'); ?>">沈阳喜车商务服务有限公司
-				</a> 版权所有 Copyright &copy;   <?php echo date('Y');?>   All Rights Reserved.</p>
-			<p>
-			<?php 
-// 			$detect = Yii::app()->mobileDetect;
-			$detect = new Mobile_Detect;
-			
-// 			// Any mobile device (phones or tablets).
-// 			if ( $detect->isMobile() ) {
-			
-// 			}
-			
-// 			// Any tablet device.
-// 			if( $detect->isTablet() ){
-			
-// 			}
-			 if($detect->isTablet()){ echo "tablet";}
-			if( $detect->isMobile()){echo 'mobile';};
-// 			echo $detect->is
-			?>
-				<a href="http://www.miitbeian.gov.cn" target="_blank">辽ICP备14013410号</a>
-			</p>
-		</div>
-
-		<div style="display: none">
-			<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1254078506'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s11.cnzz.com/z_stat.php%3Fid%3D1254078506%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
-		</div>
-	</div>
-	
-	</div> <!-- end container -->
+</div>
 </body>
-</html>
 
+</html>
