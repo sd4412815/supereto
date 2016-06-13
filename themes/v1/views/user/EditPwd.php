@@ -6,7 +6,7 @@
  */
 
 $this->pageTitle='修改密码';
-Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/public/js/common.js", CClientScript::POS_END );
+
 
 ?>
 
@@ -66,18 +66,20 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
     </div>
 
     <div class="from">
-        <label for="mobile_code">手机验证码</label>
-        <?php echo $form->textField($model,'mobile_code',array(
+        <label for="smsCode">手机验证码</label>
+        <?php echo $form->textField($model,'smsCode',array(
                 'placeholder'=>'请输入手机验证码',
                 'class'=>'input',
-                'id'=>'mobile_code'
+                'id'=>'smsCode'
         )) ?>
         <a href="javascript:void(0)" onclick="get_mobile_code();" id="get_captcha" class="btn btn-warning">免费获取验证码</a>
     </div>
-  <?php if (Yii::app ()->user->hasFlash ( 'edit_pwdError' )) :	?>
+  <?php if (Yii::app ()->user->hasFlash ( 'EditPwdError' )) :	?>
      <div class="alert alert-danger" role="alert"><?php echo Yii::app()->user->getFlash('edit_pwdError');?></div>
    <?php endif;?>
-
+    <?php echo $form->errorSummary($model); ?>
+ 
+    <input type="hidden" name="User[u_tel]" value="<?php echo $user['u_tel'] ?>">
   <input type="submit" class='btn btn-warning' value='确认修改'>
 
   <?php $this->endWidget(); ?>
@@ -98,11 +100,12 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
                      loadi = layer.load("");
                 },
                 error:function(){
+                    layer.close(loadi);
                     layer.msg('加载失败');
                 },
                 success:function(result){
+                    layer.close(loadi);
                     if(result['status']){
-                        layer.close(loadi);
                         layer.msg(result['msg']);
                         var o=document.getElementById('get_captcha');
                         time(0);
@@ -132,3 +135,4 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
         }
     }
 </script>
+<?php Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/public/js/common.js", CClientScript::POS_END ); ?>

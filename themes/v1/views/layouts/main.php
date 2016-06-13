@@ -223,8 +223,8 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
 		                    <span class="label label-primary pull-right">4</span>
 		                </a>
 		                <ul class="treeview-menu">
-		                    <li><a href="<?php echo Yii::app()->createUrl('user/edit_info');?>"><i class="fa fa-circle-o"></i> 修改资料</a></li>
-		                    <li><a href="<?php echo Yii::app()->createUrl('user/edit_pwd');?>"><i class="fa fa-circle-o"></i> 变更密码</a></li>
+		                    <li><a href="<?php echo Yii::app()->createUrl('user/EditInfo');?>"><i class="fa fa-circle-o"></i> 修改资料</a></li>
+		                    <li><a href="<?php echo Yii::app()->createUrl('user/EditPwd');?>"><i class="fa fa-circle-o"></i> 变更密码</a></li>
 		                </ul>
 		            </li>
 		            <li>
@@ -281,7 +281,7 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
 		                </ul>
 		            </li>
 		            <li class="treeview">
-		                <a href="#">
+		                <a href="<?php echo Yii::app()->createUrl('index/logout') ?>">
 		                    <i class="fa fa-sign-out"></i> <span>安全退出</span>
 		<!--                        <i class="fa fa-angle-left pull-right"></i>-->
 		                </a>

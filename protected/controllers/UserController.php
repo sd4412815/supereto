@@ -10,7 +10,7 @@ class UserController extends Controller {
 						'class' => 'CCaptchaAction',
 						'backColor' => 0xFFFFFF,
 						'minLength' => 4, // 最短为4位
-						'maxLength' => 6  // 是长为4位
+						'maxLength' => 4,  // 是长为4位
 								),
 				// page action renders "static" pages stored under 'protected/views/site/pages'
 				// They can be accessed via: index.php?r=site/page&view=FileName
@@ -24,14 +24,19 @@ class UserController extends Controller {
 	/**
 	 * 修改密码
 	 */
-	public function actionedit_pwd()
+	public function actionEditPwd()
 	{
 		$model = new User;
-        Yii::app()->session['send_code']='yuanzb';
+        Yii::app()->session['send_code']='yuanzb';//短信安全码
+
 		if (isset($_POST['User'])) {
+
             $model->attributes = $_POST['User'];
+            $model->scenario='EditPwd';
+            
             $valid = $model->validate();
             if($valid){
+//                $model->save();
                 echo '过啦';
             }else{
                 echo '没过';
@@ -40,7 +45,7 @@ class UserController extends Controller {
 
         $user=User::model()->find(Yii::app()->user->id);
 
-	    $this->render('edit_pwd',array(
+	    $this->render('EditPwd',array(
 				'model'     =>$model,
                 'user'      =>$user
 		));
@@ -49,15 +54,16 @@ class UserController extends Controller {
     /**
      * 修改资料
      */
-	public function actionedit_info()
+	public function actionEditInfo()
 	{
-        $this->render('edit_info');
+
+      $this->render('edit_info');
 	}
 
     /**
      * 新建用户（注册）
      */
-    public function actionregister()
+    public function actionRegister()
     {
         $this->render('register');
     }
@@ -143,11 +149,14 @@ class UserController extends Controller {
     {
         $mobile=$_GET['mobile'];
         $mobile='15642091931';
-        $sms=USms::edit_pwd($mobile,Yii::app()->session['send_code']);
+
+        $sms=USms::sendEditPwd($mobile,Yii::app()->session['send_code']);
 
         echo json_encode($sms);
 
     }
+
+
 
 
 

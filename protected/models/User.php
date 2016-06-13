@@ -13,11 +13,15 @@
  * @property integer $u_car_type
  */
 class User extends CActiveRecord {
-	public $old_pwd;
-	public $confirm_pwd;
-	public $captcha;
-	public $mobile_code;
-	/**
+
+    private $_identity;
+    public $old_pwd;            //原密码
+	public $confirm_pwd;        //确认密码
+	public $captcha;            //图形验证码
+	public $smsCode;            //短信验证码
+
+
+    /**
 	 *
 	 * @return string the associated database table name
 	 */
@@ -30,88 +34,26 @@ class User extends CActiveRecord {
 	 * @return array validation rules for model attributes.
 	 */
 	public function rules() {
-		// NOTE: you should only define rules for those attributes that
-		// will receive user inputs.
 		return array (
-				array (
-						'u_tel, u_pwd',
-						'required'
-				),
-				array (
-						'u_tel',
-						'numerical',
-						'integerOnly' => true
-				),
-				array (
-						'u_member_id',
-						'numerical',
-						'integerOnly' => true,
-						'allowEmpty' => true
-				),
-				array (
-						'u_nick_name',
-						'match',
-						'pattern' => '/[\x{4e00}-\x{9fa5}]|[a-zA-Z0-9*.]+$/u',
-						'on' => 'update'
-				),
-				array (
-						'u_type, u_sex,u_age,u_state,u_error_count',
-						'numerical',
-						'integerOnly' => true
-				),
-				array (
-						'u_sex',
-						'in',
-						'range' => array (
-								0,
-								1,
-								2
-						)
-				),
-				array (
-						'u_score',
-						'numerical'
-				),
-				array (
-						'u_name,u_nick_name',
-						'length',
-						'max' => 20
-				),
-				array (
-						'u_tel',
-						'match',
-						'pattern' => '/^1\d{10}$/'
-				),
-				array (
-						'u_tel',
-						'length',
-						'max' => 11
-				),
-				array (
-						'u_pwd',
-						'length',
-						'max' => 128
-				),
-				// The following rule is used by search().
-				// @todo Please remove those attributes that should not be searched.
-				array (
-						'u_tel',
-						'safe',
-						'on' => 'search'
-				) ,
-				array (
-						'u_car_brand,u_car_type',
-						'safe',
-						'on' => 'update'
-				),
-                array(
-                    'captcha',
-                    'captcha',
-                    'message'=>'验证码错误'
-                ),
+            //验证旧密码
+            array('old_pwd','authenticate','on'=>'EditPwd'),
+            array('old_pwd','required','message'=>'原密码不能为空','on'=>'EditPwd'),
             //验证密码和确认密码
-            array("confirm_pwd","compare","compareAttribute"=>"u_pwd","message"=>"两次密码不一致"),
-            array('old_pwd','validatePassword','on'=>'changePwd'),
+            array("confirm_pwd","compare","compareAttribute"=>"u_pwd","message"=>"两次密码不一致",'on'=>'EditPwd'),
+            array("u_pwd","required","message"=>"新密码不能为空",'on'=>'EditPwd'),
+            array("confirm_pwd","required","message"=>"确认密码不能为空",'on'=>'EditPwd'),
+            array("u_pwd","validatePassword",'on'=>'EditPwd'),
+            //手机号不能为空
+            array('u_tel','required','message'=>'手机号不能为空'),
+			//验证图形验证码
+//            array('captcha','captcha','message'=>'验证码错误','on'=>'EditPwd'),
+            array ('captcha','captcha','allowEmpty' => ! CCaptcha::checkRequirements (),'message' => '图形验证码过期，请点击刷新','on' => 'reset,EditPwd'),
+//            array('captcha', 'captcha','message'=>'验证码错误','allowEmpty'=>!CCaptcha::checkRequirements(),'on'=>'EditPwd'),
+            //验证手机验证码
+            array('smsCode','required','message'=>'手机验证码不能为空','on'=>'EditPwd'),
+            array ('smsCode','match','pattern' => '/^\d{6}$/','message' => '短信验证码错误','on' => 'reg,EditPwd'),
+            array ('smsCode','checkSmsCode','message' => '短信验证码错误','on' => 'reg,EditPwd'),
+            array ('smsCode','length','min'=>6,'max' => 6,'tooLong' => '短信验证码错误','tooShort' => '短信验证码错误','on' => 'reg,EditPwd'),
         );
 	}
 
@@ -149,6 +91,22 @@ class User extends CActiveRecord {
 		);
 	}
 
+    /**
+     * 验证短信验证码
+     * @param $attribute
+     * @param $params
+     */
+    public function checkSmsCode($attribute, $params) {
+        if (YII_DEBUG){
+            return ;
+        }
+        if (! isset ( Yii::app ()->session ['mobile_code'] )) {
+            $this->addError ( $attribute, '短信验证码错误' );
+        } else if (! preg_match ( '/^\d{6}$/', $this->smsCode ) || $this->smsCode != Yii::app ()->session ['mobile_code']) {
+            $this->addError ( $attribute, '短信验证码错误' );
+        }
+    }
+
 	/**
 	 * Retrieves a list of models based on the current search/filter conditions.
 	 *
@@ -175,6 +133,23 @@ class User extends CActiveRecord {
 				'criteria' => $criteria
 		) );
 	}
+
+
+
+    /**
+     * 验证密码是否正确
+     * This is the 'authenticate' validator as declared in rules().
+     */
+    public function authenticate($attribute, $params) {
+        if (! $this->hasErrors ()) {
+            $this->_identity = new UserIdentity ( $this->u_tel, $this->u_pwd );
+
+            // $isBoss = $this->scenario=="boss"?true:false;
+            if ( $this->_identity->authenticate () != 0){
+                $this->addError ( 'password', '手机号或密码错误.' );
+            }
+        }
+    }
 
 	/**
 	 * 验证密码

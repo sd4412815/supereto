@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="MySQL - yuan@192.168.0.222" uuid="413263f4-df01-4f37-a90c-b2a868d72536">
+    <data-source name="MySQL - supereto@localhost" uuid="5f6c865e-aa71-4c56-b898-ab358c2e2034">
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
-      <schema-pattern>yuan.*</schema-pattern>
-      <default-schemas>yuan.*</default-schemas>
+      <schema-pattern>supereto.*</schema-pattern>
+      <default-schemas>supereto.*</default-schemas>
     </data-source>
   </component>
 </project>

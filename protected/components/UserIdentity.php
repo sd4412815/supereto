@@ -21,40 +21,19 @@ class UserIdentity extends CUserIdentity
 	 */
 	public function authenticate($autoLogin=FALSE)
 	{
-	
-		
 		$user_telephone =trim($this->username);
-// 		if (empty($user_telephone)) {
-// 			$this->errorCode = self::ERROR_USERNAME_INVALID;
-// 			return 	$this->errorCode;
-// 		}
-		
-// 		$criteria = new CDbCriteria();
-// 		$criteria->addCondition('u_tel=:tel');
-// 		$criteria->addCondition('u_name=:name','OR');
-// 		$criteria->addCondition('u_member_id=:uid','OR');
-// 		$criteria->params[':tel']=$user_telephone;
-// 		$criteria->params[':name']=$user_telephone;
-// 		$criteria->params[':uid']=$user_telephone;
-		
-// 		$user = User::model()->find($criteria);
-// if ($user_telephone == 0){$user = null;}
-// else {
-    $user = User::model()->getUserByLoginName($user_telephone);
-// }
-		
-		
+        $user = User::model()->getUserByLoginName($user_telephone);
+
 		if (!isset($user))
 			$this->errorCode = self::ERROR_USERNAME_INVALID;
 		else if($user['u_error_count']>5){
 			$this->errorCode = self::ERROR_UNKNOWN_IDENTITY;
 		}else if($user->validatePassword($this->password) || $autoLogin){
 			$this->_id = $user->id;
-// 			$this->setState('u_tel',$user['u_tel']);
+
 			$this->username = $user['u_tel'];
 			$this->_nick_name = $user->u_name;
 			$this->errorCode=self::ERROR_NONE;
-		
 		}
 		else 
 		{
@@ -62,24 +41,8 @@ class UserIdentity extends CUserIdentity
 			$this->errorCode = self::ERROR_PASSWORD_INVALID;
 
 		}
-		
-// 		return $this->errorCode == self::ERROR_NONE;
+
 		return $this->errorCode;
-		
-		
-		
-// 		$users=array(
-// 			// username => password
-// 			'demo'=>'demo',
-// 			'admin'=>'admin',
-// 		);
-// 		if(!isset($users[$this->username]))
-// 			$this->errorCode=self::ERROR_USERNAME_INVALID;
-// 		elseif($users[$this->username]!==$this->password)
-// 			$this->errorCode=self::ERROR_PASSWORD_INVALID;
-// 		else
-// 			$this->errorCode=self::ERROR_NONE;
-// 		return !$this->errorCode;
 	}
 	
 	/**

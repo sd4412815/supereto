@@ -137,12 +137,12 @@ class LoginForm extends CFormModel {
 						'rememberMe',
 						'boolean', 
 				),
-// 				// 登录时验证密码
-// 				array (
-// 						'u_pwd',
-// 						'authenticate',
-// 						'on' => 'login' 
-// 				),
+ 				// 登录时验证密码
+ 				array (
+ 						'u_pwd',
+ 						'authenticate',
+ 						'on' => 'login'
+ 				),
 				array (
 						'smsCode',
 						'length',

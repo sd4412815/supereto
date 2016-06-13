@@ -138,6 +138,17 @@ class IndexController extends Controller
 
 
     /**
+     * Logs out the current user and redirect to homepage.
+     */
+    public function actionLogout() {
+        Yii::app ()->user->logout ();
+        Yii::app()->session->clear();
+        Yii::app()->session->destroy();
+        $this->redirect ('login');
+    }
+
+
+    /**
      * This is the action to handle external exceptions.
      */
     public function actionError() {
