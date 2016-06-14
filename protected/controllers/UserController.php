@@ -33,7 +33,7 @@ class UserController extends Controller {
 
             $model->attributes = $_POST['User'];
             $model->scenario='EditPwd';
-            
+
             $valid = $model->validate();
             if($valid){
 //                $model->save();
