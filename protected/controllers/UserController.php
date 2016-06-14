@@ -9,8 +9,8 @@ class UserController extends Controller {
 				'captcha' => array (
 						'class' => 'CCaptchaAction',
 						'backColor' => 0xFFFFFF,
-                        'height'    =>'25',
-                        'width'     =>'60',
+                        'height'    =>'34',
+                        'width'     =>'80',
 						'minLength' => 4, // 最短为4位
 						'maxLength' => 4,  // 是长为4位
 								),
@@ -59,7 +59,7 @@ class UserController extends Controller {
 	public function actionEditInfo()
 	{
 
-      $this->render('edit_info');
+      $this->render('EditInfo');
 	}
 
     /**
