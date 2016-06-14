@@ -18,14 +18,15 @@ $this->pageTitle='修改密码';
       'enableClientValidation'=>true,
       'focus'=>array($model,'firstName'),
       'htmlOptions' => array (
-				'class' => 'form-horizontal'
+				'class' => 'form-horizontal',
+                'style'=>'margin-top:30px;'
 		)
   )
 ); ?>
 
   <div class="form-group">
-    <label for="old_pwd" class="col-sm-2 control-label">原密码</label>
-      <div class="col-sm-10">
+    <label for="old_pwd" class="col-xs-4 control-label">原密码</label>
+      <div class="col-xs-6">
           <?php echo $form->passwordField($model,'old_pwd',array(
                   'placeholder'=>'请输入原密码',
                   'class'=>'form-control',
@@ -36,8 +37,8 @@ $this->pageTitle='修改密码';
   </div>
 
   <div class="form-group">
-    <label for="u_pwd" class="col-sm-2 control-label">新密码</label>
-      <div class="col-sm-10">
+    <label for="u_pwd" class="col-xs-4 control-label">新密码</label>
+      <div class="col-xs-6">
         <?php echo $form->passwordField($model,'u_pwd',array(
           'placeholder'=>'请输入新密码',
           'class'=>'form-control',
@@ -47,8 +48,8 @@ $this->pageTitle='修改密码';
   </div>
 
       <div class="form-group">
-        <label for="confirm_pwd" class="col-sm-2 control-label">确认密码</label>
-          <div class="col-sm-10">
+        <label for="confirm_pwd" class="col-xs-4 control-label">确认密码</label>
+          <div class="col-xs-6">
               <?php echo $form->passwordField($model,'confirm_pwd',array(
                       'placeholder'=>'请输入确认密码',
                       'class'=>'form-control',
@@ -58,8 +59,8 @@ $this->pageTitle='修改密码';
       </div>
 
     <div class="form-group">
-        <label for="captcha" class="col-sm-2 control-label">图形验证码</label>
-        <div class="col-sm-6">
+        <label for="captcha" class="col-xs-4 control-label">验证码</label>
+        <div class="col-xs-4">
         <?php echo $form->textField($model,'captcha',array(
                 'placeholder'=>'请输入图形验证码',
                 'class'=>'form-control',
@@ -67,7 +68,7 @@ $this->pageTitle='修改密码';
         ));
         ?>
         </div>
-        <div class="col-sm-4">
+        <div class="col-xs-2">
             <?php
             $this->widget('CCaptcha',array(
                     'showRefreshButton'=>false,
@@ -84,15 +85,15 @@ $this->pageTitle='修改密码';
     </div>
 
     <div class="form-group">
-        <label for="smsCode" class="col-sm-2 control-label">手机验证码</label>
-        <div class="col-sm-6">
+        <label for="smsCode" class="col-xs-2 control-label">手机验证码</label>
+        <div class="col-xs-4">
             <?php echo $form->textField($model,'smsCode',array(
                     'placeholder'=>'请输入手机验证码',
                     'class'=>'form-control',
                     'id'=>'smsCode'
             )) ?>
         </div>
-        <div class="col-sm-4">
+        <div class="col-xs-4">
             <a href="javascript:void(0)" onclick="get_mobile_code();" id="get_captcha" class="btn btn-warning">免费获取验证码</a>
         </div>
     </div>
