@@ -148,7 +148,7 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
                     <li class="dropdown user user-menu">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                             <img src="<?php echo Yii::app ()->theme->baseUrl?>/public/common/AdminLTE-2.3.3/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                            <span class="hidden-xs">XXXXX</span>
+                            <span class="hidden-xs"><?php echo Yii::app()->user->_nickName ?></span>
                         </a>
                         <ul class="dropdown-menu">
                             <!-- User image -->
@@ -202,7 +202,7 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
 		                <img src="<?php echo Yii::app ()->theme->baseUrl  ?>/public/common/AdminLTE-2.3.3/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 		            </div>
 		            <div class="pull-left info">
-		                <p>欢迎  XXXXXXX</p>
+		                <p>欢迎 <b style="color: #00a65a;"><?php echo Yii::app ()->user->_nickName ?></b></p>
 		                <a href="#"><i class="fa fa-circle text-success"></i> 在线中 <i class="fa fa-tablet"></i> <i class="fa fa-wifi"></i></a>
 		            </div>
 		        </div>
@@ -233,7 +233,7 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
 		                </a>
 		                <ul class="treeview-menu">
 		                    <li><a href="<?php echo Yii::app()->createUrl('user/register');?>"><i class="fa fa-circle-o"></i> 新建账户</a></li>
-		                    <li><a href="<?php echo Yii::app()->createUrl('user/recommend_list') ?>"><i class="fa fa-circle-o"></i> 推荐清单</a></li>
+		                    <li><a href="<?php echo Yii::app()->createUrl('user/RecommendList') ?>"><i class="fa fa-circle-o"></i> 推荐清单</a></li>
 		                </ul>
 		            </li>
 		            <li class="treeview">

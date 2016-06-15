@@ -35,6 +35,8 @@ class User extends CActiveRecord {
 	 */
 	public function rules() {
 		return array (
+            //安全设置
+            array('old_pwd,u_tel ,u_pwd,confirm_pwd,captcha,smsCode', 'safe'),
             //验证旧密码
             array('old_pwd','authenticate','on'=>'EditPwd'),
             array('old_pwd','required','message'=>'原密码不能为空','on'=>'EditPwd'),
@@ -142,8 +144,7 @@ class User extends CActiveRecord {
      */
     public function authenticate($attribute, $params) {
         if (! $this->hasErrors ()) {
-            $this->_identity = new UserIdentity ( $this->u_tel, $this->u_pwd );
-
+            $this->_identity = new UserIdentity ( $this->u_tel, $this->old_pwd );
             // $isBoss = $this->scenario=="boss"?true:false;
             if ( $this->_identity->authenticate () != 0){
                 $this->addError ( 'password', '手机号或密码错误.' );

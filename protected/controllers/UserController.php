@@ -30,29 +30,58 @@ class UserController extends Controller {
 	{
 		$model = new User;
         Yii::app()->session['send_code']='yuanzb';//短信安全码
-
 		if (isset($_POST['User'])) {
-
-            $model->attributes = $_POST['User'];
+            $model->attributes = $_POST ['User'];
             $model->scenario='EditPwd';
 
-            $valid = $model->validate();
-            if($valid){
-//                $model->save();
-                echo '过啦';
-            }else{
-                echo '没过';
+            if($model->validate()){
+                $user_model = new User ();
+                $user_model->u_tel = $model->u_tel;
+                $user_model->u_pwd = CPasswordHelper::hashPassword ( $model->u_pwd );
+                $user_model->u_score = 0;
+                $user_model->u_login_date = date ( 'Y-m-d H:i:s' );
+                if($user_model->save()){
+
+                    $msg =new  Message();
+                    $msg['m_datetime']=date('Y-m-d H:i:s');
+                    $msg['m_user_id'] = Yii::app ()->user->id ;
+                    $msg['m_level']= Message::LEVEL_URGENCY;
+                    $msg['m_content']='您更新了个人资料';
+                    $msg['m_type']=Message::TYPE_ACCOUNT;
+                    $msg['m_src']=UTool::getRequestInfo();
+                    $msg->save();
+                    Yii::app ()->user->setFlash ( 'userInfo', '个人信息更新成功' );
+                }else {
+                    Yii::app ()->user->setFlash ( 'userInfo', '个人信息更新失败' );
+                }
+                $this->refresh(true);
             }
 		}
 
         $user=User::model()->find(Yii::app()->user->id);
-
 	    $this->render('EditPwd',array(
 				'model'     =>$model,
                 'user'      =>$user
 		));
 	}
 
+
+    /**
+     * ajax 验证手机号
+     */
+    public function actionAjaxCheckMobile()
+    {
+        $rlt=UTool::iniFuncRlt();
+        $u_tel=$_GET['mobile'];
+        $model=new User;
+        $user = User::model ()->find($u_tel);
+        if(!empty($user)){
+            $rlt['status']=false;
+        }else{
+            $rlt['status']=true;
+        }
+        echo json_decode($rlt['status']);
+    }
     /**
      * 修改资料
      */
@@ -67,15 +96,30 @@ class UserController extends Controller {
      */
     public function actionRegister()
     {
-        $this->render('register');
+        $model=new User;
+        $models=new UserInfo;
+        if (!empty($_POST)) {
+            $model->attributes=$_POST;
+            if ($model->validate()) {
+                p($model);die;
+                User::model()->reg($model);
+            }
+
+        }
+        $userinfo = UserInfo::model ()->find(Yii::app ()->user->id);
+        $user = User::model ()->find(Yii::app ()->user->id);
+        $this->render('register',array('model'=>$model,'models'=>$models,'userinfo'=>$userinfo,'user'=>$user));
+
     }
 
     /**
      * 推荐清单
      */
-    public function actionrecommend_list()
+    public function actionRecommendList()
     {
-        $this->render('recommend_list');
+        $model=new RecommendList;
+        $recommend = RecommendList::model ()->findAll(Yii::app ()->user->id);
+        $this->render('recommend_list',array('model'=>$model,'recommend'=>$recommend));
     }
 
     /**
@@ -109,9 +153,7 @@ class UserController extends Controller {
 
                 $rltCheck = UTool::checkRepeatAction ( 0 );
                 if ($rltCheck ['status']) {
-                    // echo CJSON::encode($rltCheck);
                     Yii::app ()->user->setFlash ( 'resetError', $rltCheck ['msg'] );
-                    // Yii::app()->end();
                 } else {
                     $user_model = User::model ()->getUserByLoginName ( $model->u_tel );
 
@@ -128,7 +170,6 @@ class UserController extends Controller {
                             'model' => $model ,
                             'atype'=>$atype,
                         ) );
-                        // $this->redirect(array('user/resetCheck'));
                         Yii::app ()->end ();
                     } // end if user_model
                 } // end if checkRepeat

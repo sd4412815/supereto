@@ -66,7 +66,6 @@ class IndexController extends Controller
     public function actionindex()
     {
       $userinfo = UserInfo::model ()->find(Yii::app ()->user->id);
-      // p($userinfo);die;
       $gonggao['gg']['gonggao'] = '近期的公告';
       $gonggao['gg']['rq']      = '2015-01-15';
 

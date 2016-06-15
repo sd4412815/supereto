@@ -75,12 +75,12 @@ class JoinForm extends CFormModel {
 						'tooLong' => '{attribute}格式不正确',
 				),
 				// 注册时验证手机号码唯一
-// 				array (
-// 						'tel',
-// 						'unique',
-// 						'className' => 'User',
-// 						'message' => '手机号已注册',
-// 				),
+ 				array (
+ 						'tel',
+ 						'unique',
+ 						'className' => 'User',
+ 						'message' => '手机号已注册',
+ 				),
 				array (
 						'tel',
 						'checkTel',
@@ -156,9 +156,7 @@ class JoinForm extends CFormModel {
 			$tel =$this->tel;;
 			$address =$this->address;
 				
-			$tempUser = User::model ()->findByAttributes ( array (
-					'u_tel' => $tel
-			) );
+			$tempUser = User::model ()->findByAttributes ( array ('u_tel' => $tel));
 			if (! isset ( $tempUser )) {
 				$user = new User ();
 				$user ['u_tel'] = $tel;
