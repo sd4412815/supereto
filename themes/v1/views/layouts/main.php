@@ -17,8 +17,7 @@ if ($userModel === null)
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta http-equiv="Content-Type" content="IE=edge">
 <meta name="renderer" content="webkit">
-<meta name="viewport"
-	content="width=device-width, initial-scale=1,user-scalable=no">
+<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
 <meta name="Keywords" content="">
 <meta name="description" content="">
 <link rel="shortcut icon" href="<?php echo Yii::app()->baseUrl;?>/favicon.ico" type="image/x-icon" />
