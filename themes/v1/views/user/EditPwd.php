@@ -7,9 +7,17 @@
 
 $this->pageTitle='修改密码';
 
-
 ?>
-
+<ul class="breadcrumb">
+    <li>
+        <i class="icon-home"></i>
+        <a href="<?php echo Yii::app()->createUrl('index/index') ?>">Home</a>
+        <i class="icon-angle-right"></i>
+    </li>
+    <li>
+        <a href="<?php echo Yii::app()->createUrl('user/EditPwd') ?>">修改密码</a>
+    </li>
+</ul>
 <section class="content" style="font-size: 12px;">
 
  <?php $form = $this->beginWidget('CActiveForm', array(
@@ -97,8 +105,8 @@ $this->pageTitle='修改密码';
             <a href="javascript:void(0)" onclick="get_mobile_code();" id="get_captcha" class="btn btn-primary btn-sm">获取验证码</a>
         </div>
     </div>
-  <?php if (Yii::app ()->user->hasFlash ( 'EditPwdError' )) :	?>
-     <div class="alert alert-danger" role="alert"><?php echo Yii::app()->user->getFlash('edit_pwdError');?></div>
+  <?php if (Yii::app ()->user->hasFlash ( 'userInfo' )) :	?>
+     <div class="alert alert-danger" role="alert"><?php echo Yii::app()->user->getFlash('userInfo');?></div>
    <?php endif;?>
     <?php echo $form->errorSummary($model); ?>
 

@@ -31,18 +31,18 @@ class UserController extends Controller {
 		$model = new User;
         Yii::app()->session['send_code']='yuanzb';//短信安全码
         $user=User::model()->find(Yii::app()->user->id);
+
         if (isset($_POST['User'])) {
             $model->attributes = $_POST ['User'];
             $model->scenario='EditPwd';
-
+            
             if($model->validate()){
-                $user_model = new User ();
-                $user_model->id=$user->id;
-                $user_model->u_tel = $model->u_tel;
-                $user_model->u_pwd = CPasswordHelper::hashPassword ( $model->u_pwd );
-                $user_model->u_score = 0;
-                $user_model->u_login_date = date ( 'Y-m-d H:i:s' );
-                if($user_model->update()){
+                $user->id=$user->id;
+
+                $user->u_pwd = CPasswordHelper::hashPassword ( $model->u_pwd );
+                $user->u_score = 0;
+                $user->u_login_date = date ( 'Y-m-d H:i:s' );
+                if($user->update()){
 
                     $msg =new  Message();
                     $msg['m_datetime']=date('Y-m-d H:i:s');
@@ -88,8 +88,59 @@ class UserController extends Controller {
      */
 	public function actionEditInfo()
 	{
+        $info=UserInfo::model()->find('ui_userid=:uid',array(':uid'=>YII::app()->user->id));
+        if(!$info){
+            $info=new UserInfo();
+        }
+        $user=User::model()->find(Yii::app()->user->id);
 
-      $this->render('EditInfo');
+        //修改user表
+        if(isset($_POST['User'])) {
+            $user->attributes = $_POST ['User'];
+            $user->scenario = 'EditInfo';
+            if ($user->validate()) {
+                $user->id = $user->id;
+                $user->u_nick_name = $user->u_nick_name;
+                if ($user->update()) {
+
+                    //修改userinfo表
+                    if (isset($_POST['UserInfo'])) {
+                        $info->attributes = $_POST ['UserInfo'];
+                        $info->scenario = 'EditInfo';
+                        if ($user->validate()) {
+                            $info->id = $info->id;
+                            $info->ui_email = $info->ui_email;
+                            $info->ui_alipay = $info->ui_alipay;
+                            $info->ui_wechat = $info->ui_wechat;
+                            $info->ui_credit_card = $info->ui_credit_card;
+                            $info->ui_bank_account = $info->ui_bank_account;
+                            $info->ui_bank_branch = $info->ui_bank_branch;
+                            if ($user->save()) {
+                                $msg = new  Message();
+                                $msg['m_datetime'] = date('Y-m-d H:i:s');
+                                $msg['m_user_id'] = Yii::app()->user->id;
+                                $msg['m_level'] = Message::LEVEL_URGENCY;
+                                $msg['m_content'] = '您更新了个人资料';
+                                $msg['m_type'] = Message::TYPE_ACCOUNT;
+                                $msg['m_src'] = UTool::getRequestInfo();
+                                $msg->save();
+                                Yii::app()->user->setFlash('editInfo', '个人信息更新成功');
+                            }else{
+                                Yii::app()->user->setFlash('editInfo', '个人信息更新失败');
+                            }
+                        }
+                    }
+                } else {
+                    Yii::app()->user->setFlash('editInfo', '个人信息更新失败');
+                }
+            }
+        }
+
+
+        $this->render('EditInfo',array(
+            'user'  =>$user,
+            'info'  =>$info,
+        ));
 	}
 
     /**

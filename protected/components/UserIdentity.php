@@ -21,9 +21,9 @@ class UserIdentity extends CUserIdentity
 	 */
 	public function authenticate($autoLogin=FALSE)
 	{
+
 		$user_telephone =trim($this->username);
         $user = User::model()->getUserByLoginName($user_telephone);
-
 		if (!isset($user))
 			$this->errorCode = self::ERROR_USERNAME_INVALID;
 		else if($user['u_error_count']>5){

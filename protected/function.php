@@ -12,11 +12,12 @@ function p($arr,$is_end=false)
         echo "<pre>";
         print_r($arr);
         echo "</pre>";
-        die;
+
     }else{
         echo "<pre>";
         print_r($arr);
         echo "</pre>";
+        die;
     }
 }
 
@@ -26,10 +27,11 @@ function v($arr,$is_end=false)
         echo "<pre>";
         var_dump($arr);
         echo "</pre>";
-        die;
+
     }else{
         echo "<pre>";
         var_dump($arr);
         echo "</pre>";
+        die;
     }
 }

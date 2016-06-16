@@ -48,12 +48,10 @@ class User extends CActiveRecord {
             //手机号不能为空
             array('u_tel','required','message'=>'手机号不能为空'),
 			//验证图形验证码
-//            array('captcha','captcha','message'=>'验证码错误','on'=>'EditPwd'),
             array ('captcha','captcha','allowEmpty' => ! CCaptcha::checkRequirements (),'message' => '图形验证码过期，请点击刷新','on' => 'reset,EditPwd'),
-//            array('captcha', 'captcha','message'=>'验证码错误','allowEmpty'=>!CCaptcha::checkRequirements(),'on'=>'EditPwd'),
             //验证手机验证码
             array('smsCode','required','message'=>'手机验证码不能为空','on'=>'EditPwd'),
-            array ('smsCode','match','pattern' => '/^\d{6}$/','message' => '短信验证码错误','on' => 'reg,EditPwd'),
+            array ('smsCode','match','pattern' => '/^\d{6}$/','message' => '短信验证码错误','on' => 'reg,EditPwd,EditInfo'),
             array ('smsCode','checkSmsCode','message' => '短信验证码错误','on' => 'reg,EditPwd'),
             array ('smsCode','length','min'=>6,'max' => 6,'tooLong' => '短信验证码错误','tooShort' => '短信验证码错误','on' => 'reg,EditPwd'),
         );
@@ -147,7 +145,7 @@ class User extends CActiveRecord {
             $this->_identity = new UserIdentity ( $this->u_tel, $this->old_pwd );
             // $isBoss = $this->scenario=="boss"?true:false;
             if ( $this->_identity->authenticate () != 0){
-                $this->addError ( 'password', '手机号或密码错误.' );
+                $this->addError ( 'password', '密码错误,请重试！' );
             }
         }
     }

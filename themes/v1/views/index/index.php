@@ -21,6 +21,17 @@
  Yii::app ()->clientScript->registerCssFile ( Yii::app ()->theme->baseUrl . "/public/css/halflings.css" );
 $this->pageTitle = '我的账户';
 ?>
+<ul class="breadcrumb">
+    <li>
+        <i class="icon-home"></i>
+        <a href="<?php echo Yii::app()->createUrl('index/index') ?>">Home</a>
+        <i class="icon-angle-right"></i>
+    </li>
+    <li>
+        <a href="<?php echo Yii::app()->createUrl('index/index') ?>">我的主页</a>
+    </li>
+</ul>
+
 <section class="content-header">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 	 <meta content="" name="description">
@@ -96,10 +107,7 @@ $this->pageTitle = '我的账户';
 				 <div class="row-fluid">
 					 <div class="span12">
 						 <h3 class="page-title"> 我的主页 <small>My Homepage</small> </h3>
-						 <ul class="breadcrumb">
-							 <li> <i class="icon-home"></i> <a href="http://127.0.0.1/www/index">Home</a> <i class="icon-angle-right"></i> </li>
-							 <li><a href="http://127.0.0.1/www/index">我的主页</a></li>
-						 </ul>
+
 					 </div>
 				 </div>
 				 <!-- END PAGE HEADER-->
