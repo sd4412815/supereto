@@ -7,7 +7,7 @@
  */
 class UserInfo extends CActiveRecord {
 	public function tableName(){
-	return '{{User_Info}}';
+	return '{{user_info}}';
 	}
 		// public function UserInfo(){
 		// 	$sql = 'select * from yy_user_info where userid = '.Yii::app ()->user->id;

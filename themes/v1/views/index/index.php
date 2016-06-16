@@ -120,7 +120,7 @@ $this->pageTitle = '我的账户';
 												 <td class="tit" width="21%">账户编号</td>
 												 <td style="text-align:center;" width="29%">
 												   <!-- <a href="<?php //echo Yii::app()->createUrl('user/info');?>"> -->
-												   <?php echo $userinfo['account_number']; ?>
+												   <?php echo $userinfo['ui_account_number']; ?>
 												 <!-- </a> -->
 												 </td>
 												 <td class="tit" width="21%">账户昵称</td>
@@ -138,26 +138,26 @@ $this->pageTitle = '我的账户';
 													 <img src="<?php echo Yii::app ()->theme->baseUrl . "/images/x.gif" ;?>" height="12" width="14">
 												 </td>
 												 <td class="tit">我的级别</td>
-												 <td class="text-center"><?php echo $userinfo['my_rank']; ?></td>
+												 <td class="text-center"><?php echo $userinfo['ui_my_rank']; ?></td>
 											 </tr>
 											 <tr>
 												 <td class="tit">直推数量</td>
-												 <td class="text-center">全部<?php echo $userinfo['recommend_number']; ?> &nbsp;合格<?php echo $userinfo['recommend_number']; ?></td>
+												 <td class="text-center">全部<?php echo $userinfo['ui_recommend_number']; ?> &nbsp;合格<?php echo $userinfo['ui_recommend_number']; ?></td>
 												 <td class="tit">团队数量</td>
-												 <td class="text-center">全部<?php echo $userinfo['team_number']; ?> &nbsp;合格<?php echo $userinfo['team_number']; ?></td>
+												 <td class="text-center">全部<?php echo $userinfo['ui_team_number']; ?> &nbsp;合格<?php echo $userinfo['ui_team_number']; ?></td>
 											 </tr>
 
 											 <tr>
 												 <td class="tit">静态余额</td>
-												 <td class="text-center"><span style="color:green;"><i class="icon-money"></i></span> <?php echo $userinfo['static_balance']; ?></td>
+												 <td class="text-center"><span style="color:green;"><i class="icon-money"></i></span> <?php echo $userinfo['ui_static_balance']; ?></td>
 												 <td class="tit">动态余额</td>
-												 <td class="text-center"><span style="color:green;"><i class="icon-money"></i></span> <?php echo $userinfo['dynamic_balance']; ?></td>
+												 <td class="text-center"><span style="color:green;"><i class="icon-money"></i></span> <?php echo $userinfo['ui_dynamic_balance']; ?></td>
 											 </tr>
 											 <tr>
 												 <td class="tit">门票余额</td>
-												 <td class="text-center"><span style="color:green;"><i class="icon-money"></i></span> <?php echo $userinfo['ticket_balance']; ?> <a href="http://cn.mmobar.com/home/ticket_charge.php">充值</a></td>
+												 <td class="text-center"><span style="color:green;"><i class="icon-money"></i></span> <?php echo $userinfo['ui_ticket_balance']; ?> <a href="#">充值</a></td>
 												 <td class="tit">冻结数额</td>
-												 <td class="text-center"><span style="color:green;"><i class="icon-money"></i></span> <?php echo $userinfo['blocked_balances']; ?></td>
+												 <td class="text-center"><span style="color:green;"><i class="icon-money"></i></span> <?php echo $userinfo['ui_blocked_balances']; ?></td>
 											 </tr>
 
 										 </tbody>
