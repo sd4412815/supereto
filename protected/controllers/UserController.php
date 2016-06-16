@@ -30,17 +30,19 @@ class UserController extends Controller {
 	{
 		$model = new User;
         Yii::app()->session['send_code']='yuanzb';//短信安全码
-		if (isset($_POST['User'])) {
+        $user=User::model()->find(Yii::app()->user->id);
+        if (isset($_POST['User'])) {
             $model->attributes = $_POST ['User'];
             $model->scenario='EditPwd';
 
             if($model->validate()){
                 $user_model = new User ();
+                $user_model->id=$user->id;
                 $user_model->u_tel = $model->u_tel;
                 $user_model->u_pwd = CPasswordHelper::hashPassword ( $model->u_pwd );
                 $user_model->u_score = 0;
                 $user_model->u_login_date = date ( 'Y-m-d H:i:s' );
-                if($user_model->save()){
+                if($user_model->update()){
 
                     $msg =new  Message();
                     $msg['m_datetime']=date('Y-m-d H:i:s');
@@ -58,7 +60,6 @@ class UserController extends Controller {
             }
 		}
 
-        $user=User::model()->find(Yii::app()->user->id);
 	    $this->render('EditPwd',array(
 				'model'     =>$model,
                 'user'      =>$user
