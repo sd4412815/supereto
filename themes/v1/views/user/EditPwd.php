@@ -122,7 +122,7 @@ $this->pageTitle='修改密码';
         var mobile='<?php echo $user['u_tel']; ?>';
         if(check_mobile(mobile)){
             $.ajax({
-                url:'<?php echo Yii::app()->createUrl('user/get_mobile_code') ?>',
+                url:'<?php echo Yii::app()->createUrl('user/GetSmsCode') ?>',
                 dataType: 'json',
                 data:{
                     mobile:mobile

@@ -36,7 +36,8 @@ $this->pageTitle='推荐清单';
 <!-- END HEAD -->
 
 <!-- BEGIN BODY -->
-<body class="page-header-fixed ">
+<body class="page-header-fixed " >
+
     <script>
 	function makesure()
 	{
@@ -53,6 +54,7 @@ $this->pageTitle='推荐清单';
 .table-condensed th, .table-condensed td {padding:6px 5px 5px}
 .tg-link {line-height:30px;background:#f9f9f9;border:1px solid #ddd;border-top:0;}
 th{text-align: center;}
+td{font-size: 12.2px;}
 .peidui_btn_div {padding:0px 20px;}
 
 @media (max-width: 767px) {
@@ -105,9 +107,8 @@ th{text-align: center;}
                 <!-- BEGIN PAGE HEADER-->
                 <div class="row-fluid">
                     <div class="span12">
-                        <h3 class="page-title"> 推荐清单 <small>Create Account</small> </h3>
                         <ul class="breadcrumb">
-                            <li> <i class="icon-home"></i> <a href="">Home</a> <i class="icon-angle-right"></i> </li>
+                            <li> <i class="icon-home"></i> <a href="<?php echo Yii::app()->CreateUrl('index/index') ?>">Home</a> <i class="icon-angle-right"></i> </li>
                             <li><a href="">推荐清单</a></li>
                         </ul>
                     </div>
@@ -125,7 +126,7 @@ th{text-align: center;}
                                     <div class="span9" style="width:100%;">
                                         <div class="portlet box ">
                                           <div class="span12">
-  <div class="portlet box grey" >
+  <div class="portlet box grey">
     <div class="portlet-title">
       <div class="caption"><i class="icon-list"></i> 推荐清单</div>
     </div>
@@ -145,7 +146,7 @@ th{text-align: center;}
           </tr>
         </thead>
         <?php foreach ($recommend as $k => $rec) :?>
-        <tbody>
+        <tbody style="overflow-y:hidden">
           <tr>
             <td><?php echo $rec['id']; ?></td>
             <td><?php echo $rec['rl_account_number']; ?></td>

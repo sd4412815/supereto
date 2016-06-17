@@ -113,11 +113,11 @@ class LoginForm extends CFormModel {
 				),
 				// 图形验证码
 				array (
-				'verifyCode',
-				'captcha',
-				'allowEmpty' => ! CCaptcha::checkRequirements (),
-				'on' => 'reset',
-				'message' => '图形验证码过期，请点击刷新'
+                    'verifyCode',
+                    'captcha',
+                    'allowEmpty' => ! CCaptcha::checkRequirements (),
+                    'on' => 'reset',
+                    'message' => '图形验证码过期，请点击刷新'
 				),
 				array (
 						'verifyCode',

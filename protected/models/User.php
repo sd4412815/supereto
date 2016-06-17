@@ -36,24 +36,26 @@ class User extends CActiveRecord {
 	public function rules() {
 		return array (
             //安全设置
-            array('old_pwd,u_tel ,u_pwd,confirm_pwd,captcha,smsCode', 'safe'),
+            array ('old_pwd,u_tel,u_safe_pwd ,u_pwd,confirm_pwd,captcha,smsCode', 'safe'),
             //验证旧密码
-            array('old_pwd','authenticate','on'=>'EditPwd'),
-            array('old_pwd','required','message'=>'原密码不能为空','on'=>'EditPwd'),
+            array ('old_pwd','authenticate','on'=>'EditPwd'),
+            array ('old_pwd','required','message'=>'原密码不能为空','on'=>'EditPwd'),
+            //验证安全密码
+            array('u_safe_pwd','checkSafePwd','on'=>'EditInfo'),
             //验证密码和确认密码
-            array("confirm_pwd","compare","compareAttribute"=>"u_pwd","message"=>"两次密码不一致",'on'=>'EditPwd'),
-            array("u_pwd","required","message"=>"新密码不能为空",'on'=>'EditPwd'),
-            array("confirm_pwd","required","message"=>"确认密码不能为空",'on'=>'EditPwd'),
-            array("u_pwd","validatePassword",'on'=>'EditPwd'),
+            array ("confirm_pwd","compare","compareAttribute"=>"u_pwd","message"=>"两次密码不一致",'on'=>'EditPwd'),
+            array ("u_pwd","required","message"=>"新密码不能为空",'on'=>'EditPwd'),
+            array ("confirm_pwd","required","message"=>"确认密码不能为空",'on'=>'EditPwd'),
+            array ("u_pwd","validatePassword",'on'=>'EditPwd'),
             //手机号不能为空
-            array('u_tel','required','message'=>'手机号不能为空'),
+            array ('u_tel','required','message'=>'手机号不能为空'),
 			//验证图形验证码
             array ('captcha','captcha','allowEmpty' => ! CCaptcha::checkRequirements (),'message' => '图形验证码过期，请点击刷新','on' => 'reset,EditPwd'),
             //验证手机验证码
-            array('smsCode','required','message'=>'手机验证码不能为空','on'=>'EditPwd'),
+            array ('smsCode','required','message'=>'手机验证码不能为空','on'=>'EditPwd,EditInfo'),
             array ('smsCode','match','pattern' => '/^\d{6}$/','message' => '短信验证码错误','on' => 'reg,EditPwd,EditInfo'),
-            array ('smsCode','checkSmsCode','message' => '短信验证码错误','on' => 'reg,EditPwd'),
-            array ('smsCode','length','min'=>6,'max' => 6,'tooLong' => '短信验证码错误','tooShort' => '短信验证码错误','on' => 'reg,EditPwd'),
+            array ('smsCode','checkSmsCode','message' => '短信验证码错误','on' => 'reg,EditPwd,EditInfo'),
+            array ('smsCode','length','min'=>6,'max' => 6,'tooLong' => '短信验证码错误','tooShort' => '短信验证码错误','on' => 'reg,EditPwd,EditInfo'),
         );
 	}
 
@@ -135,7 +137,9 @@ class User extends CActiveRecord {
 	}
 
 
+    public function checkSafePwd($attribute,$params){
 
+    }
     /**
      * 验证密码是否正确
      * This is the 'authenticate' validator as declared in rules().
@@ -215,12 +219,6 @@ class User extends CActiveRecord {
 				}
 				$rlt ['msg'] .= '初始化用户权限失败;';
 			}
-			// 自动登录
-			// $lf = new LoginForm ();
-			// $lf->u_tel = $user_model->u_tel;
-			// $lf->u_pwd = $user_model->u_pwd;
-			// // $loginForm->login()
-			// $lf->setScenario('login');
 
 			if ($autoLogin) {
 				$loginForm->setScenario ( 'login' );

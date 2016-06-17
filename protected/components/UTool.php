@@ -130,8 +130,6 @@ class UTool {
 				unset($session[$sessionKey]);//超过限制时间，释放session";
 			}
 		}
-
-
 		//第一次点击确认按钮时执行
 		if(!isset($session[$sessionKey]) ){
 			$session[$sessionKey] = time();
@@ -184,8 +182,6 @@ class UTool {
 			// 没有值，赋新值
 			$token_code = UTool::mGenToken ();
 		} else {
-			// 　　　　　　　　继续使用旧的值
-			// $token_code =CPasswordHelper::hashPassword ($session ['csrfId']);
 			$token_code = $session ['csrfId'];
 		}
 
@@ -200,18 +196,13 @@ class UTool {
 	public static function mGenToken() {
 		$token = UTool::randomkeys ( 10, '1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLOMNOPQRSTUVWXYZ' );
 		Yii::app ()->session ['csrfId'] = $token;
-
-		// $token_code = CPasswordHelper::hashPassword ( $token );
 		$token_code = $token;
-
 		return $token_code;
 	}
+
 	public static function orderSubmitSms($orderItem) {
 		$target = "http://106.ihuyi.cn/webservice/sms.php?method=Submit";
-
 		@$mobile = $orderItem->ohUser ['u_tel'];
-		// @$send_code = $_POST['send_code'];
-
 		$mobile_code = UTool::randomkeys ( 6 );
 		if (empty ( $mobile )) {
 			echo '手机号码不能为空';
@@ -221,9 +212,7 @@ class UTool {
 		$post_data = "account=cf_xiche&password=" . md5 ( 'xc.2015' ) . "&mobile=" . $mobile . "&content=" . rawurlencode ( "恭喜您，成功预约“" . $orderItem->serviceType ['st_name'] . "”服务，请于" . date ( 'Y:m:d H:i', strtotime ( $orderItem ['oh_date_time'] ) ) . "-" . date ( 'H:i', strtotime ( $orderItem ['oh_date_time_end'] ) ) . "分准时到" . $orderItem->ohWashShop ['ws_name'] . "店，尊享专属爱车服务。渐进生活，尽在我洗车！" );
 		// $post_data = "account=cf_xiche&password=123456&mobile=".$mobile."&content=".rawurlencode("您的验证码是：4290。请不要把验证码泄露给其他人。如非本人操作，可不用理会！");
 		// 密码可以使用明文密码或使用32位MD5加密
-
 		$rlt = UTool::curlPost ( $target, $post_data );
-
 		$gets = UTool::xml_to_array ( $rlt );
 		if ($gets ['SubmitResult'] ['code'] == 2) {
 			$_SESSION ['mobile'] = $mobile;
@@ -243,8 +232,9 @@ class UTool {
 		$rlt ['data'] = '';
 		return $rlt;
 	}
-	
-	public static function getweather($city, $data = 'wetherData.txt') 	// 获取天气预报内容
+
+    // 获取天气预报内容
+	public static function getweather($city, $data = 'wetherData.txt')
 	{
 		$urlarr = unserialize ( file_get_contents ( $data ) );
 		if ($urlarr [$city]) {
@@ -301,7 +291,9 @@ class UTool {
 			return "无法获取到该城市的天气信息!";
 		}
 	}
-	public static function wchangearray($arr) 	// 对数组进行键值排序
+
+    // 对数组进行键值排序
+    public static function wchangearray($arr)
 	{
 		foreach ( $arr as $v ) {
 			if (! trim ( $v ))
@@ -310,11 +302,12 @@ class UTool {
 		}
 		return $value;
 	}
+
+    /*
+     * 产生随机数
+     * */
 	public static function randomkeys($length, $pattern = '1234567890') {
 		$output = '';
-		// $pattern='1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLOMNOPQRSTUVWXYZ';
-		// $pattern='1234567890';
-
 		$output .= $pattern {mt_rand ( 0, strlen ( $pattern ) - 1 )};
 		for($a = 1; $a < $length; $a ++) {
 			$output .= $pattern {mt_rand ( 0, strlen ( $pattern ) - 1 )}; // 生成php随机数
@@ -322,13 +315,13 @@ class UTool {
 		while (substr($output, 0,1) == '0'){
 		    $output = UTool::randomkeys($length,$pattern);
 		}
-
-
 		return $output;
 	}
+
 	public static function getURLRandoms($baseUrl) {
 		return Yii::app ()->createUrl ( $baseUrl . '&' . UTool::randomkeys ( mt_rand ( 4, 8 ) ) );
 	}
+
 	public static function guaranteeRatio($totalValue) {
 		return 0.5;
 	}
@@ -339,15 +332,18 @@ class UTool {
 		) );
 		return $boss;
 	}
+
 	public static function getMaskKeyWords() {
 		$str = '非法,屏蔽, 太差';
 		$arr = split ( '[, ;]', $str );
 		return $arr;
 	}
+
 	public static function checkComment($comment) {
 		$keys = UTool::getMaskKeyWords ();
 		return str_replace ( $keys, '*', $comment );
 	}
+
 	public static function get_client_ip() {
 		global $_SERVER;
 		if (isset ( $_SERVER ["HTTP_X_FORWARDED_FOR"] )) {

@@ -39,27 +39,27 @@ $this->pageTitle = '修改资料';
             )
     ); ?>
         <div class="form-group">
-            <label class="control-label col-xs-4" for="">编号<span class="required">&nbsp;</span></label>
+            <label class="control-label col-xs-4" for="">编号<span class="text-red h5">&nbsp;</span></label>
             <div class="col-xs-8 col-sm-4">
                 <span class=""><?php echo $info['ui_account_number'] ?></span>
             </div>
         </div>
 
         <div class="form-group">
-            <label class="control-label col-xs-4" for="">姓名<span class="required">&nbsp;</span></label>
+            <label class="control-label col-xs-4" for="">姓名<span class="text-red h5">&nbsp;</span></label>
             <div class="col-xs-8 col-sm-4">
                 <span class="form-show"><?php echo $user['u_name'] ?></span>
             </div>
         </div>
 
         <div class="form-group">
-            <label class="control-label col-xs-4" for="">手机号<span class="required">&nbsp;</span></label>
+            <label class="control-label col-xs-4" for="">手机号<span class="text-red h5">&nbsp;</span></label>
             <div class="col-xs-8 col-sm-4">
                 <span class="form-show"><?php echo $user['u_tel'] ?></span>
             </div>
         </div>
         <div class="form-group">
-            <label class="control-label  col-xs-4" for="u_nick_name">昵称<span class="required">*</span></label>
+            <label class="control-label  col-xs-4" for="u_nick_name">昵称<span class="text-red h5">*</span></label>
             <div class="col-xs-8 col-sm-4">
                 <?php echo $form->textField($user,'u_nick_name',array(
                         'placeholder'=>'请输入昵称',
@@ -71,7 +71,7 @@ $this->pageTitle = '修改资料';
 
 
         <div class="form-group">
-            <label class="control-label  col-xs-4" for="ui_email">邮箱<span class="required">&nbsp;</span></label>
+            <label class="control-label  col-xs-4" for="ui_email">邮箱<span class="text-red h5">&nbsp;</span></label>
             <div class="col-xs-8 col-sm-4">
                 <?php echo $form->textField($info,'ui_email',array(
                         'placeholder'=>'请输入邮箱地址',
@@ -82,7 +82,7 @@ $this->pageTitle = '修改资料';
         </div>
 
         <div class="form-group">
-            <label class="control-label  col-xs-4" for="ui_alipay">支付宝<span class="required">&nbsp;</span></label>
+            <label class="control-label  col-xs-4" for="ui_alipay">支付宝<span class="text-red h5">&nbsp;</span></label>
             <div class="col-xs-8 col-sm-4">
                 <?php echo $form->textField($info,'ui_alipay',array(
                         'placeholder'=>'请输入支付宝账号',
@@ -93,7 +93,7 @@ $this->pageTitle = '修改资料';
         </div>
 
         <div class="form-group">
-            <label class="control-label  col-xs-4" for="ui_wechat">微信号<span class="required">&nbsp;</span></label>
+            <label class="control-label  col-xs-4" for="ui_wechat">微信号<span class="text-red h5">&nbsp;</span></label>
             <div class="col-xs-8 col-sm-4">
                 <?php echo $form->textField($info,'ui_wechat',array(
                         'placeholder'=>'请输入微信号',
@@ -104,7 +104,7 @@ $this->pageTitle = '修改资料';
         </div>
 
         <div class="form-group">
-            <label class="control-label  col-xs-4" for="ui_credit_card">银行账号<span class="required">&nbsp;</span></label>
+            <label class="control-label  col-xs-4" for="ui_credit_card">银行账号<span class="text-red h5">&nbsp;</span></label>
             <div class="col-xs-8 col-sm-4">
                 <?php echo $form->textField($info,'ui_credit_card',array(
                         'placeholder'=>'请输入银行卡号',
@@ -115,7 +115,7 @@ $this->pageTitle = '修改资料';
         </div>
 
         <div class="form-group">
-            <label class="control-label  col-xs-4" for="ui_bank_account">开户银行<span class="required">&nbsp;</span></label>
+            <label class="control-label  col-xs-4" for="ui_bank_account">开户银行<span class="text-red h5">&nbsp;</span></label>
             <div class="col-xs-8 col-sm-4">
                 <?php echo $form->textField($info,'ui_bank_account',array(
                         'placeholder'=>'请输入开户银行',
@@ -126,7 +126,7 @@ $this->pageTitle = '修改资料';
         </div>
 
         <div class="form-group">
-            <label class="control-label  col-xs-4" for="ui_bank_branch">开户支行<span class="required">&nbsp;</span></label>
+            <label class="control-label  col-xs-4" for="ui_bank_branch">开户支行<span class="text-red h5">&nbsp;</span></label>
             <div class="col-xs-8 col-sm-4">
                 <?php echo $form->textField($info,'ui_bank_branch',array(
                         'placeholder'=>'请输入开户支行',
@@ -137,7 +137,7 @@ $this->pageTitle = '修改资料';
         </div>
 
         <div class="form-group">
-            <label class="control-label  col-xs-4" for="u_safe_pwd">安全密码<span class="required">*</span></label>
+            <label class="control-label  col-xs-4" for="u_safe_pwd">安全密码<span class="text-red h5">*</span></label>
             <div class="col-xs-8 col-sm-4">
                 <?php echo $form->passwordField($user,'u_safe_pwd',array(
                         'placeholder'=>'请输入安全密码',
@@ -149,15 +149,17 @@ $this->pageTitle = '修改资料';
     
 
         <div class="form-group">
-            <label class="control-label  col-xs-4" for="smsCode">短信验证码<span class="required">*</span></label>
-            <div class="col-xs-8 col-sm-4">
+            <label class="control-label  col-xs-4" for="smsCode">短信验证码<span class="text-red h5">*</span></label>
+            <div class="col-xs-4 col-sm-4">
                 <?php echo $form->passwordField($user,'smsCode',array(
-                        'placeholder'=>'请输入短信验证码',
+                        'placeholder'=>'短信验证码',
                         'class'=>'form-control',
                         'id'=>'smsCode'
                 )) ?>
             </div>
-
+            <div class="col-xs-4">
+                <a href="javascript:void(0)" onclick="get_mobile_code();" id="get_captcha" class="btn btn-primary btn-sm">获取验证码</a>
+            </div>
         </div>
         <?php if (Yii::app ()->user->hasFlash ( 'editInfo' )) :	?>
             <div class="alert alert-danger" role="alert"><?php echo Yii::app()->user->getFlash('editInfo');?></div>
@@ -171,3 +173,53 @@ $this->pageTitle = '修改资料';
 
 
 </section>
+
+<script>
+    function　get_mobile_code(){
+        var mobile='<?php echo $user['u_tel']; ?>';
+        if(check_mobile(mobile)){
+            $.ajax({
+                url:'<?php echo Yii::app()->createUrl('user/GetSmsCode') ?>',
+                dataType: 'json',
+                data:{
+                    mobile:mobile
+                },
+                beforeSend:function(){
+                    loadi = layer.load("");
+                },
+                error:function(){
+                    layer.close(loadi);
+                    layer.msg('加载失败');
+                },
+                success:function(result){
+                    layer.close(loadi);
+                    if(result['status']){
+                        layer.msg(result['msg']);
+                        var o=document.getElementById('get_captcha');
+                        time(0);
+                    }else{
+                        layer.msg(result['msg']);
+                    }
+                },
+            })
+        }else{
+            layer.msg('手机号有误');
+        }
+    }
+
+    var wait=60;
+    function time(o){
+        if (wait == 0) {
+            $('#get_captcha').attr('disabled',false);
+            $('#get_captcha').css('background','#e95466');
+            $('#get_captcha').html('免费获取验证码');
+            wait = 60;
+        } else {
+            $('#get_captcha').attr('disabled',true);
+            $('#get_captcha').css('background','#999');
+            $('#get_captcha').html('重新发送('+wait+')');
+            wait--;
+            setTimeout(function() {time(o)},1000)
+        }
+    }
+</script>

@@ -23,7 +23,7 @@ $this->pageTitle='新建账户';
 <!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
 <!--[if !IE]><!-->
-<section>
+<section class="content">
 <head>
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
@@ -52,7 +52,7 @@ $this->pageTitle='新建账户';
 .list-notice {padding:1px 5px;}
 .table-condensed th, .table-condensed td {padding:6px 5px 5px}
 .tg-link {line-height:30px;background:#f9f9f9;border:1px solid #ddd;border-top:0;}
-
+label {padding-left:1px;padding-right:1px;float: left; position:relative;min-height:1px;width:55px;text-align: right;}
 .peidui_btn_div {padding:0px 20px;}
 
 @media (max-width: 767px) {
@@ -105,9 +105,8 @@ $this->pageTitle='新建账户';
                 <!-- BEGIN PAGE HEADER-->
                 <div class="row-fluid">
                     <div class="span12">
-                        <h3 class="page-title"> 新建账户 <small>Create Account</small> </h3>
                         <ul class="breadcrumb">
-                            <li> <i class="icon-home"></i> <a href="">Home</a> <i class="icon-angle-right"></i> </li>
+                            <li> <i class="icon-home"></i> <a href="<?php echo Yii::app()->CreateUrl('index/index') ?>">Home</a> <i class="icon-angle-right"></i> </li>
                             <li><a href="">新建账户</a></li>
                         </ul>
                     </div>
@@ -121,11 +120,12 @@ $this->pageTitle='新建账户';
                         </ul>
                         <div class="tab-content">
                             <div class="tab-pane row-fluid active" id="tab_1_1">
-                                <ul><li>⊙ 本功能仅用于未注册过的手机号码，一个手机号码只能注册一次；</li>
-                                    <li>⊙ 请细致填写账户资料，全球系统统一管理；</li>
-                                    <li>⊙ 如遇申诉需要验证您的手机号码和姓名，请如实填写；</li>
-                                    <!-- <li>如您要继续注册更多的账户，请开通您的主账户后登录系统使用注册附属账户功能；</li> -->
+                                <ul><li>⊙ 本功能仅用于未注册过的手机号码。</li>
+                                    <li>⊙ 一个手机号码只能注册一次。</li>
+                                    <li>⊙ 请细致填写账户资料，全国统一管理。</li>
+                                    <li>⊙ 申诉需验证手机和姓名，请如实填写。</li>
                                     <li>⊙ 您必须为年满18周岁，60周岁以下完全民事行为能力的合法公民，不符合请勿注册。</li>
+                                    <li class="control-label">⊙ 注:<span class="required">*</span>为必填项，如不填无法成功申请。</li>
                                 </ul>
                                 <div class="row-fluid">
                                     <div class="span9">
@@ -145,187 +145,205 @@ $this->pageTitle='新建账户';
                                                      'enableClientValidation'=>true,
                                                      'focus'=>array($model,'firstName'),
                                                  )); ?>
-                                                    <div class="control-group">
-                                                        <label class="control-label" for="userAccountName" style="width:120px; text-align:right;">新用户编号<span class="required">*</span></label>
-                                                        <div class="controls input-icon" style="display:inline-block;width:800px;">
-                                                            <!-- <input class="span5 m-wrap" id="userAccountName" name="userAccountName" value="M05638273" readonly="readonly" type="text" style="display:inline-block; width:55%;"> -->
+
+                                                    <div class="form-group" >
+                                                        <label class="control-label" for="userAccountName" >编号<span class="required">*</span></label>
+                                                        <div class="col-xs-7" style="display:inline-block;"  >
                                                           <?php
                                                             echo $form->textField ( $models, 'ui_account_number', array (
-                                                            		'class'       => 'span5 m-wrap',
+                                                            		'class'       => 'form-control',
                                                                 'readonly'    => 'readonly',
                                                                 'id'          => 'userAccountName',
                                                                 'name'        => 'ui_account_number',
                                                                 'value'       => 'M05638273',
-                                                            		'style'       => 'display:inline-block; width:55%;'
+
                                                             ) );
                                                           ?>
-                                                            <span title="" data-original-title="" class="input-success tooltips" style="display:inline-block;"> </span>
-                                                            <button type="button" class="btn blue" id="userChangeAccountName">换一个</button>
-                                                        </div>
-                                                        <div class="help-hint" style="height:20px;"></div>
-                                                    </div>
 
-                                                    <div class="control-group" style="display:inline; ">
-                                                        <label class="control-label" for="userNickName" style="width:120px; text-align:right;">昵称<span class="required">*</span></label>
-                                                        <div class="controls input-icon" style="display:inline-block;width:800px;">
-                                                            <!-- <input name="userNickName" class="span5 m-wrap tooltips" id="userNickName" placeholder="昵称" maxlength="20" data-placement="bottom" data-original-title="请选择一个您喜欢的昵称" type="text" style="display:inline-block; width:55%;"> -->
+                                                        </div>
+                                                        <button type="button" class="btn blue" id="userChangeAccountName" style="font-size:8px;padding:6px 6px;">换号</button>
+                                                        <div class="help-hint" style="height:15px;"></div>
+                                                    </div>
+                                                    <div class="form-group" >
+                                                        <label class="control-label" for="userNickName" >昵称<span class="required">*</span></label>
+                                                        <div class="col-xs-9">
                                                             <?php
                                                               echo $form->textField ( $model, 'u_nick_name', array (
                                                                   'name'                => 'u_nick_name',
-                                                              		'class'               => 'span5 m-wrap tooltips',
+                                                              		'class'               => 'form-control',
                                                                   'id'                  => 'userNickName',
                                                                   'placeholder'         => '昵称',
                                                                   'maxlength'           => '20',
                                                                   'data-placement'      => 'bottom',
                                                                   'data-original-title' =>'请选择一个您喜欢的昵称',
-                                                              		'style'               => 'display:inline-block; width:55%;'
+
                                                               ) );
                                                             ?>
-                                                            <span class="help-inline" style="display:inline-block;">必填</span>
-                                                        </div>
-                                                        <div class="help-hint" style="height:20px;"></div>
+                                                          </div>
+                                                          <div class="help-hint" style="height:5px;"></div>
+                                                          <span class="help-inline" > &nbsp;</span>
+                                                        <div class="help-hint" style="height:15px;"></div>
                                                     </div>
-
-                                                    <div class="control-group">
-                                                        <label class="control-label" style="width:120px; text-align:right;">推荐人编号<span class="required">*</span></label>
-                                                        <div class="controls input-icon" style="display:inline-block;width:800px;">
+                                                    <div class="form-group">
+                                                        <label class="control-label" >推荐人<span class="required">*</span></label>
+                                                        <div class="col-xs-9">
                                                             <!-- <input name="userReference" class="span5 m-wrap" id="userReference" placeholder="推荐人编号" value="M04535811" maxlength="12" type="text" style="display:inline-block; width:55%;"> -->
                                                             <?php
                                                               echo $form->textField ( $models, 'ui_referrer', array (
                                                                   'name'                => 'ui_referrer',
-                                                                  'class'               => 'span5 m-wrap',
+                                                                  'class'               => 'form-control',
                                                                   'id'                  => 'userReference',
                                                                   'placeholder'         => '推荐人编号',
                                                                   'value'               => $userinfo['ui_account_number'],
                                                                   'maxlength'           => '12',
-                                                                  'style'               => 'display:inline-block; width:35%;'
                                                               ) );
                                                             ?>
-                                                            <span class="help-inline" style="display:inline-block;">必填</span>
                                                         </div>
-                                                        <div class="help-hint" style="height:20px;"></div>
+                                                        <div class="help-hint" style="height:5px;"></div>
+                                                        <span class="help-inline"> &nbsp;</span>
+                                                        <div class="help-hint" style="height:15px;"></div>
                                                     </div>
-                                                    <div class="control-group">
-                                                        <label class="control-label" for="userIDname" style="width:120px; text-align:right;">姓名<span class="required">*</span></label>
-                                                        <div class="controls input-icon" style="display:inline-block;width:800px;">
+
+
+                                                    <div class="form-group">
+                                                        <label class="control-label" for="userIDname">姓名<span class="required">*</span></label>
+                                                        <div class="col-xs-9">
                                                             <!-- <input name="userIDname" class="span5 m-wrap" id="userIDname" placeholder="姓名" maxlength="20" type="text" style="display:inline-block; width:55%;"> -->
                                                             <?php
                                                               echo $form->textField ( $model, 'u_name', array (
                                                                   'name'                => 'u_name',
-                                                                  'class'               => 'span5 m-wrap',
+                                                                  'class'               => 'form-control',
                                                                   'id'                  => 'userIDname',
                                                                   'placeholder'         => '姓名',
                                                                   'maxlength'           => '20',
-                                                                  'style'               => 'display:inline-block; width:55%;'
                                                               ) );
                                                             ?>
-                                                            <span class="help-inline" style="display:inline-block;">必填</span> </div>
-                                                        <div class="help-hint" style="height:20px;"></div>
+                                                             </div>
+                                                             <div class="help-hint" style="height:5px;"></div>
+                                                             <span class="help-inline" > &nbsp;</span>
+                                                        <div class="help-hint" style="height:15px;"></div>
                                                     </div>
 
-                                                    <div class="control-group">
-                                                        <label class="control-label" style="width:120px; text-align:right;">手机号码<span class="required">*</span></label>
-                                                        <div class="controls input-icon" style="display:inline-block;width:800px;">
-                                                            <!-- <input name="userMobile" class="span5 m-wrap" id="userMobile" placeholder="手机号码" onblur="return checkbinding($('#userMobile').val(), $('#userIDnumber').val())" maxlength="11" type="text" style="display:inline-block; width:55%;"> -->
+                                                    <div class="form-group">
+                                                        <label class="control-label">手机号<span class="required">*</span></label>
+                                                        <div class="col-xs-9">
                                                             <?php
                                                               echo $form->textField ( $model, 'u_tel', array (
                                                                   'name'                => 'u_tel',
-                                                                  'class'               => 'span5 m-wrap',
+                                                                  'class'               => 'form-control',
                                                                   'id'                  => 'userMobile',
                                                                   'placeholder'         => '手机号码',
-
                                                                   'maxlength'           => '11',
-                                                                  'style'               => 'display:inline-block; width:55%;'
                                                               ) );
                                                             ?>
-                                                            <!--oncontextmenu="return false" onkeyup="value = value.replace(/[^\d]/g, '')" onpaste="return false" style="ime-mode:Disabled"/>-->
-                                                            <span class="help-inline" style="display:inline-block;">必填</span> </div>
-                                                        <div class="help-hint" style="height:20px;"></div>
+                                                           </div>
+                                                           <div class="help-hint" style="height:5px;"></div>
+                                                           <span class="help-inline" > &nbsp;</span>
+                                                        <div class="help-hint" style="height:15px;"></div>
                                                     </div>
-
-                                                    <div class="control-group">
-                                                        <label class="control-label" style="width:120px; text-align:right;">电子邮箱<span class="required">&nbsp;</span></label>
-                                                        <div class="controls input-icon" style="display:inline-block;width:800px;">
-                                                            <!-- <input name="userEmail" class="span5 m-wrap" id="userEmail" placeholder="电子邮箱" maxlength="30" type="text" style="display:inline-block; width:55%;"> -->
+                                                    <div class="form-group">
+                                                        <label class="control-label" >email<span class="required">&nbsp;</span></label>
+                                                        <div class="col-xs-9">
                                                             <?php
-                                                              echo $form->textField ( $models, 'ui_email', array (
+                                                              echo $form->emailField ( $models, 'ui_email', array (
                                                                   'name'                => 'ui_email',
-                                                                  'class'               => 'span5 m-wrap',
+                                                                  'class'               => 'form-control',
                                                                   'id'                  => 'userEmail',
                                                                   'placeholder'         => '电子邮箱',
                                                                   'maxlength'           => '30',
-                                                                  'style'               => 'display:inline-block; width:55%;'
                                                               ));
                                                             ?>
-                                                            <span class="help-inline" style="display:inline-block;"> </span> </div>
-                                                        <div class="help-hint" style="height:20px;"></div>
+                                                          </div>
+                                                          <div class="help-hint" style="height:5px;"></div>
+                                                          <span class="help-inline" id="passstrength" > &nbsp;</span>
+                                                          <div class="help-hint" style="height:15px;"></div>
                                                     </div>
 
                                                     <!-- BEGIN PASSWORD -->
 
-                                                    <div class="control-group">
-                                                        <label class="control-label" for="userIDnumber" style="width:120px; text-align:right;">登录密码<span class="required">*</span></label>
-                                                        <div class="controls input-icon" style="display:inline-block;width:800px;">
-                                                            <!-- <input name="logpassword" class="span3 m-wrap" id="logpassword" placeholder="登录密码" value="" maxlength="12" oncontextmenu="return false" onpaste="return false" type="password" style="display:inline-block; width:35%;"> -->
+                                                    <div class="form-group">
+                                                        <label class="control-label" for="userIDnumber">密码<span class="required">*</span></label>
+                                                        <div class="col-xs-9">
                                                             <?php
                                                               echo $form->passwordField ( $model, 'u_pwd', array (//TODO 密码没写
                                                                   'name'                => 'u_pwd',
-                                                                  'class'               => 'span3 m-wrap',
+                                                                  'class'               => 'form-control',
                                                                   'id'                  => 'logpassword',
-                                                                  'placeholder'         => '登录密码',
+                                                                  'placeholder'         => '6-18位数字与字母',
                                                                   'maxlength'           => '12',
                                                                   'oncontextmenu'       => 'return false',
                                                                   'onpaste'             => 'return false',
-                                                                  'style'               => 'display:inline-block; width:35%;'
                                                               ) );
                                                             ?>
-                                                            <!-- <input name="vlogpassword" class="span3 m-wrap" id="vlogpassword" placeholder="重复登录密码" value="" maxlength="12" oncontextmenu="return false" onpaste="return false" type="password" style="display:inline-block; width:35%;"> -->
+
+                                                        </div>
+                                                        <div class="help-hint" style="height:5px;"></div>
+                                                        <span class="help-inline" id="passstrength" > &nbsp;</span>
+                                                        <div class="help-hint" style="height:15px;"></div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                            <label class="control-label" for="userIDnumber">确认<span class="required">*</span>
+                                                            </label>
+                                                          <div class="col-xs-9">
                                                             <?php
                                                               echo $form->passwordField ( $model, 'u_pwd', array (//TODO 密码没写
                                                                   'name'                => 'u_pwd',
-                                                                  'class'               => 'span3 m-wrap',
+                                                                  'class'               => 'form-control',
                                                                   'id'                  => 'vlogpassword',
-                                                                  'placeholder'         => '重复登录密码',
+                                                                  'placeholder'         => '6-18位数字与字母',
                                                                   'maxlength'           => '12',
                                                                   'oncontextmenu'       => 'return false',
                                                                   'onpaste'             => 'return false',
-                                                                  'style'               => 'display:inline-block; width:35%;'
                                                               ) );
                                                             ?>
-                                                            <span class="help-inline" id="passstrength" style="display:inline-block;">必填 6-12位数字与字母的组合</span> </div>
-                                                        <div class="help-hint" style="height:20px;"></div>
+                                                        </div>
+                                                        <div class="help-hint" style="height:5px;"></div>
+                                                        <span class="help-inline" id="passstrength1" > &nbsp;</span>
+                                                        <div class="help-hint" style="height:15px;"></div>
                                                     </div>
-                                                    <div class="control-group">
-                                                        <label class="control-label" for="userIDnumber" style="width:120px; text-align:right;">安全密码<span class="required">*</span></label>
-                                                        <div class="controls input-icon" style="display:inline-block;width:800px;">
-                                                            <!-- <input name="permitpassword" class="span3 m-wrap" id="permitpassword" placeholder="安全密码" value="" maxlength="12" oncontextmenu="return false" onpaste="return false" type="password" style="display:inline-block; width:35%;"> -->
+
+
+
+                                                    <div class="form-group">
+                                                        <label class="control-label" >安全码<span class="required">*</span></label>
+                                                        <div class="col-xs-9">
                                                             <?php
                                                               echo $form->passwordField ( $model, 'u_safe_pwd', array (//TODO 安全码没写
                                                                   'name'                => 'u_safe_pwd',
-                                                                  'class'               => 'span3 m-wrap',
+                                                                  'class'               => 'form-control',
                                                                   'id'                  => 'permitpassword',
-                                                                  'placeholder'         => '安全密码',
+                                                                  'placeholder'         => '6-12位的数字字母',
                                                                   'maxlength'           => '12',
                                                                   'oncontextmenu'       => 'return false',
                                                                   'onpaste'             => 'return false',
-                                                                  'style'               => 'display:inline-block; width:35%;'
                                                               ));
                                                             ?>
-                                                            <!-- <input name="vpermitpassword" class="span3 m-wrap" id="vpermitpassword" placeholder="重复安全密码" value="" maxlength="12" oncontextmenu="return false" onpaste="return false" type="password" style="display:inline-block; width:35%;"> -->
+
+                                                        </div>
+                                                        <div class="help-hint" style="height:5px;"></div>
+                                                        <span class="help-inline" id="passstrength2"> &nbsp;</span>
+                                                        <div class="help-hint" style="height:15px;"></div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                            <label for="old_pwd" class="control-label">确认
+                                                              <span class="required">*</span>
+                                                            </label>
+                                                          <div class="col-xs-9">
                                                             <?php
                                                               echo $form->passwordField ( $model, 'u_safe_pwd', array (//TODO 安全码没写
                                                                   'name'                => 'u_safe_pwd',
-                                                                  'class'               => 'span3 m-wrap',
+                                                                  'class'               => 'form-control',
                                                                   'id'                  => 'vpermitpassword',
-                                                                  'placeholder'         => '重复安全密码',
+                                                                  'placeholder'         => '6-12位的数字字母',
                                                                   'maxlength'           => '12',
                                                                   'oncontextmenu'       => 'return false',
                                                                   'onpaste'             => 'return false',
-                                                                  'style'               => 'display:inline-block; width:35%;'
                                                               ) );
                                                             ?>
-                                                            <span class="help-inline" id="passstrength1" style="display:inline-block;">必填 6-12位数字与字母的组合</span> </div>
-                                                        <div class="help-hint" style="height:20px;"></div>
+                                                          </div>
+                                                          <div class="help-hint" style="height:5px;"></div>
+                                                          <span class="help-inline" id="passstrength3"> &nbsp;</span>
+                                                          <div class="help-hint" style="height:15px;"></div>
                                                     </div>
                                                     <!-- END PASSWORD -->
 
@@ -366,28 +384,28 @@ $this->pageTitle='新建账户';
                                                         <div class="help-hint" style="height:20px;"></div>
                                                     </div> -->
 
-                                                    <div class="control-group">
-                                                        <label class="control-label" style="width:120px; text-align:right;">短信验证码<span class="required">*</span></label>
-                                                        <div class="controls input-icon" style="display:inline-block;width:800px;">
-                                                            <!-- <input name="SMSCode" class="span3 m-wrap" id="SMSCode" placeholder="短信验证码" maxlength="6" type="text" style="display:inline-block; width:55%;"> -->
+                                                    <div class="form-group">
+                                                        <label class="control-label" >短信码<span class="required">*</span></label>
+                                                        <div class="col-xs-6">
                                                             <?php
                                                               echo $form->textField ( $model, 'u_tel', array (
                                                                   'name'                => 'u_tel',
-                                                                  'class'               => 'span3 m-wrap',
+                                                                  'class'               => 'form-control',
                                                                   'id'                  => 'SMSCode',
-                                                                  'placeholder'         => '短信验证码',
+                                                                  'placeholder'         => '验证码',
                                                                   'maxlength'           => "6",
-                                                                  'style'               => 'display:inline-block; width:55%;'
                                                               ) );
                                                             ?>
                                                             <span class="help-inline" style="display:inline-block;"> </span>
-                                                            <input class="btn red" id="btnSendSMS" value="获取短信验证码" type="button" style="display:inline-block;">
+
                                                         </div>
-                                                        <div class="help-hint" style="height:50px;"></div>
+                                                        <input class="btn red" id="btnSendSMS" value="验证码" style="padding:6px 6px;" type="button">
+                                                        <div class="help-hint" style="height:5px;"></div>
+                                                      <div class="help-hint" style="height:15px;"></div>
                                                     </div>
 
                                                     <div class="form-actions">
-                                                        <button type="submit" class="btn blue" id="joinformsubbtn"  style="margin-left:125px;">提交申请(Submit)</button>
+                                                        <button type="submit" class="btn blue" id="joinformsubbtn"  >提交申请(Submit)</button>
                                                     </div>
                                               	<?php $this->endWidget(); ?>
                                                 <!-- END FORM-->

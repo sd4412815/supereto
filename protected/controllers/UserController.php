@@ -97,12 +97,10 @@ class UserController extends Controller {
         //修改user表
         if(isset($_POST['User'])) {
             $user->attributes = $_POST ['User'];
-            $user->scenario = 'EditInfo';
+            p($user);
             if ($user->validate()) {
-                $user->id = $user->id;
-                $user->u_nick_name = $user->u_nick_name;
+                $user->u_nick_name = $_POST ['User']['u_nick_name'];
                 if ($user->update()) {
-
                     //修改userinfo表
                     if (isset($_POST['UserInfo'])) {
                         $info->attributes = $_POST ['UserInfo'];
@@ -240,15 +238,28 @@ class UserController extends Controller {
     /**
      * 获取手机验证码
      */
-    public function actionget_mobile_code()
+    public function actionGetSmsCode()
     {
         $mobile=$_GET['mobile'];
-        $mobile='15642091931';
-
         $sms=USms::sendEditPwd($mobile,Yii::app()->session['send_code']);
-
         echo json_encode($sms);
+    }
+    
 
+    /**
+     * 获取用户编号
+     */
+    public function actionGetNewAccountNumber()
+    {
+        $num=UTool::randomkeys(8);
+        $num='ETO'.$num;
+        $res=UserInfo::model()->find('ui_account_number=:num',array(':num'=>$num));
+        
+        if($res){
+            self::actionGetNewAccountNumber();
+        }else{
+            echo CJSON::encode($num);
+        }
     }
 
 
