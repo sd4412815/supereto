@@ -38,7 +38,7 @@ class User extends CActiveRecord {
             //安全设置
             array ('old_pwd,u_tel,u_safe_pwd ,u_pwd,confirm_pwd,captcha,smsCode', 'safe'),
             //验证旧密码
-            array ('old_pwd','authenticate','on'=>'EditPwd'),
+            array ('old_pwd','authenticate_old','on'=>'EditPwd'),
             array ('old_pwd','required','message'=>'原密码不能为空','on'=>'EditPwd'),
             //验证安全密码
             array('u_safe_pwd','checkSafePwd','on'=>'EditInfo'),
@@ -141,13 +141,26 @@ class User extends CActiveRecord {
 
     }
     /**
+     * 验证 旧密码是否正确
+     * This is the 'authenticate' validator as declared in rules().
+     */
+    public function authenticate_old($attribute, $params) {
+        if (! $this->hasErrors ()) {
+            $this->_identity = new UserIdentity ( $this->u_tel, $this->old_pwd );
+            // $isBoss = $this->scenario=="boss"?true:false;
+            if ( $this->_identity->authenticate () != 0){
+                $this->addError ( 'password', '密码错误,请重试！' );
+            }
+        }
+    }
+
+    /**
      * 验证密码是否正确
      * This is the 'authenticate' validator as declared in rules().
      */
     public function authenticate($attribute, $params) {
         if (! $this->hasErrors ()) {
-            $this->_identity = new UserIdentity ( $this->u_tel, $this->old_pwd );
-            // $isBoss = $this->scenario=="boss"?true:false;
+            $this->_identity = new UserIdentity ( $this->u_tel, $this->u_pwd );
             if ( $this->_identity->authenticate () != 0){
                 $this->addError ( 'password', '密码错误,请重试！' );
             }

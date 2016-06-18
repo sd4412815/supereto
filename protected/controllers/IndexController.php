@@ -118,7 +118,7 @@ class IndexController extends Controller
                         Yii::app ()->user->setFlash ( 'loginError',$result['msg']);
                     }else{
                         if (isset(Yii::app()->session['urlReferer'])){
-                            $this->redirect($this->actionindex(),TRUE);
+                            $this->redirect('index',TRUE);
 //                            $this->redirect(Yii::app()->session['urlReferer'],TRUE);
                             unset(Yii::app()->session['urlReferer']);
                         }else{

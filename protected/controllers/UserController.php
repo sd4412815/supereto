@@ -35,7 +35,7 @@ class UserController extends Controller {
         if (isset($_POST['User'])) {
             $model->attributes = $_POST ['User'];
             $model->scenario='EditPwd';
-            
+
             if($model->validate()){
                 $user->id=$user->id;
 
@@ -106,13 +106,6 @@ class UserController extends Controller {
                         $info->attributes = $_POST ['UserInfo'];
                         $info->scenario = 'EditInfo';
                         if ($user->validate()) {
-                            $info->id = $info->id;
-                            $info->ui_email = $info->ui_email;
-                            $info->ui_alipay = $info->ui_alipay;
-                            $info->ui_wechat = $info->ui_wechat;
-                            $info->ui_credit_card = $info->ui_credit_card;
-                            $info->ui_bank_account = $info->ui_bank_account;
-                            $info->ui_bank_branch = $info->ui_bank_branch;
                             if ($user->save()) {
                                 $msg = new  Message();
                                 $msg['m_datetime'] = date('Y-m-d H:i:s');
@@ -244,7 +237,7 @@ class UserController extends Controller {
         $sms=USms::sendEditPwd($mobile,Yii::app()->session['send_code']);
         echo json_encode($sms);
     }
-    
+
 
     /**
      * 获取用户编号
@@ -254,7 +247,7 @@ class UserController extends Controller {
         $num=UTool::randomkeys(8);
         $num='ETO'.$num;
         $res=UserInfo::model()->find('ui_account_number=:num',array(':num'=>$num));
-        
+
         if($res){
             self::actionGetNewAccountNumber();
         }else{

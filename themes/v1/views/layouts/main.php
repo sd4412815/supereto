@@ -222,8 +222,8 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
 		                    <span class="label label-primary pull-right">4</span>
 		                </a>
 		                <ul class="treeview-menu">
-		                    <li><a href="<?php echo Yii::app()->createUrl('user/EditInfo');?>"><i class="fa fa-circle-o"></i> 修改资料</a></li>
-		                    <li><a href="<?php echo Yii::app()->createUrl('user/EditPwd');?>"><i class="fa fa-circle-o"></i> 变更密码</a></li>
+		                    <li><a href="<?php echo Yii::app()->createUrl('user/EditInfo');?>"><i class="fa fa-edit"></i> 修改资料</a></li>
+		                    <li><a href="<?php echo Yii::app()->createUrl('user/EditPwd');?>"><i class="fa fa-unlock-alt"></i> 变更密码</a></li>
 		                </ul>
 		            </li>
 		            <li>
@@ -232,8 +232,8 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
 		                    <small class="label pull-right bg-green">new</small>
 		                </a>
 		                <ul class="treeview-menu">
-		                    <li><a href="<?php echo Yii::app()->createUrl('user/register');?>"><i class="fa fa-circle-o"></i> 新建账户</a></li>
-		                    <li><a href="<?php echo Yii::app()->createUrl('user/RecommendList') ?>"><i class="fa fa-circle-o"></i> 推荐清单</a></li>
+		                    <li><a href="<?php echo Yii::app()->createUrl('user/register');?>"><i class="fa fa-clone"></i> 新建账户</a></li>
+		                    <li><a href="<?php echo Yii::app()->createUrl('user/RecommendList') ?>"><i class="fa fa-thumbs-up"></i> 推荐清单</a></li>
 		                </ul>
 		            </li>
 		            <li class="treeview">
@@ -265,7 +265,7 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
 		                    <li><a href=""><i class="fa fa-newspaper-o"></i> 佣金清单</a></li>
 		                    <li><a href=""><i class="fa fa-minus-square-o "></i> 静态对账单</a></li>
 		                    <li><a href=""><i class="fa fa-minus-square"></i> 动态对账单</a></li>
-		                    <li><a href=""><i class="fa fa-circle-o"></i> 门票对账单</a></li>
+                        <li><a href=""><i class="fa fa-money"></i> 门票对账单</a ></li>
 		                </ul>
 		            </li>
 		            <li class="treeview">
