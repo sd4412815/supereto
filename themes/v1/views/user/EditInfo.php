@@ -151,7 +151,7 @@ $this->pageTitle = '修改资料';
         <div class="form-group">
             <label class="control-label  col-xs-4" for="smsCode">短信验证码<span class="text-red h5">*</span></label>
             <div class="col-xs-4 col-sm-4">
-                <?php echo $form->passwordField($user,'smsCode',array(
+                <?php echo $form->textField($user,'smsCode',array(
                         'placeholder'=>'短信验证码',
                         'class'=>'form-control',
                         'id'=>'smsCode'
@@ -162,7 +162,7 @@ $this->pageTitle = '修改资料';
             </div>
         </div>
         <?php if (Yii::app ()->user->hasFlash ( 'editInfo' )) :	?>
-            <div class="alert alert-danger" role="alert"><?php echo Yii::app()->user->getFlash('editInfo');?></div>
+            <div class="alert alert-danger" role="alert"><?php print_r(Yii::app()->user->getFlash('editInfo')) ;?></div>
         <?php endif;?>
         <?php echo $form->errorSummary($user); ?>
         <?php echo $form->errorSummary($info); ?>

@@ -38,12 +38,10 @@ class UserController extends Controller {
 
             if($model->validate()){
                 $user->id=$user->id;
-
                 $user->u_pwd = CPasswordHelper::hashPassword ( $model->u_pwd );
                 $user->u_score = 0;
                 $user->u_login_date = date ( 'Y-m-d H:i:s' );
                 if($user->update()){
-
                     $msg =new  Message();
                     $msg['m_datetime']=date('Y-m-d H:i:s');
                     $msg['m_user_id'] = Yii::app ()->user->id ;
@@ -97,7 +95,7 @@ class UserController extends Controller {
         //修改user表
         if(isset($_POST['User'])) {
             $user->attributes = $_POST ['User'];
-            p($user);
+            $user->scenario = 'EditInfo';
             if ($user->validate()) {
                 $user->u_nick_name = $_POST ['User']['u_nick_name'];
                 if ($user->update()) {
@@ -105,8 +103,9 @@ class UserController extends Controller {
                     if (isset($_POST['UserInfo'])) {
                         $info->attributes = $_POST ['UserInfo'];
                         $info->scenario = 'EditInfo';
-                        if ($user->validate()) {
-                            if ($user->save()) {
+
+                        if ($info->validate()) {
+                            if ($info->save()) {
                                 $msg = new  Message();
                                 $msg['m_datetime'] = date('Y-m-d H:i:s');
                                 $msg['m_user_id'] = Yii::app()->user->id;
@@ -119,11 +118,15 @@ class UserController extends Controller {
                             }else{
                                 Yii::app()->user->setFlash('editInfo', '个人信息更新失败');
                             }
+                        }else{
+                            Yii::app()->user->setFlash('editInfo',$info->getErrors());
                         }
                     }
                 } else {
                     Yii::app()->user->setFlash('editInfo', '个人信息更新失败');
                 }
+            }else{
+                Yii::app()->user->setFlash('editInfo',$user->getErrors());
             }
         }
 
@@ -139,20 +142,58 @@ class UserController extends Controller {
      */
     public function actionRegister()
     {
-        $model=new User;
-        $models=new UserInfo;
-        if (!empty($_POST)) {
-            $model->attributes=$_POST;
-            if ($model->validate()) {
-                p($model);die;
-                User::model()->reg($model);
+        $userinfo=new UserInfo();
+
+        $user=new User();
+        //修改user表
+
+        if(isset($_POST['User'])) {
+            $user->attributes = $_POST ['User'];
+            $user->scenario = 'Register';
+            // p( $user);
+            $user->u_join_date = date('Y-m-d H:i:s',time()) ;
+            $user->u_login_date = date('Y-m-d H:i:s',time()) ;
+            if ($user->validate()) {
+                if ($user->save()) {
+                    $user->attributes = $_POST ['User'];
+                    $user->u_safe_pwd = CPasswordHelper::hashPassword ($_POST ['User']['u_safe_pwd']);
+                    $user->u_pwd = CPasswordHelper::hashPassword ($_POST ['User']['u_pwd']);
+                    $id = $user->attributes['id'];
+                    if($user->update()){
+                        $userinfo->attributes = $_POST['UserInfo'];
+                        $userinfo->scenario = 'RegisterInfo';
+                        $userinfo->ui_userid =$id;
+                        $userinfo->ui_account_number =$_POST['UserInfo']['ui_account_number'];
+                        $userinfo->ui_referrer =$_POST['UserInfo']['ui_referrer'];
+                        if ($userinfo->validate()) {
+                            if($userinfo->save()){
+                                $msg = new  Message();
+                                $msg['m_datetime'] = date('Y-m-d H:i:s');
+                                $msg['m_user_id'] = $id;
+                                $msg['m_level'] = Message::LEVEL_URGENCY;
+                                $msg['m_content'] = '创建账号成功';
+                                $msg['m_type'] = Message::TYPE_ACCOUNT;
+                                $msg['m_src'] = UTool::getRequestInfo();
+                                $msg->save();
+                                Yii::app()->user->setFlash('userinfo', '创建成功');
+                            }else{
+                                Yii::app()->user->setFlash('infoError',$userinfo->getErrors());
+                            }
+                            $this->refresh(true);
+                        }
+                    }else{
+                        Yii::app()->user->setFlash('userError',$user->getErrors());
+                    }
+                } else {
+                    Yii::app()->user->setFlash('userError',$user->getErrors());
+                }
+            }else{
+                Yii::app()->user->setFlash('userError',$user->getErrors());
             }
-
         }
-        $userinfo = UserInfo::model ()->find(Yii::app ()->user->id);
-        $user = User::model ()->find(Yii::app ()->user->id);
-        $this->render('register',array('model'=>$model,'models'=>$models,'userinfo'=>$userinfo,'user'=>$user));
-
+        $userinfo1 = UserInfo::model ()->find(Yii::app ()->user->id);
+        $user1 = User::model ()->find(Yii::app ()->user->id);
+        $this->render('register',array('model'=>$user,'models'=>$userinfo,'userinfo'=>$userinfo1,'user'=>$user1));
     }
 
     /**

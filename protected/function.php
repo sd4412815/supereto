@@ -6,9 +6,9 @@
  */
 
 
-function p($arr,$is_end=false)
+function p($arr,$is_end=0)
 {
-    if($is_end){
+    if($is_end=1){
         echo "<pre>";
         print_r($arr);
         echo "</pre>";
@@ -21,13 +21,12 @@ function p($arr,$is_end=false)
     }
 }
 
-function v($arr,$is_end=false)
+function v($arr,$is_end=0)
 {
-    if($is_end){
+    if($is_end=1){
         echo "<pre>";
         var_dump($arr);
         echo "</pre>";
-
     }else{
         echo "<pre>";
         var_dump($arr);

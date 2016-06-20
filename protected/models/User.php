@@ -19,6 +19,7 @@ class User extends CActiveRecord {
 	public $confirm_pwd;        //确认密码
 	public $captcha;            //图形验证码
 	public $smsCode;            //短信验证码
+    public $confirm_safe_pwd;   //安全密码——确认密码
 
 
     /**
@@ -36,19 +37,29 @@ class User extends CActiveRecord {
 	public function rules() {
 		return array (
             //安全设置
-            array ('old_pwd,u_tel,u_safe_pwd ,u_pwd,confirm_pwd,captcha,smsCode', 'safe'),
+            array ('old_pwd,u_name,u_nick_name,u_tel,u_safe_pwd ,u_pwd,
+                    confirm_pwd,captcha,smsCode,u_safe_pwd,confirm_safe_pwd',
+                    'safe'
+            ),
             //验证旧密码
             array ('old_pwd','authenticate_old','on'=>'EditPwd'),
             array ('old_pwd','required','message'=>'原密码不能为空','on'=>'EditPwd'),
             //验证安全密码
             array('u_safe_pwd','checkSafePwd','on'=>'EditInfo'),
+            array ('u_safe_pwd','required','message'=>'安全码不能为空','on'=>'EditInfo,Register'),
+            array ('u_safe_pwd', 'length','min'=>6, 'max'=>16,'message'=>'安全密码位数不正确','on'=>'EditInfo,Register'),
+            array ('confirm_safe_pwd','required','message'=>'安全码确认不能为空','on'=>'Register'),
+            array ("confirm_safe_pwd","compare","compareAttribute"=>"u_safe_pwd","message"=>"两次安全码不一致",'on'=>'Register'),
             //验证密码和确认密码
-            array ("confirm_pwd","compare","compareAttribute"=>"u_pwd","message"=>"两次密码不一致",'on'=>'EditPwd'),
-            array ("u_pwd","required","message"=>"新密码不能为空",'on'=>'EditPwd'),
-            array ("confirm_pwd","required","message"=>"确认密码不能为空",'on'=>'EditPwd'),
+            array ("confirm_pwd","compare","compareAttribute"=>"u_pwd","message"=>"两次密码不一致",'on'=>'EditPwd,Register'),
+            array ("u_pwd","required","message"=>"新密码不能为空",'on'=>'EditPwd,Register'),
+            array ("confirm_pwd","required","message"=>"确认密码不能为空",'on'=>'EditPwd,Register'),
+            array ('u_pwd', 'length','min'=>6, 'max'=>16,'on'=>'EditPwdRegister'),
+            array ('confirm_pwd', 'length','min'=>6, 'max'=>16,'on'=>'EditPwd,Register'),
             array ("u_pwd","validatePassword",'on'=>'EditPwd'),
             //手机号不能为空
             array ('u_tel','required','message'=>'手机号不能为空'),
+            array ('u_tel', 'length', 'max'=>11,'min'=>11,'on'=>'EditPwd,EditInfo,Register'),
 			//验证图形验证码
             array ('captcha','captcha','allowEmpty' => ! CCaptcha::checkRequirements (),'message' => '图形验证码过期，请点击刷新','on' => 'reset,EditPwd'),
             //验证手机验证码
@@ -56,6 +67,10 @@ class User extends CActiveRecord {
             array ('smsCode','match','pattern' => '/^\d{6}$/','message' => '短信验证码错误','on' => 'reg,EditPwd,EditInfo'),
             array ('smsCode','checkSmsCode','message' => '短信验证码错误','on' => 'reg,EditPwd,EditInfo'),
             array ('smsCode','length','min'=>6,'max' => 6,'tooLong' => '短信验证码错误','tooShort' => '短信验证码错误','on' => 'reg,EditPwd,EditInfo'),
+
+            array ('u_nick_name','required','message'=>'昵称不能为空','on'=>'Register'),
+            array ('u_name','required','message'=>'名字不能为空','on'=>'Register'),
+
         );
 	}
 
@@ -138,7 +153,13 @@ class User extends CActiveRecord {
 
 
     public function checkSafePwd($attribute,$params){
-
+        if (! $this->hasErrors ()) {
+            $this->_identity = new UserIdentity ( $this->u_tel, $this->u_safe_pwd);
+            // $isBoss = $this->scenario=="boss"?true:false;
+            if ( $this->_identity->authenticate () != 0){
+                $this->addError ( 'password', '安全密码错误,请重试！' );
+            }
+        }
     }
     /**
      * 验证 旧密码是否正确
