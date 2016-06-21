@@ -45,9 +45,9 @@ $this->pageTitle='购买ETO理财包';
             <div class="col-xs-8 col-sm-4">
                 <span class="form-show" style="font-size:14px;">
                     <?php if($model->todayStatus==0){ ?>
-                    <font color="green">恭喜您，现在可以挂单啦！</font>
+                        <span class="text-green">恭喜您，现在可以挂单啦！</span>
                     <?php }else{ ?>
-                        <font color="red">很抱歉，您今天已经挂单啦！</font>
+                        <span class="text-red">很抱歉，您今天已经挂单啦！</span>
                     <?php } ?>
                 </span>
             </div>
@@ -55,42 +55,73 @@ $this->pageTitle='购买ETO理财包';
     
     
         <div class="form-group">
-            <label class="control-label col-xs-4" for="">选择M包<span class="required">*</span></label>
+            <label class="control-label col-xs-4" for="">选择M包<span class="text-red h5">*</span></label>
             <div class="col-xs-8 col-sm-4">
-                <?php echo $form->dropDownList() ?>
-                <select name="mpackage_jibie" id="mpackage_jibie" class="span3 m-wrap">
-                    <option value="1000">RMB：1000元理财包</option>
-                    <option value="2000">RMB：2000元理财包</option>
-                    <option value="5000">RMB：5000元理财包</option>
-                    <option value="10000">RMB：10000元理财包</option>
-                </select>
+                <?php echo $form->dropDownList($model,'cp_cpt_id',$cftType,array(
+                    'class'=>'form-control'
+                )) ?>
             </div>
         </div>
         <div class="form-group">
             <label class="control-label col-xs-4" for="">安全密码<span class="required">*</span></label>
             <div class="col-xs-8 col-sm-4">
-                <input name="pass22" type="password" class="span3 m-wrap" id="pass22" placeholder="输入安全密码" value="" maxlength="12" oncontextmenu="return false" onpaste="return false" onkeyup="value = value.replace(/[^\w\.\/]/ig, '')" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=&quot;);" autocomplete="off">
+                <?php echo $form->passwordField($model,'u_safe_pwd',array(
+                    'class'=>'form-control',
+                    'placeholder'=>'输入安全密码'
+                )) ?>
             </div>
         </div>
         
         <div class="form-group">
             <label class="control-label col-xs-4">图形验证码<span class="required">*</span></label>
-            <div class="col-xs-8 col-sm-4">
-                <input name="IMGCode" type="text" class="span3 m-wrap" id="IMGCode" placeholder="图形验证码" value="" maxlength="6" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=&quot;);" autocomplete="off"> &nbsp;<img style="cursor:pointer;height:34px;" title="刷新验证码" id="refresh2" border="0" src="captcha.php" onclick="document.getElementById('refresh2').src='captcha.php?t='+Math.random()">
+            <div class="col-xs-4 col-sm-2">
+                <?php echo $form->textField($model,'captcha',array(
+                    'class'=>'form-control',
+                    'placeholder'=>'请输入验证码'
+                )) ?>
+            </div>
+            <div class="col-xs-4 col-sm-2">
+                <?php
+                $this->widget('CCaptcha',array(
+                        'showRefreshButton'=>false,
+                        'clickableImage'=>true,
+                        'imageOptions'=>array(
+                                'alt'=>'点击切换验证码',
+                                'title'=>'点击切换验证码',
+                                'style'=>'cursor:pointer'
+                        )
+                ));
+                ?>
             </div>
         </div>
         
-        
-        <div class="form-actions">
-            <button type="submit" class="btn blue" id="joinformsubbtn">确认买入(Submit)</button>
+        <?php if(Yii::app()->user->hasFlash('success')){?>
+            <div class="row error col-xs-offset-4">
+                <?php echo Yii::app()->user->getFlash('success'); ?>
+            </div>
+        <?php } ?>
+
+     <?php echo $form->errorSummary($model); ?>
+
+    <div class="col-xs-offset-4">
+            <button type="submit" id="submit" class="btn btn-info btn-sm">确认买入</button>
         </div>
     <?php $this->endWidget(); ?>
 
-
-
-
-
 </section>
+
+<script>
+    $(function(){
+        var is_check='<?php echo $model->todayStatus ?>';
+        if(is_check==1){
+            $('#CftPackage_cp_type_id').attr("disabled",true);
+            $('#submit').attr('disabled',true);
+        }else{
+            $('#CftPackage_cp_type_id').attr("disabled",false);
+            $('#submit').attr('disabled',false);
+        }
+    })
+</script>
 
 
 

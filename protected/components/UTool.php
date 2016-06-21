@@ -15,7 +15,17 @@ class UTool {
 	    return CJSON::encode($infos);
 	}
 
-	/**
+    /**
+     * 对象转数组
+     * */
+    public static function objToArray($data){
+        foreach($data as $key=>$val){
+            $newData[$key] = $val->attributes;
+        }
+        return $newData;
+    }
+
+    /**
 	 * Post using curl
 	 *
 	 * @param string $url
