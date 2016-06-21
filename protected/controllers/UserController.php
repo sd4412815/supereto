@@ -137,64 +137,85 @@ class UserController extends Controller {
         ));
 	}
 
-    /**
-     * 新建用户（注册）
-     */
-    public function actionRegister()
-    {
-        $userinfo=new UserInfo();
+	/**
+	 * 新建用户（注册）
+	 */
+	public function actionRegister()
+	{
+	  $userinfo=new UserInfo();
+	  $userinfo->ui_account_number=self::GetNewAccountNumber();
 
-        $user=new User();
-        //修改user表
+	  $user=new User();
+	    //修改user表
 
-        if(isset($_POST['User'])) {
-            $user->attributes = $_POST ['User'];
-            $user->scenario = 'Register';
-            // p( $user);
-            $user->u_join_date = date('Y-m-d H:i:s',time()) ;
-            $user->u_login_date = date('Y-m-d H:i:s',time()) ;
-            if ($user->validate()) {
-                if ($user->save()) {
-                    $user->attributes = $_POST ['User'];
-                    $user->u_safe_pwd = CPasswordHelper::hashPassword ($_POST ['User']['u_safe_pwd']);
-                    $user->u_pwd = CPasswordHelper::hashPassword ($_POST ['User']['u_pwd']);
-                    $id = $user->attributes['id'];
-                    if($user->update()){
-                        $userinfo->attributes = $_POST['UserInfo'];
-                        $userinfo->scenario = 'RegisterInfo';
-                        $userinfo->ui_userid =$id;
-                        $userinfo->ui_account_number =$_POST['UserInfo']['ui_account_number'];
-                        $userinfo->ui_referrer =$_POST['UserInfo']['ui_referrer'];
-                        if ($userinfo->validate()) {
-                            if($userinfo->save()){
-                                $msg = new  Message();
-                                $msg['m_datetime'] = date('Y-m-d H:i:s');
-                                $msg['m_user_id'] = $id;
-                                $msg['m_level'] = Message::LEVEL_URGENCY;
-                                $msg['m_content'] = '创建账号成功';
-                                $msg['m_type'] = Message::TYPE_ACCOUNT;
-                                $msg['m_src'] = UTool::getRequestInfo();
-                                $msg->save();
-                                Yii::app()->user->setFlash('userinfo', '创建成功');
-                            }else{
-                                Yii::app()->user->setFlash('infoError',$userinfo->getErrors());
-                            }
-                            $this->refresh(true);
-                        }
-                    }else{
-                        Yii::app()->user->setFlash('userError',$user->getErrors());
-                    }
-                } else {
-                    Yii::app()->user->setFlash('userError',$user->getErrors());
-                }
-            }else{
-                Yii::app()->user->setFlash('userError',$user->getErrors());
-            }
-        }
-        $userinfo1 = UserInfo::model ()->find(Yii::app ()->user->id);
-        $user1 = User::model ()->find(Yii::app ()->user->id);
-        $this->render('register',array('model'=>$user,'models'=>$userinfo,'userinfo'=>$userinfo1,'user'=>$user1));
-    }
+	    if(isset($_POST['User'])) {
+	        $user->attributes = $_POST ['User'];
+	        $user->scenario = 'Register';
+	        $user->u_join_date = date('Y-m-d H:i:s',time()) ;
+	        $user->u_login_date = date('Y-m-d H:i:s',time()) ;
+	    if ($user->validate()) {
+	            if ($user->save()) {
+	              $user->attributes = $_POST ['User'];
+	              $user->u_safe_pwd = CPasswordHelper::hashPassword ($_POST ['User']['u_safe_pwd']);
+	              $user->u_pwd = CPasswordHelper::hashPassword ($_POST ['User']['u_pwd']);
+	              $id = $user->attributes['id'];
+	              if($user->update()){
+	                    $userinfo->attributes = $_POST['UserInfo'];
+	                    $userinfo->scenario = 'RegisterInfo';
+	                    $userinfo->ui_userid =$id;
+	                    $userinfo->ui_account_number =$_POST['UserInfo']['ui_account_number'];
+	                    $userinfo->ui_referrer =$_POST['UserInfo']['ui_referrer'];
+	                    if ($userinfo->validate()) {
+	                        if($userinfo->save()){
+	                          $msg = new  Message();
+	                          $msg['m_datetime'] = date('Y-m-d H:i:s');
+	                          $msg['m_user_id'] = $id;
+	                          $msg['m_level'] = Message::LEVEL_URGENCY;
+	                          $msg['m_content'] = '创建账号成功';
+	                          $msg['m_type'] = Message::TYPE_ACCOUNT;
+	                          $msg['m_src'] = UTool::getRequestInfo();
+	                            if($msg->save()){
+	                              $recommend = new RecommendList();
+	                              $info = UserInfo::model()->find('ui_userid=:uid',array(':uid'=>$id));
+	                              $selectuser = User::model()->find('id',array('id'=>$id));
+	                              $recommend['rl_userid'] = $id;
+	                              $recommend['rl_account_number'] = $info->ui_account_number;
+	                              $recommend['rl_nick_name'] = $selectuser['u_nick_name'];
+	                              $recommend['rl_name'] = $selectuser['u_name'];
+	                              $recommend['rl_tel'] = $selectuser['u_tel'];
+	                              $recommend['rl_help_money'] = '0';
+	                              $recommend['rl_team_number'] ='0';
+	                              $recommend['rl_join_date'] = $selectuser['u_join_date'];
+	                                if($recommend->save()){
+	                                  Yii::app()->user->setFlash('userinfo', '创建成功');
+	                                }else{
+	                                  Yii::app()->user->setFlash('infoError',$userinfo->getErrors());
+	                                }
+	                            }else{
+	                              Yii::app()->user->setFlash('infoError',$userinfo->getErrors());
+	                            }
+
+	                        }else{
+	                          Yii::app()->user->setFlash('infoError',$userinfo->getErrors());
+	                        }
+	                        $this->refresh(true);
+	                    }
+	              }else{
+	                Yii::app()->user->setFlash('userError',$user->getErrors());
+	              }
+
+
+	            } else {
+	                Yii::app()->user->setFlash('userError',$user->getErrors());
+	            }
+	        }else{
+	                Yii::app()->user->setFlash('userError',$user->getErrors());
+	        }
+	    }
+	    $userinfo1 = UserInfo::model ()->find(Yii::app ()->user->id);
+	    $user1 = User::model ()->find(Yii::app ()->user->id);
+	    $this->render('register',array('model'=>$user,'models'=>$userinfo,'userinfo'=>$userinfo1,'user'=>$user1));
+	}
 
     /**
      * 推荐清单
@@ -279,11 +300,14 @@ class UserController extends Controller {
         echo json_encode($sms);
     }
 
+		public function actiongetnum(){
+			echo self::GetNewAccountNumber();
+		}
 
     /**
      * 获取用户编号
      */
-    public function actionGetNewAccountNumber()
+    public static function GetNewAccountNumber()
     {
         $num=UTool::randomkeys(8);
         $num='ETO'.$num;
@@ -292,7 +316,8 @@ class UserController extends Controller {
         if($res){
             self::actionGetNewAccountNumber();
         }else{
-            echo CJSON::encode($num);
+            // echo CJSON::encode($num);
+            return $num;
         }
     }
 

@@ -150,18 +150,30 @@ $this->pageTitle='新建账户';
                                                 <label class="control-label" for="userAccountName" >编号<span class="required">*</span></label>
                                                 <div class="col-xs-7" style="display:inline-block;"  >
                                                     <?php
-                                                    $range = range(1000,9999);
-                                                    $rand = array_rand($range,1);
+
                                                     echo $form->textField ( $models, 'ui_account_number', array (
                                                             'class'       => 'form-control',
                                                             'readonly'    => 'readonly',
                                                             'id'          => 'userAccountName',
-                                                            'value'       => 'M0'.substr(time(),7).$rand,
                                                     ) );
                                                     ?>
 
                                                 </div>
-                                                <button type="button" class="btn blue" id="userChangeAccountName" style="font-size:8px;padding:6px 6px;">换号</button>
+                                                <script type="text/javascript">
+                                                    function GetNewAccountNumber(){
+                                                      // alert('123');
+                                                      $.ajax({
+                                                        url:'<?php echo Yii::app()->createUrl('user/getnum') ?>',
+                                                        type:'GET',
+                                                        success:function(result){
+                                                          $('#userAccountName').val(result);
+                                                        }
+                                                      });
+                                                    }
+                                                </script>
+                                                <button type="button" onclick="GetNewAccountNumber()" class="btn btn-info btn-sm">换号</button>
+
+                                                <!-- <button type="button" class="btn blue" id="GetNewAccountNumber" onclick="GetNewAccountNumber();" style="font-size:8px;padding:6px 6px;"></button> -->
                                                 <div class="help-hint" style="height:15px;"></div>
                                             </div>
                                             <div class="form-group" >
@@ -255,7 +267,7 @@ $this->pageTitle='新建账户';
                                                 <label class="control-label" for="userIDnumber">密码<span class="required">*</span></label>
                                                 <div class="col-xs-9">
                                                     <?php
-                                                    echo $form->passwordField ( $model, 'u_pwd', array (//TODO 密码没写
+                                                    echo $form->passwordField ( $model, 'u_pwd', array (
                                                             'class'               => 'form-control',
                                                             'id'                  => 'logpassword',
                                                             'placeholder'         => '6-18位数字与字母',
@@ -272,7 +284,7 @@ $this->pageTitle='新建账户';
                                                 </label>
                                                 <div class="col-xs-9">
                                                     <?php
-                                                    echo $form->passwordField ( $model, 'confirm_pwd', array (//TODO 密码没写
+                                                    echo $form->passwordField ( $model, 'confirm_pwd', array (
                                                             'class'               => 'form-control',
                                                             'id'                  => 'vlogpassword',
                                                             'placeholder'         => '6-18位数字与字母',
@@ -290,7 +302,7 @@ $this->pageTitle='新建账户';
                                                 <label class="control-label" >安全码<span class="required">*</span></label>
                                                 <div class="col-xs-9">
                                                     <?php
-                                                    echo $form->passwordField ( $model, 'u_safe_pwd', array (//TODO 安全码没写
+                                                    echo $form->passwordField ( $model, 'u_safe_pwd', array (
                                                             'class'               => 'form-control',
                                                             'id'                  => 'permitpassword',
                                                             'placeholder'         => '6-12位的数字字母',
@@ -308,7 +320,7 @@ $this->pageTitle='新建账户';
                                                 </label>
                                                 <div class="col-xs-9">
                                                     <?php
-                                                    echo $form->passwordField ( $model, 'confirm_safe_pwd', array (//TODO 安全码没写
+                                                    echo $form->passwordField ( $model, 'confirm_safe_pwd', array (
                                                             'class'               => 'form-control',
                                                             'id'                  => 'vpermitpassword',
                                                             'placeholder'         => '6-12位的数字字母',
@@ -319,44 +331,6 @@ $this->pageTitle='新建账户';
                                                 <span class="help-inline" id="passstrength3"> &nbsp;</span>
                                                 <div class="help-hint" style="height:15px;"></div>
                                             </div>
-                                            <!-- END PASSWORD -->
-
-                                            <!--<div class="control-group">
-                                                <label class="control-label">密码保护问题<span class="required">*</span></label>
-                                                <div class="controls input-icon">
-                                                    <select name="userpp" id="userpp">
-                                                        <option value="0">请选择密码保护提示</option>
-                                                    <option value="1">您的出生地是哪里</option><option value="2">您的高中班主任姓名是什么</option><option value="3">您爱人出生日期是什么时候</option><option value="4">您父亲的职业是什么</option><option value="5">您最喜欢的一部电影片名是什么</option><option value="6">您爱人的职业是什么</option><option value="7">您最喜欢听的歌曲名字是什么</option><option value="8">您最喜欢的运动项目名称是什么</option><option value="9">您爱人最喜欢吃什么</option><option value="10">您读过的初中校名是什么</option>                                                            </select>
-                                                    <span class="help-inline"> </span> </div>
-                                            </div>
-                                            <div class="control-group">
-                                                <label class="control-label">密码保护答案<span class="required">*</span></label>
-                                                <div class="controls input-icon">
-                                                    <input name="userpa" type="text" class="span5 m-wrap" id="userpa" placeholder="密码保护答案" maxlength="30"/>
-                                                    <span class="help-inline"> </span> </div>
-                                                <div class="help-hint"></div>
-                                            </div>-->
-
-
-                                            <!-- <div class="control-group">
-                                                <label class="control-label" style="width:120px; text-align:right;">图形验证码<span class="required">*</span></label>
-                                                <div class="controls input-icon" style="display:inline-block;width:800px;"> -->
-                                            <!-- <input name="IMGCode" class="span3 m-wrap" id="IMGCode" placeholder="图形验证码" maxlength="6" type="text" style="display:inline-block; width:55%;">  -->
-                                            <?php
-                                            // echo $form->textField ( $model, 'u_tel', array (
-                                            //     'name'                => 'u_tel',
-                                            //     'class'               => 'span3 m-wrap',
-                                            //     'id'                  => 'IMGCode',
-                                            //     'placeholder'         => '图形验证码',
-                                            //     'maxlength'           => "6",
-                                            //     'style'               => 'display:inline-block; width:55%;'
-                                            // ) );
-                                            ?>
-                                            <!--&nbsp;<img style="cursor:pointer;height:34px;" title="刷新验证码" id="refresh2" src="<?php //echo Yii::app ()->theme->baseUrl . "/images/status.gif" ;?>" onclick="document.getElementById('refresh2').src='/include/captcha.inc.php?t='+Math.random()" border="0" >
-                                                            <span class="help-inline" style="display:inline-block;"> </span>
-                                                        </div>
-                                                        <div class="help-hint" style="height:20px;"></div>
-                                                    </div> -->
 
                                             <div class="form-group">
                                                 <label class="control-label" >短信码<span class="required">*</span></label>
@@ -377,7 +351,7 @@ $this->pageTitle='新建账户';
                                             </div>
 
                                             <div class="form-actions">
-                                                <button type="submit" class="btn blue" id="joinformsubbtn"  >提交申请(Submit)</button>
+                                                <button type="submit" class="btn blue" id="joinformsubbtn"  >提交申请</button>
                                             </div>
 
                                             <?php if(Yii::app()->user->hasFlash('userinfo')){?>
@@ -411,6 +385,10 @@ $this->pageTitle='新建账户';
                 layer.msg(msg);
             }
         });
+
+
+
+
     </script>
     <!-- END PAGE -->
 
@@ -536,17 +514,7 @@ $this->pageTitle='新建账户';
                 $(this).parents('.controls').next().html("");
             };
         });
-        // $('#userReference').blur(function () {//TODO 没有这个地址
-        //     if ($('#userReference').val() != '') {
-        //         htmlobj = $.ajax({
-        //             url: "ajax_user.php?type=2&number="+$('#userReference').val(),
-        //             async:false
-        //         });
-        //         $(this).parents('.controls').next().html(htmlobj.responseText);
-        //     }else {
-        //         $(this).parents('.controls').next().html("请输入推荐人编号");
-        //     };
-        // });
+
         $('#userIDname').blur(function () {
             if ($('#userIDname').val() == '') {
                 $(this).parents('.controls').next().html("请输入您的姓名");

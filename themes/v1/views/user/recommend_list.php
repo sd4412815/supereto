@@ -52,14 +52,18 @@ $this->pageTitle='推荐清单';
 .flip-content .tit {font-weight:bold;text-align:center;}
 .list-notice {padding:1px 5px;}
 .table-condensed th, .table-condensed td {padding:6px 5px 5px}
-.tg-link {line-height:30px;background:#f9f9f9;border:1px solid #ddd;border-top:0;}
-th{text-align: center;}
-td{font-size: 12.2px;}
+.tg-link {line-height:30px;background:#f9f9f9;border:1px solid #ddd;border-left:0}
+th{text-align: center;height:37px; font-size: 13px;}
+td{text-align: center;height:37px; font-size: 13px;width:200px;}
 .peidui_btn_div {padding:0px 20px;}
 
-@media (max-width: 767px) {
+@media (max-width: 768px) {
     .portlet_a {width:100%;float:none;clear:both;}
     .portlet_b {width:100%;float:none;}
+    td{width:500%;}
+    .flip-scroll th{margin:0}
+    .flip-scroll td{margin:0}
+    .flip-scroll tbody{overflow-x: hidden;}
 }
 
 @media (max-width: 778px) {
@@ -131,8 +135,8 @@ td{font-size: 12.2px;}
       <div class="caption"><i class="icon-list"></i> 推荐清单</div>
     </div>
     <div class="portlet-body flip-scroll" >
-      <table class="table table-hover table-bordered flip-content  table-full-width" id="sample_2">
-        <thead>
+      <?php foreach ($recommend as $k => $rec) :?>
+      <table class="table table-bordered flip-content  table-full-width" id="sample_2">
           <tr>
             <th>序号</th>
             <th>会员编号</th>
@@ -142,11 +146,8 @@ td{font-size: 12.2px;}
             <th>成功M包量</th>
             <th>团队</th>
             <th>注册时间</th>
-            <th><i class="icon-hand-down"></i> 其它操作</th>
           </tr>
-        </thead>
-        <?php foreach ($recommend as $k => $rec) :?>
-        <tbody style="overflow-y:hidden">
+
           <tr>
             <td><?php echo $rec['id']; ?></td>
             <td><?php echo $rec['rl_account_number']; ?></td>
@@ -156,12 +157,9 @@ td{font-size: 12.2px;}
             <td><?php echo $rec['rl_help_money']; ?></td>
             <td><?php echo $rec['rl_team_number']; ?></td>
             <td><?php echo $rec['rl_join_date']; ?></td>
-            <td><i class="icon-hand-up"></i> 暂无</td>
           </tr>
-        </tbody>
-        <?php endforeach;?>
       </table>
-
+        <?php endforeach;?>
       <div class="pagelist"></div>
 
     </div>
