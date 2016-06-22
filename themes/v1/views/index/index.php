@@ -136,18 +136,7 @@ $this->pageTitle = '我的账户';
 											 </tr>
 										 </thead>
 										 <tbody>
-											 <tr>
-												 <td class="tit">信用评级</td>
-												 <td class="text-center">
-													 <img src="<?php echo Yii::app ()->theme->baseUrl . "/images/x.gif" ;?>" height="12" width="14">
-													 <img src="<?php echo Yii::app ()->theme->baseUrl . "/images/x.gif" ;?>" height="12" width="14">
-													 <img src="<?php echo Yii::app ()->theme->baseUrl . "/images/x.gif" ;?>" height="12" width="14">
-													 <img src="<?php echo Yii::app ()->theme->baseUrl . "/images/x.gif" ;?>" height="12" width="14">
-													 <img src="<?php echo Yii::app ()->theme->baseUrl . "/images/x.gif" ;?>" height="12" width="14">
-												 </td>
-												 <td class="tit">我的级别</td>
-												 <td class="text-center"><?php echo $userinfo['ui_my_rank']; ?></td>
-											 </tr>
+											 
 											 <tr>
 												 <td class="tit">直推数量</td>
 												 <td class="text-center">全部<?php echo $userinfo['ui_recommend_number']; ?> &nbsp;合格<?php echo $userinfo['ui_recommend_number']; ?></td>
