@@ -144,7 +144,6 @@ class UserController extends Controller {
 	{
 	  $userinfo=new UserInfo();
 	  $userinfo->ui_account_number=self::GetNewAccountNumber();
-
 	  $user=new User();
 	    //修改user表
 
@@ -164,7 +163,7 @@ class UserController extends Controller {
 	                    $userinfo->scenario = 'RegisterInfo';
 	                    $userinfo->ui_userid =$id;
 	                    $userinfo->ui_account_number =$_POST['UserInfo']['ui_account_number'];
-	                    $userinfo->ui_referrer =$_POST['UserInfo']['ui_referrer'];
+	                    $userinfo->ui_referrer =Yii::app()->user->id;
 	                    if ($userinfo->validate()) {
 	                        if($userinfo->save()){
 	                          $msg = new  Message();
@@ -175,22 +174,7 @@ class UserController extends Controller {
 	                          $msg['m_type'] = Message::TYPE_ACCOUNT;
 	                          $msg['m_src'] = UTool::getRequestInfo();
 	                            if($msg->save()){
-	                              $recommend = new RecommendList();
-	                              $info = UserInfo::model()->find('ui_userid=:uid',array(':uid'=>$id));
-	                              $selectuser = User::model()->find('id',array('id'=>$id));
-	                              $recommend['rl_userid'] = $id;
-	                              $recommend['rl_account_number'] = $info->ui_account_number;
-	                              $recommend['rl_nick_name'] = $selectuser['u_nick_name'];
-	                              $recommend['rl_name'] = $selectuser['u_name'];
-	                              $recommend['rl_tel'] = $selectuser['u_tel'];
-	                              $recommend['rl_help_money'] = '0';
-	                              $recommend['rl_team_number'] ='0';
-	                              $recommend['rl_join_date'] = $selectuser['u_join_date'];
-	                                if($recommend->save()){
-	                                  Yii::app()->user->setFlash('userinfo', '创建成功');
-	                                }else{
-	                                  Yii::app()->user->setFlash('infoError',$userinfo->getErrors());
-	                                }
+                                  Yii::app()->user->setFlash('userinfo', '创建成功');
 	                            }else{
 	                              Yii::app()->user->setFlash('infoError',$userinfo->getErrors());
 	                            }
@@ -222,9 +206,17 @@ class UserController extends Controller {
      */
     public function actionRecommendList()
     {
-        $model=new RecommendList;
-        $recommend = RecommendList::model ()->findAll(Yii::app ()->user->id);
-        $this->render('recommend_list',array('model'=>$model,'recommend'=>$recommend));
+        $recommend = UserInfo::model ()->findAll('ui_referrer=:uid',array(':uid'=>Yii::app ()->user->id));
+
+        $cftpackage=CftPackage::model()->findAll('cp_u_id=:uid',array(':uid'=>Yii::app()->user->id));
+
+
+        $user=UserInfo::model()->findall('ui_referrer=:re',array(':re'=>Yii::app()->user->id));
+        $count_user=count($user);
+
+        $this->render('recommend_list',array(
+            'recommend'=>$recommend
+        ));
     }
 
     /**

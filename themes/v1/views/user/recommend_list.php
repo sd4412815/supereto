@@ -135,7 +135,10 @@ td{text-align: center;height:37px; font-size: 13px;width:200px;}
       <div class="caption"><i class="icon-list"></i> 推荐清单</div>
     </div>
     <div class="portlet-body flip-scroll" >
-      <?php foreach ($recommend as $k => $rec) :?>
+      <?php 
+
+      foreach ($recommend as $k => $rec) :?>
+      <?php $user=User::model()->find('id=:uid',array(':uid'=>$rec['ui_userid'])); ?>
       <table class="table table-bordered flip-content  table-full-width" id="sample_2">
           <tr>
             <th>序号</th>
@@ -149,14 +152,14 @@ td{text-align: center;height:37px; font-size: 13px;width:200px;}
           </tr>
 
           <tr>
-            <td><?php echo $rec['id']; ?></td>
-            <td><?php echo $rec['rl_account_number']; ?></td>
-            <td><?php echo $rec['rl_nick_name']; ?></td>
-            <td><?php echo $rec['rl_name']; ?></td>
-            <td><?php echo $rec['rl_tel']; ?></td>
-            <td><?php echo $rec['rl_help_money']; ?></td>
-            <td><?php echo $rec['rl_team_number']; ?></td>
-            <td><?php echo $rec['rl_join_date']; ?></td>
+            <td><?php echo $k+1; ?></td>
+            <td><?php echo $rec['ui_account_number']; ?></td>
+            <td><?php echo $user['u_nick_name']; ?></td>
+            <td><?php echo $user['u_name']; ?></td>
+            <td><?php echo $user['u_tel']; ?></td>
+            <td><?php //echo $rec['rl_help_money']; ?></td>
+            <td><?php //echo $rec['rl_team_number']; ?></td>
+            <td><?php echo $user['u_join_date']; ?></td>
           </tr>
       </table>
         <?php endforeach;?>
