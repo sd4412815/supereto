@@ -7,6 +7,7 @@
  */
 class CftController extends Controller
 {
+    public $layout='main';
     public function actions(){
         return array(
             // captcha action renders the CAPTCHA image displayed on the contact page
@@ -55,7 +56,7 @@ class CftController extends Controller
         }else{
             $model->todayStatus=0;
         }
-//        v(Yii::app ()->user->id);die;
+
 
         if(isset($_POST['CftPackage'])){
             if(count($cftpackage)>0){
