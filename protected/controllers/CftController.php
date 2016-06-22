@@ -99,4 +99,54 @@ class CftController extends Controller
             'cftType'   =>$cftType
         ));
     }
+
+    /**
+     * 卖出
+     */
+    public function actionSell()
+    {
+
+
+        $this->render('sell',array(
+            
+        ));
+    }
+    /**
+     * 买入记录
+     */
+    public function actionBuyLog()
+    {
+
+        $criteria = new CDbCriteria;
+        $criteria->addCondition('cp_u_id = :cp_u_id');
+        $criteria->params[':cp_u_id']=Yii::app()->user->id;
+        $criteria->addCondition('cp_type = :cp_type');
+        $criteria->params[':cp_type']=0;
+        $criteria->order='cp_last_time DESC';
+        $cftpackage=CftPackage::model()->findAll($criteria);
+
+
+        $this->render('buylog',array(
+            'cftpackage'=>$cftpackage,
+        ));
+    }
+
+    /**
+     * 卖出记录
+     */
+    public function actionSellLog()
+    {
+        $criteria = new CDbCriteria;
+        $criteria->addCondition('cp_u_id = :cp_u_id');
+        $criteria->params[':cp_u_id']=Yii::app()->user->id;
+        $criteria->addCondition('cp_type = :cp_type');
+        $criteria->params[':cp_type']=1;
+        $criteria->order='cp_last_time DESC';
+        $cftpackage=CftPackage::model()->findAll($criteria);
+
+
+        $this->render('selllog',array(
+            'cftpackage'=>$cftpackage,
+        ));
+    }
 }

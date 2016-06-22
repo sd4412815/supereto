@@ -4,7 +4,6 @@
  * Date: 2016-6-5
  * Time: 12:33:12
  */
-
  Yii::app ()->clientScript->registerCssFile ( Yii::app ()->theme->baseUrl . "/public/css/bootstrap-responsive.css" );
  Yii::app ()->clientScript->registerCssFile ( Yii::app ()->theme->baseUrl . "/public/css/font-awesome.css" );
  Yii::app ()->clientScript->registerCssFile ( Yii::app ()->theme->baseUrl . "/public/css/style-metro.css" );
@@ -136,7 +135,7 @@ $this->pageTitle = '我的账户';
 											 </tr>
 										 </thead>
 										 <tbody>
-											 
+
 											 <tr>
 												 <td class="tit">直推数量</td>
 												 <td class="text-center">全部<?php echo $userinfo['ui_recommend_number']; ?> &nbsp;合格<?php echo $userinfo['ui_recommend_number']; ?></td>

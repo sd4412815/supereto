@@ -255,10 +255,9 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
 		                </a>
 		                <ul class="treeview-menu">
 		                    <li><a href="<?php echo Yii::app()->createUrl('cft/buy') ?>"><i class="fa fa-reply"></i> 买入ETO包</a></li>
-		                    <li><a href=""><i class="fa fa-share"></i> 卖出ETO包</a></li>
-		                    <li><a href=""><i class="fa fa-line-chart"></i> 动态额度图</a></li>
-		                    <li><a href=""><i class="fa fa-caret-square-o-down"></i> 买入记录</a></li>
-		                    <li><a href=""><i class="fa fa-caret-square-o-up"></i> 卖出记录</a></li>
+		                    <li><a href="<?php echo Yii::app()->createUrl('cft/sell') ?>"><i class="fa fa-share"></i> 卖出ETO包</a></li>
+		                    <li><a href="<?php echo Yii::app()->createUrl('cft/buyLog') ?>"><i class="fa fa-caret-square-o-down"></i> 买入记录</a></li>
+		                    <li><a href="<?php echo Yii::app()->createUrl('cft/sellLog') ?>"><i class="fa fa-caret-square-o-up"></i> 卖出记录</a></li>
 		                </ul>
 		            </li>
 		            <li class="treeview">
