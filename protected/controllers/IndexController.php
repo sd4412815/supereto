@@ -8,7 +8,7 @@
 class IndexController extends Controller
 {
 
-  public $layouts='main';
+  public $layout='main';
 
 /*    public function accessRules() {
         return array (
@@ -65,14 +65,14 @@ class IndexController extends Controller
 
     public function actionindex()
     {
-      $userinfo = UserInfo::model ()->find(Yii::app ()->user->id);
-      $gonggao['gg']['gonggao'] = '近期的公告';
-      $gonggao['gg']['rq']      = '2015-01-15';
+          $userinfo = UserInfo::model ()->find(Yii::app ()->user->id);
+          $gonggao['gg']['gonggao'] = '近期的公告';
+          $gonggao['gg']['rq']      = '2015-01-15';
 
-      $this->render ( 'index', array (
-          'userinfo' => $userinfo,
-          'gonggao'  => $gonggao,
-      ));
+          $this->render ( 'index', array (
+              'userinfo' => $userinfo,
+              'gonggao'  => $gonggao,
+          ));
     }
 
     /**

@@ -73,6 +73,7 @@ class CftController extends Controller
                 $model->cp_add_time=date('Y-m-d H:i:s',time());
                 $model->cp_last_time=date('Y-m-d H:i:s',time());
                 $model->cp_status=0;
+                $model->cp_sn='S'.date('mdHi').rand(10,99);
 
                 if($model->save()){
                     $msg =new  Message();
@@ -117,7 +118,7 @@ class CftController extends Controller
      */
     public function actionBuyLog()
     {
-
+    
         $criteria = new CDbCriteria;
         $criteria->addCondition('cp_u_id = :cp_u_id');
         $criteria->params[':cp_u_id']=Yii::app()->user->id;
@@ -125,7 +126,7 @@ class CftController extends Controller
         $criteria->params[':cp_type']=0;
         $criteria->order='cp_last_time DESC';
         $cftpackage=CftPackage::model()->findAll($criteria);
-
+        p($cftpackage);
 
         $this->render('buylog',array(
             'cftpackage'=>$cftpackage,

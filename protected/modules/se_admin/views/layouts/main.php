@@ -230,7 +230,7 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
                        <a href="<?php echo $this->createUrl('cftpackage/list');?>"><i class="fa fa-edit"></i> 订单列表</a>
 		            </li>
 		            <li>
-                        <a href="<?php echo $this->createUrl('user/EditInfo');?>"><i class="fa fa-edit"></i> 会员列表</a>
+                        <a href="<?php echo $this->createUrl('user/list');?>"><i class="fa fa-edit"></i> 会员列表</a>
 		            </li>
 		            <li class="treeview">
                         <a href="<?php echo $this->createUrl('user/EditInfo');?>"><i class="fa fa-edit"></i> 门票列表</a>
@@ -239,7 +239,7 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
                         <a href="<?php echo $this->createUrl('user/EditInfo');?>"><i class="fa fa-edit"></i> 推荐列表</a>
 		            </li>
 		            <li class="treeview">
-                        <a href="<?php echo $this->createUrl('user/EditInfo');?>"><i class="fa fa-edit"></i> 公告列表</a>
+                        <a href="<?php echo $this->createUrl('messages/list');?>"><i class="fa fa-edit"></i> 公告列表</a>
 		            </li>
                     <li class="treeview">
                         <a href="<?php echo $this->createUrl('user/EditInfo');?>"><i class="fa fa-edit"></i> 客服管理</a>

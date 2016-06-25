@@ -34,21 +34,23 @@ $this->pageTitle='买入记录';
                                 <table id="example2" class="table table-bordered table-hover dataTable" >
                                     <thead>
                                         <tr role="row">
-                                            <th class="sorting">买入日期</th>
-                                            <th class="sorting">Browser</th>
-                                            <th class="sorting">Platform(s)</th>
-                                            <th class="sorting">Engine version</th>
-                                            <th class="sorting">CSS grade</th>
+                                            <th class="sorting">日期</th>
+                                            <th class="sorting">单号</th>
+                                            <th class="sorting">收款时间</th>
+                                            <th class="sorting">状态</th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <?php foreach ( $cftpackage as $item) {?>
+                                            
                                         <tr role="row" class="odd">
-                                            <td class="">Misc</td>
-                                            <td class="">IE Mobile</td>
-                                            <td class="sorting_1">Windows Mobile 6</td>
-                                            <td>-</td>
-                                            <td>C</td>
+                                            <td class=""><?php echo substr(substr($item['cp_add_time'],5 ) ,0, -3)?></td>
+                                            <td class=""><?php echo $item['cp_sn'] ?></td>
+                                            <td class="sorting_1"><?php echo substr(substr($item['cp_last_time'],5 ) ,0, -3) ?></td>
+                                            <td><?php echo $item['cp_status'] ?></td>
                                         </tr>
+                                        <?php } ?>
+                                    
                                     </tbody>
 
                                 </table>
