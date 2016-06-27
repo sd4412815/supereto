@@ -11,13 +11,14 @@
  * @property string $om_contactor
  * @property integer $om_type
  */
-class OpenMessage extends CActiveRecord {
+class Ticket extends CActiveRecord {
+	public $u_safe_pwd;
 	/**
 	 *
 	 * @return string the associated database table name
 	 */
 	public function tableName() {
-		return '{{open_message}}';
+		return '{{ticket}}';
 	}
 
 	/**
@@ -29,39 +30,17 @@ class OpenMessage extends CActiveRecord {
 		// will receive user inputs.
 		return array (
 				array (
-						'om_datetime, om_type,om_contactor,om_content',
+						't_account_number,t_ticket_number',
 						'required'
 				),
-				array (
-						'om_status, om_type',
-						'numerical',
-						'integerOnly' => true
-				),
-				array (
-						'om_content',
-						'length',
-						'max' => 1000,
-						'min' => 1 ,
-						'tooShort' => '留言内容太短'
-				),
-				array (
-						'om_contactor',
-						'length',
-						'max' => 100,
-						'min' => 5,
-						'tooShort' => '请输入有效的联系方式'
-				),
-				// The following rule is used by search().
-				// @todo Please remove those attributes that should not be searched.
-				array (
-						'id, om_datetime, om_status, om_content, om_contactor, om_type',
-						'safe',
-						'on' => 'search'
-				)
+			array ('t_account_number','required','message'=>'接收人编号不能为空','on'=>'Ticket'),
+			array ('t_ticket_number','required','message'=>'门票数量不能为空','on'=>'Ticket'),
+			array ('t_account_number', 'length','min'=>10, 'max'=>10,'message'=>'帮助编号位数不正确','on'=>'Ticket'),
+			// array ("t_safe_pwd","compare","compareAttribute"=>"u_safe_pwd","message"=>"安全码输入错误",'on'=>'Ticket'),
 		);
 	}
 
-	/**
+	/**t
 	 *
 	 * @return array relational rules.
 	 */
