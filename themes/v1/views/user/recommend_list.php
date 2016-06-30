@@ -135,8 +135,8 @@ td{text-align: center;height:37px; font-size: 13px;width:200px;}
       <div class="caption"><i class="icon-list"></i> 推荐清单</div>
     </div>
     <div class="portlet-body flip-scroll" >
-      <?php 
-
+      <?php
+      if(!empty($recommend)){
       foreach ($recommend as $k => $rec) :?>
       <?php $user=User::model()->find('id=:uid',array(':uid'=>$rec['ui_userid'])); ?>
       <table class="table table-bordered flip-content  table-full-width" id="sample_2">
@@ -158,11 +158,25 @@ td{text-align: center;height:37px; font-size: 13px;width:200px;}
             <td><?php echo $user['u_name']; ?></td>
             <td><?php echo $user['u_tel']; ?></td>
             <td><?php //echo $rec['rl_help_money']; ?></td>
-            <td><?php //echo $rec['rl_team_number']; ?></td>
+            <td><?php echo $count_user ?></td>
             <td><?php echo $user['u_join_date']; ?></td>
           </tr>
       </table>
         <?php endforeach;?>
+      <?php   }else{ ?>
+        <table class="table table-bordered flip-content  table-full-width" id="sample_2">
+            <tr>
+              <th>序号</th>
+              <th>会员编号</th>
+              <th>昵称</th>
+              <th>姓名</th>
+              <th>手机号</th>
+              <th>成功M包量</th>
+              <th>团队</th>
+              <th>注册时间</th>
+            </tr>
+        </table>
+        <?php }?>
       <div class="pagelist"></div>
 
     </div>

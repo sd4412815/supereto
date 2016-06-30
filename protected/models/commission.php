@@ -11,14 +11,13 @@
  * @property string $om_contactor
  * @property integer $om_type
  */
-class Ticket extends CActiveRecord {
-	public $u_safe_pwd;
+class Commission extends CActiveRecord {
 	/**
 	 *
 	 * @return string the associated database table name
 	 */
 	public function tableName() {
-		return '{{ticket}}';
+		return '{{commission}}';
 	}
 
 	/**
@@ -35,7 +34,7 @@ class Ticket extends CActiveRecord {
 				),
 			array ('t_account_number','required','message'=>'接收人编号不能为空','on'=>'Ticket'),
 			array ('t_ticket_number','required','message'=>'门票数量不能为空','on'=>'Ticket'),
-			array ('t_account_number', 'length','min'=>10, 'max'=>10,'message'=>'帮助编号位数不正确','on'=>'Ticket'),
+			array ('t_account_number', 'length','min'=>11, 'max'=>11,'message'=>'帮助编号位数不正确','on'=>'Ticket'),
 		);
 	}
 
@@ -47,30 +46,6 @@ class Ticket extends CActiveRecord {
 							$this->addError ( 'password', '安全密码错误,请重试！' );
 					}
 			}
-	}
-	/**t
-	 *
-	 * @return array relational rules.
-	 */
-	public function relations() {
-		// NOTE: you may need to adjust the relation name and the related
-		// class name for the relations automatically generated below.
-		return array ();
-	}
-
-	/**
-	 *
-	 * @return array customized attribute labels (name=>label)
-	 */
-	public function attributeLabels() {
-		return array (
-				'id' => 'ID',
-				'om_datetime' => '留言时间',
-				'om_status' => '留言状态',
-				'om_content' => '问题描述',
-				'om_contactor' => '联系方式',
-				'om_type' => '问题分类'
-		);
 	}
 
 	/**
