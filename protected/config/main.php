@@ -121,6 +121,17 @@ return array(
         'log' => $log
     ),
 
+
+    'controllerMap'=>array(
+        'ueditor'=>array(
+            'class'=>'ext.ueditor.UeditorController',
+            'config'=>array(),//参考config.json的配置，此处的配置具备最高优先级
+            'useQiniu'=>true,//是否使用七牛存储
+            'thumbnail'=>true,//是否开启缩略图
+            'watermark'=>'',//水印图片的地址，使用相对路径
+            'locate'=>9,//水印位置，1-9，默认为9在右下角
+        ),
+    ),
     // application-level parameters that can be accessed
     // using Yii::app()->params['paramName']
     'params' => array(

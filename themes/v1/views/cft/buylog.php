@@ -47,7 +47,11 @@ $this->pageTitle='买入记录';
                                             <td class=""><?php echo substr(substr($item['cp_add_time'],5 ) ,0, -3)?></td>
                                             <td class=""><?php echo $item['cp_sn'] ?></td>
                                             <td class="sorting_1"><?php echo substr(substr($item['cp_last_time'],5 ) ,0, -3) ?></td>
-                                            <td><?php echo $item['cp_status'] ?></td>
+                                            <td>
+                                                <?php if($item['cp_status'] == 0){
+                                                    echo '正常';
+                                                }?>
+                                            </td>
                                         </tr>
                                         <?php } ?>
                                     

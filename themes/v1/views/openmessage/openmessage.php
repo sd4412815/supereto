@@ -37,7 +37,18 @@ $this->pageTitle='站内公告';
 
 <!-- BEGIN BODY -->
 <body class="page-header-fixed " >
-
+  <div class="page-container">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <ul class="breadcrumb">
+                    <li> <i class="icon-home"></i> <a href="<?php echo Yii::app()->CreateUrl('index/index') ?>">Home</a> <i class="icon-angle-right"></i> </li>
+                    <li><a href="">网站公告</a></li>
+                </ul>
+            </div>
+        </div>
+      </div>
+    </div>
     <script>
 	function makesure()
 	{
@@ -46,6 +57,8 @@ $this->pageTitle='站内公告';
 </script>
 <link rel="shortcut icon" href="" type="image/x-icon">
 <style type="text/css">
+a{color:black;}
+a:hover{color:black;}
 .portlet {clear:none;}
 .portlet_a {width:49%;float:left;}
 .portlet_b {width:49%;float:right;}
@@ -96,11 +109,12 @@ td{text-align: center;height:37px; font-size: 13px;width:200px;}
          <?php
           foreach ($msg as $k => $m) :?>
            <div class="" style="text-align:center">
-
-             <h3 style="margin-top:50px;"><?php echo $m['om_title']; ?></h3>
-              <pre><?php echo $m['om_content']; ?></pre>
+             <h2 style="margin-top:50px;"><?php echo $m['om_title']; ?></h2>
+              <pre style="font-size:18px;"><?php echo $m['om_content']; ?></pre>
            </div>
-
+           <div style="width:90%;  text-align:right;">
+             <b style="font-size:18px;"><?php echo date('Y-m-d',time())?> 超级ETO总部宣</b>
+           </div>
          <?php endforeach;?>
 
 

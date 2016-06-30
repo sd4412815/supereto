@@ -108,9 +108,16 @@ class CftController extends Controller
     public function actionSell()
     {
 
+        $criteria = new CDbCriteria;
+        $criteria->addCondition('cp_u_id = :cp_u_id');
+        $criteria->params[':cp_u_id']=Yii::app()->user->id;
+        $criteria->addCondition('cp_type = :cp_type');
+        $criteria->params[':cp_type']=1;
+        $criteria->order='cp_last_time DESC';
+        $cftpackage=CftPackage::model()->findAll($criteria);
 
         $this->render('sell',array(
-            
+            'cftpackage'=>$cftpackage,
         ));
     }
     /**
@@ -126,7 +133,6 @@ class CftController extends Controller
         $criteria->params[':cp_type']=0;
         $criteria->order='cp_last_time DESC';
         $cftpackage=CftPackage::model()->findAll($criteria);
-        p($cftpackage);
 
         $this->render('buylog',array(
             'cftpackage'=>$cftpackage,

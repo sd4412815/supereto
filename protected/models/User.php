@@ -154,7 +154,7 @@ class User extends CActiveRecord {
 
     public function checkSafePwd($attribute,$params){
         if (! $this->hasErrors ()) {
-            $this->_identity = new UserIdentity ( $this->u_tel, $this->u_safe_pwd);
+            $this->_identity = new Checksafepwd ( $this->u_tel, $this->u_safe_pwd);
             // $isBoss = $this->scenario=="boss"?true:false;
             if ( $this->_identity->authenticate () != 0){
                 $this->addError ( 'password', '安全密码错误,请重试！' );
@@ -198,7 +198,18 @@ class User extends CActiveRecord {
 		return CPasswordHelper::verifyPassword ( $password, $this->u_pwd );
 	}
 
-	/**
+    /**
+     * 验证安全密码
+     *
+     * @param unknown $password
+     * @return boolean
+     */
+    public function validateSafePassword($password) {
+        return CPasswordHelper::verifyPassword ( $password, $this->u_safe_pwd );
+    }
+
+
+    /**
 	 * 用户注册
 	 *
 	 * @param LoginForm $loginForm

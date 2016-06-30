@@ -49,7 +49,11 @@ $this->pageTitle='卖出记录';
                                             <td class=""><?php echo $item['cp_add_time'] ?></td>
                                             <td class=""><?php echo $item['cp_sn'] ?></td>
                                             <td class="sorting_1"><?php echo $item['cp_last_time'] ?></td>
-                                            <td><?php echo $item['cp_status'] ?></td>
+                                            <td>
+                                                <?php if($item['cp_status'] == 0){
+                                                    echo '正常';
+                                                }?>
+                                            </td>
                                         </tr>
                                     <?php } ?>
 
