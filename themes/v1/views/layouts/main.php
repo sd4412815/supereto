@@ -268,7 +268,7 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
 		                </a>
 		                <ul class="treeview-menu">
 		                    <li><a href=""><i class="fa fa-book"></i> 我的账户</a></li>
-		                    <li><a href="<?php $this->createUrl('ticket/Ticket') ?>"><i class="fa fa-exchange"></i> 门票转账</a></li>
+		                    <li><a href="<?php echo  $this->createUrl('ticket/Ticket') ?>"><i class="fa fa-exchange"></i> 门票转账</a></li>
 		                    <li><a href="<?php echo Yii::app()->createUrl('ticket/commission');?>"><i class="fa fa-newspaper-o"></i> 佣金清单</a></li>
 		                </ul>
 		            </li>

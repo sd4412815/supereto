@@ -2,6 +2,8 @@
 
 class TicketController extends Controller
 {
+
+    public $layout='main';
   /**
    * 门票转账
    */
@@ -43,19 +45,21 @@ class TicketController extends Controller
       // $ticket = Ticket::model()->find();
       $this->render('Ticket',array('ticket'=>$ticket));
   }
-  /**
-   * 佣金清单
-   */
-        public function actioncommission()
-        {
-            $recommend = UserInfo::model ()->findAll('ui_referrer=:uid',array(':uid'=>Yii::app ()->user->id));
-            $cftpackage=CftPackage::model()->findAll('cp_u_id=:uid',array(':uid'=>Yii::app()->user->id));
-            // $cftpackagetype=CftPackageType::model()->findAll('cpt_price',array('id'=>$cftpackage->cp_u_id));
-            $user=UserInfo::model()->findall('ui_referrer=:re',array(':re'=>Yii::app()->user->id));
-            $count_user=count($user);
-            $this->render('commission',array(
-                'recommend'=>$recommend,
-                'count_user'=>$count_user
-            ));
-        }
+    /**
+     * 佣金清单
+     */
+    public function actioncommission()
+    {
+        $recommend = UserInfo::model ()->findAll('ui_referrer=:uid',array(':uid'=>Yii::app ()->user->id));
+        $cftpackage=CftPackage::model()->findAll('cp_u_id=:uid',array(':uid'=>Yii::app()->user->id));
+        // $cftpackagetype=CftPackageType::model()->findAll('cpt_price',array('id'=>$cftpackage->cp_u_id));
+        $user=UserInfo::model()->findall('ui_referrer=:re',array(':re'=>Yii::app()->user->id));
+        $count_user=count($user);
+        $this->render('commission',array(
+            'recommend'=>$recommend,
+            'count_user'=>$count_user
+        ));
+    }
+
+
 }
