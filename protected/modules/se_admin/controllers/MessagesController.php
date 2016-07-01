@@ -18,6 +18,16 @@ class MessagesController extends Controller
             'title'=>'添加公告'
         ));
     }
+
+    public function actionEdit()
+    {
+        $model=OpenMessage::model()->find(Yii::app()->request->getParam('id'));
+
+        $this->render('add',array(
+            'model'=>$model,
+            'title'=>'编辑公告'
+        ));
+    }
     /**
      * 列表
      */

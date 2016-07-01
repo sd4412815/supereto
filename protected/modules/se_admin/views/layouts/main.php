@@ -242,7 +242,7 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
                         <a href="<?php echo $this->createUrl('messages/list');?>"><i class="fa fa-edit"></i> 公告列表</a>
 		            </li>
                     <li class="treeview">
-                        <a href="<?php echo $this->createUrl('user/EditInfo');?>"><i class="fa fa-edit"></i> 客服管理</a>
+                        <a href="<?php echo $this->createUrl('CustomerService/list');?>"><i class="fa fa-edit"></i> 客服管理</a>
                     </li>
 		            <li class="treeview">
 		                <a href="<?php echo $this->createUrl('index/logout') ?>">
