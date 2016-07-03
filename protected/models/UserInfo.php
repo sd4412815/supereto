@@ -26,13 +26,13 @@ class UserInfo extends CActiveRecord {
             //安全设置
             array ('ui_email ,ui_alipay,ui_wechat,ui_credit_card,smsCode,ui_bank_account,ui_bank_branch', 'safe'),
             //邮箱验证
-            array('ui_email','email','message'=>'请输入正确的邮箱地址','on'=>'EditInfo'),
+            array('ui_email','email','message'=>'请输入正确的邮箱地址','on'=>'EditInfo,su_edit'),
             //支付宝账号
-            array ('ui_alipay', 'length', 'max'=>30, 'message'=>'支付宝账号格式错位','min'=>5,'on'=>'EditInfo'),
+            array ('ui_alipay', 'length', 'max'=>30, 'message'=>'支付宝账号格式错位','min'=>5,'on'=>'EditInfo,su_edit'),
             //微信号
-            array ('ui_wechat', 'length', 'max'=>30,'min'=>3, 'message'=>'微信号格式错位','on'=>'EditInfo'),
+            array ('ui_wechat', 'length', 'max'=>30,'min'=>3, 'message'=>'微信号格式错位','on'=>'EditInfo,su_edit'),
             //银行卡号
-            array ('ui_credit_card', 'numerical', 'message'=>'银行卡号格式错位','on'=>'EditInfo'),
+            array ('ui_credit_card', 'numerical', 'message'=>'银行卡号格式错位','on'=>'EditInfo,su_edit'),
 
         );
     }

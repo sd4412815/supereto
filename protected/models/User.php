@@ -59,7 +59,7 @@ class User extends CActiveRecord {
             array ("u_pwd","validatePassword",'on'=>'EditPwd'),
             //手机号不能为空
             array ('u_tel','required','message'=>'手机号不能为空'),
-            array ('u_tel', 'length', 'max'=>11,'min'=>11,'on'=>'EditPwd,EditInfo,Register'),
+            array ('u_tel', 'length', 'max'=>11,'min'=>11,'on'=>'EditPwd,EditInfo,Register,su_edit'),
 			//验证图形验证码
             array ('captcha','captcha','allowEmpty' => ! CCaptcha::checkRequirements (),'message' => '图形验证码过期，请点击刷新','on' => 'reset,EditPwd'),
             //验证手机验证码
@@ -68,8 +68,8 @@ class User extends CActiveRecord {
             array ('smsCode','checkSmsCode','message' => '短信验证码错误','on' => 'reg,EditPwd,EditInfo'),
             array ('smsCode','length','min'=>6,'max' => 6,'tooLong' => '短信验证码错误','tooShort' => '短信验证码错误','on' => 'reg,EditPwd,EditInfo'),
 
-            array ('u_nick_name','required','message'=>'昵称不能为空','on'=>'Register'),
-            array ('u_name','required','message'=>'名字不能为空','on'=>'Register'),
+            array ('u_nick_name','required','message'=>'昵称不能为空','on'=>'Register,su_edit'),
+            array ('u_name','required','message'=>'名字不能为空','on'=>'Register,su_edit'),
 
         );
 	}

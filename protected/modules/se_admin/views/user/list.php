@@ -41,6 +41,7 @@ $this->pageTitle='会员列表';
                                         <th class="sorting">加入时间</th>
                                         <th class="sorting">上次登录</th>
                                         <th class="sorting">状态</th>
+                                        <th colspan="2">操作</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -51,7 +52,23 @@ $this->pageTitle='会员列表';
                                             <td class=""><?php echo $item['u_name'] ?></td>
                                             <td class="sorting_1"><?php echo $item['u_join_date'] ?></td>
                                             <td class="sorting_1"><?php echo $item['u_login_date'] ?></td>
-                                            <td><?php echo $item['u_state'] ?></td>
+                                            <td>
+                                                <?php
+                                                    if($item['u_state']){
+                                                        echo  '正常';
+                                                    }
+                                                ?>
+                                            </td>
+                                            <td>
+                                                <a href="<?php echo $this->createUrl('user/edit',array('id'=>$item['id'])) ?>">
+                                                    <i class="fa fa-pencil-square-o"></i>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="#" onclick="del(<?php echo $item['id']?>);">
+                                                    <i class="fa fa-trash-o"></i>
+                                                </a>
+                                            </td>
                                         </tr>
                                     <?php } ?>
 
@@ -68,3 +85,26 @@ $this->pageTitle='会员列表';
 </div>
 
 </section>
+
+
+<script>
+    function del(id){
+        $.ajax({
+            url:'<?php echo $this->createUrl('user/del') ?>',
+            type:'GET',
+            dataType:'JSON',
+            data:{
+                'id':id
+            },
+            success:function (result){
+                if(result.status){
+                    layer.msg(result.msg);
+                    location.reload()
+                }
+            },
+            error:function (result){
+
+            }
+        })
+    }
+</script>

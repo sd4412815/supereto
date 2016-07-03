@@ -1,6 +1,27 @@
 <?php
 class UserController extends Controller {
-	/**
+
+    public function accessRules()              //这里就是访问规则的设置。
+    {
+        return array(
+            array('allow',              // 允许所有用户执行index,view动作。
+                'actions'=>array('index','view'),
+                'users'=>array('*'),
+           ),
+         array('allow',             // 只允许经过验证的用户执行create, update动作。
+             'actions'=>array('create','update'),
+             'users'=>array('@'),       // @号指所有注册的用户
+         ),
+         array('allow',             // 只允许用户名是admin的用户执行admin,delete动作
+             'actions'=>array('admin','delete'),
+             'users'=>array('admin'),
+         ),                   //admin就是指用户名是admin的用户,以硬编码的形式分配用户权限。
+             array('deny',           // 拒绝所有的访问。
+                 'users'=>array('*'),
+             ),
+         );
+     }
+    /**
 	 * Declares class-based actions.
 	 */
 	public function actions() {
