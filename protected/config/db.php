@@ -13,7 +13,7 @@ return
 		'connectionString' => 'mysql:host=127.0.0.1;dbname=supereto',
 		'emulatePrepare' => true,
 		'username' => 'root',
-		'password' => 'woshimima',
+		'password' => 'root',
 		'charset' => 'utf8',
 		'tablePrefix' => 'yy_'
 );
