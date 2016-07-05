@@ -18,6 +18,7 @@
  Yii::app ()->clientScript->registerCssFile ( Yii::app ()->theme->baseUrl . "/public/css/news.css" );
  Yii::app ()->clientScript->registerCssFile ( Yii::app ()->theme->baseUrl . "/public/css/glyphicons.css" );
  Yii::app ()->clientScript->registerCssFile ( Yii::app ()->theme->baseUrl . "/public/css/halflings.css" );
+ // Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/public/js/jquery.js", CClientScript::POS_END );
 $this->pageTitle = '我的账户';
 ?>
 <ul class="breadcrumb">
@@ -58,12 +59,7 @@ $this->pageTitle = '我的账户';
 
  <!-- BEGIN BODY -->
  <body class="page-header-fixed ">
- <script>
-	function makesure()
-	{
-		return(confirm("此操作将取消挂单，门票不予退还，你确定取消吗？"))
-	}
- </script>
+
  <link rel="shortcut icon" href="" type="image/x-icon">
  <style type="text/css">
  .portlet {clear:none;}
@@ -126,7 +122,7 @@ $this->pageTitle = '我的账户';
 											 <tr>
 												 <td class="tit" width="21%">账户编号</td>
 												 <td style="text-align:center;" width="29%">
-												   <!-- <a href="<?php //echo Yii::app()->createUrl('user/info');?>"> -->
+										<!-- <a href="<?php //echo Yii::app()->createUrl('user/info');?>"> -->
 												   <?php echo $userinfo['ui_account_number']; ?>
 												 <!-- </a> -->
 												 </td>
@@ -159,7 +155,7 @@ $this->pageTitle = '我的账户';
 										 </tbody>
 									 </table>
 
-									 <div class="tg-link text-center"><b>推广链接：<a href="127.0.0.1/www/" target="_blank">127.0.0.1/www/</a></b></div>
+									 <div class="tg-link text-center"><b>推广链接：<a href="www.supereto.com/" target="_blank">www.supereto.com/</a></b></div>
 								 </div>
 							 </div>
 							 <div class="portlet box grey portlet_b" style="">
@@ -187,19 +183,16 @@ $this->pageTitle = '我的账户';
 				 <div class="row-fluid">
                     <div class="span12">
                         <div class="portlet big-btn-box">
-                            <div class="big-btn-box-a">
+                            <div class="big-btn-box-a" style="width:49%;" >
                                 <a class="btn red btn-bigbig" id="pdBtn" href="mpackage_buy.php"><i class="icon-cloud-upload"></i> 买入M包</a>
                             </div>
-                            <div class="big-btn-box-c">
-                                <a class="btn blue btn-bigbig" id="pdBtn" href="mpackage_buy_vip.php"><i class="icon-cloud-upload"></i> 财富通道</a>
-                            </div>
-                            <div class="big-btn-box-b">
-                                <a class="btn green btn-bigbig" id="gdBtn" href="mpackage_sell.php"><i class="icon-cloud-download"></i> 卖出M包</a>
+                            <div class="big-btn-box-b" style="width:49%">
+                                <a class="btn blue btn-bigbig" id="gdBtn" href="mpackage_sell.php"><i class="icon-cloud-download"></i> 卖出M包</a>
                             </div>
                         </div>
                     </div>
                 </div>
-<?php if(1==1){?>
+<?php if(!empty($cfttype)){?>
 <!--舍列表-->
 <div class="row-fluid">
     <div class="span12">
@@ -209,31 +202,35 @@ $this->pageTitle = '我的账户';
                 <div class="caption"><i class="icon-cloud-upload"></i>买入的M包</div>
                 <div class="tools"> <a href="javascript:;" class="collapse"></a></div>
             </div>
+
+            <?php foreach ( $cft as $k=>$item) {?>
+            <?php foreach ( $cfttype as $k=>$v) {?>
+            <?php }?>
             <div class="portlet-body pd-wrap">
                 <div class="table-pd tongdao0">
                     <div class="donate-header clearfix">
                         <i title="" data-original-title="" class="icon-reorder hireTable" rel="S003044127" value="pd" data-toggle="tooltip" data-placement="top" align="right"></i>
-                            <h4>提供帮助编号：<span>S003044127</span></h4>
+
+                            <h4>原石众筹编号：<span><?php echo $item['cp_sn']; ?></span></h4>
                                 <ul class="div_list">
-                                    <li>参加者：M04535811</li>
-                                    <li>提供帮助数额：RMB 2000.00</li>
-                                    <li>排队日期：2016-05-29 11:39:59</li>
-                                    <li>当前状态：<span class="pending"><font color="black">等待匹配</font>  <a href="http://cn.mmobar.com/home/index.php?action=cancelshe&amp;sheid=6184963" onclick="return makesure();"><font color="yellow">取消挂单</font></a></span>
+                                    <li>参加者：<?php echo $userinfo['ui_account_number']; ?></li>
+                                    <li>淘宝号：<?php echo $userinfo['ui_taobao']; ?></li>
+                                    <li>提供帮助数额：<?php echo $v['cpt_name']; ?></li>
+                                    <li>排队日期：<?php echo $item['cp_add_time']; ?></li>
+                                    <li>当前状态：<span class="pending"><font color="black" class="timeout">打款倒计时</font>
+                                    <font  id="<?php echo $item['id'];?>"></font><button class="btn box-a" type="button" onclick="time<?php echo $item['id'];?>();" name="button">点击查看</button><a href="http://www.taobao.com">前往打款</a><a href="" onclick="return makesure();"><font color="yellow">取消挂单</font></a></span>
                                     </li>
-                                    <li>预计匹配时间：2016-06-08至2016-06-15之间</li>
-                                <!--
-                                <li>剩余数额: RMB0.00</li>
-                                <li>回酬分布剩余时间: 剩余0天</li>-->
+                                    <li>预计收款时间：<?php echo substr($item['cp_last_time'],0,10);?> 日 10:00:00--16:00:00之间</li>
+
                                 </ul>
+
+
                     </div>
-
-
                     <div class="pd donate-body-S003044127">
                         <div class="">
                         </div>
                     </div>
                 </div>
-
                 <div class="table-pd tongdao0">
 
                     <div class="pd donate-body-S004474514">
@@ -243,10 +240,22 @@ $this->pageTitle = '我的账户';
                     </div>
                 </div>
             </div>
+            <script>
+                function time<?php echo $item['id'];?>(){
+                  var timestamp = Date.parse(new Date());
+                  var wait<?php echo $item['id'];?>=new Date(<?php echo (strtotime($item['cp_last_time'])+86400);?>-timestamp);
+                  $('#<?php echo $item['id'];?>').html(wait<?php echo $item['id'];?>);
+                    setTimeout(function() {time<?php echo $item['id'];?>()},1000)
+                }
+            </script>
+              <?php }?>
+
         </div>
     </div>
 </div>
-<?php } ?>
+<?php }else{
+  echo '暂无买入记录';
+} ?>
 <?php if(1==1){?>
 				 <!--得列表-->
 <div class="row-fluid">
@@ -256,23 +265,19 @@ $this->pageTitle = '我的账户';
                 <div class="caption"><i class="icon-cloud-download"></i>卖出的M包</div>
                 <div class="tools"> <a href="javascript:;" class="collapse"></a></div>
             </div>
+            <?php foreach ( $cft as $k=>$item) {?>
             <div class="portlet-body pd-wrap">
                 <div class="table-pd tongdao1">
                     <div class="donate-header clearfix">
                         <i title="" data-original-title="" class="icon-reorder hireTable" rel="S003044127" value="pd" data-toggle="tooltip" data-placement="top" align="right">
                         </i>
-                        <h4>提供帮助编号：<span>S003044127</span></h4>
-                        <ul class="div_list">
-                            <li>参加者：M04535811</li>
-                            <li>提供帮助数额：RMB 2000.00</li>
-                            <li>排队日期：2016-05-29 11:39:59</li>
-                            <li>当前状态：<span class="pending"><font color="black">等待匹配</font>  <a href="http://cn.mmobar.com/home/index.php?action=cancelshe&amp;sheid=6184963" onclick="return makesure();"><font color="yellow">取消挂单</font></a></span>
-                            </li>
-                            <li>预计匹配时间：2016-06-08至2016-06-15之间</li>
-                        <!--
-                        <li>剩余数额: RMB0.00</li>
-                        <li>回酬分布剩余时间: 剩余0天</li>-->
-                        </ul>
+                        <h4>公司弘历编号：<span><?php echo $item['cp_sn']; ?></span></h4>
+                            <ul class="div_list">
+                                <li>参加者：<?php echo $userinfo['ui_account_number']; ?></li>
+                                <li>淘宝号：<?php echo $userinfo['ui_taobao']; ?></li>
+                                <li>排队日期：<?php echo $item['cp_add_time']; ?></li>
+                                <li>当前状态：<span class="pending"><font color="black" class="timeout">收款倒计时</font><font  id="id<?php echo $item['id'];?>"></font><button class="btn box-a" type="button" onclick="shijian<?php echo $item['id'];?>();" name="button">点击查看</button></li>
+                            </ul>
                     </div>
 
 
@@ -291,6 +296,15 @@ $this->pageTitle = '我的账户';
                     </div>
                 </div>
             </div>
+            <script>
+                function shijian<?php echo $item['id'];?>(){
+                  var timestamp = Date.parse(new Date());
+                  var wait<?php echo $item['id'];?>=new Date(<?php echo (strtotime($item['cp_last_time'])+86400);?>-timestamp);
+                  $('#id<?php echo $item['id'];?>').html(wait<?php echo $item['id'];?>);
+                    setTimeout(function() {shijian<?php echo $item['id'];?>()},1000)
+                }
+            </script>
+              <?php }?>
         </div>
     </div>
 </div>
@@ -328,166 +342,11 @@ $this->pageTitle = '我的账户';
 
 
 	  </div>
-		 <!-- END PAGE -->
 
-		 <!-- END CONTAINER -->
-		 <!-- BEGIN FOOTER -->
 		 <div class="footer">
-			 <div class="footer-inner"> 2015 © MMoBar.com </div>
+			 <div class="footer-inner"> 2016 © superETO.com </div>
 			 <div class="footer-tools"> <span class="go-top"> <i class="icon-angle-up"></i> </span> </div>
 		 </div>
-		 <!-- END FOOTER -->
-
-		 <!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
-		 <!-- BEGIN CORE PLUGINS -->
-		 <!-- IMPORTANT! Load jquery-ui-1.10.1.custom.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
-		 <?php
-//		  Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/public/js/jquery-1.js", CClientScript::POS_END );
-//		  Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/public/js/jquery-migrate-1.js", CClientScript::POS_END );
-//		  Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/public/js/jquery-ui-1.js", CClientScript::POS_END );
-//		  Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/public/js/bootstrap.js", CClientScript::POS_END );
-//		  Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/public/js/jquery_003.js", CClientScript::POS_END );
-//		  Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/public/js/jquery.js", CClientScript::POS_END );
-//		  Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/public/js/jquery_002.js", CClientScript::POS_END );
-		  ?>
-
-
-
-		 <!--[if lt IE 9]>
-		 <!--<script src="media/js/excanvas.min.js"></script>-->
-		 <!--<script src="media/js/respond.min.js"></script>-->
-		 <![endif]-->
-
-		 <!-- END CORE PLUGINS -->
-
-
-		 <!-- BEGIN PAGE LEVEL SCRIPTS -->
-		 <?php
-		  Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/public/js/app.js", CClientScript::POS_END );
-		 ?>
-		 <!-- END PAGE LEVEL SCRIPTS -->
-		 <script>
-			 jQuery(document).ready(function () {
-				 App.init(); // initlayout and core plugins
-				 //Index.init();
-				 //            alert("系統試運行階段，請及時設置密碼保護答案，確保帳戶安全。如有錯誤，請及時留言至公司。");
-				 //            Index.initJQVMAP(); // init index page's custom scripts
-				 //            Index.initCalendar(); // init index page's custom scripts
-				 //            Index.initCharts(); // init index page's custom scripts
-				 //            Index.initChat();
-				 //            Index.initMiniCharts();
-				 //            Index.initDashboardDaterange();
-				 //            Index.initIntro();
-			 });
-		 </script>
-		 <script>
-
-			 var OriginalHtml = $('#AccountNickName').html();
-
-			 $('#todo').click(function () {
-				 $('#AccountNickName').html("<input name='newnickname' type='text' id='newnickname' value='" + OriginalHtml + "' style='width:80px;' maxlength=10>");
-				 $('#newnickname').focus();
-				 $('#newnickname').blur(function () {
-					 if ($('#newnickname').val() != '') {
-						 $.ajax({
-							 url: "ajax/ajax_RenewNickName.php",
-							 dataType: "html",
-							 data: {nickname: $('#newnickname').val(), timestamp: Math.random()},
-							 success: function (strValue) {
-								 if (strValue == 0) {
-									 window.location = 'index.php';
-								 } else {
-									 alert(strValue);
-								 }
-							 }
-						 })
-					 } else {
-						 $('#newnickname').focus();
-						 //alert('請輸入一個昵稱');
-					 }
-					 ;
-				 });
-			 });
-		 </script>
-		 <!-- END JAVASCRIPTS -->
-		 <?php
-		 Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/public/js/remaining.js", CClientScript::POS_END );
-		  ?>
-		 <script type="text/javascript">
-
- var _gNow = new Date();
- jQuery(document).ready(function($){
-	var _allsecs = new Array();
-	var _allsecs2 = new Array();
-	var _i18n = {
-		weeks: ['星期', '星期'],
-		days: ['天', '天'],
-		hours: ['小时', '小时'],
-		minutes: ['分', '分'],
-		seconds: ['秒', '秒']
-	};
-	$('.approve_remaining_time').each(function(){
-		var _rid = $(this).attr('id');
-		var _seconds = parseInt($(this).attr('rel'));
-		if(_seconds > 0){
-			$(this).html(
-				remaining.getString(_seconds, _i18n, false)
-			);
-		}
-		else{
-			$(this).html('剩余0天');
-		}
-		_allsecs[_rid] = _seconds;
-		_allsecs2[_rid] = _seconds;
-	});
-
-	timer = setInterval(function(){
-		var now = new Date();
-		 //alert('ok');
-		true_elapsed = Math.round((now.getTime() - _gNow.getTime()) / 1000);
-		 $('.approve_remaining_time').each(function(){
-			var _rid = $(this).attr('id');
-			_seconds = _allsecs[_rid];
-			//synchronize
-			_diff_sec = _allsecs2[_rid] - _seconds;
-			if(_diff_sec < true_elapsed){
-				_seconds = _allsecs2[_rid] - true_elapsed;
-			}
-			if(_seconds > 0){
-				$(this).html(
-					remaining.getString(_seconds, _i18n, false)
-				);
-				_allsecs[_rid] = --_seconds;
-			}
-			else{
-				$("#too_many_user").hide();
-				$("#login_btn").removeAttr("disabled");
-				$(this).html('剩余0天');
-			}
-		});
-	}, 1000);
- });
- </script>
- <script type="text/javascript">
- jQuery(document).ready(function($){
-	var mdid, pdid, gdid, amount, status;
-
-	$('[data-toggle="tooltip"]').tooltip({
-		container : 'body',
-	});
-
-	$('.hireTable').click(function(){
-		$('.'+$(this).attr('value')+'.donate-body-'+$(this).attr('rel')).slideToggle('normal');
-	});
-
-	$('.transactionWrap').hide();
-	$('.btn-details').click(function () {
-		$(this).parents('.table-donations').siblings('.transactionWrap').stop(true, false).slideUp('normal');
-		$(this).parents('.table-donations').next().stop(true, false).slideToggle('normal');
-		return false;
-	});
- });
- </script>
 
 
  <style>
@@ -624,37 +483,7 @@ $this->pageTitle = '我的账户';
  .inner img{width:100%;margin:0}
  }
  </style>
- <script>
- $(function() {
-	 GZIDC.form.verify.addRules({
-		 domain_query: {
-			 reg: function(domain) {
-				 return /^[a-zA-Z0-9\u4E00-\u9FA5]([a-zA-Z0-9\u4E00-\u9FA5\-]*)+$/.test(domain);
-			 },
-			 txt: '请输入正确的域名, 无需输入后缀'
-		 }
-	 });
-	 // x'mas
-	 if (GZIDC.date.diff(new Date(), '2015-12-24 00:00:00') <= 0 && GZIDC.date.diff(new Date(), '2015-12-26 00:00:00') >= 0) {
-		 GZIDC.dom.loadScript([GZIDC.publicPath + '/Js/front/snow-xmas.min.js'], function() {
-			 GZIDC.xmas.snow();
-		 });
-	 }
-	 // 12.12
-	 if (GZIDC.date.diff(new Date(), '2015-12-11 00:00:00') <= 0 && GZIDC.date.diff(new Date(), '2015-12-23 00:00:00') >= 0) {
-		 setTimeout(function() {
-			 GZIDC.ui.imgLayer({
-				 imgSrc: '/Public/DemoModule/Images/index/activity/dibai.jpg',
-				 url: './cloud.php'
-			 });
-		 }, 600);
-	 }
- })
- function guanbi(){
-	var this_img=document.getElementById("layer-img");
-	this_img.style.display="none";
- }
- </script>
+
 
  <div style="display: none;" id="layer-img" class="layer-img-enter">
    <div class="mask-screen"></div>

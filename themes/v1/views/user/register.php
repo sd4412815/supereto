@@ -125,6 +125,7 @@ $this->pageTitle='新建账户';
                                 <li>⊙ 请细致填写账户资料，全国统一管理。</li>
                                 <li>⊙ 申诉需验证手机和姓名，请如实填写。</li>
                                 <li>⊙ 您必须为年满18周岁，60周岁以下完全民事行为能力的合法公民，不符合请勿注册。</li>
+                                <li>⊙ 如淘宝号填写不正确，则无法完成后期购买商品。</li>
                                 <li class="control-label">⊙ 注:<span class="required">*</span>为必填项，如不填无法成功申请。</li>
                             </ul>
                             <div class="row-fluid">
@@ -197,7 +198,6 @@ $this->pageTitle='新建账户';
                                             <div class="form-group">
                                                 <label class="control-label" >推荐人<span class="required">*</span></label>
                                                 <div class="col-xs-9">
-                                                    <!-- <input name="userReference" class="span5 m-wrap" id="userReference" placeholder="推荐人编号" value="M04535811" maxlength="12" type="text" style="display:inline-block; width:55%;"> -->
                                                     <?php
                                                     echo $form->textField ( $models, 'ui_referrer', array (
                                                             'class'               => 'form-control',
@@ -216,7 +216,6 @@ $this->pageTitle='新建账户';
                                             <div class="form-group">
                                                 <label class="control-label" for="userIDname">姓名<span class="required">*</span></label>
                                                 <div class="col-xs-9">
-                                                    <!-- <input name="userIDname" class="span5 m-wrap" id="userIDname" placeholder="姓名" maxlength="20" type="text" style="display:inline-block; width:55%;"> -->
                                                     <?php
                                                     echo $form->textField ( $model, 'u_name', array (
                                                             'class'               => 'form-control',
@@ -258,6 +257,21 @@ $this->pageTitle='新建账户';
                                                 </div>
                                                 <div class="help-hint" style="height:5px;"></div>
                                                 <span class="help-inline" id="passstrength" > &nbsp;</span>
+                                                <div class="help-hint" style="height:15px;"></div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="control-label">淘宝号<span class="required">*</span></label>
+                                                <div class="col-xs-9">
+                                                    <?php
+                                                    echo $form->textField ( $models, 'ui_taobao', array (
+                                                            'class'               => 'form-control',
+                                                            'id'                  => 'userMobile',
+                                                            'placeholder'         => '淘宝账号',
+                                                    ) );
+                                                    ?>
+                                                </div>
+                                                <div class="help-hint" style="height:5px;"></div>
+                                                <span class="help-inline" > &nbsp;</span>
                                                 <div class="help-hint" style="height:15px;"></div>
                                             </div>
 

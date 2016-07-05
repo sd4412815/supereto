@@ -158,69 +158,93 @@ class UserController extends Controller {
         ));
 	}
 
-	/**
-	 * 新建用户（注册）
-	 */
-	public function actionRegister()
-	{
-	  $userinfo=new UserInfo();
-	  $userinfo->ui_account_number=self::GetNewAccountNumber();
-	  $user=new User();
-	    //修改user表
+    /**
+     * 新建用户（注册）
+     */
+    public function actionRegister()
+    {
+        $userinfo=new UserInfo();
+        $userinfo->ui_account_number=self::GetNewAccountNumber();
+        $user=new User();
+        //修改user表
 
-	    if(isset($_POST['User'])) {
-	        $user->attributes = $_POST ['User'];
-	        $user->scenario = 'Register';
-	        $user->u_join_date = date('Y-m-d H:i:s',time()) ;
-	        $user->u_login_date = date('Y-m-d H:i:s',time()) ;
-	    if ($user->validate()) {
-	            if ($user->save()) {
-	              $user->attributes = $_POST ['User'];
-	              $user->u_safe_pwd = CPasswordHelper::hashPassword ($_POST ['User']['u_safe_pwd']);
-	              $user->u_pwd = CPasswordHelper::hashPassword ($_POST ['User']['u_pwd']);
-	              $id = $user->attributes['id'];
-	              if($user->update()){
-	                    $userinfo->attributes = $_POST['UserInfo'];
-	                    $userinfo->scenario = 'RegisterInfo';
-	                    $userinfo->ui_userid =$id;
-	                    $userinfo->ui_account_number =$_POST['UserInfo']['ui_account_number'];
-	                    $userinfo->ui_referrer =Yii::app()->user->id;
-	                    if ($userinfo->validate()) {
-	                        if($userinfo->save()){
-	                          $msg = new  Message();
-	                          $msg['m_datetime'] = date('Y-m-d H:i:s');
-	                          $msg['m_user_id'] = $id;
-	                          $msg['m_level'] = Message::LEVEL_URGENCY;
-	                          $msg['m_content'] = '创建账号成功';
-	                          $msg['m_type'] = Message::TYPE_ACCOUNT;
-	                          $msg['m_src'] = UTool::getRequestInfo();
-	                            if($msg->save()){
-                                  Yii::app()->user->setFlash('userinfo', '创建成功');
-	                            }else{
-	                              Yii::app()->user->setFlash('infoError',$userinfo->getErrors());
-	                            }
+        if(isset($_POST['User'])) {
+            $user->attributes = $_POST ['User'];
+            $user->scenario = 'Register';
+            $user->u_join_date = date('Y-m-d H:i:s',time()) ;
+            $user->u_login_date = date('Y-m-d H:i:s',time()) ;
+            if ($user->validate()) {
+                if ($user->save()) {
+                    $user->attributes = $_POST ['User'];
+                    $user->u_safe_pwd = CPasswordHelper::hashPassword ($_POST ['User']['u_safe_pwd']);
+                    $user->u_pwd = CPasswordHelper::hashPassword ($_POST ['User']['u_pwd']);
+                    $id = $user->attributes['id'];
+                    if($user->update()){
+                        $userinfo->attributes = $_POST['UserInfo'];
+                        $userinfo->scenario = 'RegisterInfo';
+                        $userinfo->ui_userid =$id;
+                        $userinfo->ui_account_number =$_POST['UserInfo']['ui_account_number'];
+                        $userinfo->ui_referrer =Yii::app()->user->id;
+                        if ($userinfo->validate()) {
+                            if($userinfo->save()){
+                                $msg = new  Message();
+                                $msg['m_datetime'] = date('Y-m-d H:i:s');
+                                $msg['m_user_id'] = $id;
+                                $msg['m_level'] = Message::LEVEL_URGENCY;
+                                $msg['m_content'] = '创建账号成功';
+                                $msg['m_type'] = Message::TYPE_ACCOUNT;
+                                $msg['m_src'] = UTool::getRequestInfo();
+                                if($msg->save()){
+                                    Yii::app()->user->setFlash('userinfo', '创建成功');
+                                }else{
+                                    Yii::app()->user->setFlash('userinfo','创建失败');
+                                }
 
-	                        }else{
-	                          Yii::app()->user->setFlash('infoError',$userinfo->getErrors());
-	                        }
-	                        $this->refresh(true);
-	                    }
-	              }else{
-	                Yii::app()->user->setFlash('userError',$user->getErrors());
-	              }
+                            }else{
+                                Yii::app()->user->setFlash('userinfo','创建失败');
+                            }
+                            $this->refresh(true);
+                        }else{
+                            Yii::app()->user->setFlash('userinfo','基础信息验证失败');
+                        }
+                    }else{
+                        Yii::app()->user->setFlash('userinfo','基础信息验证失败');
+                    }
 
 
-	            } else {
-	                Yii::app()->user->setFlash('userError',$user->getErrors());
-	            }
-	        }else{
-	                Yii::app()->user->setFlash('userError',$user->getErrors());
-	        }
-	    }
-	    $userinfo1 = UserInfo::model ()->find(Yii::app ()->user->id);
-	    $user1 = User::model ()->find(Yii::app ()->user->id);
-	    $this->render('register',array('model'=>$user,'models'=>$userinfo,'userinfo'=>$userinfo1,'user'=>$user1));
-	}
+                } else {
+                    Yii::app()->user->setFlash('userinfo','基础信息验证失败');
+                }
+            }else{
+                Yii::app()->user->setFlash('userinfo','基础信息格式错误');
+            }
+        }
+        $userinfo1 = UserInfo::model ()->find(Yii::app ()->user->id);
+        $user1 = User::model ()->find(Yii::app ()->user->id);
+        $this->render('register',array('model'=>$user,'models'=>$userinfo,'userinfo'=>$userinfo1,'user'=>$user1));
+    }
+
+
+    /**
+     * 我的账户
+     */
+    public function actionAccount()
+    {
+        $recommend = UserInfo::model ()->findAll('ui_userid=:uid',array(':uid'=>Yii::app ()->user->id));
+        foreach ($recommend as $key => $value) {
+            $referrer = UserInfo::model ()->findAll('ui_userid=:uid',array(':uid'=>$value['ui_referrer']));
+        }
+        $username = User::model ()->findAll(array(
+                'select'=>array('u_nick_name'),
+                'condition' => 'id='.Yii::app()->user->id,
+            )
+        );
+        $this->render('account',array(
+            'recommend'=>$recommend,
+            'username'=>$username,
+            'referrer'=>$referrer,
+        ));
+    }
 
     /**
      * 推荐清单
@@ -229,14 +253,40 @@ class UserController extends Controller {
     {
         $recommend = UserInfo::model ()->findAll('ui_referrer=:uid',array(':uid'=>Yii::app ()->user->id));
 
-        $cftpackage=CftPackage::model()->findAll('cp_u_id=:uid',array(':uid'=>Yii::app()->user->id));
+        // $cftpackage=CftPackage::model()->findAll('cp_u_id=:uid',array(':uid'=>Yii::app()->user->id));
+        foreach ($recommend as $key => $value) {
+            $cftpackage[]=CftPackage::model()->findAll(array(
+                    'select'=>array('cp_cpt_id'),
+                    'condition' => 'cp_u_id='.$value['ui_userid'],
+                )
+            );
 
+        }
+        foreach ($cftpackage as $key => $value) {
+            if ($value) {
+                foreach ($value as $k => $v) {
+                    $cft[$k] = CftPackageType::model()->findAll('id=:uid',array(':uid'=>$v['cp_cpt_id']));
+                    foreach ($cft as $k1 => $v1) {
+                        foreach ($v1 as $k2 => $v2) {
+                            $count1[$key][$k] = $v2['cpt_price'];
+                            $count[$key] = array_sum($count1[$key]);
 
+                        }
+                    }
+                }
+            }else{
+                $count[$key] = 0;
+            }
+
+            // $cftpackage[$key][$k]['count'] = array_sum($count);
+        }
         $user=UserInfo::model()->findall('ui_referrer=:re',array(':re'=>Yii::app()->user->id));
         $count_user=count($user);
+        // $count_cft=count($cftpackage);
 
         $this->render('recommend_list',array(
-            'recommend'=>$recommend
+            'recommend'=>$recommend,
+            'cftpackage'=>$count,
         ));
     }
 

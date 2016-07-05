@@ -8852,3 +8852,409 @@
 2016/07/03 17:08:53 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_customer_service`
 2016/07/03 17:08:53 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_customer_service`
 2016/07/03 17:08:53 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_customer_service` `t`
+2016/07/05 09:27:17 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 09:27:17 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 09:27:17 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 09:27:17 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/05 09:27:17 [trace] [system.db.ar.CActiveRecord] UserInfo.find()
+2016/07/05 09:27:17 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_user_info`
+2016/07/05 09:27:17 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_user_info`
+2016/07/05 09:27:17 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user_info` `t` LIMIT 1
+2016/07/05 09:27:18 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 09:27:18 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 09:27:18 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 09:27:18 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 09:27:18 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 09:27:18 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 09:27:19 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 09:27:19 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 09:27:19 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 09:27:19 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 09:27:19 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 09:27:19 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 09:27:30 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 09:27:30 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 09:27:30 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 09:27:30 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/05 09:27:30 [trace] [system.db.ar.CActiveRecord] UserInfo.findAll()
+2016/07/05 09:27:30 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_user_info`
+2016/07/05 09:27:30 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_user_info`
+2016/07/05 09:27:30 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user_info` `t` WHERE ui_referrer=:uid
+2016/07/05 09:29:57 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 09:29:57 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 09:29:57 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 09:29:57 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/05 09:29:57 [trace] [system.db.ar.CActiveRecord] UserInfo.find()
+2016/07/05 09:29:57 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_user_info`
+2016/07/05 09:29:57 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_user_info`
+2016/07/05 09:29:57 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user_info` `t` LIMIT 1
+2016/07/05 09:29:58 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 09:29:58 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 09:29:58 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 09:30:00 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 09:30:00 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 09:30:00 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 09:30:00 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/05 09:30:00 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 09:30:00 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 09:30:00 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 09:30:00 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/05 09:30:04 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 09:30:04 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 09:30:04 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 09:30:04 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/05 09:30:06 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 09:30:06 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 09:30:06 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 09:30:06 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/05 09:30:06 [trace] [system.db.ar.CActiveRecord] User.find()
+2016/07/05 09:30:06 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_user`
+2016/07/05 09:30:06 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_user`
+2016/07/05 09:30:06 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user` `t` WHERE (((u_tel=:tel) OR (u_name=:name)) OR (u_member_id=:uid)) AND (u_state=0) LIMIT 1
+2016/07/05 09:30:06 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 09:30:06 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 09:30:06 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 09:30:06 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/05 09:30:07 [trace] [system.db.ar.CActiveRecord] User.find()
+2016/07/05 09:30:07 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_user`
+2016/07/05 09:30:07 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_user`
+2016/07/05 09:30:07 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user` `t` WHERE (((u_tel=:tel) OR (u_name=:name)) OR (u_member_id=:uid)) AND (u_state=0) LIMIT 1
+2016/07/05 09:30:11 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 09:30:11 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 09:30:11 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 09:30:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/05 09:30:11 [trace] [system.db.ar.CActiveRecord] User.find()
+2016/07/05 09:30:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_user`
+2016/07/05 09:30:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_user`
+2016/07/05 09:30:11 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user` `t` WHERE (((u_tel=:tel) OR (u_name=:name)) OR (u_member_id=:uid)) AND (u_state=0) LIMIT 1
+2016/07/05 09:30:12 [trace] [system.db.ar.CActiveRecord] User.findByPk()
+2016/07/05 09:30:12 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user` `t` WHERE `t`.`id`='1' LIMIT 1
+2016/07/05 09:30:12 [trace] [system.db.ar.CActiveRecord] User.update()
+2016/07/05 09:30:12 [trace] [system.db.ar.CActiveRecord] User.updateByPk()
+2016/07/05 09:30:12 [trace] [system.db.CDbCommand] Executing SQL: UPDATE `yy_user` SET `id`=:yp0, `u_tel`=:yp1, `u_name`=:yp2, `u_member_id`=:yp3, `u_pwd`=:yp4, `u_safe_pwd`=:yp5, `u_score`=:yp6, `u_join_date`=:yp7, `u_login_date`=:yp8, `u_type`=:yp9, `u_sex`=:yp10, `u_age`=:yp11, `u_state`=:yp12, `u_nick_name`=:yp13, `u_error_count`=:yp14 WHERE `yy_user`.`id`='1'
+2016/07/05 09:30:12 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_message`
+2016/07/05 09:30:12 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_message`
+2016/07/05 09:30:12 [trace] [system.db.ar.CActiveRecord] Message.insert()
+2016/07/05 09:30:12 [trace] [system.db.CDbCommand] Executing SQL: INSERT INTO `yy_message` (`m_status`, `m_level`, `m_content`, `m_datetime`, `m_type`, `m_user_id`, `m_src`) VALUES (:yp0, :yp1, :yp2, :yp3, :yp4, :yp5, :yp6)
+2016/07/05 09:30:12 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 09:30:12 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 09:30:12 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 09:30:12 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/05 09:30:12 [trace] [system.db.ar.CActiveRecord] UserInfo.find()
+2016/07/05 09:30:12 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_user_info`
+2016/07/05 09:30:12 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_user_info`
+2016/07/05 09:30:12 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user_info` `t` WHERE 1 LIMIT 1
+2016/07/05 09:30:12 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 09:30:12 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 09:30:12 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 09:30:13 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 09:30:13 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 09:30:13 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 09:30:13 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 09:30:13 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 09:30:13 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 09:30:13 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 09:30:13 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 09:30:13 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 09:30:16 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 09:30:16 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 09:30:16 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 09:30:16 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/05 09:30:16 [trace] [system.db.ar.CActiveRecord] UserInfo.findAll()
+2016/07/05 09:30:16 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_user_info`
+2016/07/05 09:30:16 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_user_info`
+2016/07/05 09:30:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user_info` `t` WHERE ui_referrer=:uid
+2016/07/05 09:30:16 [trace] [system.db.ar.CActiveRecord] CftPackage.findAll()
+2016/07/05 09:30:16 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_cft_package`
+2016/07/05 09:30:16 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_cft_package`
+2016/07/05 09:30:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT cp_cpt_id FROM `yy_cft_package` `t` WHERE cp_u_id=1
+2016/07/05 09:30:16 [trace] [system.db.ar.CActiveRecord] CftPackage.findAll()
+2016/07/05 09:30:16 [trace] [system.db.CDbCommand] Querying SQL: SELECT cp_cpt_id FROM `yy_cft_package` `t` WHERE cp_u_id=1
+2016/07/05 09:30:21 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 09:30:21 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 09:30:21 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 09:30:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/05 09:30:21 [trace] [system.db.ar.CActiveRecord] UserInfo.find()
+2016/07/05 09:30:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_user_info`
+2016/07/05 09:30:21 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_user_info`
+2016/07/05 09:30:21 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user_info` `t` WHERE 1 LIMIT 1
+2016/07/05 09:30:22 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 09:30:22 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 09:30:22 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 09:30:22 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 09:30:22 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 09:30:22 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 09:30:25 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 09:30:25 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 09:30:25 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 09:30:25 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/05 09:30:25 [trace] [system.db.ar.CActiveRecord] UserInfo.findAll()
+2016/07/05 09:30:25 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_user_info`
+2016/07/05 09:30:25 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_user_info`
+2016/07/05 09:30:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user_info` `t` WHERE ui_referrer=:uid
+2016/07/05 09:30:25 [trace] [system.db.ar.CActiveRecord] CftPackage.findAll()
+2016/07/05 09:30:25 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_cft_package`
+2016/07/05 09:30:25 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_cft_package`
+2016/07/05 09:30:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT cp_cpt_id FROM `yy_cft_package` `t` WHERE cp_u_id=1
+2016/07/05 09:30:25 [trace] [system.db.ar.CActiveRecord] CftPackage.findAll()
+2016/07/05 09:30:25 [trace] [system.db.CDbCommand] Querying SQL: SELECT cp_cpt_id FROM `yy_cft_package` `t` WHERE cp_u_id=1
+2016/07/05 09:45:48 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 09:45:48 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 09:45:48 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 09:45:48 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/05 09:45:48 [trace] [system.db.ar.CActiveRecord] UserInfo.findAll()
+2016/07/05 09:45:48 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_user_info`
+2016/07/05 09:45:48 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_user_info`
+2016/07/05 09:45:48 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user_info` `t` WHERE ui_referrer=:uid
+2016/07/05 09:45:48 [trace] [system.db.ar.CActiveRecord] CftPackage.findAll()
+2016/07/05 09:45:48 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_cft_package`
+2016/07/05 09:45:48 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_cft_package`
+2016/07/05 09:45:48 [trace] [system.db.CDbCommand] Querying SQL: SELECT cp_cpt_id FROM `yy_cft_package` `t` WHERE cp_u_id=1
+2016/07/05 09:45:48 [trace] [system.db.ar.CActiveRecord] CftPackage.findAll()
+2016/07/05 09:45:48 [trace] [system.db.CDbCommand] Querying SQL: SELECT cp_cpt_id FROM `yy_cft_package` `t` WHERE cp_u_id=1
+2016/07/05 09:45:48 [trace] [system.db.ar.CActiveRecord] CftPackageType.findAll()
+2016/07/05 09:45:48 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_cft_package_type`
+2016/07/05 09:45:48 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_cft_package_type`
+2016/07/05 09:45:48 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_cft_package_type` `t` WHERE id=:uid
+2016/07/05 09:45:48 [trace] [system.db.ar.CActiveRecord] CftPackageType.findAll()
+2016/07/05 09:45:48 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_cft_package_type` `t` WHERE id=:uid
+2016/07/05 09:45:48 [trace] [system.db.ar.CActiveRecord] CftPackageType.findAll()
+2016/07/05 09:45:48 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_cft_package_type` `t` WHERE id=:uid
+2016/07/05 09:45:48 [trace] [system.db.ar.CActiveRecord] CftPackageType.findAll()
+2016/07/05 09:45:48 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_cft_package_type` `t` WHERE id=:uid
+2016/07/05 09:45:48 [trace] [system.db.ar.CActiveRecord] UserInfo.findAll()
+2016/07/05 09:45:48 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user_info` `t` WHERE ui_referrer=:re
+2016/07/05 09:45:48 [trace] [system.db.ar.CActiveRecord] User.find()
+2016/07/05 09:45:48 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_user`
+2016/07/05 09:45:49 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_user`
+2016/07/05 09:45:49 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user` `t` WHERE id=:uid LIMIT 1
+2016/07/05 09:45:49 [trace] [system.db.ar.CActiveRecord] User.find()
+2016/07/05 09:45:49 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user` `t` WHERE id=:uid LIMIT 1
+2016/07/05 09:45:49 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 09:45:49 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 09:45:49 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 09:45:49 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 09:45:49 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 09:45:49 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 09:45:50 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 09:45:50 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 09:45:50 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 09:45:50 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 09:45:50 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 09:45:50 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 09:45:50 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 09:45:50 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 09:45:50 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 09:45:51 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 09:45:51 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 09:45:51 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 11:04:45 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 11:04:45 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 11:04:45 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 11:04:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/05 11:04:45 [trace] [system.db.ar.CActiveRecord] UserInfo.find()
+2016/07/05 11:04:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_user_info`
+2016/07/05 11:04:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_user_info`
+2016/07/05 11:04:45 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user_info` `t` WHERE id=:id LIMIT 1
+2016/07/05 11:04:59 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 11:04:59 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 11:04:59 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 11:04:59 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/05 11:04:59 [trace] [system.db.ar.CActiveRecord] UserInfo.find()
+2016/07/05 11:04:59 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_user_info`
+2016/07/05 11:04:59 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_user_info`
+2016/07/05 11:04:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user_info` `t` WHERE id=:id LIMIT 1
+2016/07/05 11:04:59 [trace] [system.db.ar.CActiveRecord] CftPackage.findAll()
+2016/07/05 11:04:59 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_cft_package`
+2016/07/05 11:04:59 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_cft_package`
+2016/07/05 11:04:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_cft_package` `t` WHERE cp_u_id=:id
+2016/07/05 11:04:59 [trace] [system.db.ar.CActiveRecord] CftType.find()
+2016/07/05 11:04:59 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_cft_package_type`
+2016/07/05 11:04:59 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_cft_package_type`
+2016/07/05 11:04:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_cft_package_type` `t` WHERE cpt_sort=:cpt LIMIT 1
+2016/07/05 11:04:59 [trace] [system.db.ar.CActiveRecord] CftType.find()
+2016/07/05 11:04:59 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_cft_package_type` `t` WHERE cpt_sort=:cpt LIMIT 1
+2016/07/05 11:05:00 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 11:05:00 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 11:05:00 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 11:05:00 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 11:05:00 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 11:05:00 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 11:05:01 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 11:05:01 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 11:05:01 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 11:05:02 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 11:05:02 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 11:05:02 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 11:05:06 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 11:05:06 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 11:05:06 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 11:05:06 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/05 11:05:06 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_user_info`
+2016/07/05 11:05:06 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_user_info`
+2016/07/05 11:05:06 [trace] [system.db.ar.CActiveRecord] UserInfo.find()
+2016/07/05 11:05:06 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user_info` `t` WHERE ui_account_number=:num LIMIT 1
+2016/07/05 11:05:06 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_user`
+2016/07/05 11:05:06 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_user`
+2016/07/05 11:05:06 [trace] [system.db.ar.CActiveRecord] UserInfo.find()
+2016/07/05 11:05:06 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user_info` `t` WHERE 1 LIMIT 1
+2016/07/05 11:05:06 [trace] [system.db.ar.CActiveRecord] User.find()
+2016/07/05 11:05:06 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user` `t` WHERE 1 LIMIT 1
+2016/07/05 11:05:06 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 11:05:06 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 11:05:06 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 11:05:06 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 11:05:06 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 11:05:06 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 11:05:07 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 11:05:07 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 11:05:07 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 11:05:07 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 11:05:07 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 11:05:07 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 11:05:07 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 11:05:07 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 11:05:07 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 11:05:08 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 11:05:08 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 11:05:08 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 11:07:35 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 11:07:35 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 11:07:35 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 11:07:35 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/05 11:07:35 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_user_info`
+2016/07/05 11:07:35 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_user_info`
+2016/07/05 11:07:35 [trace] [system.db.ar.CActiveRecord] UserInfo.find()
+2016/07/05 11:07:35 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user_info` `t` WHERE ui_account_number=:num LIMIT 1
+2016/07/05 11:07:35 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_user`
+2016/07/05 11:07:35 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_user`
+2016/07/05 11:07:35 [trace] [system.db.ar.CActiveRecord] UserInfo.find()
+2016/07/05 11:07:35 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user_info` `t` WHERE 1 LIMIT 1
+2016/07/05 11:07:35 [trace] [system.db.ar.CActiveRecord] User.find()
+2016/07/05 11:07:35 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user` `t` WHERE 1 LIMIT 1
+2016/07/05 11:07:35 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 11:07:35 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 11:07:35 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 11:07:35 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 11:07:35 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 11:07:35 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 11:07:36 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 11:07:36 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 11:07:36 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 11:07:36 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 11:07:36 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 11:07:36 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 11:07:36 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 11:07:36 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 11:07:36 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 11:07:37 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 11:07:37 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 11:07:37 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 11:33:44 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 11:33:44 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 11:33:44 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 11:33:44 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/05 11:33:44 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_user_info`
+2016/07/05 11:33:44 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_user_info`
+2016/07/05 11:33:44 [trace] [system.db.ar.CActiveRecord] UserInfo.find()
+2016/07/05 11:33:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user_info` `t` WHERE ui_account_number=:num LIMIT 1
+2016/07/05 11:33:44 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_user`
+2016/07/05 11:33:44 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_user`
+2016/07/05 11:33:44 [trace] [system.db.ar.CActiveRecord] UserInfo.find()
+2016/07/05 11:33:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user_info` `t` WHERE 1 LIMIT 1
+2016/07/05 11:33:44 [trace] [system.db.ar.CActiveRecord] User.find()
+2016/07/05 11:33:44 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user` `t` WHERE 1 LIMIT 1
+2016/07/05 11:33:45 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 11:33:45 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 11:33:45 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 11:33:45 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 11:33:45 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 11:33:45 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 11:33:46 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 11:33:46 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 11:33:46 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 11:33:46 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 11:33:46 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 11:33:46 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 11:33:46 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 11:33:46 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 11:33:46 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 11:33:47 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 11:33:47 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 11:33:47 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 11:33:53 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 11:33:53 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 11:33:53 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 11:33:53 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/05 11:33:53 [trace] [system.db.ar.CActiveRecord] UserInfo.findAll()
+2016/07/05 11:33:53 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_user_info`
+2016/07/05 11:33:53 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_user_info`
+2016/07/05 11:33:53 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user_info` `t` WHERE ui_userid=:uid
+2016/07/05 11:33:53 [trace] [system.db.ar.CActiveRecord] UserInfo.findAll()
+2016/07/05 11:33:53 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user_info` `t` WHERE ui_userid=:uid
+2016/07/05 11:33:53 [trace] [system.db.ar.CActiveRecord] UserInfo.findAll()
+2016/07/05 11:33:53 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user_info` `t` WHERE ui_userid=:uid
+2016/07/05 11:33:53 [trace] [system.db.ar.CActiveRecord] User.findAll()
+2016/07/05 11:33:53 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_user`
+2016/07/05 11:33:53 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_user`
+2016/07/05 11:33:53 [trace] [system.db.CDbCommand] Querying SQL: SELECT u_nick_name FROM `yy_user` `t` WHERE id=1
+2016/07/05 11:44:35 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 11:44:35 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 11:44:35 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 11:44:35 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/05 11:44:35 [trace] [system.db.ar.CActiveRecord] UserInfo.findAll()
+2016/07/05 11:44:35 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_user_info`
+2016/07/05 11:44:35 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_user_info`
+2016/07/05 11:44:35 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user_info` `t` WHERE ui_userid=:uid
+2016/07/05 11:44:35 [trace] [system.db.ar.CActiveRecord] UserInfo.findAll()
+2016/07/05 11:44:35 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user_info` `t` WHERE ui_userid=:uid
+2016/07/05 11:44:35 [trace] [system.db.ar.CActiveRecord] UserInfo.findAll()
+2016/07/05 11:44:35 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user_info` `t` WHERE ui_userid=:uid
+2016/07/05 11:44:35 [trace] [system.db.ar.CActiveRecord] User.findAll()
+2016/07/05 11:44:35 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_user`
+2016/07/05 11:44:35 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_user`
+2016/07/05 11:44:35 [trace] [system.db.CDbCommand] Querying SQL: SELECT u_nick_name FROM `yy_user` `t` WHERE id=1
+2016/07/05 11:44:39 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 11:44:39 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 11:44:39 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 11:44:39 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/05 11:44:39 [trace] [system.db.ar.CActiveRecord] UserInfo.findAll()
+2016/07/05 11:44:39 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_user_info`
+2016/07/05 11:44:39 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_user_info`
+2016/07/05 11:44:39 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user_info` `t` WHERE ui_userid=:uid
+2016/07/05 11:44:39 [trace] [system.db.ar.CActiveRecord] UserInfo.findAll()
+2016/07/05 11:44:39 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user_info` `t` WHERE ui_userid=:uid
+2016/07/05 11:44:39 [trace] [system.db.ar.CActiveRecord] UserInfo.findAll()
+2016/07/05 11:44:39 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user_info` `t` WHERE ui_userid=:uid
+2016/07/05 11:44:39 [trace] [system.db.ar.CActiveRecord] User.findAll()
+2016/07/05 11:44:39 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_user`
+2016/07/05 11:44:39 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_user`
+2016/07/05 11:44:39 [trace] [system.db.CDbCommand] Querying SQL: SELECT u_nick_name FROM `yy_user` `t` WHERE id=1
+2016/07/05 11:45:14 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 11:45:14 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 11:45:14 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 11:45:14 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/05 11:45:14 [trace] [system.db.ar.CActiveRecord] UserInfo.findAll()
+2016/07/05 11:45:14 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_user_info`
+2016/07/05 11:45:14 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_user_info`
+2016/07/05 11:45:14 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user_info` `t` WHERE ui_userid=:uid
+2016/07/05 11:45:14 [trace] [system.db.ar.CActiveRecord] UserInfo.findAll()
+2016/07/05 11:45:14 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user_info` `t` WHERE ui_userid=:uid
+2016/07/05 11:45:14 [trace] [system.db.ar.CActiveRecord] UserInfo.findAll()
+2016/07/05 11:45:14 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user_info` `t` WHERE ui_userid=:uid
+2016/07/05 11:45:14 [trace] [system.db.ar.CActiveRecord] User.findAll()
+2016/07/05 11:45:14 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_user`
+2016/07/05 11:45:14 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_user`
+2016/07/05 11:45:14 [trace] [system.db.CDbCommand] Querying SQL: SELECT u_nick_name FROM `yy_user` `t` WHERE id=1
+2016/07/05 11:45:15 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 11:45:15 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 11:45:15 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 11:45:15 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 11:45:15 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 11:45:15 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 11:45:16 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 11:45:16 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 11:45:16 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 11:45:16 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 11:45:16 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 11:45:16 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1

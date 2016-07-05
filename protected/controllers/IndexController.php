@@ -65,14 +65,20 @@ class IndexController extends Controller
 
     public function actionindex()
     {
-          $userinfo = UserInfo::model ()->find(Yii::app ()->user->id);
-          $gonggao['gg']['gonggao'] = '近期的公告';
-          $gonggao['gg']['rq']      = '2015-01-15';
+        $userinfo = UserInfo::model ()->find('id=:id',array(':id'=>Yii::app ()->user->id));
 
-          $this->render ( 'index', array (
-              'userinfo' => $userinfo,
-              'gonggao'  => $gonggao,
-          ));
+        $gonggao['gg']['gonggao'] = '近期的公告';
+        $gonggao['gg']['rq']      = '2015-01-15';
+        $cft = cftPackage::model ()->findAll('cp_u_id=:id',array(':id'=>Yii::app ()->user->id));
+        foreach($cft as $k => $v){
+            $cfttype[$k] = cftType::model ()->find('cpt_sort=:cpt',array(':cpt'=>$v->attributes['cp_cpt_id']));
+        }
+        $this->render ( 'index', array (
+            'userinfo' => $userinfo,
+            'gonggao'  => $gonggao,
+            'cft'  => $cft,
+            'cfttype'  => $cfttype
+        ));
     }
 
     /**

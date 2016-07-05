@@ -11,15 +11,7 @@ class UserInfo extends CActiveRecord {
 	public function tableName(){
 	    return '{{user_info}}';
 	}
-		// public function UserInfo(){
-		// 	$sql = 'select * from yy_user_info where userid = '.Yii::app ()->user->id;
-		// 		 $result = yii::app()->db->createCommand($sql);
-		// 		 $query = $result->queryAll();
-		// 		 print_r($query);die;
-		// 		 return array (
-		// 						 $query [0],
-		// 		);
-		// }
+
 
     public function rules(){
         return array(
@@ -31,6 +23,8 @@ class UserInfo extends CActiveRecord {
             array ('ui_alipay', 'length', 'max'=>30, 'message'=>'支付宝账号格式错位','min'=>5,'on'=>'EditInfo,su_edit'),
             //微信号
             array ('ui_wechat', 'length', 'max'=>30,'min'=>3, 'message'=>'微信号格式错位','on'=>'EditInfo,su_edit'),
+            //淘宝号验证
+            array ('ui_taobao','required','message'=>'淘宝账号不能为空','on'=>'RegisterInfo'),
             //银行卡号
             array ('ui_credit_card', 'numerical', 'message'=>'银行卡号格式错位','on'=>'EditInfo,su_edit'),
 
