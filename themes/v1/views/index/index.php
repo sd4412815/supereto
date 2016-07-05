@@ -48,6 +48,12 @@ $this->pageTitle = '我的账户';
 	 padding: 10px;
 	 border: 1px solid #417DE0;
  }
+ .xian{
+   display: block;
+ }
+ .yin{
+   display: none;
+ }
  @media  (max-width:736px) {
 	 .big-btn-box .big-btn-box-a {width:100%;}
 	 .big-btn-box .big-btn-box-b {width:100%;}
@@ -69,12 +75,15 @@ $this->pageTitle = '我的账户';
  .list-notice {padding:1px 5px;}
  .table-condensed th, .table-condensed td {padding:6px 5px 5px}
  .tg-link {line-height:30px;background:#f9f9f9;border:1px solid #ddd;border-top:0;}
-
+ .fl{width:49%;float:left;}
+ .fr{width:49%;float:right;}
  .peidui_btn_div {padding:0px 20px;}
 
  @media (max-width: 767px) {
 	 .portlet_a {width:100%;float:none;clear:both;}
 	 .portlet_b {width:100%;float:none;}
+   .fl{width:100%;float:none;clear:both;}
+   .fr{width:100%;float:none;}
  }
 
  @media (max-width: 778px) {
@@ -158,7 +167,7 @@ $this->pageTitle = '我的账户';
 									 <div class="tg-link text-center"><b>推广链接：<a href="www.supereto.com/" target="_blank">www.supereto.com/</a></b></div>
 								 </div>
 							 </div>
-							 <div class="portlet box grey portlet_b" style="">
+							 <div class="portlet box grey portlet_b">
 								 <div class="portlet-title">
 									 <div class="caption"><i class="icon-user"></i>网站公告 Notice </div>
 									 <div class="tools"> <a href="javascript:;" class="collapse"></a></div>
@@ -184,54 +193,61 @@ $this->pageTitle = '我的账户';
                     <div class="span12">
                         <div class="portlet big-btn-box">
                             <div class="big-btn-box-a" style="width:49%;" >
-                                <a class="btn red btn-bigbig" id="pdBtn" href="mpackage_buy.php"><i class="icon-cloud-upload"></i> 买入M包</a>
+                                <a class="btn red btn-bigbig" style="background:#e95466" id="pdBtn" href="mpackage_buy.php"><i class="icon-cloud-upload"></i> 原石众筹</a>
                             </div>
                             <div class="big-btn-box-b" style="width:49%">
-                                <a class="btn blue btn-bigbig" id="gdBtn" href="mpackage_sell.php"><i class="icon-cloud-download"></i> 卖出M包</a>
+                                <a class="btn blue btn-bigbig" id="gdBtn" href="mpackage_sell.php"><i class="icon-cloud-download"></i> 公司红利</a>
                             </div>
                         </div>
                     </div>
                 </div>
 <?php if(!empty($cfttype)){?>
 <!--舍列表-->
-<div class="row-fluid">
-    <div class="span12">
+<div class="row-fluid portlet_c fl" >
+    <div class="span12" >
 
-        <div class="portlet box grey">
-            <div class="portlet-title">
-                <div class="caption"><i class="icon-cloud-upload"></i>买入的M包</div>
+        <div class="portlet box grey" >
+            <div class="portlet-title" >
+                <div class="caption"><i class="icon-cloud-upload"></i>原石众筹</div>
                 <div class="tools"> <a href="javascript:;" class="collapse"></a></div>
             </div>
-
             <?php foreach ( $cft as $k=>$item) {?>
             <?php foreach ( $cfttype as $k=>$v) {?>
             <?php }?>
             <div class="portlet-body pd-wrap">
-                <div class="table-pd tongdao0">
+                <div class="table-pd tongdao0" style="background:#e95466;" >
                     <div class="donate-header clearfix">
-                        <i title="" data-original-title="" class="icon-reorder hireTable" rel="S003044127" value="pd" data-toggle="tooltip" data-placement="top" align="right"></i>
-
                             <h4>原石众筹编号：<span><?php echo $item['cp_sn']; ?></span></h4>
                                 <ul class="div_list">
                                     <li>参加者：<?php echo $userinfo['ui_account_number']; ?></li>
                                     <li>淘宝号：<?php echo $userinfo['ui_taobao']; ?></li>
-                                    <li>提供帮助数额：<?php echo $v['cpt_name']; ?></li>
+                                    <li>众筹金额：<?php echo $v['cpt_name']; ?></li>
                                     <li>排队日期：<?php echo $item['cp_add_time']; ?></li>
-                                    <li>当前状态：<span class="pending"><font color="black" class="timeout">打款倒计时</font>
-                                    <font  id="<?php echo $item['id'];?>"></font><button class="btn box-a" type="button" onclick="time<?php echo $item['id'];?>();" name="button">点击查看</button><a href="http://www.taobao.com">前往打款</a><a href="" onclick="return makesure();"><font color="yellow">取消挂单</font></a></span>
-                                    </li>
+                                    <li>当前状态：<span class="pending">
+                                    <?php if ((strtotime($item['cp_last_time'])+43200-time())<0) {  ?>
+                                    <div id="endd<?php echo $item['id'];?>" style="display:inline">
+                                      <font>已到期</font>
+                                    </div>
+                                    <?php }else{ ?>
+                                      <font class="timeout">打款倒计时</font>
+                                      <span id="start<?php echo $item['id'];?>" class="yin">
+                                        <font  id="s<?php echo $item['id'];?>"></font>小时
+                                        <font  id="f<?php echo $item['id'];?>"></font>分
+                                        <font  id="m<?php echo $item['id'];?>"></font>秒
+                                      </span>
+                                      <button id="look" style="width:70px; hight:20px;background:#00a2cd;" type="button" onclick="time<?php echo $item['id'];?>();" name="button">点击查看</button>
+                                      <?php }?>
+                                      <a href="http://www.taobao.com">去打款</a><a href="" onclick="return makesure();"><font color="yellow">取消挂单</font></a></span>
+                                      </li>
                                     <li>预计收款时间：<?php echo substr($item['cp_last_time'],0,10);?> 日 10:00:00--16:00:00之间</li>
-
                                 </ul>
-
-
                     </div>
                     <div class="pd donate-body-S003044127">
                         <div class="">
                         </div>
                     </div>
                 </div>
-                <div class="table-pd tongdao0">
+                <div class="table-pd tongdao0" style="background:#e95466">
 
                     <div class="pd donate-body-S004474514">
                         <div class="">
@@ -242,9 +258,18 @@ $this->pageTitle = '我的账户';
             </div>
             <script>
                 function time<?php echo $item['id'];?>(){
-                  var timestamp = Date.parse(new Date());
-                  var wait<?php echo $item['id'];?>=new Date(<?php echo (strtotime($item['cp_last_time'])+86400);?>-timestamp);
-                  $('#<?php echo $item['id'];?>').html(wait<?php echo $item['id'];?>);
+                  $('#look').addClass('yin');
+                  var timestamp = Date.parse(new Date())/1000;
+                  // console.log(<?php //echo (strtotime($item['cp_last_time'])+86400);?>);
+                  var wait<?php echo $item['id'];?>=<?php echo (strtotime($item['cp_last_time'])+43200);?>-timestamp;
+                  if (wait<?php echo $item['id'];?> < 0) {
+                      $('#endd<?php echo $item['id'];?>').removeClass('yin');
+                  }else{
+                      $('#start<?php echo $item['id'];?>').removeClass('yin');
+                  }
+                  $('#s<?php echo $item['id'];?>').html(parseInt(wait<?php echo $item['id'];?>/3600));
+                  $('#f<?php echo $item['id'];?>').html(parseInt(wait<?php echo $item['id'];?>/60%60));
+                  $('#m<?php echo $item['id'];?>').html(parseInt(wait<?php echo $item['id'];?>%60));
                     setTimeout(function() {time<?php echo $item['id'];?>()},1000)
                 }
             </script>
@@ -256,31 +281,42 @@ $this->pageTitle = '我的账户';
 <?php }else{
   echo '暂无买入记录';
 } ?>
-<?php if(1==1){?>
+<?php if(!empty($cfttype)){?>
 				 <!--得列表-->
-<div class="row-fluid">
-    <div class="span12">
-        <div class="portlet box grey">
+<div class="row-fluid portlet_d fr"  >
+    <div class="span12 portlet_b" >
+        <div class="portlet box grey" >
             <div class="portlet-title">
-                <div class="caption"><i class="icon-cloud-download"></i>卖出的M包</div>
+                <div class="caption"><i class="icon-cloud-download"></i>公司红利</div>
                 <div class="tools"> <a href="javascript:;" class="collapse"></a></div>
             </div>
             <?php foreach ( $cft as $k=>$item) {?>
             <div class="portlet-body pd-wrap">
                 <div class="table-pd tongdao1">
                     <div class="donate-header clearfix">
-                        <i title="" data-original-title="" class="icon-reorder hireTable" rel="S003044127" value="pd" data-toggle="tooltip" data-placement="top" align="right">
                         </i>
-                        <h4>公司弘历编号：<span><?php echo $item['cp_sn']; ?></span></h4>
+                        <h4>公司红利编号：<span><?php echo $item['cp_sn']; ?></span></h4>
                             <ul class="div_list">
                                 <li>参加者：<?php echo $userinfo['ui_account_number']; ?></li>
                                 <li>淘宝号：<?php echo $userinfo['ui_taobao']; ?></li>
                                 <li>排队日期：<?php echo $item['cp_add_time']; ?></li>
-                                <li>当前状态：<span class="pending"><font color="black" class="timeout">收款倒计时</font><font  id="id<?php echo $item['id'];?>"></font><button class="btn box-a" type="button" onclick="shijian<?php echo $item['id'];?>();" name="button">点击查看</button></li>
+                                <li>当前状态：<span class="pending"><?php if ((strtotime($item['cp_last_time'])+43200-time())<0) {  ?>
+                                <div id="endds<?php echo $item['id'];?>" style="display:inline">
+                                  <font>已到期</font>
+                                </div>
+                                <?php }else{ ?>
+                                  <font class="timeout">收款倒计时</font>
+                                  <span id="starts<?php echo $item['id'];?>" class="yin">
+                                    <font  id="ss<?php echo $item['id'];?>"></font>小时
+                                    <font  id="ff<?php echo $item['id'];?>"></font>分
+                                    <font  id="mm<?php echo $item['id'];?>"></font>秒
+                                  </span>
+                                  <button id="looks"style="width:70px; hight:20px;background:#e95466;" type="button" onclick="times<?php echo $item['id'];?>();" name="button">点击查看</button>
+                                  <?php }?></li>
+                                  <br>
+                                  <br>
                             </ul>
                     </div>
-
-
                     <div class="pd donate-body-S003044127">
                         <div class="">
                         </div>
@@ -297,52 +333,30 @@ $this->pageTitle = '我的账户';
                 </div>
             </div>
             <script>
-                function shijian<?php echo $item['id'];?>(){
-                  var timestamp = Date.parse(new Date());
-                  var wait<?php echo $item['id'];?>=new Date(<?php echo (strtotime($item['cp_last_time'])+86400);?>-timestamp);
-                  $('#id<?php echo $item['id'];?>').html(wait<?php echo $item['id'];?>);
-                    setTimeout(function() {shijian<?php echo $item['id'];?>()},1000)
+                function times<?php echo $item['id'];?>(){
+                  $('#looks').addClass('yin');
+                  var timestamp = Date.parse(new Date())/1000;
+                  // console.log(<?php //echo (strtotime($item['cp_last_time'])+86400);?>);
+                  var wait<?php echo $item['id'];?>=<?php echo (strtotime($item['cp_last_time'])+43200);?>-timestamp;
+                  if (wait<?php echo $item['id'];?> < 0) {
+                      $('#endds<?php echo $item['id'];?>').removeClass('yin');
+                  }else{
+                      $('#starts<?php echo $item['id'];?>').removeClass('yin');
+                  }
+                  $('#ss<?php echo $item['id'];?>').html(parseInt(wait<?php echo $item['id'];?>/3600));
+                  $('#ff<?php echo $item['id'];?>').html(parseInt(wait<?php echo $item['id'];?>/60%60));
+                  $('#mm<?php echo $item['id'];?>').html(parseInt(wait<?php echo $item['id'];?>%60));
+                    setTimeout(function() {times<?php echo $item['id'];?>()},1000)
                 }
             </script>
-              <?php }?>
+              <?php } ?>
         </div>
     </div>
 </div>
-<?php } ?>
-
-
-				 <!-- BEGIN IMPORTANT NOTICE-->
-				 <!--<div class="row-fluid">
-					 <div class="span12">
-								 <div class="span3">
-									 <div class="news-blocks"  style="height:400px; overflow: hidden;">
-										 <h4><i class="icon-globe"></i> <a href="view.php?sid=5955">搶購金幣功能補充公告</a></h4>
-										 <div class="news-block-tags"><i class="icon-tags"></i> <strong>ACWEALTH.NET</strong> <i class="icon-calendar"></i>
-											 <em>2015-08-08</em>
-											 </div>
-
-									 </div>
-								 </div>
-								 <div class="span3">
-									 <div class="news-blocks"  style="height:400px; overflow: hidden;">
-										 <h4><i class="icon-globe"></i> <a href="view.php?sid=5954">複投規則公告</a></h4>
-										 <div class="news-block-tags"><i class="icon-tags"></i> <strong>ACWEALTH.NET</strong> <i class="icon-calendar"></i>
-											 <em>2015-06-07</em>
-											 </div>
-
-									 </div>
-								 </div>
-					 </div>
-				 </div>-->
-				 <!-- END IMPORTANT NOTICE-->
-
-			 </div>
-		 </div>
-		 <!-- END PAGE CONTAINER-->
-
-
-	  </div>
-
+<?php }else{ echo '暂无卖出记录'; } ?>
+	 </div>
+ </div>
+</div>
 		 <div class="footer">
 			 <div class="footer-inner"> 2016 © superETO.com </div>
 			 <div class="footer-tools"> <span class="go-top"> <i class="icon-angle-up"></i> </span> </div>

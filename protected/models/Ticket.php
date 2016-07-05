@@ -30,7 +30,7 @@ class Ticket extends CActiveRecord {
 		// will receive user inputs.
 		return array (
 				array (
-						't_account_number,t_ticket_number,t_account_id',
+						't_account_number,t_ticket_number,t_account_id,t_transfer_time',
 						'required'
 				),
 			array ('t_account_number','required','message'=>'接收人编号不能为空','on'=>'Ticket'),

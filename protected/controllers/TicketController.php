@@ -15,9 +15,13 @@ class TicketController extends Controller
           $user->u_safe_pwd=$_POST['Ticket']['u_safe_pwd'];
           $user->scenario = 'Ticket';
           if ($user->validate()) {
-            $ticket->attributes = $_POST['Ticket'];
+            // $ticket->attributes = $_POST['Ticket'];
+            $action = $_POST['Ticket'];
+            $action ['t_transfer_time']=date('Y-m-d H:i:s',time());
+            $ticket->attributes = $action;
             $ticket->scenario = 'Ticket';
             $id = $user->attributes['id'];
+            // p($ticket->attributes);die;
               if ($ticket->validate()) {
                 if($ticket->save()){
                 $msg = new  Message();

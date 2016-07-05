@@ -85,7 +85,6 @@ class UserController extends Controller {
 		));
 	}
 
-
     /**
      * ajax 验证手机号
      */
@@ -102,6 +101,7 @@ class UserController extends Controller {
         }
         echo json_decode($rlt['status']);
     }
+
     /**
      * 修改资料
      */
@@ -223,7 +223,6 @@ class UserController extends Controller {
         $user1 = User::model ()->find(Yii::app ()->user->id);
         $this->render('register',array('model'=>$user,'models'=>$userinfo,'userinfo'=>$userinfo1,'user'=>$user1));
     }
-
 
     /**
      * 我的账户
@@ -352,7 +351,6 @@ class UserController extends Controller {
         ) );
     }
 
-
     /**
      * 获取手机验证码
      */
@@ -363,7 +361,7 @@ class UserController extends Controller {
         echo json_encode($sms);
     }
 
-		public function actiongetnum(){
+    public function actiongetnum(){
 			echo self::GetNewAccountNumber();
 		}
 

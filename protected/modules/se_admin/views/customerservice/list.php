@@ -22,11 +22,13 @@ $this->pageTitle='客服管理';
 <div class="row">
     <div class="pull-right" style="margin-right: 30px;">
         <a href="<?php echo $this->createUrl('CustomerService/add') ?>" class="btn btn-info">添加客服</a>
+        <a href="http://shang.qq.com/v3/index.html" target="_blank" class="btn btn-info">客服申请</a>
     </div>
 </div>
 
 <section class="content">
     <div class="row">
+
         <div class="col-xs-12">
             <div class="box">
                 <div class="box-header">

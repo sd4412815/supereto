@@ -9258,3 +9258,44 @@
 2016/07/05 11:45:16 [trace] [system.db.CDbConnection] Opening DB connection
 2016/07/05 11:45:16 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
 2016/07/05 11:45:16 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 16:40:02 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 16:40:02 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 16:40:02 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 16:40:03 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/05 16:40:06 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 16:40:06 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 16:40:06 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 16:40:06 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/05 16:40:06 [trace] [system.db.ar.CActiveRecord] CustomerService.findAll()
+2016/07/05 16:40:06 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_customer_service`
+2016/07/05 16:40:06 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'supereto.yy_customer_service' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `yy_customer_service`.
+2016/07/05 16:40:09 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 16:40:09 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 16:40:09 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 16:40:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/05 16:40:09 [trace] [system.db.ar.CActiveRecord] CustomerService.findAll()
+2016/07/05 16:40:09 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_customer_service`
+2016/07/05 16:40:09 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'supereto.yy_customer_service' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `yy_customer_service`.
+2016/07/05 16:40:11 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 16:40:11 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 16:40:11 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 16:40:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/05 16:40:11 [trace] [system.db.ar.CActiveRecord] CustomerService.findAll()
+2016/07/05 16:40:11 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_customer_service`
+2016/07/05 16:40:11 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'supereto.yy_customer_service' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `yy_customer_service`.
+2016/07/05 16:42:13 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 16:42:13 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 16:42:13 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 16:42:13 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/05 16:42:13 [trace] [system.db.ar.CActiveRecord] CustomerService.findAll()
+2016/07/05 16:42:13 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_customer_service`
+2016/07/05 16:42:13 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_customer_service`
+2016/07/05 16:42:13 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_customer_service` `t`
+2016/07/05 16:42:40 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 16:42:40 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 16:42:40 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 16:42:40 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/05 16:42:40 [trace] [system.db.ar.CActiveRecord] CustomerService.findAll()
+2016/07/05 16:42:40 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_customer_service`
+2016/07/05 16:42:41 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_customer_service`
+2016/07/05 16:42:41 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_customer_service` `t`
