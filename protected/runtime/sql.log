@@ -9299,3 +9299,7 @@
 2016/07/05 16:42:40 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_customer_service`
 2016/07/05 16:42:41 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_customer_service`
 2016/07/05 16:42:41 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_customer_service` `t`
+2016/07/05 16:43:45 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/05 16:43:46 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/05 16:43:46 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/05 16:43:46 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
