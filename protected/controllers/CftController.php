@@ -32,6 +32,7 @@ class CftController extends Controller
     
     public function actionBuy()
     {
+        p(UserInfo::model()->catparent(Yii::app()->user->id));die;
         $model=new CftPackage();
         $user=User::model()->find(Yii::app()->user->id);
         $cftType=CftType::model()->findAll();
@@ -103,7 +104,7 @@ class CftController extends Controller
     }
 
     /**
-     * 卖出
+     * 可卖出
      */
     public function actionSell()
     {
@@ -112,13 +113,33 @@ class CftController extends Controller
         $criteria->addCondition('cp_u_id = :cp_u_id');
         $criteria->params[':cp_u_id']=Yii::app()->user->id;
         $criteria->addCondition('cp_type = :cp_type');
-        $criteria->params[':cp_type']=1;
+        $criteria->params[':cp_type']=0;
         $criteria->order='cp_last_time DESC';
         $cftpackage=CftPackage::model()->findAll($criteria);
-
         $this->render('sell',array(
             'cftpackage'=>$cftpackage,
         ));
+    }
+
+
+    /**
+     * 卖出
+     */
+    public function actionsellbyid()
+    {
+        $rlt=UTool::iniFuncRlt();
+        $id=Yii::app()->request->getParam('id');
+
+        $cft=CftPackage::model()->find($id);
+        $cft->cp_type=1;
+        $cft->cp_last_time=date('Y-m-d H:i:s');
+        if($cft->save()){
+            $rlt['status']=true;
+            $rlt['msg']='卖出成功';
+        }
+
+        echo CJSON::encode($rlt);
+
     }
     /**
      * 买入记录

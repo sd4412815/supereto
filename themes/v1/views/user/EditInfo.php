@@ -173,6 +173,11 @@ $this->pageTitle = '修改资料';
 </section>
 
 <script>
+
+    $(function(){
+        $('#u_safe_pwd').val('');
+
+    });
     function　get_mobile_code(){
         var mobile='<?php echo $user['u_tel']; ?>';
         if(check_mobile(mobile)){

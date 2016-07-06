@@ -111,7 +111,7 @@ class UserController extends Controller {
         if(!$info){
             $info=new UserInfo();
         }
-        $user=User::model()->find(Yii::app()->user->id);
+        $user=User::model()->find('id=:id',array(':id'=>Yii::app()->user->id));
 
         //修改user表
         if(isset($_POST['User'])) {
@@ -119,6 +119,7 @@ class UserController extends Controller {
             $user->scenario = 'EditInfo';
             if ($user->validate()) {
                 $user->u_nick_name = $_POST ['User']['u_nick_name'];
+                unset($user->u_safe_pwd);
                 if ($user->update()) {
                     //修改userinfo表
                     if (isset($_POST['UserInfo'])) {

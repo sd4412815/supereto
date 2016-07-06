@@ -47,7 +47,7 @@ class User extends CActiveRecord {
             //验证安全密码
             array('u_safe_pwd','checkSafePwd','on'=>'EditInfo'),
             array ('u_safe_pwd','required','message'=>'安全码不能为空','on'=>'EditInfo,Register'),
-            array ('u_safe_pwd', 'length','min'=>6, 'max'=>16,'message'=>'安全密码位数不正确','on'=>'EditInfo,Register'),
+            array ('u_safe_pwd', 'length','min'=>6, 'max'=>16,'message'=>'安全密码位数不正确','on'=>'Register'),
             array ('confirm_safe_pwd','required','message'=>'安全码确认不能为空','on'=>'Register'),
             array ("confirm_safe_pwd","compare","compareAttribute"=>"u_safe_pwd","message"=>"两次安全码不一致",'on'=>'Register'),
             //验证密码和确认密码
@@ -154,7 +154,7 @@ class User extends CActiveRecord {
 
     public function checkSafePwd($attribute,$params){
         if (! $this->hasErrors ()) {
-            $this->_identity = new Checksafepwd ( $this->u_tel, $this->u_safe_pwd);
+            $this->_identity = new Checksafepwdmodel ( $this->u_tel, $this->u_safe_pwd);
             // $isBoss = $this->scenario=="boss"?true:false;
             if ( $this->_identity->authenticate () != 0){
                 $this->addError ( 'password', '安全密码错误,请重试！' );
@@ -209,85 +209,6 @@ class User extends CActiveRecord {
     }
 
 
-    /**
-	 * 用户注册
-	 *
-	 * @param LoginForm $loginForm
-	 * @return array
-	 */
-	public function reg($loginForm,$autoLogin=TRUE) {
-		$rlt = UTool::iniFuncRlt ();
-		$model = $loginForm;
-		$user_model = new User ();
-		$user_model ['u_tel'] = $model->u_tel;
-		$user_model ['u_pwd'] = CPasswordHelper::hashPassword ( $model->u_pwd );
-		$user_model ['u_name'] = '';
-		$user_model ['u_member_id'] = '';
-		$user_model ['u_score'] = 0;
-		$user_model ['u_join_date'] = date ( 'Y-m-d H:i:s' );
-		$user_model ['u_login_date'] = $user_model ['u_join_date'];
-		$user_model ['u_type'] = 0; // 默认车主
-		$user_model ['u_sex'] = 2; // 默认未知
-		$user_model ['u_state'] = 0; // 默认正常
-		$user_model ['u_age'] = 254; // 默认未知
-		$user_model ['u_nick_name'] = '' . substr ( $model->u_tel, - 4, 4 );
-		$user_model ['u_error_count'] = 0;
-
-		if (! $user_model->validate ()) {
-			$rlt ['msg'] .= $model->getErrors () . ';';
-			// Yii::log ( '用户注册信息不符合规范',CLogger::LEVEL_INFO, 'mngr.user.reg.validate' );
-		} elseif ($user_model->save ()) {
-			$msg = new Message ();
-			$msg ['m_content'] = '欢迎您注册我洗车，在线预约，养护爱车不用愁，省钱又省时';
-			$msg ['m_datetime'] = date ( 'Y-m-d H:i:s' );
-			$msg ['m_user_id'] = $user_model ['id'];
-			$msg ['m_type'] = Message::TYPE_ACCOUNT;
-			$msg['m_src']=UTool::getRequestInfo();
-			$msg['m_level']=Message::LEVEL_NORM;
-			$msg->save ();
-
-			// 用户注册成功
-			// 自动为用户增加车主角色
-			$auth = Assignments::model ()->findByAttributes ( array (
-					'itemname' => 'car_user',
-					'userid' => $user_model ['id']
-			) );
-			if (! isset ( $auth )) {
-				$auth = new Assignments ();
-			}
-
-			$auth->itemname = 'car_user';
-			$auth->userid = $user_model ['id'];
-			if (! $auth->save ()) {
-				if (! $user_model->save ()) {
-					Yii::log ( '初始化用户权限失败 userId:' . $user_model ['id'], CLogger::LEVEL_ERROR, 'mngr.user.reg.addAssignment' );
-				}
-				$rlt ['msg'] .= '初始化用户权限失败;';
-			}
-
-			if ($autoLogin) {
-				$loginForm->setScenario ( 'login' );
-				$r= $loginForm->login();
-				if ($r['status']) {
-
-				} else {
-					Yii::log ( '用户登录失败次数增加 userId:' . $user_model ['id'], CLogger::LEVEL_WARNING, 'mngr.user.reg.login' );
-				} // end if
-
-			}
-			$rlt ['status'] = true;
-			$rlt ['data'] = $user_model;
-
-		} else {
-			// 用户注册失败
-			$rlt ['msg'] = '保存用户注册信息失败;';
-			Yii::log ( '用户注册失败' . CJSON::encode ( $user_model ), CLogger::LEVEL_WARNING, 'mngr.user.reg.save' );
-		} // end if save
-
-		return $rlt;
-	}
-
-
 
 
 	/**
@@ -339,6 +260,7 @@ class User extends CActiveRecord {
 		$items = $this->findAll ( $criteria );
 		return $items;
 	}
+
 
 	/**
 	 * Returns the static model of the specified AR class.
