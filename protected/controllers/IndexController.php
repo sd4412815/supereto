@@ -70,8 +70,9 @@ class IndexController extends Controller
         $gonggao['gg']['gonggao'] = '近期的公告';
         $gonggao['gg']['rq']      = '2015-01-15';
         $cft = cftPackage::model ()->findAll('cp_u_id=:id',array(':id'=>Yii::app ()->user->id));
+        $cfttype=array();
         foreach($cft as $k => $v){
-            $cfttype[$k] = cftType::model ()->find('cpt_sort=:cpt',array(':cpt'=>$v->attributes['cp_cpt_id']));
+            $cfttype[$k] = CftPackageType::model ()->find('cpt_sort=:cpt',array(':cpt'=>$v->attributes['cp_cpt_id']));
         }
         $this->render ( 'index', array (
             'userinfo' => $userinfo,

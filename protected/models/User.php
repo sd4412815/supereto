@@ -45,8 +45,8 @@ class User extends CActiveRecord {
             array ('old_pwd','authenticate_old','on'=>'EditPwd'),
             array ('old_pwd','required','message'=>'原密码不能为空','on'=>'EditPwd'),
             //验证安全密码
-            array('u_safe_pwd','checkSafePwd','on'=>'EditInfo'),
-            array ('u_safe_pwd','required','message'=>'安全码不能为空','on'=>'EditInfo,Register'),
+            array('u_safe_pwd','checkSafePwd','on'=>'EditInfo,buy'),
+            array ('u_safe_pwd','required','message'=>'安全码不能为空','on'=>'EditInfo,Register,buy'),
             array ('u_safe_pwd', 'length','min'=>6, 'max'=>16,'message'=>'安全密码位数不正确','on'=>'Register'),
             array ('confirm_safe_pwd','required','message'=>'安全码确认不能为空','on'=>'Register'),
             array ("confirm_safe_pwd","compare","compareAttribute"=>"u_safe_pwd","message"=>"两次安全码不一致",'on'=>'Register'),
@@ -187,6 +187,7 @@ class User extends CActiveRecord {
             }
         }
     }
+
 
 	/**
 	 * 验证密码

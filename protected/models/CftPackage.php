@@ -25,24 +25,84 @@ class CftPackage extends CActiveRecord
             //安全设置
             array ('captcha,u_safe_pwd ,cp_type_id','safe'),
 
-            array('u_safe_pwd','checkSafePwd','on'=>'buy'),
-            array ('u_safe_pwd','required','message'=>'安全码不能为空','on'=>'buy'),
+//            array('u_safe_pwd','checkSafePwd','on'=>'buy'),
+//            array ('u_safe_pwd','required','message'=>'安全码不能为空','on'=>'buy'),
             //验证图形验证码
             array ('captcha','captcha','allowEmpty' => ! CCaptcha::checkRequirements (),'message' => '图形验证码过期，请点击刷新','on' => 'buy'),
         );
 
     }
 
+    public function Rebate($uid,$oid){
+        $info=UserInfo::model()->find('ui_userid=:uid',array(':uid'=>$uid));
+        $order=$this->find('id=:id',array(':id'=>$oid));
+        $order_type=CftPackageType::model()->find('id=:id',array(':id'=>$order->cp_cpt_id));
+        //3代
+        $info3=UserInfo::model()->find('ui_userid=:uid3',array(':uid3'=>$info->ui_referrer));
+        if($info->ui_referrer!=$uid) {
 
-    public function checkSafePwd($attribute,$params){
-        if (! $this->hasErrors ()) {
-            $this->_identity = new UserIdentity ( $this->u_tel, $this->u_safe_pwd);
-            // $isBoss = $this->scenario=="boss"?true:false;
-            if ( $this->_identity->authenticate () != 0){
-                $this->addError ( 'password', '安全密码错误,请重试！' );
+            if ($info3->ui_referrer != 0) {
+                $criteria = new CDbCriteria;
+                $criteria->addCondition('cp_u_id = :id');
+                $criteria->params[':id'] = $info3->ui_userid;
+                $criteria->addCondition('cp_type = 0');
+                $order3 = $this->find($criteria);
+                if ($order3) {
+                    $order_type3 = CftPackageType::model()->find('id=:id', array(':id' => $order3->cp_cpt_id));
+                    if ($order_type->cpt_price > $order_type3->cpt_price) {
+                        $balance3 = $order_type3->cpt_price * 0.05;
+                    } else {
+                        $balance3 = $order_type->cpt_price * 0.05;
+                    }
+                    $info3->ui_static_balance = $info3->ui_static_balance + $balance3;
+                    $info3->save();
+                }
+
+                //2代
+                $info2 = UserInfo::model()->find('ui_userid=:uid3', array(':uid3' => $info3->ui_referrer));
+                if ($info2->ui_referrer != 0) {
+                    $criteria = new CDbCriteria;
+                    $criteria->addCondition('cp_u_id = :id');
+                    $criteria->params[':id'] = $info2->ui_userid;
+                    $criteria->addCondition('cp_type = 0');
+                    $order2 = $this->find($criteria);
+                    if ($order2) {
+                        $order_type2 = CftPackageType::model()->find('id=:id', array(':id' => $order2->cp_cpt_id));
+                        if ($order_type->cpt_price > $order_type2->cpt_price) {
+                            $balance2 = $order_type2->cpt_price * 0.03;
+                        } else {
+                            $balance2 = $order_type->cpt_price * 0.03;
+                        }
+                        $info2->ui_static_balance = $info2->ui_static_balance + $balance2;
+                        $info2->save();
+                    }
+
+                    //1代
+                    $info1 = UserInfo::model()->find('ui_userid=:uid3', array(':uid3' => $info2->ui_referrer));
+                    if ($info1->ui_referrer != 0) {
+                        $criteria = new CDbCriteria;
+                        $criteria->addCondition('cp_u_id = :id');
+                        $criteria->params[':id'] = $info1->ui_userid;
+                        $criteria->addCondition('cp_type = 0');
+                        $order1 = $this->find($criteria);
+                        if ($order1) {
+                            $order_type1 = CftPackageType::model()->find('id=:id', array(':id' => $order1->cp_cpt_id));
+                            if ($order_type->cpt_price > $order_type1->cpt_price) {
+                                $balance1 = $order_type1->cpt_price * 0.01;
+                            } else {
+                                $balance1 = $order_type->cpt_price * 0.01;
+                            }
+                            $info1->ui_static_balance = $info1->ui_static_balance + $balance1;
+                            $info1->save();
+                        }
+                    }
+                }
             }
         }
+
+
     }
+
 
 
 

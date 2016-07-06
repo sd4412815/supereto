@@ -65,7 +65,7 @@ $this->pageTitle='购买ETO理财包';
         <div class="form-group">
             <label class="control-label col-xs-4" for="">安全密码<span class="required">*</span></label>
             <div class="col-xs-8 col-sm-4">
-                <?php echo $form->passwordField($model,'u_safe_pwd',array(
+                <?php echo $form->passwordField($user,'u_safe_pwd',array(
                     'class'=>'form-control',
                     'placeholder'=>'输入安全密码'
                 )) ?>
@@ -102,6 +102,7 @@ $this->pageTitle='购买ETO理财包';
         <?php } ?>
 
      <?php echo $form->errorSummary($model); ?>
+     <?php echo $form->errorSummary($user); ?>
 
     <div class="col-xs-offset-4">
             <button type="submit" id="submit" class="btn btn-info btn-sm">确认买入</button>
@@ -111,6 +112,10 @@ $this->pageTitle='购买ETO理财包';
 </section>
 
 <script>
+    $(function(){
+        $('#User_u_safe_pwd').val('');
+
+    });
     $(function(){
         var is_check='<?php echo $model->todayStatus ?>';
         if(is_check==1){

@@ -1,16 +1,16 @@
 /*
 Navicat MySQL Data Transfer
 
-Source Server         : 127.0.0.1_3306
-Source Server Version : 50616
-Source Host           : 127.0.0.1:3306
+Source Server         : loca
+Source Server Version : 50547
+Source Host           : localhost:3306
 Source Database       : supereto
 
 Target Server Type    : MYSQL
-Target Server Version : 50616
+Target Server Version : 50547
 File Encoding         : 65001
 
-Date: 2016-07-06 16:58:09
+Date: 2016-07-06 21:21:36
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -76,7 +76,7 @@ CREATE TABLE `logssystem` (
   `logtime` int(11) DEFAULT NULL,
   `message` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=289 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=317 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of logssystem
@@ -369,6 +369,34 @@ INSERT INTO `logssystem` VALUES ('285', 'error', 'exception.CHttpException.404',
 INSERT INTO `logssystem` VALUES ('286', 'error', 'exception.CHttpException.404', '1467787454', 'exception \'CHttpException\' with message \'?????? \"themes/v1/public/image/portlet-collapse-icon-white.png\"?\' in F:\\www\\supereto\\yii\\web\\CWebApplication.php:286\nStack trace:\n#0 F:\\www\\supereto\\yii\\web\\CWebApplication.php(141): CWebApplication->runController(\'themes/v1/publi...\')\n#1 F:\\www\\supereto\\yii\\base\\CApplication.php(184): CWebApplication->processRequest()\n#2 F:\\www\\supereto\\index.php(28): CApplication->run()\n#3 {main}\nREQUEST_URI=/supereto/themes/v1/public/image/portlet-collapse-icon-white.png\nHTTP_REFERER=http://localhost:8080/supereto/themes/v1/public/css/style1.css\n---');
 INSERT INTO `logssystem` VALUES ('287', 'error', 'exception.CHttpException.404', '1467787455', 'exception \'CHttpException\' with message \'?????? \"themes/v1/public/image/fontawesome-webfont.woff\"?\' in F:\\www\\supereto\\yii\\web\\CWebApplication.php:286\nStack trace:\n#0 F:\\www\\supereto\\yii\\web\\CWebApplication.php(141): CWebApplication->runController(\'themes/v1/publi...\')\n#1 F:\\www\\supereto\\yii\\base\\CApplication.php(184): CWebApplication->processRequest()\n#2 F:\\www\\supereto\\index.php(28): CApplication->run()\n#3 {main}\nREQUEST_URI=/supereto/themes/v1/public/image/fontawesome-webfont.woff\nHTTP_REFERER=http://localhost:8080/supereto/themes/v1/public/css/font-awesome.css\n---');
 INSERT INTO `logssystem` VALUES ('288', 'error', 'exception.CHttpException.404', '1467787455', 'exception \'CHttpException\' with message \'?????? \"themes/v1/public/image/fontawesome-webfont.ttf\"?\' in F:\\www\\supereto\\yii\\web\\CWebApplication.php:286\nStack trace:\n#0 F:\\www\\supereto\\yii\\web\\CWebApplication.php(141): CWebApplication->runController(\'themes/v1/publi...\')\n#1 F:\\www\\supereto\\yii\\base\\CApplication.php(184): CWebApplication->processRequest()\n#2 F:\\www\\supereto\\index.php(28): CApplication->run()\n#3 {main}\nREQUEST_URI=/supereto/themes/v1/public/image/fontawesome-webfont.ttf\nHTTP_REFERER=http://localhost:8080/supereto/themes/v1/public/css/font-awesome.css\n---');
+INSERT INTO `logssystem` VALUES ('289', 'error', 'php', '1467806500', 'Undefined variable: cfttype (E:\\www\\supereto\\protected\\controllers\\IndexController.php:81)\nStack trace:\n#0 E:\\www\\supereto\\yii\\web\\CController.php(286): IndexController->runAction()\n#1 E:\\www\\supereto\\yii\\web\\CController.php(265): IndexController->runActionWithFilters()\n#2 E:\\www\\supereto\\yii\\web\\CWebApplication.php(282): IndexController->run()\n#3 E:\\www\\supereto\\yii\\web\\CWebApplication.php(141): CWebApplication->runController()\n#4 E:\\www\\supereto\\yii\\base\\CApplication.php(184): CWebApplication->processRequest()\n#5 E:\\www\\supereto\\index.php(28): CWebApplication->run()\nREQUEST_URI=/supereto/');
+INSERT INTO `logssystem` VALUES ('290', 'error', 'php', '1467806502', 'Undefined variable: cfttype (E:\\www\\supereto\\protected\\controllers\\IndexController.php:81)\nStack trace:\n#0 E:\\www\\supereto\\yii\\web\\CController.php(286): IndexController->runAction()\n#1 E:\\www\\supereto\\yii\\web\\CController.php(265): IndexController->runActionWithFilters()\n#2 E:\\www\\supereto\\yii\\web\\CWebApplication.php(282): IndexController->run()\n#3 E:\\www\\supereto\\yii\\web\\CWebApplication.php(141): CWebApplication->runController()\n#4 E:\\www\\supereto\\yii\\base\\CApplication.php(184): CWebApplication->processRequest()\n#5 E:\\www\\supereto\\index.php(28): CWebApplication->run()\nREQUEST_URI=/supereto/');
+INSERT INTO `logssystem` VALUES ('291', 'error', 'php', '1467806800', 'Undefined variable: cfttype (E:\\www\\supereto\\protected\\controllers\\IndexController.php:81)\nStack trace:\n#0 E:\\www\\supereto\\yii\\web\\CController.php(286): IndexController->runAction()\n#1 E:\\www\\supereto\\yii\\web\\CController.php(265): IndexController->runActionWithFilters()\n#2 E:\\www\\supereto\\yii\\web\\CWebApplication.php(282): IndexController->run()\n#3 E:\\www\\supereto\\yii\\web\\CWebApplication.php(141): CWebApplication->runController()\n#4 E:\\www\\supereto\\yii\\base\\CApplication.php(184): CWebApplication->processRequest()\n#5 E:\\www\\supereto\\index.php(28): CWebApplication->run()\nREQUEST_URI=/supereto/');
+INSERT INTO `logssystem` VALUES ('292', 'error', 'php', '1467806802', 'Undefined variable: cfttype (E:\\www\\supereto\\protected\\controllers\\IndexController.php:81)\nStack trace:\n#0 E:\\www\\supereto\\yii\\web\\CController.php(286): IndexController->runAction()\n#1 E:\\www\\supereto\\yii\\web\\CController.php(265): IndexController->runActionWithFilters()\n#2 E:\\www\\supereto\\yii\\web\\CWebApplication.php(282): IndexController->run()\n#3 E:\\www\\supereto\\yii\\web\\CWebApplication.php(141): CWebApplication->runController()\n#4 E:\\www\\supereto\\yii\\base\\CApplication.php(184): CWebApplication->processRequest()\n#5 E:\\www\\supereto\\index.php(28): CWebApplication->run()\nREQUEST_URI=/supereto/');
+INSERT INTO `logssystem` VALUES ('293', 'error', 'exception.CHttpException.404', '1467806823', 'exception \'CHttpException\' with message \'?????? \"themes/v1/public/image/css\"?\' in E:\\www\\supereto\\yii\\web\\CWebApplication.php:286\nStack trace:\n#0 E:\\www\\supereto\\yii\\web\\CWebApplication.php(141): CWebApplication->runController(\'themes/v1/publi...\')\n#1 E:\\www\\supereto\\yii\\base\\CApplication.php(184): CWebApplication->processRequest()\n#2 E:\\www\\supereto\\index.php(28): CApplication->run()\n#3 {main}\nREQUEST_URI=/supereto/themes/v1/public/image/css\nHTTP_REFERER=http://localhost/supereto/\n---');
+INSERT INTO `logssystem` VALUES ('294', 'error', 'exception.CHttpException.404', '1467806823', 'exception \'CHttpException\' with message \'?????? \"themes/v1/public/image/portlet-collapse-icon-white.png\"?\' in E:\\www\\supereto\\yii\\web\\CWebApplication.php:286\nStack trace:\n#0 E:\\www\\supereto\\yii\\web\\CWebApplication.php(141): CWebApplication->runController(\'themes/v1/publi...\')\n#1 E:\\www\\supereto\\yii\\base\\CApplication.php(184): CWebApplication->processRequest()\n#2 E:\\www\\supereto\\index.php(28): CApplication->run()\n#3 {main}\nREQUEST_URI=/supereto/themes/v1/public/image/portlet-collapse-icon-white.png\nHTTP_REFERER=http://localhost/supereto/themes/v1/public/css/style1.css\n---');
+INSERT INTO `logssystem` VALUES ('295', 'error', 'exception.CHttpException.404', '1467806824', 'exception \'CHttpException\' with message \'?????? \"themes/v1/public/image/fontawesome-webfont.woff\"?\' in E:\\www\\supereto\\yii\\web\\CWebApplication.php:286\nStack trace:\n#0 E:\\www\\supereto\\yii\\web\\CWebApplication.php(141): CWebApplication->runController(\'themes/v1/publi...\')\n#1 E:\\www\\supereto\\yii\\base\\CApplication.php(184): CWebApplication->processRequest()\n#2 E:\\www\\supereto\\index.php(28): CApplication->run()\n#3 {main}\nREQUEST_URI=/supereto/themes/v1/public/image/fontawesome-webfont.woff\nHTTP_REFERER=http://localhost/supereto/themes/v1/public/css/font-awesome.css\n---');
+INSERT INTO `logssystem` VALUES ('296', 'error', 'exception.CHttpException.404', '1467806824', 'exception \'CHttpException\' with message \'?????? \"themes/v1/public/image/fontawesome-webfont.ttf\"?\' in E:\\www\\supereto\\yii\\web\\CWebApplication.php:286\nStack trace:\n#0 E:\\www\\supereto\\yii\\web\\CWebApplication.php(141): CWebApplication->runController(\'themes/v1/publi...\')\n#1 E:\\www\\supereto\\yii\\base\\CApplication.php(184): CWebApplication->processRequest()\n#2 E:\\www\\supereto\\index.php(28): CApplication->run()\n#3 {main}\nREQUEST_URI=/supereto/themes/v1/public/image/fontawesome-webfont.ttf\nHTTP_REFERER=http://localhost/supereto/themes/v1/public/css/font-awesome.css\n---');
+INSERT INTO `logssystem` VALUES ('297', 'info', 'mngr.index.loginsrc', '1467806846', '{\"urlReferrer\":\"http:\\/\\/localhost\\/supereto\\/\",\"urlCurrent\":\"\\/supereto\\/index\\/login\",\"urlReturn\":\"\\/supereto\\/\"}');
+INSERT INTO `logssystem` VALUES ('298', 'error', 'php', '1467806853', 'session_regenerate_id(): Session object destruction failed (E:\\www\\supereto\\yii\\web\\CHttpSession.php:182)\nStack trace:\n#0 E:\\www\\supereto\\yii\\web\\auth\\CWebUser.php(233): CWebUser->changeIdentity()\n#1 E:\\www\\supereto\\protected\\models\\LoginForm.php(230): CWebUser->login()\n#2 E:\\www\\supereto\\protected\\controllers\\IndexController.php(123): LoginForm->login()\n#3 E:\\www\\supereto\\yii\\web\\actions\\CInlineAction.php(49): IndexController->actionlogin()\n#4 E:\\www\\supereto\\yii\\web\\CController.php(308): CInlineAction->runWithParams()\n#5 E:\\www\\supereto\\yii\\web\\CController.php(286): IndexController->runAction()\n#6 E:\\www\\supereto\\yii\\web\\CController.php(265): IndexController->runActionWithFilters()\n#7 E:\\www\\supereto\\yii\\web\\CWebApplication.php(282): IndexController->run()\n#8 E:\\www\\supereto\\yii\\web\\CWebApplication.php(141): CWebApplication->runController()\n#9 E:\\www\\supereto\\yii\\base\\CApplication.php(184): CWebApplication->processRequest()\n#10 E:\\www\\supereto\\index.php(28): CWebApplication->run()\nREQUEST_URI=/supereto/index/login');
+INSERT INTO `logssystem` VALUES ('299', 'error', 'exception.CHttpException.404', '1467806856', 'exception \'CHttpException\' with message \'?????? \"themes/v1/public/image/css\"?\' in E:\\www\\supereto\\yii\\web\\CWebApplication.php:286\nStack trace:\n#0 E:\\www\\supereto\\yii\\web\\CWebApplication.php(141): CWebApplication->runController(\'themes/v1/publi...\')\n#1 E:\\www\\supereto\\yii\\base\\CApplication.php(184): CWebApplication->processRequest()\n#2 E:\\www\\supereto\\index.php(28): CApplication->run()\n#3 {main}\nREQUEST_URI=/supereto/themes/v1/public/image/css\nHTTP_REFERER=http://localhost/supereto/index/index\n---');
+INSERT INTO `logssystem` VALUES ('300', 'error', 'exception.CHttpException.404', '1467806857', 'exception \'CHttpException\' with message \'?????? \"themes/v1/public/image/portlet-collapse-icon-white.png\"?\' in E:\\www\\supereto\\yii\\web\\CWebApplication.php:286\nStack trace:\n#0 E:\\www\\supereto\\yii\\web\\CWebApplication.php(141): CWebApplication->runController(\'themes/v1/publi...\')\n#1 E:\\www\\supereto\\yii\\base\\CApplication.php(184): CWebApplication->processRequest()\n#2 E:\\www\\supereto\\index.php(28): CApplication->run()\n#3 {main}\nREQUEST_URI=/supereto/themes/v1/public/image/portlet-collapse-icon-white.png\nHTTP_REFERER=http://localhost/supereto/themes/v1/public/css/style1.css\n---');
+INSERT INTO `logssystem` VALUES ('301', 'error', 'exception.CHttpException.404', '1467806857', 'exception \'CHttpException\' with message \'?????? \"themes/v1/public/image/fontawesome-webfont.woff\"?\' in E:\\www\\supereto\\yii\\web\\CWebApplication.php:286\nStack trace:\n#0 E:\\www\\supereto\\yii\\web\\CWebApplication.php(141): CWebApplication->runController(\'themes/v1/publi...\')\n#1 E:\\www\\supereto\\yii\\base\\CApplication.php(184): CWebApplication->processRequest()\n#2 E:\\www\\supereto\\index.php(28): CApplication->run()\n#3 {main}\nREQUEST_URI=/supereto/themes/v1/public/image/fontawesome-webfont.woff\nHTTP_REFERER=http://localhost/supereto/themes/v1/public/css/font-awesome.css\n---');
+INSERT INTO `logssystem` VALUES ('302', 'error', 'exception.CHttpException.404', '1467806857', 'exception \'CHttpException\' with message \'?????? \"themes/v1/public/image/fontawesome-webfont.ttf\"?\' in E:\\www\\supereto\\yii\\web\\CWebApplication.php:286\nStack trace:\n#0 E:\\www\\supereto\\yii\\web\\CWebApplication.php(141): CWebApplication->runController(\'themes/v1/publi...\')\n#1 E:\\www\\supereto\\yii\\base\\CApplication.php(184): CWebApplication->processRequest()\n#2 E:\\www\\supereto\\index.php(28): CApplication->run()\n#3 {main}\nREQUEST_URI=/supereto/themes/v1/public/image/fontawesome-webfont.ttf\nHTTP_REFERER=http://localhost/supereto/themes/v1/public/css/font-awesome.css\n---');
+INSERT INTO `logssystem` VALUES ('303', 'error', 'php', '1467806859', 'include(CftType.php): failed to open stream: No such file or directory (E:\\www\\supereto\\yii\\YiiBase.php:432)\nStack trace:\n#0 E:\\www\\supereto\\protected\\controllers\\CftController.php(38): spl_autoload_call()\n#1 E:\\www\\supereto\\yii\\web\\actions\\CInlineAction.php(49): CftController->actionBuy()\n#2 E:\\www\\supereto\\yii\\web\\CController.php(308): CInlineAction->runWithParams()\n#3 E:\\www\\supereto\\yii\\web\\CController.php(286): CftController->runAction()\n#4 E:\\www\\supereto\\yii\\web\\CController.php(265): CftController->runActionWithFilters()\n#5 E:\\www\\supereto\\yii\\web\\CWebApplication.php(282): CftController->run()\n#6 E:\\www\\supereto\\yii\\web\\CWebApplication.php(141): CWebApplication->runController()\n#7 E:\\www\\supereto\\yii\\base\\CApplication.php(184): CWebApplication->processRequest()\n#8 E:\\www\\supereto\\index.php(28): CWebApplication->run()\nREQUEST_URI=/supereto/cft/buy');
+INSERT INTO `logssystem` VALUES ('304', 'warning', 'application', '1467806952', 'Failed to set unsafe attribute \"cp_cpt_id\" of \"CftPackage\".');
+INSERT INTO `logssystem` VALUES ('305', 'warning', 'application', '1467806985', 'Failed to set unsafe attribute \"cp_cpt_id\" of \"CftPackage\".');
+INSERT INTO `logssystem` VALUES ('306', 'warning', 'application', '1467807143', 'Failed to set unsafe attribute \"cp_cpt_id\" of \"CftPackage\".');
+INSERT INTO `logssystem` VALUES ('307', 'warning', 'application', '1467807192', 'Failed to set unsafe attribute \"cp_cpt_id\" of \"CftPackage\".');
+INSERT INTO `logssystem` VALUES ('308', 'error', 'php', '1467807772', 'Undefined index: user (E:\\www\\supereto\\protected\\controllers\\CftController.php:67)\nStack trace:\n#0 E:\\www\\supereto\\yii\\web\\CController.php(286): CftController->runAction()\n#1 E:\\www\\supereto\\yii\\web\\CController.php(265): CftController->runActionWithFilters()\n#2 E:\\www\\supereto\\yii\\web\\CWebApplication.php(282): CftController->run()\n#3 E:\\www\\supereto\\yii\\web\\CWebApplication.php(141): CWebApplication->runController()\n#4 E:\\www\\supereto\\yii\\base\\CApplication.php(184): CWebApplication->processRequest()\n#5 E:\\www\\supereto\\index.php(28): CWebApplication->run()\nREQUEST_URI=/supereto/cft/buy');
+INSERT INTO `logssystem` VALUES ('309', 'warning', 'application', '1467807818', 'Failed to set unsafe attribute \"cp_cpt_id\" of \"CftPackage\".');
+INSERT INTO `logssystem` VALUES ('310', 'warning', 'application', '1467807829', 'Failed to set unsafe attribute \"cp_cpt_id\" of \"CftPackage\".');
+INSERT INTO `logssystem` VALUES ('311', 'warning', 'application', '1467807869', 'Failed to set unsafe attribute \"cp_cpt_id\" of \"CftPackage\".');
+INSERT INTO `logssystem` VALUES ('312', 'warning', 'application', '1467807885', 'Failed to set unsafe attribute \"cp_cpt_id\" of \"CftPackage\".');
+INSERT INTO `logssystem` VALUES ('313', 'warning', 'application', '1467810548', 'Failed to set unsafe attribute \"cp_cpt_id\" of \"CftPackage\".');
+INSERT INTO `logssystem` VALUES ('314', 'warning', 'application', '1467811192', 'Failed to set unsafe attribute \"cp_cpt_id\" of \"CftPackage\".');
+INSERT INTO `logssystem` VALUES ('315', 'warning', 'application', '1467811223', 'Failed to set unsafe attribute \"cp_cpt_id\" of \"CftPackage\".');
+INSERT INTO `logssystem` VALUES ('316', 'warning', 'application', '1467811234', 'Failed to set unsafe attribute \"cp_cpt_id\" of \"CftPackage\".');
 
 -- ----------------------------
 -- Table structure for logsuser
@@ -381,7 +409,7 @@ CREATE TABLE `logsuser` (
   `logtime` int(11) DEFAULT NULL,
   `message` text,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
 -- ----------------------------
 -- Records of logsuser
@@ -390,6 +418,7 @@ INSERT INTO `logsuser` VALUES ('1', 'info', 'user.login.success', '1467290267', 
 INSERT INTO `logsuser` VALUES ('2', 'info', 'user.login.success', '1467782309', '1-login-15642091931-::1--Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.106 Safari/537.36');
 INSERT INTO `logsuser` VALUES ('3', 'info', 'user.login.success', '1467782529', '1-login-15642091931-::1--Mozilla/5.0 (Windows NT 10.0; WOW64; rv:47.0) Gecko/20100101 Firefox/47.0');
 INSERT INTO `logsuser` VALUES ('4', 'info', 'user.login.success', '1467787453', '1-login-15642091931-::1--Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.106 Safari/537.36');
+INSERT INTO `logsuser` VALUES ('5', 'info', 'user.login.success', '1467806856', '1-login-15642091931-::1--Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36');
 
 -- ----------------------------
 -- Table structure for yy_admin_user
@@ -422,12 +451,12 @@ CREATE TABLE `yy_cft_package` (
   `cp_num` int(10) NOT NULL COMMENT '编号',
   `cp_sn` varchar(11) NOT NULL COMMENT '订单编号',
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of yy_cft_package
 -- ----------------------------
-INSERT INTO `yy_cft_package` VALUES ('9', '1', '0', '1', '2016-07-06 13:17:18', '2016-07-06 13:27:26', '0', '0', 'S0706131783');
+INSERT INTO `yy_cft_package` VALUES ('11', '1', '0', '1', '2016-07-06 21:20:34', '2016-07-06 21:20:34', '0', '0', 'S0706212047');
 
 -- ----------------------------
 -- Table structure for yy_cft_package_type
@@ -517,7 +546,7 @@ CREATE TABLE `yy_message` (
   PRIMARY KEY (`id`),
   KEY `FK_message_user_id` (`m_user_id`),
   CONSTRAINT `FK_message_user_id` FOREIGN KEY (`m_user_id`) REFERENCES `yy_user` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=3172 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3174 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of yy_message
@@ -546,6 +575,8 @@ INSERT INTO `yy_message` VALUES ('3168', '2016-07-06 14:44:13', '1', '0', '0', '
 INSERT INTO `yy_message` VALUES ('3169', '2016-07-06 14:51:20', '1', '0', '2', '您更新了个人资料', '0', null, null, '{\"id\":\"1\",\"ip\":\"::1\",\"host\":null,\"userAgent\":\"Mozilla\\/5.0 (Windows NT 10.0; WOW64; rv:47.0) Gecko\\/20100101 Firefox\\/47.0\"}');
 INSERT INTO `yy_message` VALUES ('3170', '2016-07-06 14:57:15', '1', '0', '2', '您更新了个人资料', '0', null, null, '{\"id\":\"1\",\"ip\":\"::1\",\"host\":null,\"userAgent\":\"Mozilla\\/5.0 (Windows NT 10.0; WOW64; rv:47.0) Gecko\\/20100101 Firefox\\/47.0\"}');
 INSERT INTO `yy_message` VALUES ('3171', '2016-07-06 14:57:35', '1', '0', '2', '您更新了个人资料', '0', null, null, '{\"id\":\"1\",\"ip\":\"::1\",\"host\":null,\"userAgent\":\"Mozilla\\/5.0 (Windows NT 10.0; WOW64; rv:47.0) Gecko\\/20100101 Firefox\\/47.0\"}');
+INSERT INTO `yy_message` VALUES ('3172', '2016-07-06 20:07:36', '1', '0', '0', '欢迎使用superETO', '-1', null, null, '{\"id\":\"1\",\"ip\":\"::1\",\"host\":null,\"userAgent\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/51.0.2704.103 Safari\\/537.36\"}');
+INSERT INTO `yy_message` VALUES ('3173', '2016-07-06 21:20:34', '1', '0', '2', '您成功的购买了ETO理财包', '0', null, null, '{\"id\":\"1\",\"ip\":\"::1\",\"host\":null,\"userAgent\":\"Mozilla\\/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\\/537.36 (KHTML, like Gecko) Chrome\\/51.0.2704.103 Safari\\/537.36\"}');
 
 -- ----------------------------
 -- Table structure for yy_open_message
@@ -608,7 +639,7 @@ CREATE TABLE `yy_user` (
 -- ----------------------------
 -- Records of yy_user
 -- ----------------------------
-INSERT INTO `yy_user` VALUES ('1', '15642091931', 'yuan', '', '$2y$13$7pIaDaODSxFmLdKSv51XW.3ZfrlXvIrKx40CoDwutUfspW.Bs8THy', '$2y$13$7pIaDaODSxFmLdKSv51XW.3ZfrlXvIrKx40CoDwutUfspW.Bs8THy', '0', '2016-05-16 10:42:31', '2016-07-06 14:44:07', '0', '0', '0', '0', 'yuan', '0');
+INSERT INTO `yy_user` VALUES ('1', '15642091931', 'yuan', '', '$2y$13$7pIaDaODSxFmLdKSv51XW.3ZfrlXvIrKx40CoDwutUfspW.Bs8THy', '$2y$13$7pIaDaODSxFmLdKSv51XW.3ZfrlXvIrKx40CoDwutUfspW.Bs8THy', '0', '2016-05-16 10:42:31', '2016-07-06 20:07:07', '0', '0', '0', '0', 'yuan', '0');
 INSERT INTO `yy_user` VALUES ('55', '13940498763', '你涛哥', null, '$2a$13$00NDv1fd0j9Yl/CEJTydC.dFY93ep1PdLhg40t1p2YO7PenmiFnfW', '', '570', '2015-01-16 10:15:56', '2016-06-20 11:41:06', '2', '0', '45', '0', '问我', '0');
 INSERT INTO `yy_user` VALUES ('57', '15642091932', 'y', null, '$2y$13$KnAoFGjgqRpN8029PcdL/OnFpvBccmXaTCTnn5pDlxL9x4xD1CAtC', '$2y$13$xYt/2I6Hnoos/sPYfWmps.ZWkISG0u55JAmrO9VreJUnHx9RGEpPe', '0', '2016-06-20 13:28:49', '2016-06-20 13:29:06', '0', '2', '254', '0', 'yyy', '0');
 
@@ -627,7 +658,7 @@ CREATE TABLE `yy_user_info` (
   `ui_ticket_balance` int(10) DEFAULT NULL COMMENT '门票余额',
   `ui_blocked_balances` int(10) DEFAULT NULL COMMENT '冻结数额',
   `ui_email` varchar(20) DEFAULT NULL COMMENT '邮箱',
-  `ui_referrer` varchar(20) DEFAULT NULL COMMENT '推荐人',
+  `ui_referrer` varchar(20) DEFAULT '0' COMMENT '推荐人',
   `ui_alipay` varchar(20) DEFAULT NULL COMMENT '支付宝账号',
   `ui_wechat` varchar(20) DEFAULT NULL COMMENT '微信号',
   `ui_credit_card` varchar(19) DEFAULT NULL COMMENT '银行卡号',
@@ -642,8 +673,6 @@ CREATE TABLE `yy_user_info` (
 -- Records of yy_user_info
 -- ----------------------------
 INSERT INTO `yy_user_info` VALUES ('1', '1', 'M00717544', '5', '10', '2000', '1000', '500', '200', 'sd4412815@163.com', '1', '', '', null, '', '', null);
-INSERT INTO `yy_user_info` VALUES ('2', '1', 'M00717540', null, null, null, null, null, null, '', '1', null, null, null, null, null, null);
-INSERT INTO `yy_user_info` VALUES ('3', null, null, null, null, null, null, null, null, '123@1.com', null, '123123', '123123', '2147483647', 'sda sd as asd ', 'dsdasdasdasd', null);
 INSERT INTO `yy_user_info` VALUES ('4', '58', 'ETO3372248', null, null, null, null, null, null, 'sd4412815@163.com', '57', null, null, null, null, null, null);
 INSERT INTO `yy_user_info` VALUES ('5', '59', 'ETO7687285', null, '0', null, null, null, null, 'sd4412815@163.com', '58', null, null, null, null, null, null);
 INSERT INTO `yy_user_info` VALUES ('6', '62', 'ETO9246567', null, '0', null, null, null, null, 'sd4412815@163.com', '58', null, null, null, null, null, 'sd4412815');
