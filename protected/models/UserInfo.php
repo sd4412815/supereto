@@ -16,7 +16,7 @@ class UserInfo extends CActiveRecord {
     public function rules(){
         return array(
             //安全设置
-            array ('ui_email ,ui_alipay,ui_wechat,ui_credit_card,smsCode,ui_bank_account,ui_bank_branch，ui_taobao', 'safe'),
+            array ('ui_email ,ui_alipay,ui_wechat,ui_credit_card,smsCode,ui_bank_account,ui_bank_branch,ui_taobao', 'safe'),
             //邮箱验证
             array('ui_email','email','message'=>'请输入正确的邮箱地址','on'=>'EditInfo,su_edit'),
             //支付宝账号

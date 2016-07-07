@@ -9,22 +9,22 @@
 class Rebate extends CActiveRecord
 {
     public  function tableName(){
-        return '{{rebate_log}}';
+        return '{{rebate}}';
     }
 
     public function rebatelog($uid,$fromid,$rebate,$uprice,$fromprice,$price){
         $rebatelog=new Rebate();
-        $rebatelog=array();
-        $rebatelog['b_uid']=$uid;
-        $rebatelog['b_from_id']=$fromid;
-        $rebatelog['b_rebate']=$rebate;
-        $rebatelog['b_u_price']=$uprice;
-        $rebatelog['b_price']=$price;
-        $rebatelog['b_from_price']=$fromprice;
+        $rebatelog->b_uid=$uid;
+        $rebatelog->b_from_id=$fromid;
+        $rebatelog->b_rebate=$rebate;
+        $rebatelog->b_u_price=$uprice;
+        $rebatelog->b_price=$price;
+        $rebatelog->b_from_price=$fromprice;
+        $rebatelog->b_add_time=date('Y-m-d H:i:s');
         $rebatelog->save();
     }
 
-    public static function model($className){
+    public static function model($className=__CLASS__){
         return parent::model($className);
     }
     

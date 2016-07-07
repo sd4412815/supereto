@@ -52,54 +52,58 @@ class CftPackage extends CActiveRecord
                 $order3 = $this->find($criteria);
                 if ($order3) {
                     $order_type3 = CftPackageType::model()->find('id=:id', array(':id' => $order3->cp_cpt_id));
-                    if ($order_type->cpt_price > $order_type3->cpt_price) {
+                    if ($order_type->cpt_price >= $order_type3->cpt_price) {
                         $balance3 = $order_type3->cpt_price * 0.05;
                     } else {
                         $balance3 = $order_type->cpt_price * 0.05;
                     }
                     $info3->ui_static_balance = $info3->ui_static_balance + $balance3;
                     $info3->save();
-                    $rebatelog->rebatelog($info3->ui_userid,$info->ui_userid,'5',$order_type3->cpt_price,$order_type->cpt_price,$balance3);
+                    $rebatelog->rebatelog($info3->ui_userid, $info->ui_userid, '5', $order_type3->cpt_price, $order_type->cpt_price, $balance3);
                 }
 
                 //2代
                 $info2 = UserInfo::model()->find('ui_userid=:uid3', array(':uid3' => $info3->ui_referrer));
-                if ($info2->ui_referrer != 0) {
-                    $criteria = new CDbCriteria;
-                    $criteria->addCondition('cp_u_id = :id');
-                    $criteria->params[':id'] = $info2->ui_userid;
-                    $criteria->addCondition('cp_type = 0');
-                    $order2 = $this->find($criteria);
-                    if ($order2) {
-                        $order_type2 = CftPackageType::model()->find('id=:id', array(':id' => $order2->cp_cpt_id));
-                        if ($order_type->cpt_price > $order_type2->cpt_price) {
-                            $balance2 = $order_type2->cpt_price * 0.03;
-                        } else {
-                            $balance2 = $order_type->cpt_price * 0.03;
-                        }
-                        $info2->ui_static_balance = $info2->ui_static_balance + $balance2;
-                        $info2->save();
-                        $rebatelog->rebatelog($info2->ui_userid,$info->ui_userid,'5',$order_type2->cpt_price,$order_type->cpt_price,$balance2);
-                    }
-
-                    //1代
-                    $info1 = UserInfo::model()->find('ui_userid=:uid3', array(':uid3' => $info2->ui_referrer));
-                    if ($info1->ui_referrer != 0) {
+                if ($info2) {
+                    if ($info2->ui_referrer != 0) {
                         $criteria = new CDbCriteria;
                         $criteria->addCondition('cp_u_id = :id');
-                        $criteria->params[':id'] = $info1->ui_userid;
+                        $criteria->params[':id'] = $info2->ui_userid;
                         $criteria->addCondition('cp_type = 0');
-                        $order1 = $this->find($criteria);
-                        if ($order1) {
-                            $order_type1 = CftPackageType::model()->find('id=:id', array(':id' => $order1->cp_cpt_id));
-                            if ($order_type->cpt_price > $order_type1->cpt_price) {
-                                $balance1 = $order_type1->cpt_price * 0.01;
+                        $order2 = $this->find($criteria);
+                        if ($order2) {
+                            $order_type2 = CftPackageType::model()->find('id=:id', array(':id' => $order2->cp_cpt_id));
+                            if ($order_type->cpt_price >= $order_type2->cpt_price) {
+                                $balance2 = $order_type2->cpt_price * 0.03;
                             } else {
-                                $balance1 = $order_type->cpt_price * 0.01;
+                                $balance2 = $order_type->cpt_price * 0.03;
                             }
-                            $info1->ui_static_balance = $info1->ui_static_balance + $balance1;
-                            $info1->save();
-                            $rebatelog->rebatelog($info1->ui_userid,$info->ui_userid,'5',$order_type1->cpt_price,$order_type->cpt_price,$balance1);
+                            $info2->ui_static_balance = $info2->ui_static_balance + $balance2;
+                            $info2->save();
+                            $rebatelog->rebatelog($info2->ui_userid, $info->ui_userid, '3', $order_type2->cpt_price, $order_type->cpt_price, $balance2);
+                        }
+
+                        //1代
+                        $info1 = UserInfo::model()->find('ui_userid=:uid3', array(':uid3' => $info2->ui_referrer));
+                        if ($info1) {
+                            if ($info1->ui_referrer != 0) {
+                                $criteria = new CDbCriteria;
+                                $criteria->addCondition('cp_u_id = :id');
+                                $criteria->params[':id'] = $info1->ui_userid;
+                                $criteria->addCondition('cp_type = 0');
+                                $order1 = $this->find($criteria);
+                                if ($order1) {
+                                    $order_type1 = CftPackageType::model()->find('id=:id', array(':id' => $order1->cp_cpt_id));
+                                    if ($order_type->cpt_price >= $order_type1->cpt_price) {
+                                        $balance1 = $order_type1->cpt_price * 0.01;
+                                    } else {
+                                        $balance1 = $order_type->cpt_price * 0.01;
+                                    }
+                                    $info1->ui_static_balance = $info1->ui_static_balance + $balance1;
+                                    $info1->save();
+                                    $rebatelog->rebatelog($info1->ui_userid, $info->ui_userid, '1', $order_type1->cpt_price, $order_type->cpt_price, $balance1);
+                                }
+                            }
                         }
                     }
                 }

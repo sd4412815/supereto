@@ -254,10 +254,10 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
 		                    <i class="fa fa-angle-left pull-right"></i>
 		                </a>
 		                <ul class="treeview-menu">
-		                    <li><a href="<?php echo Yii::app()->createUrl('cft/buy') ?>"><i class="fa fa-reply"></i> 买入ETO包</a></li>
-		                    <li><a href="<?php echo Yii::app()->createUrl('cft/sell') ?>"><i class="fa fa-share"></i> 卖出ETO包</a></li>
-		                    <li><a href="<?php echo Yii::app()->createUrl('cft/buyLog') ?>"><i class="fa fa-caret-square-o-down"></i> 买入记录</a></li>
-		                    <li><a href="<?php echo Yii::app()->createUrl('cft/sellLog') ?>"><i class="fa fa-caret-square-o-up"></i> 卖出记录</a></li>
+		                    <li><a href="<?php echo Yii::app()->createUrl('cft/buy') ?>"><i class="fa fa-reply"></i>原石众筹包</a></li>
+		                    <li><a href="<?php echo Yii::app()->createUrl('cft/sell') ?>"><i class="fa fa-share"></i>提取红利</a></li>
+		                    <li><a href="<?php echo Yii::app()->createUrl('cft/buyLog') ?>"><i class="fa fa-caret-square-o-down"></i>众筹记录</a></li>
+		                    <li><a href="<?php echo Yii::app()->createUrl('cft/sellLog') ?>"><i class="fa fa-caret-square-o-up"></i>提取记录</a></li>
 		                </ul>
 		            </li>
 		            <li class="treeview">
@@ -267,7 +267,7 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
 		                    <i class="fa fa-angle-left pull-right"></i>
 		                </a>
 		                <ul class="treeview-menu">
-                            <li><a href="<?php echo $this->createUrl('user/account');?>"><i class="fa fa-book"></i> 我的账户</ a></li>
+                            <li><a href="<?php echo $this->createUrl('user/account');?>"><i class="fa fa-book"></i> 我的账户</a></li>
 		                    <li><a href="<?php echo  $this->createUrl('ticket/Ticket') ?>"><i class="fa fa-exchange"></i> 门票转账</a></li>
 		                    <li><a href="<?php echo $this->createUrl('ticket/commission');?>"><i class="fa fa-newspaper-o"></i> 佣金清单</a></li>
 		                </ul>
