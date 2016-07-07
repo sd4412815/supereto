@@ -10,7 +10,7 @@ class IndexController extends Controller
 
   public $layout='main';
 
-/*    public function accessRules() {
+    public function accessRules() {
         return array (
             array (
                 'allow', // allow all users to perform 'index' and 'view' actions
@@ -27,7 +27,7 @@ class IndexController extends Controller
             array (
                 'allow',
                 'actions' => array (
-                    'index',
+                    'login',
                 ),
                 'roles' => array (
                     '?'
@@ -43,7 +43,7 @@ class IndexController extends Controller
                     '@'
                 )
             ),
-            array (
+           /* array (
                 'allow', // allow admin user to perform 'admin' and 'delete' actions
                 'actions' => array (
                     'admin',
@@ -58,9 +58,9 @@ class IndexController extends Controller
                 'users' => array (
                     '*'
                 )
-            )
+            )*/
         );
-    }*/
+    }
 
 
     public function actionindex()

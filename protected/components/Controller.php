@@ -20,4 +20,15 @@ class Controller extends SBaseController
 	 * for more details on how to specify this property.
 	 */
 	public $breadcrumbs=array();
+
+  /*  public function init(){
+        //判断用户是否登录
+        print_r(Yii::app()->Action()->Id);die;
+        /*if(Yii::app()->controller->id=='index' && ){
+            
+        }*/
+        /*if(Yii::app()->user->isGuest){
+            $this->redirect(array('Index/login'));
+        }
+    }*/
 }
