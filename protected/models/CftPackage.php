@@ -33,7 +33,10 @@ class CftPackage extends CActiveRecord
 
     }
 
+
+
     public function Rebate($uid,$oid){
+        $rebatelog=new Rebate();
         $info=UserInfo::model()->find('ui_userid=:uid',array(':uid'=>$uid));
         $order=$this->find('id=:id',array(':id'=>$oid));
         $order_type=CftPackageType::model()->find('id=:id',array(':id'=>$order->cp_cpt_id));
@@ -56,6 +59,7 @@ class CftPackage extends CActiveRecord
                     }
                     $info3->ui_static_balance = $info3->ui_static_balance + $balance3;
                     $info3->save();
+                    $rebatelog->rebatelog($info3->ui_userid,$info->ui_userid,'5',$order_type3->cpt_price,$order_type->cpt_price,$balance3);
                 }
 
                 //2代
@@ -75,6 +79,7 @@ class CftPackage extends CActiveRecord
                         }
                         $info2->ui_static_balance = $info2->ui_static_balance + $balance2;
                         $info2->save();
+                        $rebatelog->rebatelog($info2->ui_userid,$info->ui_userid,'5',$order_type2->cpt_price,$order_type->cpt_price,$balance2);
                     }
 
                     //1代
@@ -94,6 +99,7 @@ class CftPackage extends CActiveRecord
                             }
                             $info1->ui_static_balance = $info1->ui_static_balance + $balance1;
                             $info1->save();
+                            $rebatelog->rebatelog($info1->ui_userid,$info->ui_userid,'5',$order_type1->cpt_price,$order_type->cpt_price,$balance1);
                         }
                     }
                 }
