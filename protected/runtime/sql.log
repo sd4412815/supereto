@@ -3068,3 +3068,23 @@
 2016/07/08 11:25:50 [trace] [system.db.CDbConnection] Opening DB connection
 2016/07/08 11:25:50 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
 2016/07/08 11:25:50 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/08 13:39:28 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/08 13:39:28 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/08 13:39:28 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/08 13:39:28 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/08 13:39:28 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_cft_package`
+2016/07/08 13:39:28 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_cft_package`
+2016/07/08 13:39:28 [trace] [system.db.ar.CActiveRecord] User.find()
+2016/07/08 13:39:28 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_user`
+2016/07/08 13:39:28 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_user`
+2016/07/08 13:39:28 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user` `t` WHERE id=:id LIMIT 1
+2016/07/08 13:39:28 [trace] [system.db.ar.CActiveRecord] CftPackageType.findAll()
+2016/07/08 13:39:28 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_cft_package_type`
+2016/07/08 13:39:28 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_cft_package_type`
+2016/07/08 13:39:28 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_cft_package_type` `t`
+2016/07/08 13:39:28 [trace] [system.db.ar.CActiveRecord] CftPackage.find()
+2016/07/08 13:39:28 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_cft_package` `t` WHERE ((cp_u_id = :uid) AND (cp_add_time>=:start)) AND (cp_add_time<=:end) LIMIT 1
+2016/07/08 13:39:29 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/08 13:39:29 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/08 13:39:29 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/08 13:39:29 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
