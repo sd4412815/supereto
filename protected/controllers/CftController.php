@@ -123,25 +123,32 @@ class CftController extends Controller
         $user = User::model()->find('id=:id',array(':id'=>Yii::app()->user->id));
 
         if(isset($_POST['User']) && isset($_POST['UserInfo'])){
-            if($_POST['UserInfo']['ui_static_balance'] % 100 == 0 ) {
+            if($_POST['UserInfo']['ui_static_balance'] % 100 == 0 && $_POST['UserInfo']['ui_static_balance']>0) {
                 $user->u_safe_pwd = $_POST['User']['u_safe_pwd'];
                 if ($user->validate()) {
-                    $userinfo->ui_static_balance = $userinfo->ui_static_balance - $_POST['UserInfo']['ui_static_balance'];
-                    $userinfo->save();
-                    Selllog::model()->log(Yii::app()->user->id,$userinfo->ui_static_balance);
-                    $msg = new  Message();
-                    $msg['m_datetime'] = date('Y-m-d H:i:s');
-                    $msg['m_user_id'] = Yii::app()->user->id;
-                    $msg['m_level'] = Message::LEVEL_URGENCY;
-                    $msg['m_content'] = '您成功的提取了余额';
-                    $msg['m_type'] = Message::TYPE_ACCOUNT;
-                    $msg['m_src'] = UTool::getRequestInfo();
-                    $msg->save();
-                    Yii::app()->user->setFlash('success', '提取成功');
-                }else{
+                    if ($userinfo->ui_static_balance >= $_POST['UserInfo']['ui_static_balance']) {
+
+                        $userinfo->ui_static_balance = $userinfo->ui_static_balance - $_POST['UserInfo']['ui_static_balance'];
+                        $userinfo->save();
+                        Selllog::model()->log(Yii::app()->user->id, $userinfo->ui_static_balance);
+                        $msg = new  Message();
+                        $msg['m_datetime'] = date('Y-m-d H:i:s');
+                        $msg['m_user_id'] = Yii::app()->user->id;
+                        $msg['m_level'] = Message::LEVEL_URGENCY;
+                        $msg['m_content'] = '您成功的提取了余额';
+                        $msg['m_type'] = Message::TYPE_ACCOUNT;
+                        $msg['m_src'] = UTool::getRequestInfo();
+                        $msg->save();
+                        Yii::app()->user->setFlash('success', '提取成功');
+                    }else{
+                        p('余额不足');
+                        Yii::app()->user->setFlash('error', '余额不足');
+                    }
+                } else {
                     p($user->getErrors());
                     Yii::app()->user->setFlash('error', $user->getErrors());
                 }
+
             }else{
                 p('金额必须是100或100的倍数');
                 Yii::app()->user->setFlash('error', '金额必须是100或100的倍数');
