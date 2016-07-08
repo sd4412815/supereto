@@ -20,40 +20,49 @@ class IndexController extends Controller
      */
     public function actionlogin()
     {
+
         $this->layout='login';
-        if (Yii::app ()->request->isAjaxRequest || Yii::app ()->request->isPostRequest) {
-        } else {
-            $urls = array (
-                'urlReferrer' => Yii::app ()->request->urlReferrer,
-                'urlCurrent' => Yii::app ()->request->url,
-                'urlReturn' => Yii::app ()->user->returnUrl
-            );
-            Yii::log ( CJSON::encode ( $urls ), CLogger::LEVEL_INFO, 'mngr.' . $this->getId () . '.' . $this->getAction ()->getId ()  . 'src');
-            Yii::app ()->session ['urlReferer'] = Yii::app ()->request->urlReferrer;
-        }
+        // if (Yii::app ()->request->isAjaxRequest || Yii::app ()->request->isPostRequest) {
+        // } else {
+        //     $urls = array (
+        //         'urlReferrer' => Yii::app ()->request->urlReferrer,
+        //         'urlCurrent' => Yii::app ()->request->url,
+        //         'urlReturn' => Yii::app ()->user->returnUrl
+        //     );
 
-        if (! Yii::app ()->user->isGuest) {
-            $this->redirect(Yii::app()->baseUrl);
-        }
-        $model = new LoginForm ();
+        //     Yii::log ( CJSON::encode ( $urls ), CLogger::LEVEL_INFO, 'mngr.' . $this->getId () . '.' . $this->getAction ()->getId ()  . 'src');
+        //     Yii::app ()->session ['urlReferer'] = Yii::app ()->request->urlReferrer;
+        // }
+        
+        // if (! Yii::app ()->user->isGuest) {
+        //     $this->redirect(Yii::app()->baseUrl);
+
+        // }
+        $model = new LoginAdminForm ();
+
         $model->setScenario ( 'login' );
-
+        
         if (isset ( $_POST ['ajax'] ) && $_POST ['ajax'] === 'login-form') {
             echo CActiveForm::validate ( $model );
+            // echo "123123" ;die;
             Yii::app ()->end ();
         }
 
-        if (isset ( $_POST['LoginForm'] )) {
-
-            $model->attributes = $_POST ['LoginForm'];
+        if (isset ( $_POST['LoginAdminForm'] )) {
+            $model->attributes = $_POST ['LoginAdminForm'];
+            // echo 123123;die;
             // validate user input and redirect to the previous page if valid
+// p($model);die;
             if ($model->validate ()) {
                 $rltCheck = UTool::checkRepeatAction (3);
+                
                 if ($rltCheck ['status']) {
                     Yii::app ()->user->setFlash ( 'loginError', $rltCheck ['msg'] );
                 } else
                 {
+
                     $result = $model->login ();
+                    // p($result);die;
                     if (!$result['status']){
                         Yii::app ()->user->setFlash ( 'loginError',$result['msg']);
                     }else{

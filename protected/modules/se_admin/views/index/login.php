@@ -11,10 +11,7 @@ $this->pageTitle = 'supereto--登录';
     <h1>SuperETO</h1>
     <?php $form = $this->beginWidget ( 'CActiveForm', array (
     'id' => 'login-form',
-    'focus' => array (
-        $model,
-        'u_tel',
-    ),
+    'action'=>$this->CreateUrl('Index/Login'),
     'enableAjaxValidation' => true,
     'enableClientValidation' => true,
     'htmlOptions' => array (
@@ -25,21 +22,21 @@ $this->pageTitle = 'supereto--登录';
 ?>
         <label>
             <?php
-                echo $form->textField ( $model, 'u_tel', array (
-                    'placeholder' => '手机号',
+                echo $form->textField ( $model, 'username', array (
+                    'placeholder' => '用户名',
                     'id'=>'LoginForm_u_tel'
                 ) );
             ?>
-            <?php echo $form->error ( $model, 'u_tel');?>
+            <?php echo $form->error ( $model, 'password');?>
         </label>
         <label>
             <?php
-                echo $form->passwordField ( $model, 'u_pwd', array (
+                echo $form->passwordField ( $model, 'password', array (
                     'placeholder' => '密码只包含数字、字母、下划线',
                     'required'=>''
                 ) );
             ?>
-            <?php echo $form->error ( $model, 'u_pwd');?>
+            <?php echo $form->error ( $model, 'password');?>
         </label>
             <?php if (Yii::app()->user->hasFlash('loginError')):?>
                 <div style="color: #ff6140;"><?php echo Yii::app()->user->getFlash('loginError');?></div>

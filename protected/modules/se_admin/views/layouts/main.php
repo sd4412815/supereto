@@ -12,7 +12,7 @@ if ($userModel === null)
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-<title><?php echo CHtml::encode($this->pageTitle).'-后台管理'; ?></title>
+<title><?php echo CHtml::encode($this->pageTitle).'-'.Yii::app ()->name; ?></title>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta http-equiv="Content-Type" content="IE=edge">
@@ -208,8 +208,10 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
 		            </div>
 		            <div class="pull-left info">
 		                <p>欢迎 <b style="color: #00a65a;">
-                                <?php if(isset(Yii::app()->user->_nickName)){
-                                    echo Yii::app()->user->_nickName;
+                                <?php if(Yii::app()->user->username == "admin"){
+                                    echo "超级管理员";
+                                }else{
+                                    echo "管理员";
                                 }
                                 ?>
                             </b>
@@ -242,7 +244,10 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
                         <a href="<?php echo $this->createUrl('messages/list');?>"><i class="fa fa-edit"></i> 公告列表</a>
 		            </li>
                     <li class="treeview">
-                        <a href="<?php echo $this->createUrl('CustomerService/list');?>"><i class="fa fa-edit"></i> 客服管理</a>
+                        <a href="<?php echo $this->createUrl('user/EditInfo');?>"><i class="fa fa-edit"></i> 客服管理</a>
+                    </li>
+                    <li class="treeview">
+                        <a href="<?php echo $this->createUrl('user/register');?>"><i class="fa fa-edit"></i> 新增管理员</a>
                     </li>
 		            <li class="treeview">
 		                <a href="<?php echo $this->createUrl('index/logout') ?>">
