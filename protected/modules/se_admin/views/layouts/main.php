@@ -235,8 +235,8 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
                         <a href="<?php echo $this->createUrl('user/list');?>"><i class="fa fa-edit"></i> 会员列表</a>
 		            </li>
 		            <li class="treeview">
-                        <a href="<?php echo $this->createUrl('user/EditInfo');?>"><i class="fa fa-edit"></i> 门票列表</a>
-		            </li>
+                        <a href="<?php echo $this->createUrl('ticket/list');?>"><i class="fa fa-edit"></i> 门票列表</a>
+                    </li>
 		            <li class="treeview">
                         <a href="<?php echo $this->createUrl('user/EditInfo');?>"><i class="fa fa-edit"></i> 推荐列表</a>
 		            </li>

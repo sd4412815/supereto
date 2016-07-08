@@ -78,7 +78,13 @@ $this->pageTitle = '我的账户';
  .fl{width:49%;float:left;}
  .fr{width:49%;float:right;}
  .peidui_btn_div {padding:0px 20px;}
-
+ .bgimg{
+background-image:url('images/login/login_Middle2.jpg');
+background-repeat: repeat;
+height:635px;
+width:100%;
+overflow:hidden;
+}
  @media (max-width: 767px) {
 	 .portlet_a {width:100%;float:none;clear:both;}
 	 .portlet_b {width:100%;float:none;}
@@ -164,7 +170,6 @@ $this->pageTitle = '我的账户';
 										 </tbody>
 									 </table>
 
-									 <div class="tg-link text-center"><b>推广链接：<a href="www.supereto.com/" target="_blank">www.supereto.com/</a></b></div>
 								 </div>
 							 </div>
 							 <div class="portlet box grey portlet_b">
@@ -186,17 +191,14 @@ $this->pageTitle = '我的账户';
 						 </div>
 					 </div>
 				 </div>
-				 <!-- END ACCOUNT INFO-->
-
-				 <!--舍得按钮-->
 				 <div class="row-fluid">
                     <div class="span12">
                         <div class="portlet big-btn-box">
                             <div class="big-btn-box-a" style="width:49%;" >
-                                <a class="btn red btn-bigbig" style="background:#e95466" id="pdBtn" href="mpackage_buy.php"><i class="icon-cloud-upload"></i> 原石众筹</a>
+                                <a class="btn  btn-bigbig" style="background:#BED8F1" id="pdBtn" href="mpackage_buy.php"><i class="icon-cloud-upload"></i> 原石众筹</a>
                             </div>
                             <div class="big-btn-box-b" style="width:49%">
-                                <a class="btn blue btn-bigbig" id="gdBtn" href="mpackage_sell.php"><i class="icon-cloud-download"></i> 公司红利</a>
+                                <a class="btn yellow btn-bigbig" id="gdBtn" href="mpackage_sell.php"><i class="icon-cloud-download"></i> 公司红利</a>
                             </div>
                         </div>
                     </div>
@@ -215,7 +217,7 @@ $this->pageTitle = '我的账户';
             <?php foreach ( $cfttype as $k=>$v) {?>
             <?php }?>
             <div class="portlet-body pd-wrap">
-                <div class="table-pd tongdao0" style="background:#e95466;" >
+                <div class="tongdao0" style="background-image:url(<?php echo Yii::app ()->theme->baseUrl . "/images/image04.png" ;?>); background-repeat:no-repeat;" >
                     <div class="donate-header clearfix">
                             <h4>原石众筹编号：<span><?php echo $item['cp_sn']; ?></span></h4>
                                 <ul class="div_list">
@@ -237,7 +239,7 @@ $this->pageTitle = '我的账户';
                                       </span>
                                       <button id="look" style="width:70px; hight:20px;background:#00a2cd;" type="button" onclick="time<?php echo $item['id'];?>();" name="button">点击查看</button>
                                       <?php }?>
-                                      <a href="http://www.taobao.com">去打款</a><a href="" onclick="return makesure();"><font color="yellow">取消挂单</font></a></span>
+                                      <a href="http://www.taobao.com" style="color:black; border:2px solid #e95466;">去打款</a><a href="" onclick="return makesure();"> <font color="blue" style="border:1px solid blue;">取消挂单</font></a></span>
                                       </li>
                                     <li>预计收款时间：<?php echo substr($item['cp_last_time'],0,10);?> 日 10:00:00--16:00:00之间</li>
                                 </ul>
@@ -247,9 +249,9 @@ $this->pageTitle = '我的账户';
                         </div>
                     </div>
                 </div>
-                <div class="table-pd tongdao0" style="background:#e95466">
+                <div class="table-pd tongdao0" style="background:#fff; border:0px;">
 
-                    <div class="pd donate-body-S004474514">
+                    <div class="pd ">
                         <div class="">
 
                         </div>
@@ -279,7 +281,7 @@ $this->pageTitle = '我的账户';
     </div>
 </div>
 <?php }else{
-  echo '暂无买入记录';
+  echo '';
 } ?>
 <?php if(!empty($cfttype)){?>
 				 <!--得列表-->
@@ -292,7 +294,7 @@ $this->pageTitle = '我的账户';
             </div>
             <?php foreach ( $cft as $k=>$item) {?>
             <div class="portlet-body pd-wrap">
-                <div class="table-pd tongdao1">
+                <div class="" style="background-image:url(<?php echo Yii::app ()->theme->baseUrl . "/images/image05.png" ;?>); background-repeat:no-repeat;">
                     <div class="donate-header clearfix">
                         </i>
                         <h4>公司红利编号：<span><?php echo $item['cp_sn']; ?></span></h4>
@@ -317,13 +319,13 @@ $this->pageTitle = '我的账户';
                                   <br>
                             </ul>
                     </div>
-                    <div class="pd donate-body-S003044127">
+                    <div class=" ">
                         <div class="">
                         </div>
                     </div>
                 </div>
 
-                <div class="table-pd tongdao1">
+                <div class="table-pd tongdao1" style="background:#fff;border:0px;">
 
                     <div class="pd donate-body-S004474514">
                         <div class="">
@@ -353,7 +355,7 @@ $this->pageTitle = '我的账户';
         </div>
     </div>
 </div>
-<?php }else{ echo '暂无卖出记录'; } ?>
+<?php }else{ echo ''; } ?>
 	 </div>
  </div>
 </div>
