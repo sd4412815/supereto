@@ -75,7 +75,13 @@ class CftController extends Controller
 
                 if ($model->validate()) {
                     $typePrice=CftPackageType::model()->find('id=:id',array(':id'=>$_POST['CftPackage']['cp_cpt_id']))['cpt_price'];
-                    if($info->ui_ticket_balance<=0 && $info->ui_ticket_balance <  $typePrice){
+                    if($info->ui_ticket_balance<=0){
+                        Yii::app()->user->setFlash('error', '门票余额不足');
+                    }elseif($typePrice == 5000 && $info->ui_ticket_balance < 5){
+                        Yii::app()->user->setFlash('error', '门票余额不足');
+                    }elseif($typePrice == 2500 && $info->ui_ticket_balance < 2){
+                        Yii::app()->user->setFlash('error', '门票余额不足');
+                    }elseif($typePrice == 1000 && $info->ui_ticket_balance < 1){
                         Yii::app()->user->setFlash('error', '门票余额不足');
                     }else {
                         if ($typePrice == 5000 && $info->ui_ticket_balance >= 5) {
