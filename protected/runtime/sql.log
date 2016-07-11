@@ -3396,3 +3396,65 @@
 2016/07/11 16:51:24 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
 2016/07/11 16:51:24 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
 2016/07/11 16:51:24 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/11 17:14:06 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/11 17:14:06 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/11 17:14:06 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/11 17:14:06 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/11 17:14:06 [trace] [system.db.ar.CActiveRecord] UserInfo.find()
+2016/07/11 17:14:06 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_user_info`
+2016/07/11 17:14:06 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_user_info`
+2016/07/11 17:14:06 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_user_info` `t` WHERE ui_userid=:id LIMIT 1
+2016/07/11 17:14:06 [trace] [system.db.ar.CActiveRecord] OpenMessage.findAll()
+2016/07/11 17:14:06 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_open_message`
+2016/07/11 17:14:06 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_open_message`
+2016/07/11 17:14:06 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_open_message` `t`
+2016/07/11 17:14:06 [trace] [system.db.ar.CActiveRecord] CftPackage.findAll()
+2016/07/11 17:14:06 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_cft_package`
+2016/07/11 17:14:06 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_cft_package`
+2016/07/11 17:14:06 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_cft_package` `t` WHERE cp_u_id= and cp_status=0
+2016/07/11 17:14:06 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and cp_status=0' at line 1. The SQL statement executed was: SELECT * FROM `yy_cft_package` `t` WHERE cp_u_id= and cp_status=0.
+2016/07/11 17:14:17 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/11 17:14:17 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/11 17:14:17 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/11 17:14:17 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/11 17:14:43 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/11 17:14:43 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/11 17:14:43 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/11 17:14:43 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/11 17:14:48 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/11 17:14:48 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/11 17:14:48 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/11 17:14:48 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/11 17:14:48 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/11 17:14:48 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/11 17:14:48 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/11 17:14:48 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/11 17:14:48 [trace] [system.db.ar.CActiveRecord] Adminuser.find()
+2016/07/11 17:14:48 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_adminuser`
+2016/07/11 17:14:48 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_adminuser`
+2016/07/11 17:14:48 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_adminuser` `t` WHERE username=:tel LIMIT 1
+2016/07/11 17:14:49 [trace] [system.db.ar.CActiveRecord] Adminuser.findByPk()
+2016/07/11 17:14:49 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_adminuser` `t` WHERE `t`.`id`=5 LIMIT 1
+2016/07/11 17:14:49 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/11 17:14:49 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/11 17:14:49 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/11 17:14:49 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/11 17:14:53 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/11 17:14:53 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/11 17:14:53 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/11 17:16:30 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/11 17:16:30 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/11 17:16:30 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/11 17:16:30 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/11 17:16:32 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/11 17:16:32 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/11 17:16:32 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/11 17:16:32 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/11 17:16:40 [trace] [system.db.CDbConnection] Opening DB connection
+2016/07/11 17:16:40 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsSystem` WHERE 0=1
+2016/07/11 17:16:40 [trace] [system.db.CDbCommand] Executing SQL: DELETE FROM `logsUser` WHERE 0=1
+2016/07/11 17:16:40 [trace] [system.db.CDbCommand] Querying SQL: SHOW TABLES
+2016/07/11 17:16:40 [trace] [system.db.ar.CActiveRecord] CustomerService.findAll()
+2016/07/11 17:16:40 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `yy_customer_service`
+2016/07/11 17:16:40 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `yy_customer_service`
+2016/07/11 17:16:40 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `yy_customer_service` `t`
