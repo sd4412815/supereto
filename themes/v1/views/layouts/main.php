@@ -278,7 +278,7 @@ Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/
 		                    <i class="fa fa-angle-left pull-right"></i>
 		                </a>
 		                <ul class="treeview-menu">
-		                    <li><a href="<?php echo Yii::app()->createUrl('OpenMessage/OpenMessage');?>"><i class="fa fa-building-o"></i> 网站公告</a></li>
+		                    <li><a href="<?php echo Yii::app()->createUrl('index/index');?>"><i class="fa fa-building-o"></i> 网站公告</a></li>
 		                    <li><a href="<?php echo $this->createUrl('Customerservice/list') ?>"><i class="fa fa-calendar-o"></i> 在线客服</a></li>
 		                </ul>
 		            </li>

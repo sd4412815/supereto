@@ -116,55 +116,55 @@ overflow:hidden;
 				 <!-- BEGIN PAGE HEADER-->
 				 <div class="row-fluid">
 					 <div class="span12">
-						 <h3 class="page-title"> 我的主页 <small>My Homepage</small> </h3>
+						 <h3 class="page-title"> 我的主页</h3>
 
 					 </div>
 				 </div>
 				 <!-- END PAGE HEADER-->
 				 <!-- BEGIN ACCOUNT INFO-->
-				 <div class="row-fluid">
-					 <div class="span12">
-						 <div class="first_div">
-							 <div class="portlet box grey portlet_a" style="">
-								 <div class="portlet-title">
+				 <div class="row-fluid" >
+					 <div class="span12" >
+						 <div class="first_div" >
+							 <div class="portlet box grey portlet_a">
+								 <div class="portlet-title" style="background:#BED8F1; margin:6px;">
 
-									 <div class="caption"><i class="icon-user"></i>我的帳戶 My account </div>
+									 <div class="caption" style="color:black"><i class="icon-user" style="color:black;"></i>个人信息</div>
 									 <div class="tools"> <a href="javascript:;" class="collapse"></a></div>
 								 </div>
 																 <div class="portlet-body">
 									 <table class="table-bordered table-striped table-condensed flip-content" width="100%">
 										 <thead class="flip-content">
 											 <tr>
-												 <td class="tit" width="21%">账户编号</td>
+												 <td class=""style="text-align:center;" width="21%">账户编号</td>
 												 <td style="text-align:center;" width="29%">
 										<!-- <a href="<?php //echo Yii::app()->createUrl('user/info');?>"> -->
 												   <?php echo $userinfo['ui_account_number']; ?>
 												 <!-- </a> -->
 												 </td>
-												 <td class="tit" width="21%">账户昵称</td>
+												 <td class=""style="text-align:center;" width="21%">账户昵称</td>
 												 <td style="text-align:center;" width="29%"><span id="AccountNickName"><?php echo Yii::app ()->name;  ?></span> <!--<i class="icon-refresh" id="todo" style="color:red;"></i>--></td>
 											 </tr>
 										 </thead>
 										 <tbody>
 
 											 <tr>
-												 <td class="tit">直推数量</td>
+												 <td class=""style="text-align:center;">直推数量</td>
 												 <td class="text-center">全部<?php echo $userinfo['ui_recommend_number']; ?> &nbsp;合格<?php echo $userinfo['ui_recommend_number']; ?></td>
-												 <td class="tit">团队数量</td>
+												 <td class=""style="text-align:center;">团队数量</td>
 												 <td class="text-center">全部<?php echo $userinfo['ui_team_number']; ?> &nbsp;合格<?php echo $userinfo['ui_team_number']; ?></td>
 											 </tr>
 
 											 <tr>
-												 <td class="tit">静态余额</td>
-												 <td class="text-center"><span style="color:green;"><i class="icon-money"></i></span> <?php echo $userinfo['ui_static_balance']; ?></td>
-												 <td class="tit">动态余额</td>
-												 <td class="text-center"><span style="color:green;"><i class="icon-money"></i></span> <?php echo $userinfo['ui_dynamic_balance']; ?></td>
+												 <td class=""style="text-align:center;">动态余额</td>
+												 <td class="text-center"><span style="color:orange;"><i class="glyphicon glyphicon-jpy"></i></span> <?php echo $userinfo['ui_static_balance']; ?></td>
+                         <td class=""style="text-align:center;">门票余额</td>
+												 <td class="text-center"><span style="color:orange;"><i class="glyphicon glyphicon-jpy"></i></span> <?php echo $userinfo['ui_ticket_balance']; ?> <a href="#">充值</a></td>
 											 </tr>
 											 <tr>
-												 <td class="tit">门票余额</td>
-												 <td class="text-center"><span style="color:green;"><i class="icon-money"></i></span> <?php echo $userinfo['ui_ticket_balance']; ?> <a href="#">充值</a></td>
-												 <td class="tit">冻结数额</td>
-												 <td class="text-center"><span style="color:green;"><i class="icon-money"></i></span> <?php echo $userinfo['ui_blocked_balances']; ?></td>
+												 <td class=""style="text-align:center;">冻结数额</td>
+												 <td class="text-center"><span style="color:orange;"><i class="glyphicon glyphicon-jpy"></i></span> <?php echo $userinfo['ui_blocked_balances']; ?></td>
+												 <td class=""style="text-align:center;">暂无</td>
+												 <td class="text-center"><span style="color:orange;"><i class=""></i></span></td>
 											 </tr>
 
 										 </tbody>
@@ -173,16 +173,15 @@ overflow:hidden;
 								 </div>
 							 </div>
 							 <div class="portlet box grey portlet_b">
-								 <div class="portlet-title">
-									 <div class="caption"><i class="icon-user"></i>网站公告 Notice </div>
+								 <div class="portlet-title" style="background:orange; margin:6px;">
+									 <div class="caption" style="color:black;"><i class="icon-edit" style="color:black;"></i>网站公告</div>
 									 <div class="tools"> <a href="javascript:;" class="collapse"></a></div>
 								 </div>
 								 <div class="portlet-body">
 								 <ul class="list-notice">
 										<?php  foreach($gonggao as $k =>$v){ ?>
 										 <li>
-											 <span><?php $v['rq'] ?></span>
-											 <a href=""><i class="icon-file-alt"></i> <?php echo $v['gonggao'] ?></a>
+											 <a href="<?php echo Yii::app()->createUrl('OpenMessage/OpenMessage?id='.$v['id']);?>"><i class="icon-file-alt"></i> <?php echo $v['om_title']; ?></a>
 										 </li>
 										<?php }?>
 									 </ul>
@@ -239,7 +238,7 @@ overflow:hidden;
                                       </span>
                                       <button id="look" style="width:70px; hight:20px;background:#00a2cd;" type="button" onclick="time<?php echo $item['id'];?>();" name="button">点击查看</button>
                                       <?php }?>
-                                      <a href="http://www.taobao.com" style="color:black; border:2px solid #e95466;">去打款</a><a href="" onclick="return makesure();"> <font color="blue" style="border:1px solid blue;">取消挂单</font></a></span>
+                                      <a href="http://www.taobao.com" style="color:black; border:2px solid #e95466;">去打款</a><a href="" onclick="makesure(<?php echo $item['id'];?>);"> <font color="blue" style="border:1px solid blue;">取消挂单</font></a></span>
                                       </li>
                                     <li>预计收款时间：<?php echo substr($item['cp_last_time'],0,10);?> 日 10:00:00--16:00:00之间</li>
                                 </ul>
@@ -283,8 +282,23 @@ overflow:hidden;
 <?php }else{
   echo '';
 } ?>
-<?php if(!empty($cfttype)){?>
+<script type="text/javascript">
+    function makesure(t){
+        if (confirm("确定要取消本次挂单吗?")) {
+            $.ajax({
+                type:"POST",
+                dataType:"json",
+                data:{"id":t},
+                url:'<?php echo Yii::app()->createUrl("index/del"); ?>',
+                success:function(json) {
+                    layer.msg(json.val);
+                }
+            });
+        };
+    }
+</script>
 				 <!--得列表-->
+<?php if ($sell) {?>
 <div class="row-fluid portlet_d fr"  >
     <div class="span12 portlet_b" >
         <div class="portlet box grey" >
@@ -292,33 +306,46 @@ overflow:hidden;
                 <div class="caption"><i class="icon-cloud-download"></i>公司红利</div>
                 <div class="tools"> <a href="javascript:;" class="collapse"></a></div>
             </div>
-            <?php foreach ( $cft as $k=>$item) {?>
+            <?php foreach ( $sell as $k=>$item) {?>
             <div class="portlet-body pd-wrap">
                 <div class="" style="background-image:url(<?php echo Yii::app ()->theme->baseUrl . "/images/image05.png" ;?>); background-repeat:no-repeat;">
-                    <div class="donate-header clearfix">
-                        </i>
-                        <h4>公司红利编号：<span><?php echo $item['cp_sn']; ?></span></h4>
-                            <ul class="div_list">
-                                <li>参加者：<?php echo $userinfo['ui_account_number']; ?></li>
-                                <li>淘宝号：<?php echo $userinfo['ui_taobao']; ?></li>
-                                <li>排队日期：<?php echo $item['cp_add_time']; ?></li>
-                                <li>当前状态：<span class="pending"><?php if ((strtotime($item['cp_last_time'])+43200-time())<0) {  ?>
-                                <div id="endds<?php echo $item['id'];?>" style="display:inline">
-                                  <font>已到期</font>
-                                </div>
-                                <?php }else{ ?>
-                                  <font class="timeout">收款倒计时</font>
-                                  <span id="starts<?php echo $item['id'];?>" class="yin">
-                                    <font  id="ss<?php echo $item['id'];?>"></font>小时
-                                    <font  id="ff<?php echo $item['id'];?>"></font>分
-                                    <font  id="mm<?php echo $item['id'];?>"></font>秒
-                                  </span>
-                                  <button id="looks"style="width:70px; hight:20px;background:#e95466;" type="button" onclick="times<?php echo $item['id'];?>();" name="button">点击查看</button>
-                                  <?php }?></li>
-                                  <br>
-                                  <br>
-                            </ul>
-                    </div>
+                  <div class="donate-header clearfix">
+                      </i>
+                      <h4>公司红利编号：<span><?php echo $item['s_account']; ?></span></h4>
+                          <ul class="div_list">
+                              <li>参加者：
+                              <?php if ($userinfo['ui_account_number']) {
+                                  echo $userinfo['ui_account_number'];
+                              }else{
+                                  echo "未绑定";
+                                  } ?>
+                              </li>
+                              <li>淘宝号：
+                              <?php if ($userinfo['ui_taobao']) {
+                                  echo $userinfo['ui_taobao'];
+                              }else{
+                                  echo "未绑定";
+                                  } ?>
+                                  </li>
+                              <li>提取金额：<?php echo $item['s_balance']; ?>元</li>
+                              <li>提取日期：<?php echo $item['s_add_time']; ?></li>
+                              <li>当前状态：<span class="pending"><?php if ((strtotime($item['s_add_time'])+43200-time())<0) {  ?>
+                              <div id="endds<?php echo $item['id'];?>" style="display:inline">
+                                <font>已到期</font>
+                              </div>
+                              <?php }else{ ?>
+                                <font class="timeout">收款倒计时</font>
+                                <span id="starts<?php echo $item['id'];?>" class="yin">
+                                  <font  id="ss<?php echo $item['id'];?>"></font>小时
+                                  <font  id="ff<?php echo $item['id'];?>"></font>分
+                                  <font  id="mm<?php echo $item['id'];?>"></font>秒
+                                </span>
+                                <button id="looks<?php echo $item['id'];?>" style="width:70px; hight:20px;background:#e95466;" type="button" onclick="times<?php echo $item['id'];?>();" name="button">点击查看</button>
+                                <?php }?></li>
+                                <br>
+                          </ul>
+                  </div>
+
                     <div class=" ">
                         <div class="">
                         </div>
@@ -335,21 +362,21 @@ overflow:hidden;
                 </div>
             </div>
             <script>
-                function times<?php echo $item['id'];?>(){
-                  $('#looks').addClass('yin');
-                  var timestamp = Date.parse(new Date())/1000;
-                  // console.log(<?php //echo (strtotime($item['cp_last_time'])+86400);?>);
-                  var wait<?php echo $item['id'];?>=<?php echo (strtotime($item['cp_last_time'])+43200);?>-timestamp;
-                  if (wait<?php echo $item['id'];?> < 0) {
-                      $('#endds<?php echo $item['id'];?>').removeClass('yin');
-                  }else{
-                      $('#starts<?php echo $item['id'];?>').removeClass('yin');
-                  }
-                  $('#ss<?php echo $item['id'];?>').html(parseInt(wait<?php echo $item['id'];?>/3600));
-                  $('#ff<?php echo $item['id'];?>').html(parseInt(wait<?php echo $item['id'];?>/60%60));
-                  $('#mm<?php echo $item['id'];?>').html(parseInt(wait<?php echo $item['id'];?>%60));
-                    setTimeout(function() {times<?php echo $item['id'];?>()},1000)
-                }
+            function times<?php echo $item['id'];?>(){
+              $('#looks<?php echo $item['id'];?>').addClass('yin');
+              var timestamp = Date.parse(new Date())/1000;
+              // console.log(<?php //echo (strtotime($item['cp_last_time'])+86400);?>);
+              var wait<?php echo $item['id'];?>=<?php echo (strtotime($item['s_add_time'])+86400);?>-timestamp;
+              if (wait<?php echo $item['id'];?> < 0) {
+                  $('#endds<?php echo $item['id'];?>').removeClass('yin');
+              }else{
+                  $('#starts<?php echo $item['id'];?>').removeClass('yin');
+              }
+              $('#ss<?php echo $item['id'];?>').html(parseInt(wait<?php echo $item['id'];?>/3600));
+              $('#ff<?php echo $item['id'];?>').html(parseInt(wait<?php echo $item['id'];?>/60%60));
+              $('#mm<?php echo $item['id'];?>').html(parseInt(wait<?php echo $item['id'];?>%60));
+                setTimeout(function() {times<?php echo $item['id'];?>()},1000)
+            }
             </script>
               <?php } ?>
         </div>

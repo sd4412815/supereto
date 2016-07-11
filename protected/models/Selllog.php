@@ -17,6 +17,7 @@ class Selllog extends CActiveRecord
         $selllog->s_uid=$uid;
         $selllog->s_balance=$balance;
         $selllog->s_add_time=date('Y-m-d H:i:s');
+        $selllog->s_account= "S0".rand(1000,9999). substr(time(),-5);
         $selllog->save();
     }
 

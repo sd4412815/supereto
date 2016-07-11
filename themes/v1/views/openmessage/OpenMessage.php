@@ -106,16 +106,13 @@ td{text-align: center;height:37px; font-size: 13px;width:200px;}
          Yii::app ()->clientScript->registerScriptFile ( Yii::app ()->theme->baseUrl . "/public/js/jquery_002.js", CClientScript::POS_END );
          ?>
          <div class="clear"></div>
-         <?php
-          foreach ($msg as $k => $m) :?>
            <div class="" style="text-align:center">
-             <h2 style="margin-top:50px;"><?php echo $m['om_title']; ?></h2>
-              <pre style="font-size:18px;"><?php echo $m['om_content']; ?></pre>
+             <h2 style="margin-top:50px;"><?php echo $msg['om_title']; ?></h2>
+              <pre style="font-size:18px;"><?php echo $msg['om_content']; ?></pre>
            </div>
            <div style="width:90%;  text-align:right;">
-             <b style="font-size:18px;"><?php echo date('Y-m-d',time())?> 超级ETO总部宣</b>
+             <b style="font-size:18px;"><?php echo substr($msg['om_addtime'],0,10);?> 超级ETO总部宣</b>
            </div>
-         <?php endforeach;?>
 
 
 </body>

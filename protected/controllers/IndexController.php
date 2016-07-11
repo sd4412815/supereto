@@ -65,21 +65,32 @@ class IndexController extends Controller
 
     public function actionindex()
     {
-        $userinfo = UserInfo::model ()->find('id=:id',array(':id'=>Yii::app ()->user->id));
+      $userinfo = UserInfo::model ()->find('ui_userid=:id',array(':id'=>Yii::app ()->user->id));
+      $gonggao = OpenMessage::model()->findAll();
+      // p($gonggao);die;
+      // $cft = cftPackage::model ()->findAll('cp_u_id=:id',array(':id'=>Yii::app ()->user->id));
+      $cft = cftPackage::model ()->findAll(array(
+                  'select'=>array('*'),
+                  'condition' => 'cp_u_id='.Yii::app ()->user->id.' and cp_status=0',
+              )
+      );
+      $sell = Selllog::model ()->findAll(array(
+                  'select'=>array('*'),
+                  'condition' => 's_uid='.Yii::app ()->user->id,
+              )
+      );
+      $cfttype=array();
+      foreach($cft as $k => $v){
+          $cfttype[$k] = CftPackageType::model ()->find('cpt_sort=:cpt',array(':cpt'=>$v->attributes['cp_cpt_id']));
+      }
+      $this->render ( 'index', array (
+          'userinfo' => $userinfo,
+          'gonggao'  => $gonggao,
+          'cft'  => $cft,
+          'cfttype'  => $cfttype,
+          'sell'  => $sell
+      ));
 
-        $gonggao['gg']['gonggao'] = '近期的公告';
-        $gonggao['gg']['rq']      = '2015-01-15';
-        $cft = cftPackage::model ()->findAll('cp_u_id=:id',array(':id'=>Yii::app ()->user->id));
-        $cfttype=array();
-        foreach($cft as $k => $v){
-            $cfttype[$k] = CftPackageType::model ()->find('cpt_sort=:cpt',array(':cpt'=>$v->attributes['cp_cpt_id']));
-        }
-        $this->render ( 'index', array (
-            'userinfo' => $userinfo,
-            'gonggao'  => $gonggao,
-            'cft'  => $cft,
-            'cfttype'  => $cfttype
-        ));
     }
 
     /**
@@ -164,6 +175,20 @@ class IndexController extends Controller
             else
                 echo json_encode($error);
 
+        }
+    }
+    /**
+     * 取消挂单
+     */
+    public function actionDel() {
+        if (isset($_POST['id'])) {
+            $id = $_POST['id'];
+            $cft = CftPackage::model()->updateAll(array('cp_status'=>-1),'id=:id',array(':id'=>$id));
+            if ($cft) {
+                echo CJSON::encode(array('val'=>'取消成功'));
+            }else{
+                echo CJSON::encode(array('val'=>'取消失败'));
+            }
         }
     }
 

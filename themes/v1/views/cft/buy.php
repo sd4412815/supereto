@@ -100,6 +100,11 @@ $this->pageTitle='购买ETO理财包';
                 <?php echo Yii::app()->user->getFlash('success'); ?>
             </div>
         <?php } ?>
+    <?php if(Yii::app()->user->hasFlash('error')){?>
+        <div class="row error col-xs-offset-4">
+            <?php echo Yii::app()->user->getFlash('error'); ?>
+        </div>
+    <?php } ?>
 
      <?php echo $form->errorSummary($model); ?>
      <?php echo $form->errorSummary($user); ?>

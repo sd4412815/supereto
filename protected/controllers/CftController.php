@@ -35,6 +35,7 @@ class CftController extends Controller
 
         $model=new CftPackage();
         $user=User::model()->find('id=:id',array(':id'=>Yii::app()->user->id));
+        $info=UserInfo::model()->find('ui_userid=:uid',array(':uid'=>$user->id));
         $cftType=CftPackageType::model()->findAll();
         $cftType=UTool::objToArray($cftType);
         $cftType = array_column($cftType, 'cpt_name', 'id');
@@ -73,27 +74,41 @@ class CftController extends Controller
                 $model->scenario = 'buy';
 
                 if ($model->validate()) {
-                    $model->cp_type = 0;
-                    $model->cp_cpt_id = $_POST['CftPackage']['cp_cpt_id'];
-                    $model->cp_u_id = Yii::app()->user->id;
-                    $model->cp_add_time = date('Y-m-d H:i:s', time());
-                    $model->cp_last_time = date('Y-m-d H:i:s', time());
-                    $model->cp_status = 0;
-                    $model->cp_sn = 'S' . date('mdHi') . rand(10, 99);
+                    $typePrice=CftPackageType::model()->find('id=:id',array(':id'=>$_POST['CftPackage']['cp_cpt_id']))['cpt_price'];
+                    if($info->ui_ticket_balance<=0 && $info->ui_ticket_balance <  $typePrice){
+                        Yii::app()->user->setFlash('error', '门票余额不足');
+                    }else {
+                        if ($typePrice == 5000 && $info->ui_ticket_balance >= 5) {
+                            $info->ui_ticket_balance = $info->ui_ticket_balance - 5;
+                        } elseif ($typePrice == 2500 && $info->ui_ticket_balance >= 2) {
+                            $info->ui_ticket_balance = $info->ui_ticket_balance - 2;
+                        } elseif ($typePrice == 1000 && $info->ui_ticket_balance >= 1) {
+                            $info->ui_ticket_balance = $info->ui_ticket_balance - 1;
+                        }
+                        if ($info->save()) {
+                            $model->cp_type = 0;
+                            $model->cp_cpt_id = $_POST['CftPackage']['cp_cpt_id'];
+                            $model->cp_u_id = Yii::app()->user->id;
+                            $model->cp_add_time = date('Y-m-d H:i:s', time());
+                            $model->cp_last_time = date('Y-m-d H:i:s', time());
+                            $model->cp_status = 0;
+                            $model->cp_sn = 'S' . date('mdHi') . rand(10, 99);
 
-                    if ($model->save()) {
-                        $model->Rebate(Yii::app()->user->id, $model->attributes['id']);
-                        $msg = new  Message();
-                        $msg['m_datetime'] = date('Y-m-d H:i:s');
-                        $msg['m_user_id'] = Yii::app()->user->id;
-                        $msg['m_level'] = Message::LEVEL_URGENCY;
-                        $msg['m_content'] = '您成功的购买了ETO理财包';
-                        $msg['m_type'] = Message::TYPE_ACCOUNT;
-                        $msg['m_src'] = UTool::getRequestInfo();
-                        $msg->save();
-                        Yii::app()->user->setFlash('success', '您成功的购买了ETO理财包');
-                    } else {
-                        Yii::app()->user->setFlash('error', $model->getErrors());
+                            if ($model->save()) {
+                                $model->Rebate(Yii::app()->user->id, $model->attributes['id']);
+                                $msg = new  Message();
+                                $msg['m_datetime'] = date('Y-m-d H:i:s');
+                                $msg['m_user_id'] = Yii::app()->user->id;
+                                $msg['m_level'] = Message::LEVEL_URGENCY;
+                                $msg['m_content'] = '您成功的购买了ETO理财包';
+                                $msg['m_type'] = Message::TYPE_ACCOUNT;
+                                $msg['m_src'] = UTool::getRequestInfo();
+                                $msg->save();
+                                Yii::app()->user->setFlash('success', '您成功的购买了ETO理财包');
+                            } else {
+                                Yii::app()->user->setFlash('error', $model->getErrors());
+                            }
+                        }
                     }
                 } else {
                     Yii::app()->user->setFlash('error', $model->getErrors());
@@ -130,7 +145,7 @@ class CftController extends Controller
 
                         $userinfo->ui_static_balance = $userinfo->ui_static_balance - $_POST['UserInfo']['ui_static_balance'];
                         $userinfo->save();
-                        Selllog::model()->log(Yii::app()->user->id, $userinfo->ui_static_balance);
+                        Selllog::model()->log(Yii::app()->user->id, $_POST['UserInfo']['ui_static_balance']);//保存到记录
                         $msg = new  Message();
                         $msg['m_datetime'] = date('Y-m-d H:i:s');
                         $msg['m_user_id'] = Yii::app()->user->id;

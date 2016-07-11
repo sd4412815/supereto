@@ -232,7 +232,14 @@ class UserController extends Controller {
     {
         $recommend = UserInfo::model ()->findAll('ui_userid=:uid',array(':uid'=>Yii::app ()->user->id));
         foreach ($recommend as $key => $value) {
-            $referrer = UserInfo::model ()->findAll('ui_userid=:uid',array(':uid'=>$value['ui_referrer']));
+            if (!$value['ui_referrer']) {
+                $referrer[0]['ui_account_number'] = '暂无';
+            }else{
+                $referrer = UserInfo::model ()->findAll('ui_userid=:uid',array(':uid'=>$value['ui_referrer']));
+                if (!$referrer) {
+                    $referrer[0]['ui_account_number'] = '暂无';
+                }
+            }
         }
         $username = User::model ()->findAll(array(
                 'select'=>array('u_nick_name'),
@@ -245,7 +252,6 @@ class UserController extends Controller {
             'referrer'=>$referrer,
         ));
     }
-
     /**
      * 推荐清单
      */
