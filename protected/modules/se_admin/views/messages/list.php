@@ -96,22 +96,24 @@ $this->pageTitle='公告管理';
 
 <script>
     function del(id){
-        $.ajax({
-            url:'<?php echo $this->createUrl('messages/del') ?>',
-            type:'GET',
-            dataType:'JSON',
-            data:{
-                'id':id
-            },
-            success:function (result){
-                if(result.status){
-                    layer.msg(result.msg);
-                    location.reload()
-                }
-            },
-            error:function (result){
+        if(confirm('确定要删除吗？')) {
+            $.ajax({
+                url: '<?php echo $this->createUrl('messages/del') ?>',
+                type: 'GET',
+                dataType: 'JSON',
+                data: {
+                    'id': id
+                },
+                success: function (result) {
+                    if (result.status) {
+                        layer.msg(result.msg);
+                        location.reload()
+                    }
+                },
+                error: function (result) {
 
-            }
-        })
+                }
+            })
+        }
     }
 </script>

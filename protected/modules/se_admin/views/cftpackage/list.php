@@ -38,6 +38,7 @@ $this->pageTitle='订单列表';
                                         <th class="sorting">单号</th>
                                         <th class="sorting">收款时间</th>
                                         <th class="sorting">状态</th>
+                                        <th class="sorting" colspan="2">操作</th>
                                     </tr>
                                     </thead>
                                     <tbody>
@@ -48,6 +49,17 @@ $this->pageTitle='订单列表';
                                             <td class=""><?php echo $item['cp_sn'] ?></td>
                                             <td class="sorting_1"><?php echo substr(substr($item['cp_last_time'],5 ) ,0, -3) ?></td>
                                             <td><?php echo $item['cp_status'] ?></td>
+                                            <td>
+                                                <a href="<?php echo $this->createUrl('Cftpackage/edit',array('id'=>$item['id'])) ?>">
+                                                    <i class="fa fa-pencil-square-o"></i>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="#" onclick="del(<?php echo $item['id']?>);">
+                                                    <i class="fa fa-trash-o"></i>
+                                                </a>
+                                            </td>
+
                                         </tr>
                                     <?php } ?>
 
@@ -64,3 +76,28 @@ $this->pageTitle='订单列表';
     </div>
 
 </section>
+
+
+<script>
+    function del(id){
+        if(confirm('确定要删除吗？')) {
+            $.ajax({
+                url: '<?php echo $this->createUrl('Cftpackage/del') ?>',
+                type: 'GET',
+                dataType: 'JSON',
+                data: {
+                    'id': id
+                },
+                success: function (result) {
+                    if (result.status) {
+                        layer.msg(result.msg);
+                        location.reload()
+                    }
+                },
+                error: function (result) {
+
+                }
+            })
+        }
+    }
+</script>

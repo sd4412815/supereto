@@ -13,6 +13,7 @@ class Selllog extends CActiveRecord
     }
 
     public function log($uid,$balance){
+
         $selllog=new Selllog();
         $selllog->s_uid=$uid;
         $selllog->s_balance=$balance;

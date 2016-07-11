@@ -23,4 +23,28 @@ class CftpackageController extends Controller
             'cftpackage'=>$cftpackage,
         ));
     }
+
+
+    public function actionEdit()
+    {
+        echo '13';
+    }
+
+    /**
+     * 删除
+     */
+    public function actionDel()
+    {
+        $rlt=UTool::iniFuncRlt();
+        $id=Yii::app()->request->getParam('id');
+        $re=CftPackage::model()->deleteByPk($id);
+        if($re){
+            $rlt['status']=true;
+            $rlt['msg']='删除成功';
+        }else{
+            $rlt['msg']='删除失败';
+        }
+
+        echo CJSON::encode($rlt);
+    }
 }

@@ -11,6 +11,9 @@ class IndexController extends Controller
     
     public function actionIndex()
     {
+        if(Yii::app()->user->isGuest){
+            $this->redirect(array('index/login'));
+        }
         $this->render('index');
     }
 

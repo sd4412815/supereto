@@ -202,6 +202,7 @@ class CftController extends Controller
         echo CJSON::encode($rlt);
 
     }
+
     /**
      * 买入记录
      */
@@ -211,6 +212,7 @@ class CftController extends Controller
         $criteria = new CDbCriteria;
         $criteria->addCondition('cp_u_id = :cp_u_id');
         $criteria->params[':cp_u_id']=Yii::app()->user->id;
+        $criteria->addCondition('cp_status = 0');
         $criteria->addCondition('cp_type = :cp_type');
         $criteria->params[':cp_type']=0;
         $criteria->order='cp_last_time DESC';
@@ -227,16 +229,14 @@ class CftController extends Controller
     public function actionSellLog()
     {
         $criteria = new CDbCriteria;
-        $criteria->addCondition('cp_u_id = :cp_u_id');
-        $criteria->params[':cp_u_id']=Yii::app()->user->id;
-        $criteria->addCondition('cp_type = :cp_type');
-        $criteria->params[':cp_type']=1;
-        $criteria->order='cp_last_time DESC';
-        $cftpackage=CftPackage::model()->findAll($criteria);
-
+        $criteria->addCondition('s_uid = :s_uid');
+        $criteria->params[':s_uid']=Yii::app()->user->id;
+        $criteria->addCondition('s_status = 1');
+        $criteria->order='s_add_time DESC';
+        $selllog=Selllog::model()->findAll($criteria);
 
         $this->render('selllog',array(
-            'cftpackage'=>$cftpackage,
+            'selllog'=>$selllog,
         ));
     }
 }

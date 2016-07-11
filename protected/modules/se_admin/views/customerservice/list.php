@@ -86,22 +86,24 @@ $this->pageTitle='客服管理';
 
 <script>
     function del(id){
-        $.ajax({
-            url:'<?php echo $this->createUrl('CustomerService/del') ?>',
-            type:'GET',
-            dataType:'JSON',
-            data:{
-                'id':id
-            },
-            success:function (result){
-                if(result.status){
-                    layer.msg(result.msg);
-                    location.reload()
-                }
-            },
-            error:function (result){
+        if(confirm('确定删除吗？')) {
+            $.ajax({
+                url: '<?php echo $this->createUrl('CustomerService/del') ?>',
+                type: 'GET',
+                dataType: 'JSON',
+                data: {
+                    'id': id
+                },
+                success: function (result) {
+                    if (result.status) {
+                        layer.msg(result.msg);
+                        location.reload()
+                    }
+                },
+                error: function (result) {
 
-            }
-        })
+                }
+            })
+        }
     }
 </script>

@@ -36,23 +36,29 @@ $this->pageTitle='卖出记录';
                                 <table id="example2" class="table table-bordered table-hover dataTable" >
                                     <thead>
                                     <tr role="row">
+                                        <th class="sorting">编号</th>
                                         <th class="sorting">日期</th>
-                                        <th class="sorting">单号</th>
-                                        <th class="sorting">收款时间</th>
+                                        <th class="sorting">金额</th>
+                                        <th class="sorting">预计收款时间</th>
                                         <th class="sorting">状态</th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    <?php foreach ( $cftpackage as $item) {?>
+                                    <?php foreach ( $selllog as $item) {?>
 
                                         <tr role="row" class="odd">
-                                            <td class=""><?php echo $item['cp_add_time'] ?></td>
-                                            <td class=""><?php echo $item['cp_sn'] ?></td>
-                                            <td class="sorting_1"><?php echo $item['cp_last_time'] ?></td>
+                                            <td class=""><?php echo $item['s_account'] ?></td>
+                                            <td class=""><?php echo $item['s_add_time'] ?></td>
+                                            <td class=""><?php echo $item['s_balance'] ?></td>
+                                            <td class="sorting_1"><?php //echo strtotime(strtotime($item['s_add_time']),'+3 days') ?></td>
                                             <td>
-                                                <?php if($item['cp_status'] == 0){
-                                                    echo '正常';
-                                                }?>
+                                                <?php
+                                                    if($item['s_status'] == 1){
+                                                        echo '申请中';
+                                                    }elseif($item['s_status'] ==2){
+                                                        echo '提取成功';
+                                                    }
+                                                ?>
                                             </td>
                                         </tr>
                                     <?php } ?>

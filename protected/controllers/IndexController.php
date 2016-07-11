@@ -65,6 +65,9 @@ class IndexController extends Controller
 
     public function actionindex()
     {
+        if(Yii::app()->user->isGuest){
+            $this->redirect(array('index/login'));
+        }
       $userinfo = UserInfo::model ()->find('ui_userid=:id',array(':id'=>Yii::app ()->user->id));
       $gonggao = OpenMessage::model()->findAll();
       // p($gonggao);die;
