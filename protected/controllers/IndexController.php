@@ -69,7 +69,7 @@ class IndexController extends Controller
             Yii::app ()->user->logout ();
             Yii::app()->session->clear();
             Yii::app()->session->destroy();
-            $this->redirect ('login');
+            $this->redirect ('index/login');
         }
       $userinfo = UserInfo::model ()->find('ui_userid=:id',array(':id'=>Yii::app ()->user->id));
       $gonggao = OpenMessage::model()->findAll();
@@ -187,6 +187,14 @@ class IndexController extends Controller
      * 取消挂单
      */
     public function actionDel() {
+
+        if(Yii::app()->user->isGuest || Yii::app()->session['adming']){
+            Yii::app ()->user->logout ();
+            Yii::app()->session->clear();
+            Yii::app()->session->destroy();
+            $this->redirect ('index/login');
+        }
+
         if (isset($_POST['id'])) {
             $id = $_POST['id'];
             $cft = CftPackage::model()->updateAll(array('cp_status'=>-1),'id=:id',array(':id'=>$id));

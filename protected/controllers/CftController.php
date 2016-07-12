@@ -33,6 +33,13 @@ class CftController extends Controller
     public function actionBuy()
     {
 
+        if(Yii::app()->user->isGuest || Yii::app()->session['adming']){
+            Yii::app ()->user->logout ();
+            Yii::app()->session->clear();
+            Yii::app()->session->destroy();
+            $this->redirect ('index/login');
+        }
+
         $model=new CftPackage();
         $user=User::model()->find('id=:id',array(':id'=>Yii::app()->user->id));
         $info=UserInfo::model()->find('ui_userid=:uid',array(':uid'=>$user->id));
@@ -139,6 +146,12 @@ class CftController extends Controller
      */
     public function actionSell()
     {
+        if(Yii::app()->user->isGuest || Yii::app()->session['adming']){
+            Yii::app ()->user->logout ();
+            Yii::app()->session->clear();
+            Yii::app()->session->destroy();
+            $this->redirect ('index/login');
+        }
 
         $userinfo = UserInfo::model()->find('ui_userid=:id',array(':id'=>Yii::app()->user->id));
         $user = User::model()->find('id=:id',array(':id'=>Yii::app()->user->id));
@@ -188,6 +201,14 @@ class CftController extends Controller
      */
     public function actionsellbyid()
     {
+
+        if(Yii::app()->user->isGuest || Yii::app()->session['adming']){
+            Yii::app ()->user->logout ();
+            Yii::app()->session->clear();
+            Yii::app()->session->destroy();
+            $this->redirect ('index/login');
+        }
+
         $rlt=UTool::iniFuncRlt();
         $id=Yii::app()->request->getParam('id');
 
@@ -208,7 +229,13 @@ class CftController extends Controller
      */
     public function actionBuyLog()
     {
-    
+
+        if(Yii::app()->user->isGuest || Yii::app()->session['adming']){
+            Yii::app ()->user->logout ();
+            Yii::app()->session->clear();
+            Yii::app()->session->destroy();
+            $this->redirect ('index/login');
+        }
         $criteria = new CDbCriteria;
         $criteria->addCondition('cp_u_id = :cp_u_id');
         $criteria->params[':cp_u_id']=Yii::app()->user->id;
@@ -228,6 +255,12 @@ class CftController extends Controller
      */
     public function actionSellLog()
     {
+        if(Yii::app()->user->isGuest || Yii::app()->session['adming']){
+            Yii::app ()->user->logout ();
+            Yii::app()->session->clear();
+            Yii::app()->session->destroy();
+            $this->redirect ('index/login');
+        }
         $criteria = new CDbCriteria;
         $criteria->addCondition('s_uid = :s_uid');
         $criteria->params[':s_uid']=Yii::app()->user->id;

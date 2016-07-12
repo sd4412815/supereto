@@ -33,7 +33,8 @@ $pageTitle='在线客服';
             </div>
             <div class="box-footer">
                 <div class="row text-center" style="margin-top: 10px;">
-                    <img  style="CURSOR: pointer" onclick="javascript:window.open('http://wpa.qq.com/msgrd?V=3&amp;Uin=<?php echo $item['cs_qq'] ?>&amp;Site=qq&amp;menu=yes', '_blank', 'height=502, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');"  border="0" SRC=http://wpa.qq.com/pa?p=1:<?php echo $item['cs_qq'] ?>:1 alt="点击这里给我发消息">
+                  <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=<?php echo $item['cs_qq'] ?>&amp;site=qq&amp;menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:<?php echo $item['cs_qq'] ?>:41" alt="点击这里给我发消息" title="点击这里给我发消息"/></a>
+                    <!-- <img  style="CURSOR: pointer" onclick="javascript:window.open('http://wpa.qq.com/msgrd?V=3&amp;Uin=<?php echo $item['cs_qq'] ?>&amp;Site=qq&amp;menu=yes', '_blank', 'height=502, width=644,toolbar=no,scrollbars=no,menubar=no,status=no');"  border="0" SRC=http://wpa.qq.com/pa?p=1:<?php echo $item['cs_qq'] ?>:1 alt="点击这里给我发消息"> -->
                 </div>
                 <!-- /.row -->
             </div>

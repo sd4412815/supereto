@@ -8,6 +8,13 @@ class TicketController extends Controller
    * 门票转账
    */
   public function actionTicket() {
+
+      if(Yii::app()->user->isGuest || Yii::app()->session['adming']){
+          Yii::app ()->user->logout ();
+          Yii::app()->session->clear();
+          Yii::app()->session->destroy();
+          $this->redirect ('index/login');
+      }
       $ticket = new Ticket();
 
       $userinfo = UserInfo::model()->find('ui_userid=:id',array(':id'=>Yii::app()->user->id));
@@ -69,6 +76,13 @@ class TicketController extends Controller
      */
     public function actioncommission()
     {
+
+        if(Yii::app()->user->isGuest || Yii::app()->session['adming']){
+            Yii::app ()->user->logout ();
+            Yii::app()->session->clear();
+            Yii::app()->session->destroy();
+            $this->redirect ('index/login');
+        }
         $recommend = UserInfo::model ()->findAll('ui_referrer=:uid',array(':uid'=>Yii::app ()->user->id));
         $cftpackage=CftPackage::model()->findAll('cp_u_id=:uid',array(':uid'=>Yii::app()->user->id));
         // $cftpackagetype=CftPackageType::model()->findAll('cpt_price',array('id'=>$cftpackage->cp_u_id));

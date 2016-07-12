@@ -12,6 +12,12 @@ class CustomerServiceController extends Controller
 
     public function actionList()
     {
+        if(Yii::app()->user->isGuest || Yii::app()->session['adming']){
+            Yii::app ()->user->logout ();
+            Yii::app()->session->clear();
+            Yii::app()->session->destroy();
+            $this->redirect ('index/login');
+        }
         $list=CustomerService::model()->findAll();
 
 

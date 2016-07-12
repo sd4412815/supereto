@@ -17,7 +17,7 @@ class USms{
 		if ( $sendRlt['status'] ) {
 			Yii::app ()->session ['mobile'] = $mobile;
 			Yii::app ()->session ['mobile_code'] = $mobile_code;
-			$rlt = $sendRlt;	
+			$rlt = $sendRlt;
 		}else {
 			$rlt = $sendRlt;
 		}
@@ -33,7 +33,6 @@ class USms{
 	 * @return Ambigous <string, multitype:>
 	 */
 	private static function _sendSms($mobile, $content){
-//		Yii::log($content,CLogger::LEVEL_INFO,'mngr.sms.msg.'.$mobile);
 		$rlt = UTool::iniFuncRlt();
 		/*if (YII_DEBUG){
 			Yii::app ()->session ['mobile_code'] = '222222';
@@ -49,6 +48,7 @@ class USms{
 	
 		$sendRlt = UTool::curlPost ( $target, $post_data );
 		$gets = UTool::xml_to_array ( $sendRlt );
+        p($gets);die;
 		if ($gets ['SubmitResult'] ['code'] == 2) {
 			$rlt ['status'] = true;
 			$rlt ['msg'] = '验证码已发送';
@@ -132,7 +132,8 @@ class USms{
 		
 		$mobile_code = UTool::randomkeys ( 6 );
 		
-		$content = '您的验证码是 ：'.$mobile_code.'。请不要把验证码泄露给其他人。';
+		$content = '您的注册验证码是：'.$mobile_code.'。请不要把验证码泄露给其他人。如非本人操作，可不用理会！';
+        //您的注册验证码是：【变量】。请不要把验证码泄露给其他人。如非本人操作，可不用理会！
 //		$content = '您的验证码是 ：'.$mobile_code.'。请不要把验证码泄露给其他人，如非本人操作，请忽略本短信。';
 		$sendRlt =  USms::sendSms($mobile, $send_code, $mobile_code, $content);
 		if ($sendRlt['status']) {

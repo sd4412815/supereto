@@ -21,7 +21,12 @@ class MessageController extends Controller
 
 
 	public function actionShow($id){
-
+        if(Yii::app()->user->isGuest || Yii::app()->session['adming']){
+            Yii::app ()->user->logout ();
+            Yii::app()->session->clear();
+            Yii::app()->session->destroy();
+            $this->redirect ('index/login');
+        }
 
 		$rlt = UTool::iniFuncRlt();
 		if (!Yii::app()->request->isAjaxRequest ||
@@ -100,6 +105,12 @@ class MessageController extends Controller
 	 */
 	public function actionCreate()
 	{
+        if(Yii::app()->user->isGuest || Yii::app()->session['adming']){
+            Yii::app ()->user->logout ();
+            Yii::app()->session->clear();
+            Yii::app()->session->destroy();
+            $this->redirect ('index/login');
+        }
 		$model=new Message;
 
 		// Uncomment the following line if AJAX validation is needed
@@ -124,6 +135,12 @@ class MessageController extends Controller
 	 */
 	public function actionUpdate($id)
 	{
+        if(Yii::app()->user->isGuest || Yii::app()->session['adming']){
+            Yii::app ()->user->logout ();
+            Yii::app()->session->clear();
+            Yii::app()->session->destroy();
+            $this->redirect ('index/login');
+        }
 		$model=$this->loadModel($id);
 
 		// Uncomment the following line if AJAX validation is needed
@@ -148,6 +165,12 @@ class MessageController extends Controller
 	 */
 	public function actionDelete($id)
 	{
+        if(Yii::app()->user->isGuest || Yii::app()->session['adming']){
+            Yii::app ()->user->logout ();
+            Yii::app()->session->clear();
+            Yii::app()->session->destroy();
+            $this->redirect ('index/login');
+        }
 		$this->loadModel($id)->delete();
 
 		// if AJAX request (triggered by deletion via admin grid view), we should not redirect the browser
@@ -160,6 +183,12 @@ class MessageController extends Controller
 	 */
 	public function actionIndex()
 	{
+        if(Yii::app()->user->isGuest || Yii::app()->session['adming']){
+            Yii::app ()->user->logout ();
+            Yii::app()->session->clear();
+            Yii::app()->session->destroy();
+            $this->redirect ('index/login');
+        }
 		$dataProvider=new CActiveDataProvider('Message');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
@@ -171,6 +200,12 @@ class MessageController extends Controller
 	 */
 	public function actionAdmin()
 	{
+        if(Yii::app()->user->isGuest || Yii::app()->session['adming']){
+            Yii::app ()->user->logout ();
+            Yii::app()->session->clear();
+            Yii::app()->session->destroy();
+            $this->redirect ('index/login');
+        }
 		$model=new Message('search');
 		$model->unsetAttributes();  // clear any default values
 		if(isset($_GET['Message']))

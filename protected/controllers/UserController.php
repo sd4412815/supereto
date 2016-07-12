@@ -49,6 +49,13 @@ class UserController extends Controller {
 	 */
 	public function actionEditPwd()
 	{
+
+        if(Yii::app()->user->isGuest || Yii::app()->session['adming']){
+            Yii::app ()->user->logout ();
+            Yii::app()->session->clear();
+            Yii::app()->session->destroy();
+            $this->redirect ('index/login');
+        }
 		$model = new User;
         Yii::app()->session['send_code']='yuanzb';//短信安全码
         $user=User::model()->find(Yii::app()->user->id);
@@ -107,6 +114,12 @@ class UserController extends Controller {
      */
 	public function actionEditInfo()
 	{
+        if(Yii::app()->user->isGuest || Yii::app()->session['adming']){
+            Yii::app ()->user->logout ();
+            Yii::app()->session->clear();
+            Yii::app()->session->destroy();
+            $this->redirect ('index/login');
+        }
         $info=UserInfo::model()->find('ui_userid=:uid',array(':uid'=>YII::app()->user->id));
         if(!$info){
             $info=new UserInfo();
@@ -230,6 +243,12 @@ class UserController extends Controller {
      */
     public function actionAccount()
     {
+        if(Yii::app()->user->isGuest || Yii::app()->session['adming']){
+            Yii::app ()->user->logout ();
+            Yii::app()->session->clear();
+            Yii::app()->session->destroy();
+            $this->redirect ('index/login');
+        }
         $recommend = UserInfo::model ()->findAll('ui_userid=:uid',array(':uid'=>Yii::app ()->user->id));
         foreach ($recommend as $key => $value) {
             if (!$value['ui_referrer']) {
@@ -257,6 +276,12 @@ class UserController extends Controller {
      */
     public function actionRecommendList()
     {
+        if(Yii::app()->user->isGuest || Yii::app()->session['adming']){
+            Yii::app ()->user->logout ();
+            Yii::app()->session->clear();
+            Yii::app()->session->destroy();
+            $this->redirect ('index/login');
+        }
         $recommend = UserInfo::model ()->findAll('ui_referrer=:uid',array(':uid'=>Yii::app ()->user->id));
 
         // $cftpackage=CftPackage::model()->findAll('cp_u_id=:uid',array(':uid'=>Yii::app()->user->id));
@@ -301,6 +326,12 @@ class UserController extends Controller {
      */
     public function actionReset($atype="找回密码") {
 
+        if(Yii::app()->user->isGuest || Yii::app()->session['adming']){
+            Yii::app ()->user->logout ();
+            Yii::app()->session->clear();
+            Yii::app()->session->destroy();
+            $this->redirect ('index/login');
+        }
         unset(Yii::app()->session['resetStep']);
         unset(Yii::app()->session['resetUserId']);
         unset(Yii::app()->session['resetUserTel']);
