@@ -4,7 +4,7 @@
  * Author: yuanzb (yuan_zb@qq.com)
  * DateTime: 16-6-20 下午3:38
  */
-$this->pageTitle='购买ETO理财包';
+$this->pageTitle='原石众筹';
 
 ?>
 
@@ -16,19 +16,19 @@ $this->pageTitle='购买ETO理财包';
         <i class="icon-angle-right"></i>
     </li>
     <li>
-        <a href="<?php echo Yii::app()->createUrl('cft/buy') ?>">买入ETO包</a>
+        <a href="<?php echo Yii::app()->createUrl('cft/buy') ?>">原石众筹</a>
     </li>
 </ul>
 
 
 <section class="content" style="font-size: 12px;">
-    <div class="alert alert-error"><strong>系统提示：</strong> <br>
-        一、每天只能挂一单<br>
+    <div class="alert" style="background:orange;"><strong>系统提示：</strong> <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;每天只能众筹一次<br>
         <strong>风险提示：</strong> <br>
-        本人正式申明：我已完全了解所有投资可能的风险，我觉得参与BBG爱心互助平台，愿意对自己认可的BBG爱心互助投资，并愿意为项目的市场营销推广贡献力量。
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;本人正式申明：本人完全清楚了解投资带来的所有的风险，并愿意为superETO项目的市场营销推广贡献自己的力量。
     </div>
-    
-    
+
+
 
     <?php $form=$this->beginWidget('CActiveForm', array(
         'id'=>'user-form',
@@ -52,10 +52,10 @@ $this->pageTitle='购买ETO理财包';
                 </span>
             </div>
         </div>
-    
-    
+
+
         <div class="form-group">
-            <label class="control-label col-xs-4" for="">选择M包<span class="text-red h5">*</span></label>
+            <label class="control-label col-xs-4" for="">众筹金额<span class="text-red h5">*</span></label>
             <div class="col-xs-8 col-sm-4">
                 <?php echo $form->dropDownList($model,'cp_cpt_id',$cftType,array(
                     'class'=>'form-control'
@@ -71,7 +71,7 @@ $this->pageTitle='购买ETO理财包';
                 )) ?>
             </div>
         </div>
-        
+
         <div class="form-group">
             <label class="control-label col-xs-4">图形验证码<span class="required">*</span></label>
             <div class="col-xs-4 col-sm-2">
@@ -94,7 +94,7 @@ $this->pageTitle='购买ETO理财包';
                 ?>
             </div>
         </div>
-        
+
         <?php if(Yii::app()->user->hasFlash('success')){?>
             <div class="row error col-xs-offset-4">
                 <?php echo Yii::app()->user->getFlash('success'); ?>
@@ -110,7 +110,7 @@ $this->pageTitle='购买ETO理财包';
      <?php echo $form->errorSummary($user); ?>
 
     <div class="col-xs-offset-4">
-            <button type="submit" id="submit" class="btn btn-info btn-sm">确认买入</button>
+            <button type="submit" id="submit" class="btn btn-info btn-sm">确认众筹</button>
         </div>
     <?php $this->endWidget(); ?>
 
@@ -132,6 +132,3 @@ $this->pageTitle='购买ETO理财包';
         }
     })
 </script>
-
-
-

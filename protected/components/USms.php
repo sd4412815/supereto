@@ -35,15 +35,15 @@ class USms{
 	private static function _sendSms($mobile, $content){
 //		Yii::log($content,CLogger::LEVEL_INFO,'mngr.sms.msg.'.$mobile);
 		$rlt = UTool::iniFuncRlt();
-		if (YII_DEBUG){
+		/*if (YII_DEBUG){
 			Yii::app ()->session ['mobile_code'] = '222222';
 			$rlt['status']=true;
 			$rlt['msg']='调试，222222';
 			return $rlt;
             Yii::app()->end();
-		}
+		}*/
 		$target = "http://106.ihuyi.cn/webservice/sms.php?method=Submit";
-		$post_data = "account=cf_xiche&password=" . md5 ( 'xc.2015' ) . "&mobile=" . $mobile . "&content=" . rawurlencode ( $content );
+		$post_data = "account=cf_FXGJ&password=" . md5 ( 'weizhi24' ) . "&mobile=" . $mobile . "&content=" . rawurlencode ( $content );
 		// $post_data = "account=cf_xiche&password=123456&mobile=".$mobile."&content=".rawurlencode("您的验证码是：4290。请不要把验证码泄露给其他人。如非本人操作，可不用理会！");
 		// 密码可以使用明文密码或使用32位MD5加密
 	
@@ -132,7 +132,8 @@ class USms{
 		
 		$mobile_code = UTool::randomkeys ( 6 );
 		
-		$content = '您的验证码是 ：'.$mobile_code.'。请不要把验证码泄露给其他人，如非本人操作，请忽略本短信。';
+		$content = '您的验证码是 ：'.$mobile_code.'。请不要把验证码泄露给其他人。';
+//		$content = '您的验证码是 ：'.$mobile_code.'。请不要把验证码泄露给其他人，如非本人操作，请忽略本短信。';
 		$sendRlt =  USms::sendSms($mobile, $send_code, $mobile_code, $content);
 		if ($sendRlt['status']) {
 			$rlt['status']=true;

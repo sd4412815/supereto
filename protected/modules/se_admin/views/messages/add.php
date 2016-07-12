@@ -69,23 +69,38 @@ $this->pageTitle=$title;
     <div class="form-group">
         <label class="control-label  col-xs-4" for="om_content">内容<span class="text-red h5">&nbsp;</span></label>
         <div class="col-xs-8 col-sm-4">
-            <?php
-            $this->widget('ext.ueditor.UeditorWidget',
-                    array(
-//                            'model'=>$model,//model
-//                            'attribute'=>'om_content',//attribute
-                            'id'=>'Post_content',//页面中输入框（或其他初始化容器）的ID
-                            'name'=>'editor',//指定ueditor实例的名称,个页面有多个ueditor实例时使用
-                    )
-            );
-            ?>
+          <?php
+              $this->widget('ext.ueditor.UeditorWidget',
+                  array(
+                      'name'=>'om_content',
+                      'id'=>'Post_excerpt',
+                      'value' => '',
+                      'config'=>array(
+                          'serverUrl' => Yii::app()->createUrl('editor/index'),//指定serverUrl，用于文件上传处理。默认是｀ueditor/index｀，如果自己实现了上传接口，可以更改通过修改`serverurl`来使用自定义的后端接口。
+                          'toolbars'=>array(
+                              array('source','background','link','bold','italic','underline','forecolor',
+                                  'superscript','insertimage','spechars','blockquote','help','preview',),
+                              array('emotion','wordimage','attachment','insertframe',
+                                  'edittip','edittable','edittd','webapp','snapscreen','scrawl','music',
+                                  'template','charts','insertvideo','gmap','map','searchreplace','anchor',),
+                              array('undo', 'redo', 'formatmatch',
+                              'touppercase', 'tolowercase','strikethrough', 'subscript', 'indent', 'outdent', 'pasteplain',
+                              'selectall', 'print','horizontal', 'removeformat', 'time', 'date', 'unlink', 'pagebreak'),
+                              array('insertparagraphbeforetable', 'insertrow', 'insertcol', 'mergeright', 'mergedown', 'deleterow',
+                              'deletecol', 'splittorows', 'splittocols', 'splittocells', 'mergecells', 'deletetable', 'drafts')
+                          ),
+                          'initialFrameHeight'=>'150',
+                          'initialFrameWidth'=>'100%'
+                      ),
+                      'htmlOptions' => array('rows'=>3,'class'=>'span12 controls')
+              ));
+          ?>
         </div>
 
 
     </div>
 
 
-    </div>
 <!--    --><?php //if (Yii::app ()->user->hasFlash ( 'editInfo' )) :	?>
 <!--        <div class="alert alert-danger" role="alert">--><?php //print_r(Yii::app()->user->getFlash('editInfo')) ;?><!--</div>-->
 <!--    --><?php //endif;?>
@@ -94,5 +109,18 @@ $this->pageTitle=$title;
     <div class="form-actions">
         <button type="submit" class="btn btn-info col-xs-offset-4">确认修改</button>
     </div>
+    <?php if(Yii::app()->user->hasFlash('userinfo')){?>
+        <div id='userInfoError' class="" style="display:none">
+            <?php echo Yii::app()->user->getFlash('userinfo') ?>
+        </div>
+    <?php } ?>
     <?php $this->endWidget(); ?>
+    <script type="text/javascript">
+        $(function(){
+            var msg = $('#userInfoError').html();
+            if (msg) {
+                layer.msg(msg);
+            }
+        });
+</script>
 </section>

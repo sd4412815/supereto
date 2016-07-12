@@ -1,62 +1,74 @@
 <?php
+
 /**
  * @author xbzbing<xbzbing@gmail.com>
  * @link www.crazydb.com
+ *
  * UEditor版本v1.4.3
- * Yii版本v1.1.14
- * 使用widget请配置容器的id，如果在一个页面使用多个ueditor，
- * 需要配置name属性，默认的name属性为editor。
+ * Yii版本v1.x
+ *
+ * 配合AR使用：
+ *
+ * $this->widget('ext.ueditor.UeditorWidget',
+ * array(
+ * 'model' => $model,
+ * 'attribute' => 'content',
+ * 'htmlOptions' => array('rows'=>6, 'cols'=>50)
+ * ));
+ *
+ * 当作普通表单使用:
+ *
+ * $this->widget('ext.ueditor.UeditorWidget',
+ * array(
+ * 'id'=>'Post_excerpt',
+ * 'name'=>'excerpt_editor',
+ * 'value' => '输入值',
+ * 'config'=>array(
+ * 'serverUrl' => Yii::app()->createUrl('editor/'),//指定serverUrl
+ * 'toolbars'=>array(
+ * array('source','link','bold','italic','underline','forecolor','superscript','insertimage','spechars','blockquote')
+ * ),
+ * 'initialFrameHeight'=>'150',
+ * 'initialFrameWidth'=>'95%'
+ * ),
+ * 'htmlOptions' => array('rows'=>3,'class'=>'span12 controls')
+ * ));
+ *
  */
-class UeditorWidget extends CInputWidget {
-
-    /**
-     * 资源地址，也是UE的UEDITOR_HOME_URL，自动生成，一般情况不要修改。
-     * @var string
-     */
-    private $_assetUrl;
-    /**
-     * 生成的ueditor对象的名称，默认为editor。
-     * 主要用于同一个页面的多个editor实例的管理。
-     * @var string
-     */
-    public $name;
+class UeditorWidget extends CInputWidget
+{
     /**
      * 需要引入的JS文件列表，为以后升级添加配置保证兼容。
      * 可以单独引入patch文件
      * @var array js列表
      */
-    public $jsFiles = array (
-    	'/ueditor.config.js',
-        '/ueditor.all.js',
+    public $jsFiles = array(
+        '/ueditor.all.min.js',
     );
-    /**
-     * ueditor的初始化配置选项。默认配置为个人喜好，可以根据需求修改。
-     * 语言默认中文，修改最大字符为10240，修改提示信息。
-     * @var String
-     */
-    public $options = array();
 
     /**
-     * UEditor 1.4+的统一后台入口
-     * @var string
+     * 是否附加缩略图管理，默认为true。
+     * @var bool
      */
-    public $serverUrl;
+    public $thumbnail = true;
+
     /**
-     * 初始化高度
-     * @var string
+     * 前端配置，详见 @see http://fex.baidu.com/ueditor/#start-config
+     * @var array
      */
-    public $initialFrameHeight = '400';
+    public $config;
+
     /**
-     * 初始化宽度
-     * 默认为100%，会自动匹配父容器宽度
-     * @var string
+     * 用于注册javascript脚本
+     * @var CClientScript
      */
-    public $initialFrameWidth = '100%';
+    protected $clientScript;
 
     /**
      * 初始化配置，发布资源文件
      */
-    public function init() {
+    public function init()
+    {
         parent::init();
         //发布资源文件
         $assetManager = Yii::app()->assetManager;
@@ -66,148 +78,101 @@ class UeditorWidget extends CInputWidget {
             'action_list.php',
             'controller.php',
             'Uploader.class.php',
-            'config.json',
             'index.html'
         );
-        $this->_assetUrl = $assetManager->publish( __DIR__ . DIRECTORY_SEPARATOR . 'resources' );
+        $_assetUrl = $assetManager->publish(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'resources') . '/';
 
         //注册资源文件
-        $cs = Yii::app()->clientScript;
-        foreach( $this->jsFiles as $jsFile)
-            $cs->registerScriptFile( $this->_assetUrl . $jsFile, CClientScript::POS_END );
+        $this->clientScript = Yii::app()->clientScript;
 
-        //拼接UE配置
-        if($this->serverUrl==null){
-            $this->serverUrl = Yii::app()->createUrl('ueditor/index');
-        }
-        
-        //默认的编辑栏目
-        !isset($this->options['toolbars']) && $this->options['toolbars'] = 
-        array(
-			array (
-				'fullscreen',
-				'source',
-				'undo',
-				'redo',
-				'|',
-				'customstyle',
-				'paragraph',
-				'fontfamily',
-				'fontsize' 
-			),
-			array (
-				'bold',
-				'italic',
-				'underline',
-				'fontborder',
-				'strikethrough',
-				'superscript',
-				'subscript',
-				'removeformat',
-				'formatmatch',
-				'autotypeset',
-				'blockquote',
-				'pasteplain',
-				'|',
-				'forecolor',
-				'backcolor',
-				'insertorderedlist',
-				'insertunorderedlist',
-				'|',
-				'rowspacingtop',
-				'rowspacingbottom',
-				'lineheight',
-				'|',
-				'directionalityltr',
-				'directionalityrtl',
-				'indent',
-				'|' 
-			),
-			array (
-				'justifyleft',
-				'justifycenter',
-				'justifyright',
-				'justifyjustify',
-				'|',
-				'link',
-				'unlink',
-				'|',
-				'insertimage',
-				'emotion',
-				'scrawl',
-				'insertvideo',
-				'music',
-				'attachment',
-				'map',
-				'insertcode',
-				'pagebreak',
-				'|',
-				'horizontal',
-				'inserttable',
-				'|',
-				'print',
-				'preview',
-				'searchreplace',
-				'help' 
-			) 
-		);
-        
-        isset($this->options['lang']) && $this->options['lang'] = 'zh-cn';
-        $this->options['UEDITOR_HOME_URL'] = $this->_assetUrl.'/';
-        $this->options['serverUrl'] = $this->serverUrl;
-        $this->options['initialFrameHeight'] = $this->initialFrameHeight;
-        $this->options['initialFrameWidth'] = $this->initialFrameWidth;
-        
-        $options = CJavaScript::encode($this->options);
-        
-        list($name, $id) = $this->resolveNameID();
-        
-        $this->name = $name;
-        $this->id = $id;
+        foreach ($this->jsFiles as $jsFile)
+            $this->clientScript->registerScriptFile($_assetUrl . $jsFile, CClientScript::POS_END);
 
-        if ($this->hasModel()) {
-        	echo CHtml::activeTextArea($this->model, $this->attribute, $this->htmlOptions);
-        } else {
-        	echo CHtml::textArea($name, $this->value, $this->htmlOptions);
+        //常用配置项
+        if (empty($this->config['UEDITOR_HOME_URL']))
+            $this->config['UEDITOR_HOME_URL'] = $_assetUrl;
+
+        if (empty($this->config['serverUrl']))
+            $this->config['serverUrl'] = Yii::app()->createUrl('ueditor/index');
+        elseif (is_array($this->config['serverUrl']))
+            $this->config['serverUrl'] = Yii::app()->createUrl($this->config['serverUrl']);
+
+        if (empty($this->config['lang']))
+            $this->config['lang'] = 'zh-cn';
+
+        if (empty($this->config['initialFrameHeight']))
+            $this->config['initialFrameHeight'] = 400;
+
+        if (empty($this->config['initialFrameWidth']))
+            $this->config['initialFrameWidth'] = '100%';
+
+        //扩展默认不直接引入config.js文件，因此需要自定义配置项.
+        if (empty($this->config['toolbars'])) {
+            //为了避免每次使用都输入乱七八糟的按钮，这里预先定义一些常用的编辑器按钮。
+            //这是一个丑陋的二维数组
+            $this->config['toolbars'] = array(
+                array(
+                    'fullscreen', 'source', 'undo', 'redo', '|',
+                    'customstyle', 'paragraph', 'fontfamily', 'fontsize'
+                ),
+                array(
+                    'bold', 'italic', 'underline', 'fontborder', 'strikethrough', 'superscript', 'subscript', 'removeformat',
+                    'formatmatch', 'autotypeset', 'blockquote', 'pasteplain', '|',
+                    'forecolor', 'backcolor', 'insertorderedlist', 'insertunorderedlist', '|',
+                    'rowspacingtop', 'rowspacingbottom', 'lineheight', '|',
+                    'directionalityltr', 'directionalityrtl', 'indent', '|'
+                ),
+                array(
+                    'justifyleft', 'justifycenter', 'justifyright', 'justifyjustify', '|',
+                    'link', 'unlink', '|',
+                    'insertimage', 'emotion', 'scrawl', 'insertvideo', 'music', 'attachment', 'map', 'insertcode', 'pagebreak', '|',
+                    'horizontal', 'inserttable', '|',
+                    'print', 'preview', 'searchreplace', 'help'
+                )
+            );
         }
 
-        $js = <<<UEDITOR
-        
-        UE.Editor.prototype._bkGetActionUrl = UE.Editor.prototype.getActionUrl;
-		UE.Editor.prototype.getActionUrl = function(action) {
-		    if ( this.getOpt('useQiniu') == true && action == 'uploadimage') {
-		        return this.getOpt('imageUrl');
-		    } else {
-		        return this._bkGetActionUrl.call(this, action);
-		    }
-		}
-        
-        var {$this->id} = UE.getEditor('{$this->id}', {$options});
-        {$this->id}.ready(function(){
-        	if(this.getOpt('useQiniu')){
-    			this.execCommand('serverparam',{'token':this.getOpt('token')});
-        		this.addListener( "beforeInsertImage", function ( type, imgObjs ) {
-	                for(var i=0;i < imgObjs.length;i++){
-	                    imgObjs[i].src = imgObjs[i].src.replace(this.getOpt('suffix_thumbnail'),this.getOpt('suffix_big'));
-	                }
-	            });
-    		}else{
-    			this.addListener( "beforeInsertImage", function ( type, imgObjs ) {
-	                for(var i=0;i < imgObjs.length;i++){
-	                    imgObjs[i].src = imgObjs[i].src.replace(".thumbnail","");
-	                }
-	            });
-    		}
-        });
-UEDITOR;
-        $cs->registerScript('ueditor_'.$this->id, $js, CClientScript::POS_END);
+        if (!is_array($this->htmlOptions))
+            $this->htmlOptions = array();
+
     }
 
     /**
-     * 获取assetUrl
-     * @return string
+     * 输出widget页面，注册相关JS代码。
      */
-    public function getAssetUrl(){
-        return $this->_assetUrl;
+    public function run()
+    {
+        if ($this->hasModel()) {
+            $id = CHtml::getIdByName(CHtml::activeName($this->model, $this->attribute));
+            $name = $this->name ? $this->name : $id;
+        } else {
+            if (empty($this->name))
+                throw new CException(Yii::t('yii', '{class} must specify "model" and "attribute" or "name" property values.', array('{class}' => get_class($this))));
+            $name = $this->name;
+            $id = isset($this->htmlOptions['id']) ? $this->htmlOptions['id'] : $this->id;
+        }
+
+        $config = json_encode($this->config);
+
+        $script = "var {$name} = UE.getEditor('{$id}',{$config});\n";
+
+        //ready部分代码，是为了缩略图管理。UEditor本身就很大，在后台直接加载大文件图片会很卡。
+        if ($this->thumbnail)
+            $script .= <<<THUMBNAIL
+    {$name}.ready(function(){
+        this.addListener( "beforeInsertImage", function ( type, imgObjs ) {
+            for(var i=0;i < imgObjs.length;i++){
+                imgObjs[i].src = imgObjs[i].src.replace(".thumbnail","");
+            }
+        });
+    });
+THUMBNAIL;
+
+        $this->clientScript->registerScript('ueditor_' . $name, $script);
+
+        if ($this->hasModel())
+            echo CHtml::activeTextarea($this->model, $this->attribute, $this->htmlOptions);
+        else
+            echo CHtml::textarea($this->name, $this->value, $this->htmlOptions + array('id' => $this->id));
     }
 }

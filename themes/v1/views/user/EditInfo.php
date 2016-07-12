@@ -27,8 +27,8 @@ $this->pageTitle = '修改资料';
 
     <?php $form = $this->beginWidget('CActiveForm', array(
                     'id'=>'user-form',
-                    'enableAjaxValidation'=>true,
-                    'enableClientValidation'=>true,
+//                    'enableAjaxValidation'=>true,
+//                    'enableClientValidation'=>true,
                     'focus'=>array($info,'firstName'),
                     'htmlOptions' => array (
                             'class' => 'form-horizontal',
@@ -178,6 +178,15 @@ $this->pageTitle = '修改资料';
         $('#u_safe_pwd').val('');
 
     });
+
+    function check_mobile(mobile){
+        var re=/^1\d{10}$/;
+        if(re.test(mobile)){
+            return true;
+        }
+        return false;
+    }
+
     function　get_mobile_code(){
         var mobile='<?php echo $user['u_tel']; ?>';
         if(check_mobile(mobile)){

@@ -11,8 +11,17 @@ class MessagesController extends Controller
 
     public function actionAdd()
     {
-        $model=new OpenMessage();
-
+      $model = new OpenMessage();
+        if ($_POST) {
+           $_POST['OpenMessage']['om_content'] = $_POST['om_content'];
+           $_POST['OpenMessage']['om_addtime'] = time();
+           $model->attributes = $_POST ['OpenMessage'];
+            if ($model->save()) {
+                Yii::app()->user->setFlash('userinfo','添加成功');
+            } else {
+                Yii::app()->user->setFlash('userinfo','添加失败');
+            }
+        }
         $this->render('add',array(
             'model'=>$model,
             'title'=>'添加公告'
@@ -33,7 +42,7 @@ class MessagesController extends Controller
      */
     public function actionList(){
 
-        
+
         $criteria = new CDbCriteria;
         $criteria->addCondition('om_status = :om_status');
         $criteria->params[':om_status']=0;
@@ -45,7 +54,7 @@ class MessagesController extends Controller
            'messages'=>$messages,
         ));
     }
-    
+
     /**
      * 删除
      */
@@ -63,5 +72,5 @@ class MessagesController extends Controller
 
         echo CJSON::encode($rlt);
     }
-    
+
 }
